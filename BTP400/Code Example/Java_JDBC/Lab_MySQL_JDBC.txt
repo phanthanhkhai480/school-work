@@ -1,0 +1,78 @@
+
+A. Install MySQL server 5.0
+
+- download the installer (mysql-essential-5.0.27-win32.msi)
+	- http://dev.mysql.com/downloads/mysql/5.0.html
+
+- follow the installation instructions
+
+
+B. Create a user account
+
+- start the MySQL server
+	- open a command prompt window
+	- run the command
+		- c:\>"c:\Program Files\...\mysqld-nt" --console
+
+                - an example:
+
+		C:\>"C:\Program Files\MySQL\MySQL Server 5.0\bin\mysqld-nt" --console
+
+	- do not close the window
+
+- open another command prompt window
+
+- run the command
+
+	- c:>"c:\Prgoram Files\...\mysql" -h localhost -u root
+
+- run MySQL commands
+	- USE mysql;
+	- create user 'pliu'@'localhost' identified by 'pliu';
+	- grant select, insert, update, delete, create, drop, references, execute
+          on *.* to 'pliu'@'localhost';
+	- exit;
+
+
+C. Create a Database in MySQL
+
+- run the command
+    c:>"c:\Prgoram Files\...\mysql" -h localhost -u pliu -p
+
+	(enter "pliu" for the password)
+
+- run MySQL command to execute a MySQL script file
+
+	- source Account.sql
+	
+
+
+D. Install MySQL Connector/J (the JDBC Driver for MySQL)
+
+- download the jar file(mysql-connector-java-5.0.4-bin.jar)
+
+- put it in a directory (e.g. c:\temp)
+
+(FYI: 
+	- JDBC driver name: "com.mysql.jdbc.Driver"
+	- database URL: "jdbc:mysql://localhost/accounts" )
+
+
+E. Run a JDBC Application(QueryDB.java)
+
+java
+
+     -classpath .;c:\temp\mysql-connector-java-5.0.4-bin.jar
+
+     QueryDB 401
+
+- OR -
+
+java 
+
+     -classpath .;
+     "C:\Program Files\Java\jdk1.6.0_01\jre\lib\ext\mysql-connector-java-5.0.4-bin.jar"
+
+     QueryDB 401
+
+

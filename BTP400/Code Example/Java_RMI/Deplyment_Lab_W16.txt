@@ -1,0 +1,55 @@
+
+An Exercise on Deploying an RMI Application.
+(updated on April 19, 2016)
+
+folder name: TeachingDemo
+
+A. Deployment of the RMI Server.
+
+0. Open a DOS command prompt window.
+
+   Go to the subfolder "ServerDir."
+
+   We have three source files in the folder(ServerDir): 
+
+      Product.java, ProductImpl.java, ProductServer.java
+	  
+[Note: Skip Step 1 if you're using Java 8.]
+1. >javac ProudctImpl.java
+
+[Note: Skip Step 2 if you're using Java 8.]
+2. >rmic  -v1.2 ProductImpl
+
+[Note: Skip Step 3 if the server code uses the createRegistry() method.]
+3. >rmiregistry 6666
+
+[Note: If you have skipped Step 3, you may use the same DOS command prompt window.]
+4. Open another DOS command prompt window.
+
+   Go to the subfolder "ServerDir."
+
+   >javac ProductServer.java
+
+   >java ProductServer
+
+(Question: How many class files do you have in the end?)
+
+B. Deployment of the RMI Client.
+
+0. Open a DOS command prompt window.
+
+   Go to the folder "ClientDir."
+
+   We have two source files in the folder(ClientDir): 
+
+      Product.java, ProductClient.java.
+
+[Note: Skip Step 1 if you are using Java 8.]
+1. copy "ProductImpl_Stub.class" from "ServerDir" into this folder(ClientDir).
+
+2. >javac ProductClient.java
+
+3. >java ProductClient
+
+(Question: How many class files do you have in the end?)
+
