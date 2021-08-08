@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    Title="Manage Order"
+    xmlns="http://xamarin.com/schemas/2014/forms"         
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"          
+    x:Class="Assignment.managerPage">
+
+    <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+        <Button Grid.Row="2" Grid.Column="0" Text="Check Current Order" 
+                CornerRadius="10" FontSize="12" Clicked="check_currentOrder"    />
+
+        <Button Grid.Row="2" Grid.Column="0" Text="Update Current Order" Margin="0,10,0,0"
+                CornerRadius="10" FontSize="12" Clicked="update_currentOrder"  />
+
+        <Button Grid.Row="2" Grid.Column="0" Text="Previous Order" Margin="0,10,0,0"
+                CornerRadius="10" FontSize="12" Clicked="previousOrder"  />
+
+        <Button Grid.Row="2" Grid.Column="0" Text="New Order" Margin="0,10,0,0"
+                CornerRadius="10" FontSize="12" Clicked="newOrder"  />
+    </StackLayout>
+
+</ContentPage>

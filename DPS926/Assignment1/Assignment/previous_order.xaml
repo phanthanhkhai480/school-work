@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    Title="Previous Order"
+    xmlns="http://xamarin.com/schemas/2014/forms"         
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"          
+    x:Class="Assignment.previous_order">
+
+    <StackLayout>
+        <Label Text="Transaction History" TextColor="Black" FontSize="Large"
+                Margin="0,30,0,0" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" />
+
+        <ListView x:Name="orderHistory" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Padding="0,30,0,0">
+                            <Label VerticalTextAlignment="Center" Text="{Binding time}" TextColor="Red"></Label>
+                            <StackLayout Orientation="Vertical" HorizontalOptions="EndAndExpand" Margin="0,0,10,0">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="$"></Label>
+                                    <Label Text="{Binding total}" TextColor="Blue"></Label>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Quantity:"></Label>
+                                    <Label Text="{Binding quantity}" TextColor="Blue"></Label>
+                                </StackLayout>
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
+    </StackLayout>
+</ContentPage>

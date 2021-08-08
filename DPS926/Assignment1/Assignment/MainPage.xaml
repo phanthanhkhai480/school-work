@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    Title="Pizza App" 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Assignment.MainPage">
+    
+    <StackLayout>
+        <StackLayout Margin="10">
+            <StackLayout Orientation="Horizontal">
+                <Image Source="https://bit.ly/3ut02To" HeightRequest="50" WidthRequest="100" Margin="50,0,0,0"/>
+                <Button x:Name="myOrder" Text="Order Manager" Clicked="MyOrderClicked"
+                        WidthRequest="120" HeightRequest="40" Margin="100,0,30,0"
+                        FontSize="10"
+                        TextColor="White"
+                        CornerRadius="5"
+                        HorizontalOptions="End"
+                        VerticalOptions="Start"
+                        BackgroundColor="Blue"  />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Quantity: " TextColor="Black" FontSize="Medium" Margin="0,20,0,0"/>
+                <Label x:Name="quantity" Text="0" TextColor="Black" FontSize="Medium" Margin="0,20,0,0"/>
+            </StackLayout>
+
+
+            <StackLayout x:Name="selectQuantity" Margin="50,20,0,0">
+
+            </StackLayout>
+
+
+            <StackLayout Orientation="Horizontal" Margin="0,20,0,0">
+                <StackLayout Orientation="Horizontal" WidthRequest="200">
+                    <Label Text="Topping: " TextColor="Black" FontSize="15" Margin="15,0,0,0"   />
+                    <Label x:Name="topping_" Text="0" TextColor="Black" FontSize="15"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" WidthRequest="200">
+                    <Label Text="Size: " TextColor="Black" FontSize="15" Margin="0,0,0,0"   />
+                    <Label x:Name="size_" Text="0" TextColor="Black" FontSize="15"/>
+                </StackLayout>
+
+            </StackLayout>
+
+
+            <StackLayout VerticalOptions="End" Orientation="Horizontal">
+                <ListView x:Name="Topping" ItemSelected="Topping_ItemSelected">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextCell Text="{Binding topping}"></TextCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+                <ListView x:Name="Size" ItemSelected="Size_ItemSelected">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextCell Text="{Binding size}"></TextCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

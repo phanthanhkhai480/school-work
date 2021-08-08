@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    Title="Current Order"
+    xmlns="http://xamarin.com/schemas/2014/forms"          
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"       
+    x:Class="Assignment.check_current_order">
+
+    <StackLayout>
+        <StackLayout VerticalOptions="Start" HorizontalOptions="Center">
+            <Label x:Name="amount" Text="$0" HorizontalOptions="Center" FontSize="Title"/>
+            <Label x:Name="quantity" Text="0" HorizontalOptions="Center" FontSize="Title"/>
+        </StackLayout>
+
+        <ListView x:Name="orderDisplay" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Padding="10">
+                            <StackLayout Orientation="Vertical">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Topping: " TextColor="Black"></Label>
+                                    <Label Text="{Binding topping}" TextColor="Blue"></Label>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Size: " TextColor="Black"></Label>
+                                    <Label Text="{Binding size}" TextColor="Blue"></Label>
+                                </StackLayout>
+                            </StackLayout>
+                            <StackLayout Orientation="Vertical" HorizontalOptions="EndAndExpand">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding price}" TextColor="Red"></Label>
+                                    <Label Text="$" TextColor="Red"></Label>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Quantity: " TextColor="Black"></Label>
+                                    <Label Text="{Binding quantity}" TextColor="Blue"></Label>
+                                </StackLayout>
+                            </StackLayout>
+                        </StackLayout>
+                        
+                        <ViewCell.ContextActions>
+                            <MenuItem Text="Delete" Clicked="Delete_Button"  
+                                      CommandParameter="{Binding .}" IsDestructive="True" />
+                        </ViewCell.ContextActions>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Button Text="Place Order" BackgroundColor="SandyBrown" Margin="20" Clicked="place_order"
+                VerticalOptions="End" HorizontalOptions="Center"></Button>
+
+    </StackLayout>
+</ContentPage>
