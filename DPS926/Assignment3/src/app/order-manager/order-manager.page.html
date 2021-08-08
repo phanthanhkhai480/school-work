@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="home"></ion-back-button>
+      </ion-buttons>
+    <ion-title>Order Manager</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <br><br><br><br><br><br><br><br><br><br>
+  <ion-grid>
+    <ion-row class="ion-center"> 
+      <ion-col size-md="2">
+        <ion-button shape="round" color="secondary" (click)="checkCurrentOrder()">Check Current Order</ion-button>       
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="ion-center">  
+      <ion-col size-md="2">
+        <ion-button shape="round" color="secondary" (click)="updateCurrentOrder()">Update Current Order</ion-button>                               
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="ion-center">
+      <ion-col size-md="2">
+        <ion-button shape="round" color="secondary" (click)="previousOrder()">Previous Order</ion-button>                               
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="ion-center">
+      <ion-col size-md="2">
+        <ion-button shape="round" color="secondary" (click)="newOrder()">New Order</ion-button>                                     
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,123 @@
+<ion-header>
+  <ion-toolbar padding-horizontal>
+        <ion-grid>
+            <ion-row>
+                
+                <ion-col><ion-title>Main Page</ion-title></ion-col>
+            </ion-row>
+        </ion-grid>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Display Quantity pad -->
+    <ion-card>
+        <ion-card-header>
+            <ion-grid>
+                <ion-row>
+                    <ion-col>
+                        <ion-img src="https://bit.ly/36Kksxw" class="leading-img"></ion-img>
+                    </ion-col>
+                    <ion-col class="align-end">
+                        <ion-button color="secondary" shape="round" (click)="OrderManager()">Order Manager</ion-button>                      
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-card-title>Quantity: <label>{{mQuantity}}</label></ion-card-title>  
+                </ion-row>
+            </ion-grid>
+        </ion-card-header>
+
+        <ion-card-content>
+            <ion-grid>
+                <ion-row>                       
+                    <ion-col size-sm="1.5" offset-sm="3">
+                        <ion-button shape="round" color="light" expand="block" (click)="quantity(1)">1</ion-button>
+                    </ion-col>
+                    <ion-col size-sm="1.5">
+                        <ion-button shape="round" color="light" expand="block" (click)="quantity(2)">2</ion-button>
+                    </ion-col>
+                    <ion-col size-sm="1.5">
+                        <ion-button shape="round" color="light" expand="block" (click)="quantity(3)">3</ion-button>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row>                       
+                    <ion-col size-md="1.5" offset-sm="3">
+                        <ion-button shape="round" color="light" expand="block" (click)="quantity(4)">4</ion-button>
+                    </ion-col>
+                    <ion-col size-md="1.5">
+                        <ion-button shape="round" color="light" expand="block" (click)="quantity(5)">5</ion-button>
+                    </ion-col>
+                    <ion-col size-md="1.5">
+                        <ion-button shape="round" color="light" expand="block" (click)="quantity(6)">6</ion-button>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row>                       
+                    <ion-col size-md="1.5" offset-sm="3">
+                        <ion-button shape="round" color="light" expand="block" (click)="quantity(7)">7</ion-button>
+                    </ion-col>
+                    <ion-col size-md="1.5">
+                        <ion-button shape="round" color="light" expand="block" (click)="quantity(8)">8</ion-button>
+                    </ion-col>
+                    <ion-col size-md="1.5">
+                        <ion-button shape="round" color="light" expand="block" (click)="quantity(9)">9</ion-button>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row>                       
+                    <ion-col size-md="1.5" offset-sm="3">
+                        <ion-button shape="round" color="danger" expand="block" (click)="reset()">Reset</ion-button>
+                    </ion-col>
+                    <ion-col size-md="1.5">
+                        <ion-button shape="round" color="light" expand="block" (click)="quantity(0)">0</ion-button>
+                    </ion-col>
+                    <ion-col size-md="1.5">
+                        <ion-button shape="round" color="success" expand="block" (click)="add()">Add</ion-button>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-card-content>
+    </ion-card>
+  
+    <ion-grid>                   
+        <ion-row> 
+            <!-- Display Topping -->
+            <ion-col size-md="6">
+                <ion-card>
+                    <ion-card-header>
+                        <ion-card-title>Topping: <label>{{mTopping}}</label></ion-card-title>
+                    </ion-card-header>
+                    <ion-card-content>
+                        <ion-list>
+                            <ion-item *ngFor="let a of toppings;" (click)="toppingClicked(a)">
+                                <ion-label>
+                                    {{a.topping_}}
+                                </ion-label>
+                            </ion-item>     
+                        </ion-list>                                                               
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+            
+            <!-- Display Size -->
+            <ion-col size-md="6">
+                <ion-card>
+                    <ion-card-header>
+                        <ion-card-title>Size: <label>{{mSize}}</label></ion-card-title>
+                    </ion-card-header>
+                    <ion-card-content>
+                        <ion-list>
+                            <ion-item *ngFor="let b of sizes;" (click)="sizeClicked(b)">
+                                <ion-label>
+                                    {{b.size_}}
+                                </ion-label>
+                            </ion-item>     
+                        </ion-list>                               
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>     

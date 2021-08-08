@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="order-manager"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Previous Order</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <br>
+    <ion-row class="head-text">
+      <div>History Transaction</div>
+    </ion-row>
+  </ion-grid>
+  <br>
+
+  <ion-grid>
+    <ion-row class="ion-justify-content-between">
+      <ion-col>
+        <ion-card>
+          <ion-card-content>
+            <ion-list>
+              <ion-item *ngFor="let a of mPizzaCollection;">
+                <ion-grid>
+                  <ion-row class="ion-justify-content-between">
+                    <ion-col>
+                      <label>{{a.orderTime_}}</label>                  
+                    </ion-col>
+                  </ion-row>
+              
+                  <ion-row class="ion-justify-content-between">
+                    <ion-col size="5">
+                      <label>Amount: ${{a.orderTotal_}}</label>
+                    </ion-col>
+                    <ion-col size="5">
+                      <label>Quantity: {{a.orderQuantity_}}</label>
+                    </ion-col>
+                  </ion-row>
+                </ion-grid>
+              </ion-item>
+            </ion-list>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+</ion-content>
