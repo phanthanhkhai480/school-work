@@ -1,0 +1,73 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Flight Result</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row class="ion-justify-content-between">
+
+      <ion-col>
+        <ion-card>
+          
+          <ion-card-content>
+            <ion-list>
+              <ion-item (click)="save()">
+
+                <ion-grid>
+                  <ion-row class="ion-justify-content-between">
+                    <ion-col size="6">
+                      <label style="color:red">{{carrier}}</label>
+                    </ion-col>
+                    <ion-col size="6">
+                      <label style="color:green">{{currency}}{{price_quote}}</label>
+                    </ion-col>
+                  </ion-row>
+
+                  <ion-row class="ion-justify-content-between">
+                    <ion-col>
+                      <label>Depature Airport: {{origin}}</label>
+                    </ion-col>
+                  </ion-row>
+              
+                  <ion-row class="ion-justify-content-between">
+                    <ion-col>
+                      <label>Arrival Airport: {{destination}}</label>
+                    </ion-col>
+                  </ion-row>
+
+                  <ion-row class="ion-justify-content-between">
+                    <ion-col>
+                      <label>Departure Time: {{departure}}</label>
+                    </ion-col>
+                  </ion-row>
+
+                  <ion-row class="ion-justify-content-between">
+                    <ion-col>
+                      <label>Returning Time: {{arrival}}</label>
+                    </ion-col>
+                  </ion-row>
+              </ion-grid>
+
+              </ion-item>
+            </ion-list>
+          </ion-card-content>
+
+        </ion-card>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<!-- Footer without a border -->
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <p>Please Note: This is only mock data with an average estimated price only.</p>
+    <p>Due to COVID-19. some flight are not available, therefore data will not be shown. If it takes more than 10 seconds to load result, consider doing another search.</p>
+  </ion-toolbar>
+</ion-footer>

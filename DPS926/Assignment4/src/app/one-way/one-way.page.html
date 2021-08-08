@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>One-Way Search</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="form">
+    <ion-grid>
+
+      <ion-row>
+        <ion-col size-sm="6" offset-sm="3">
+          <ion-item>
+            <ion-label position="floating">Departure Airport</ion-label>
+            <ion-input [(ngModel)]="depart_" formControlName="departure" type="text" 
+                        placeholder="Departure City" autocapitalize="on" maxlength="4"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size-sm="6" offset-sm="3">
+          <ion-item>
+            <ion-label position="floating">Arrival Airport: </ion-label>
+            <ion-input [(ngModel)]="arrive_" formControlName="arrival" type="text" 
+                        placeholder="Arrival City" autocapitalize="on" maxlength="4"></ion-input>
+          </ion-item>    
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size-sm="6" offset-sm="3">
+          <ion-item>
+            <ion-label position="floating">Departure Date: </ion-label>
+            <ion-datetime [(ngModel)]="departDate_" formControlName="from" displayFormat="MMMM DD, YYYY" 
+                          [min]="departDate_" max="2023-08-01"></ion-datetime>
+          </ion-item>
+        </ion-col>       
+      </ion-row>
+
+      <ion-row>
+        <ion-col size-sm="6" offset-sm="3">
+          <ion-item>
+            <ion-label>Currency Select: </ion-label>
+            <ion-select #mySelect [value]="currency_" formControlName="dollar" (ionChange)="selectChanged(mySelect.value)">
+              <ion-select-option *ngFor="let a of currencies">{{ a.code_ }}</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row> 
+        <ion-col>
+          <ion-button (click)="onSubmitFlight()" shape="round" color="secondary" expand="block">Search</ion-button>       
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+  </form>
+</ion-content>
