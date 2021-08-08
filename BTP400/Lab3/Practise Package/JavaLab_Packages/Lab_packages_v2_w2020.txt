@@ -1,0 +1,157 @@
+
+Focus: Working with Java Packages of Classes. (updated on 1/30/2020)
+
+Note: You are not required to submit your answers to the questions.
+
+PART 0: READING.
+1. Read "Creating and Using Packages" in The Java Tutorials:
+   https://docs.oracle.com/javase/tutorial/java/package/packages.htm.
+
+PART 1A: Set up the directory structure for a Java package.
+0. You should have four Java source files after you have unzipped JavaLab_Pacakages.zip.
+
+1. a) Open a command prompt window.
+- Opened
+   b) Create a working directory.
+      c:\>mkdir c:\temp 
+- Created
+	  
+   c) Copy three Java sources (PackageDemo.java, May.java, August.java)
+      into this working directory.
+- Moved
+
+2. a) Inspect these two source files: May.java and August.java. 
+      Question 1: What is the package name?
+- Package name was seneca.summer2004
+
+   b) Inspect the source file: PackageDemo.java. 
+      Question 2: What is the package name?
+- There is no package name
+
+3. a) In the current working directory, create a subdirectory/subfolder with the name "seneca."
+      c:\temp>mkdir seneca
+- Created
+
+   b) Under the "seneca" subdirectory, create another subdirectory with the name "summer2004."
+      c:\temp>cd seneca
+	  c:\temp\seneca>mkdir summer2004
+- Created
+   
+   c) MOVE (not copy) May.java and August.java from the current working directory (c:\temp) into \summer2004.
+- Moved
+
+4. a) Read the comments in PackageDemo.java.
+      Question 3: How do you compile PackageDemo.java?
+- I used the command javac PackageDemo.java and it automatically execute and generate the .class files
+
+   b) Compile PackageDemo.java.
+- It ran
+
+   c) Inspect the subdirectory "summer2004". 
+      Question 4: Do you find class files there? What are their names?
+- The system generated the .class files for August.java and May.java file
+
+5. Read the comments in PackageDemo.java.
+   Question 1A.5: How do you run the class file (PackageDemo.class)?
+- I ran using the command java PackageDemo
+  
+6. Take a screenshot of your command prompt window.
+- Done
+
+7. Note: During your demo time, without looking at this document, you are expected to show all these steps 
+         about creating, compiling and running Java packages within a command prompt window. 
+ 
+      
+PART 1B: Set up the directory structure for a Java package, ANYWHERE on the file system. 
+1. Create a directory with a name such as "c:\elsewhere".
+- Created
+
+2. Use this directory (i.e. c:\elsewhere) to create the Java packages on the file system.
+- Created
+
+3. Go back to your previous working directory (e.g. c:\temp) used in Part 1A.
+   Delete the subdirectory "seneca". PackageDemo.java should still be in the working directory (c:\temp).
+- Done
+
+4. a) Read the comments in PackageDemo.java.
+      Question 1: How do you compile and run PackageDemo.java?	  
+- Since May and August are in new location, I have to specify the new location where the files 
+are so the PackageDemo can located it and compile it
+   b) Compile and run PackageDemo.java.
+- javac -classpath .;C:\Users\phant\Desktop\Lab3 PackageDemo.java
+- java -classpath .;C:\Users\phant\Desktop\Lab3 PackageDemo
+   
+5. Take a screenshot of your command prompt window.  
+- Done
+   
+6. Note: During your demo time, Next week, you may be asked about using classpaths in compiling and running a Java package.
+
+PART 1C: SUBMISSION REQUIREMENTS.
+Submit two screenshots of the command prompt windows at Blackboard.
+
+PART 2A: DO IT AT HOME. NO SUBMISSION REQUIRED.
+Note: You are not required to submit the work that you do at home. However, you may be asked to 
+      answer questions related to the work done at home.
+
+1. READING
+   Read the following sections in The Java Tutorials.
+   a) Managing Source and Class Files
+      https://docs.oracle.com/javase/tutorial/java/package/managingfiles.html.
+- Done
+
+   b) How to use "javac -directory"?
+      https://docs.oracle.com/javase/7/docs/technotes/tools/windows/javac.html.
+- Done
+
+
+PART 2B: DO IT AT HOME. NO SUBMISSION REQUIRED.
+1. Assign the package name "seneca.summer2004" to the Java class in PackageDemo.java.
+   a) Comment out the statement "import seneca.summer2004.*;" in PackageDemo.java.
+- Done
+
+   b) Insert the statement "package seneca.summer2004;" at the beginning of PackageDemo.java.
+- Done
+   
+2. Select your root directory for the package "seneca.summer2004" (e.g. c:\elsewhere or c:\temp).
+- Done
+
+3. Question: Where are you going to put PackageDemo.java?
+
+
+4. Try the following 2 commands:
+
+    >javac   ./seneca/summer2004/PackageDemo.java
+
+    >java    seneca.summer2004.PackageDemo
+        
+5. Question: Are you able to run the Java application successfully?
+- I was able to run the first commamd to generate the .class file only
+- However on the 2nd one, I cannot run the PackageDemo
+      	
+      	
+Part 3A: DO IT AT HOME. NO SUBMISSION REQUIRED.
+Objective: Create three packages of these four Java classes (within a command prompt window):
+      - lab.testing.PackageDemo, 
+      - opensource.seneca.January, 
+      - seneca.summer2004.May, seneca.summer2004.August.
+	     
+1. Modify the source code of lab.testing.PackageDemo such that its toString() method will invoke the toString() methods
+   from opensource.seneca.January, seneca.summer2004.May and seneca.summer2004.August. 
+   (Note: You will find January.java in the zip file.)
+   
+2. a) Select your current working directory such as c:\temp.
+   b) Put all three packages in the working directory.
+   c) Question: How do you compile and run lab3.testing.PackageDemo from your current working directory?
+      (Note: The lab3.testing.PackageDemo class has the main method.)
+
+Part 3B: DO IT AT HOME. NO SUBMISSION REQUIRED.
+1. Use another working directory (e.g. c:\temp\testjava) such that it is not the root directory for these packages.
+
+2. Question: How do you compile and run lab.testing.PackageDemo at this working directory (i.e. c:\temp\testjava\)?
+
+
+
+
+
+
+
