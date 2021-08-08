@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Assignment2.FlightHistory"
+             BackgroundColor="SkyBlue">
+
+    <StackLayout Margin="20">
+        <Button Text="Go Back" Clicked="go_back" CornerRadius="20"
+                WidthRequest="100" HorizontalOptions="Start"></Button>
+
+        <ListView x:Name="result_history" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Vertical" Margin="0,20,0,10">
+                            <StackLayout Orientation="Horizontal" Margin="5,0,5,0">
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
+                                    <Label Text="{Binding carrier}" TextColor="Black" FontSize="Medium"/>
+                                </StackLayout>
+
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                                    <Label Text="{Binding quote_price}" TextColor="Black" FontSize="Medium"/>
+                                    <Label Text="{Binding currency_symbol}" TextColor="Black" FontSize="Medium"/>
+                                </StackLayout>
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal" Margin="25,0,0,0">
+                                <StackLayout Orientation="Vertical" WidthRequest="120">
+                                    <Label x:Name="airport_origin" Text="Origin: " FontSize="Small"/>
+                                    <Label x:Name="airport_departure" Text="Destination: " FontSize="Small"/>
+                                    <Label x:Name="depart_time" Text="Departure Time: " FontSize="Small"/>
+                                    <Label x:Name="return_time" Text="Return Time: " FontSize="Small" />
+                                </StackLayout>
+
+                                <StackLayout Orientation="Vertical">
+                                    <Label Text="{Binding place_origin}" TextColor="Black" FontSize="Small"/>
+                                    <Label Text="{Binding place_destination}" TextColor="Black" FontSize="Small"/>
+                                    <Label Text="{Binding time_depart}" TextColor="Black" FontSize="Small"/>
+                                    <Label Text="{Binding time_return}" TextColor="Black" FontSize="10" x:Name="time_return"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </StackLayout>
+
+                        <ViewCell.ContextActions>
+                            <MenuItem Text="Delete" Clicked="deleteFromDB"  
+                                      CommandParameter="{Binding .}" IsDestructive="True" />
+                        </ViewCell.ContextActions>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <StackLayout VerticalOptions="EndAndExpand" HorizontalOptions="Center">
+            <Label x:Name="warning1" FontSize="Small"></Label>
+            <Label x:Name="warning2" FontSize="Small"></Label>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    Title="Flight Booking"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Assignment2.Flight"
+    BackgroundColor="SkyBlue">
+
+    <StackLayout Margin="20">
+        <Button Text="Go Back" Clicked="go_back" CornerRadius="20"
+                WidthRequest="100" HorizontalOptions="Start"></Button>
+  
+        <StackLayout Margin="0,50,0,0">
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Origin" VerticalOptions="Center" FontSize="16"/>
+                <Entry x:Name="origin" WidthRequest="180" Placeholder="From?" HorizontalOptions="EndAndExpand"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Destination" VerticalOptions="Center" FontSize="16"/>
+                <Entry x:Name="destination" WidthRequest="180" Placeholder="To?" HorizontalOptions="EndAndExpand"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Departure Date" VerticalOptions="Center" FontSize="16"/>
+                <DatePicker x:Name="depart_date" WidthRequest="180" Format="MMM dd yyyy" 
+                            MinimumDate="{Binding min_date}" MaximumDate="{Binding max_date}" HorizontalOptions="EndAndExpand"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Currency" VerticalOptions="Center" FontSize="16"/>
+                <Picker x:Name="currency" Title="Select a currency" SelectedIndexChanged="currency_SelectedIndexChanged" 
+                        WidthRequest="180" HorizontalOptions="EndAndExpand">   
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>USD</x:String>
+                            <x:String>EUR</x:String>
+                            <x:String>GBP</x:String>
+                            <x:String>AUD</x:String>
+                            <x:String>NZD</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+            </StackLayout>
+        </StackLayout>
+
+        <Button Text="Search" Clicked="flight_search" WidthRequest="200" 
+                HorizontalOptions="Center" VerticalOptions="EndAndExpand"></Button>
+    </StackLayout>
+</ContentPage>

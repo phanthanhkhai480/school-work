@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    Title="Travelling App"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Assignment2.MainPage"
+    BackgroundImageSource="https://previews.123rf.com/images/valiva/valiva1807/valiva180700001/105174250-summer-background-with-tropical-landscape-view-from-terrace-on-seaside-flying-birds-and-distant-tree.jpg">
+
+    <StackLayout>
+        <StackLayout>
+            <Ellipse Fill="Orange" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="0,200,0,0"
+                WidthRequest="250" HeightRequest="70" />
+            <Label Text="Travel Paradise" TextColor="WhiteSmoke" FontSize="25" Margin="0,-60,0,0"
+               HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"></Label>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="EndAndExpand" Margin="0,0,0,45">
+            <Button Text="Book a Flight" Clicked="Flight_Booking" Margin="0,0,20,0" FontSize="16" BackgroundColor="DarkOrange"
+                    TextColor="WhiteSmoke" CornerRadius="50" WidthRequest="180" HeightRequest="50"></Button>
+            <Button Text="Book Hotel" Clicked="Hotel_Booking" FontSize ="16" BackgroundColor="DarkOrange"
+                    TextColor="WhiteSmoke" CornerRadius="50"  WidthRequest="180" HeightRequest="70"></Button>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>
