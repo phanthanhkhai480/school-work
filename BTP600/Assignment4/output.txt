@@ -1,0 +1,70 @@
+Test 1 - Singleton Test
+Test 1: passed
+Test 2 - Observer Test
+Stars: *
+Seconds: 1
+Status: unpaused
+Stars: 
+Seconds: 0
+Status: paused
+
+--------------------------------------------
+
+Stars: **
+Seconds: 2
+Status: unpaused
+Stars: **
+Seconds: 2
+Status: unpaused
+
+--------------------------------------------
+
+Stars: **
+Seconds: 2
+Status: unpaused
+Stars: ***
+Seconds: 3
+Status: unpaused
+
+--------------------------------------------
+
+Stars: **
+Seconds: 2
+Status: unpaused
+Stars: ***
+Seconds: 3
+Status: paused
+
+--------------------------------------------
+
+Test 3 - Memento Test
+Stars: 
+Seconds: 0
+Status: paused
+
+--------------------------------------------
+
+Stars: *
+Seconds: 1
+Status: unpaused
+
+--------------------------------------------
+
+Stars: *
+Seconds: 1
+Status: paused
+
+--------------------------------------------
+
+Stars: **
+Seconds: 2
+Status: unpaused
+
+--------------------------------------------
+
+Stars: **
+Seconds: 2
+Status: paused
+
+--------------------------------------------
+
