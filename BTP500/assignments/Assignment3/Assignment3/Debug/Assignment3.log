@@ -1,0 +1,25 @@
+﻿  a3main.local.cpp
+  a3main.matrix.cpp
+  timer.cpp
+C:\Users\phant\Desktop\Semester10\BTP500\labs-btp500-khai-phan\a3-a3-khai-phan-mamadou-diallo-main\timer.cpp(17,19): error C2065: 'CLOCK_MONOTONIC_RAW': undeclared identifier
+C:\Users\phant\Desktop\Semester10\BTP500\labs-btp500-khai-phan\a3-a3-khai-phan-mamadou-diallo-main\timer.cpp(17,5): error C3861: 'clock_gettime': identifier not found
+C:\Users\phant\Desktop\Semester10\BTP500\labs-btp500-khai-phan\a3-a3-khai-phan-mamadou-diallo-main\timer.cpp(29,19): error C2065: 'CLOCK_MONOTONIC_RAW': undeclared identifier
+C:\Users\phant\Desktop\Semester10\BTP500\labs-btp500-khai-phan\a3-a3-khai-phan-mamadou-diallo-main\timer.cpp(29,5): error C3861: 'clock_gettime': identifier not found
+C:\Users\phant\Desktop\Semester10\BTP500\labs-btp500-khai-phan\a3-a3-khai-phan-mamadou-diallo-main\timer.cpp(48,19): error C2065: 'CLOCK_MONOTONIC_RAW': undeclared identifier
+C:\Users\phant\Desktop\Semester10\BTP500\labs-btp500-khai-phan\a3-a3-khai-phan-mamadou-diallo-main\timer.cpp(48,5): error C3861: 'clock_gettime': identifier not found
+C:\Users\phant\Desktop\Semester10\BTP500\labs-btp500-khai-phan\a3-a3-khai-phan-mamadou-diallo-main\timer.cpp(54,23): error C2065: 'CLOCK_MONOTONIC_RAW': undeclared identifier
+C:\Users\phant\Desktop\Semester10\BTP500\labs-btp500-khai-phan\a3-a3-khai-phan-mamadou-diallo-main\timer.cpp(54,9): error C3861: 'clock_gettime': identifier not found
+C:\Users\phant\Desktop\Semester10\BTP500\labs-btp500-khai-phan\a3-a3-khai-phan-mamadou-diallo-main\timer.cpp(65,19): error C2065: 'CLOCK_MONOTONIC_RAW': undeclared identifier
+C:\Users\phant\Desktop\Semester10\BTP500\labs-btp500-khai-phan\a3-a3-khai-phan-mamadou-diallo-main\timer.cpp(65,5): error C3861: 'clock_gettime': identifier not found
+C:\Users\phant\Desktop\Semester10\BTP500\labs-btp500-khai-phan\a3-a3-khai-phan-mamadou-diallo-main\timer.cpp(79,19): error C2065: 'CLOCK_MONOTONIC_RAW': undeclared identifier
+C:\Users\phant\Desktop\Semester10\BTP500\labs-btp500-khai-phan\a3-a3-khai-phan-mamadou-diallo-main\timer.cpp(79,5): error C3861: 'clock_gettime': identifier not found
+  trie.cpp
+C:\Users\phant\Desktop\Semester10\BTP500\labs-btp500-khai-phan\a3-a3-khai-phan-mamadou-diallo-main\trie.cpp(28,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\phant\Desktop\Semester10\BTP500\labs-btp500-khai-phan\a3-a3-khai-phan-mamadou-diallo-main\trie.cpp(55,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\phant\Desktop\Semester10\BTP500\labs-btp500-khai-phan\a3-a3-khai-phan-mamadou-diallo-main\trie.cpp(86,15): error C2065: 'numOfWords': undeclared identifier
+C:\Users\phant\Desktop\Semester10\BTP500\labs-btp500-khai-phan\a3-a3-khai-phan-mamadou-diallo-main\trie.cpp(87,3): error C2065: 'numOfWords': undeclared identifier
+C:\Users\phant\Desktop\Semester10\BTP500\labs-btp500-khai-phan\a3-a3-khai-phan-mamadou-diallo-main\trie.cpp(96,69): error C2065: 'numOfWords': undeclared identifier
+C:\Users\phant\Desktop\Semester10\BTP500\labs-btp500-khai-phan\a3-a3-khai-phan-mamadou-diallo-main\trie.cpp(175,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\phant\Desktop\Semester10\BTP500\labs-btp500-khai-phan\a3-a3-khai-phan-mamadou-diallo-main\trie.cpp(195,54): error C2660: 'Trie::Suggestion': function does not take 4 arguments
+C:\Users\phant\Desktop\Semester10\BTP500\labs-btp500-khai-phan\a3-a3-khai-phan-mamadou-diallo-main\trie.cpp(81,11): message : see declaration of 'Trie::Suggestion'
+  Generating Code...
