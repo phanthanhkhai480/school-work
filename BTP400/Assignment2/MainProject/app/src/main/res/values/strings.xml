@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">BTP400-Assignment2</string>
+    <string name="signup">Don\'t have an account? Sign-Up</string>
+
+    <string name="Login">Login</string>
+    <string name="Username">Username</string>
+    <string name="Password">Password</string>
+    <string name="Register">Create Account</string>
+    <string name="re_enter_password">Confirm Password</string>
+    <string name="Back">Go Back</string>
+    <string name="Logout">LogOut</string>
+
+    <string name="Flight">Search Flights</string>
+    <string name="originPlace">Departure</string>
+    <string name="destinationPlace">Destination</string>
+    <string name="outboundDate">Outbound Date</string>
+    <string name="inboundDate">Inbound Date</string>
+    <string name="air_pacific">Air Pacific</string>
+    <string name="yyz">YYZ</string>
+    <string name="lax">LAX</string>
+    <string name="_120_00">$ 120.00</string>
+    <string name="departure_12_03_2020">Departure : 12/03/2020</string>
+    <string name="return_12_04_2020">Return : 12/04/2020</string>
+    <string name="to"><![CDATA[->]]></string>
+
+    <string name="Hotel">Search Hotel</string>
+    <string name="Guests">Guests</string>
+    <string name="CheckIn">Check-In Date</string>
+    <string name="CheckOut">Check-Out Date</string>
+    <string name="max_price">Max Price:</string>
+    <string name="dollar_sign">$</string>
+    <string name="_100_00">100.00</string>
+    <string name="search">Search</string>
+    <string name="for_2_adults">For 2 adults</string>
+    <string name="_16_01_2020_to_18_01_2020">16/01/2020 to 18/01/2020</string>
+    <string name="hotel_name">Hotel Name</string>
+</resources>

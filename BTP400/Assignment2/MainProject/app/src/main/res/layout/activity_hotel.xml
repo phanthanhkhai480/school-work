@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+                                        <!-- Front-End: Display Hotel Activity -->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".HotelActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:layout_marginEnd="10sp"
+        android:layout_marginBottom="20sp"
+        android:gravity="end"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/hotelLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="20sp"
+            android:text="@string/Logout"
+            android:textAllCaps="false"
+            android:textSize="30sp"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/hotelBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="@string/Back"
+            android:textAllCaps="false"
+            android:textSize="30sp"
+            tools:ignore="ButtonStyle" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20sp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/destinationPlace"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="40dp"
+            android:hint="@string/destinationPlace"
+            android:inputType="textShortMessage"
+            android:textSize="30sp" />
+
+
+        <EditText
+            android:id="@+id/guests"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/Guests"
+            android:inputType="textShortMessage"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20sp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp">
+
+            <EditText
+                android:id="@+id/checkIn"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="date"
+                android:textSize="30sp"
+                android:hint="@string/CheckIn" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/calendar"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/calendar_btn_1"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/checkOut"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="date"
+                android:textSize="30sp"
+                android:hint="@string/CheckOut"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/calendar"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/calendar_btn_2"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/max_price"
+            android:textSize="30sp" />
+        <androidx.legacy.widget.Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/dollar_sign"
+            android:textSize="30sp" />
+
+        <EditText
+            android:id="@+id/price_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="10dp"
+            android:inputType="numberDecimal"
+            android:text="@string/_100_00"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20sp"/>
+
+    <Button
+        android:id="@+id/searchHotel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/search"
+        android:textAllCaps="false"
+        android:textSize="30sp"
+        tools:ignore="ButtonStyle"  />
+</LinearLayout>

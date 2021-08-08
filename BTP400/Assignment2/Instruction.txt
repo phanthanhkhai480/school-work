@@ -1,0 +1,41 @@
+If runnning the file via .apk
+1. Have one of the Android emulator ready. (appetite.io is a free online emulator you can use)
+2. Choose a device to run the emulator (any phone with screen size of 5.0-5.5 inch will work).
+3. Install the .apk.
+
+If running the file via Android Studio
+1. Have Android Studio installed in the machine. (Ensure the latest version is installed, version 3.6.2)
+2. After launch, open an existing project and open the folder where it contains the programs and the source code.
+3. Clean and rebuild project
+4. Have at least one of the emulator installed in the program.
+	(any phone of screen size from 5.0-5.5 and running from Kitkat 4.4 should do the job).
+
+Once the emulator is running
+- The first screen will be login screen, as for the purpose of testing all of the method,
+assume we don't have any account at the moment.
+- Proceed to Create Account button.
+- RegisterActivity will be directed, please enter the information as discretion.
+	1. If the password is unmatch, an AlertDialog will pop-up to notify.
+	2. If everything is good, an AlertDialog will pop-up to confirm.
+- Assume the process has no issue, when the user click on the OK from the AlertDialog, it will
+direct user back to the MainActivity login page.
+- Enter information as created previously.
+	1. If Account isn't exist, a pop-up will be displayed to ask user to create an account.
+	2. If Account is exist and password is match, it will prompt the user in.
+- SecondActivity should be display if nothing goes wrong
+- In SecondActivity, there will be 2 APIs, for Search Flight and Search Hotel
+
+For Search Flight:
+1. Enter information in the field provided, adjust the price if necessary.
+2. Hit on the search to trigger the API calling.
+3. Result will be display underneath.
+4. User can LogOut if no longer want to be in the app.
+5. User can Go Back to choose another APIs.
+
+For Search Hotel:
+1. Enter information in the field provided, adjust the price if necessary.
+2. Hit on the search to trigger the API calling.
+3. Result will be display on another page .
+	(since it has more result, display it on another page can show more result in one screen).
+4. User can LogOut if no longer want to be in the app.
+5. User can Go Back to choose another APIs.
