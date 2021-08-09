@@ -1,0 +1,116 @@
+
+We, Haoyu Yang and Mahnoor Siddiqui, declare that the attached assignment 
+is our own work in accordance with the Seneca Academic Policy.
+No part of this assignment has been copied manually or electronically
+from any other source (including web sites) or distributed to other students.
+
+
+DESCRIBE EMPLOYEES
+Name           Null     Type         
+-------------- -------- ------------ 
+EMPLOYEE_ID    NOT NULL NUMBER(6)    
+FIRST_NAME              VARCHAR2(20) 
+LAST_NAME      NOT NULL VARCHAR2(25) 
+EMAIL          NOT NULL VARCHAR2(25) 
+PHONE_NUMBER            VARCHAR2(20) 
+HIRE_DATE      NOT NULL DATE         
+JOB_ID         NOT NULL VARCHAR2(10) 
+SALARY                  NUMBER(8,2)  
+COMMISSION_PCT          NUMBER(2,2)  
+MANAGER_ID              NUMBER(6)    
+DEPARTMENT_ID           NUMBER(4)    
+
+EMPLOYEE_ID LAST_NAME               
+----------- -------------------------
+        141 Rajs                      
+        142 Davies                    
+
+ REGION_ID
+----------
+         1 
+         2 
+         4 
+         3 
+
+COUNTRIES                                                                            
+--------------------------------------------------------------------------------------
+ZW, Zimbabwe, 4                                                                        
+ZM, Zambia, 4                                                                          
+US, United States of America, 2                                                        
+UK, United Kingdom, 1                                                                  
+SG, Singapore, 3                                                                       
+NL, Netherlands, 1                                                                     
+NG, Nigeria, 4                                                                         
+MX, Mexico, 2                                                                          
+KW, Kuwait, 4                                                                          
+JP, Japan, 3                                                                           
+IT, Italy, 1                                                                           
+IN, India, 3                                                                           
+IL, Israel, 4                                                                          
+HK, HongKong, 3                                                                        
+FR, France, 1                                                                          
+EG, Egypt, 4                                                                           
+DK, Denmark, 1                                                                         
+DE, Germany, 1                                                                         
+CN, China, 3                                                                           
+CH, Switzerland, 1                                                                     
+CA, Canada, 2                                                                          
+BR, Brazil, 2                                                                          
+BE, Belgium, 1                                                                         
+AU, Australia, 3                                                                       
+AR, Argentina, 2                                                                       
+
+ 25 rows selected 
+
+STREET ADDRESS                           CITY                         
+---------------------------------------- ------------------------------
+Mariano Escobedo 9991                    Mexico City                    
+Schwanthalerstr. 7031                    Munich                         
+
+old:SELECT LAST_NAME, FIRST_NAME
+FROM EMPLOYEES
+WHERE DEPARTMENT_ID = '&DEPARTMENT_ID'
+new:SELECT LAST_NAME, FIRST_NAME
+FROM EMPLOYEES
+WHERE DEPARTMENT_ID = '20'
+LAST_NAME                 FIRST_NAME         
+------------------------- --------------------
+Hartstein                 Michael              
+Fay                       Pat                  
+
+old:SELECT FIRST_NAME, &NAME, &&NAME + 10
+FROM EMPLOYEES
+new:SELECT FIRST_NAME, hire_date, hire_date + 10
+FROM EMPLOYEES
+FIRST_NAME           HIRE_DATE HIRE_DATE+10
+-------------------- --------- ------------
+Steven               17-JUN-87 27-JUN-87    
+Neena                21-SEP-89 01-OCT-89    
+Lex                  13-JAN-93 23-JAN-93    
+Alexander            03-JAN-90 13-JAN-90    
+Bruce                21-MAY-91 31-MAY-91    
+Diana                07-FEB-99 17-FEB-99    
+Kevin                16-NOV-99 26-NOV-99    
+Trenna               17-OCT-95 27-OCT-95    
+Curtis               29-JAN-97 08-FEB-97    
+Randall              15-MAR-98 25-MAR-98    
+Peter                09-JUL-98 19-JUL-98    
+Eleni                29-JAN-00 08-FEB-00    
+Ellen                11-MAY-96 21-MAY-96    
+Jonathon             24-MAR-98 03-APR-98    
+Kimberely            24-MAY-99 03-JUN-99    
+Jennifer             17-SEP-87 27-SEP-87    
+Michael              17-FEB-96 27-FEB-96    
+Pat                  17-AUG-97 27-AUG-97    
+Shelley              07-JUN-94 17-JUN-94    
+William              07-JUN-94 17-JUN-94    
+
+ 20 rows selected 
+
+Symbol LAST is UNDEFINED
+old:SELECT PHONE_NUMBER FROM EMPLOYEES WHERE LAST_NAME = '&LAST'
+new:SELECT PHONE_NUMBER FROM EMPLOYEES WHERE LAST_NAME = 'Taylor'
+PHONE_NUMBER       
+--------------------
+011.44.1644.429265   
+

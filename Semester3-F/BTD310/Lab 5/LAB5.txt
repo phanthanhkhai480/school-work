@@ -1,0 +1,33 @@
+DESCRIBE DEP_CPY
+Name            Null     Type         
+--------------- -------- ------------ 
+DEPARTMENT_ID            NUMBER(4)    
+DEPARTMENT_NAME NOT NULL VARCHAR2(30) 
+MANAGER_ID               NUMBER(6)    
+LOCATION_ID              NUMBER(4)    
+
+DEPARTMENT_ID DEPARTMENT_NAME                MANAGER_ID LOCATION_ID
+------------- ------------------------------ ---------- -----------
+           20 Marketing                             201        1800 
+           50 Shipping                              103        1500 
+           60 IT                                    103        1400 
+           80 Sales                                 149        2500 
+           90 Executive                             100        1700 
+          110 Accounting                            149        2500 
+          190 Contracting                                      1700 
+          200 Programming                           201             
+          210 Web design                                       1700 
+
+ 9 rows selected 
+
+DESCRIBE MyTable
+Name      Null     Type          
+--------- -------- ------------- 
+M_ID      NOT NULL NUMBER(38)    
+M_DATE             DATE          
+M_SUBJECT          VARCHAR2(100) 
+M_CODE             CHAR(3)       
+
+no rows selected
+
+

@@ -1,0 +1,59 @@
+--Question 5
+TOOL_NAME                                   TI_NUM  RETAILER_NAME                  TI_STATUS       AVALIBILITY
+---------------------------------------- ---------- ------------------------------ --------------- ----------
+Grass trimmer                                    16 Johnson                        Rented          15-12-2017
+Tractor                                          14 YYY Tractors                   Available       Now       
+Tractor                                          15 YYY Tractors                   Available       Now       
+Tractor/mower                                    13 John Deer                      Available       Now       
+Tree pruning shears                              22 XXX's manufacturing            Available       Now       
+Tree pruning shears                              23 XXX's manufacturing            Available       Now       
+
+6 rows selected. 
+
+
+--Question 6
+    TI_NUM   TOOL_NUM TI_PURCH TI_STATUS      
+---------- ---------- -------- ---------------
+        17       9991 14-04-03 Rented         
+        20       9991 15-07-09 Rented  
+
+--Question 7
+
+2 rows updated.
+
+
+Name                                            Retailer                           Number Status          Expected
+----------------------------------------------- ------------------------------ ---------- --------------- --------
+Grass trimmer                                   Johnson                                17 Available       15-10-15
+Grass trimmer                                   Johnson                                20 Available       15-08-25
+Grass trimmer                                   Johnson                                20 Available       16-10-15
+
+
+
+
+--Question 8
+CONTRACTOR_NAME           CONTRACTOR_PHONE_NUM TOOL_NAME                            TI_NUM RENT_DATE DETAIL_DUEDATE
+------------------------- -------------------- -------------------------------- ---------- --------- --------------
+John Adams                416-555-9999         Grass trimmer                            16 01-OCT-16 30-DEC-17      
+Audry's                   647-666-8888         Grass trimmer                            21 15-AUG-16 25-DEC-17      
+
+
+--Question 9
+  TI_NUM #days rented out #days since purchase
+---------- ---------------- --------------------
+        11              170                 2160
+        12             1240                 1250
+        13                0                  480
+        14                0                  470
+        15                0                  470
+        16              430                 1740
+        17               70                 1340
+        18                0                 1310
+        19                0                  910
+        20              270                  880
+        21              480                  480
+
+    TI_NUM #days rented out #days since purchase
+---------- ---------------- --------------------
+        22                0                  580
+        23                0                  580

@@ -1,0 +1,41 @@
+--CONTRACTOR_INFO view
+This will give the manager a view of which contractor is borrowing
+our equipment. Instead of giving the name straight forward, I've 
+decided to give him the TI_NUM
+
+CONTRACTOR_NAME               TI_NUM RENT_DATE
+------------------------- ---------- ---------
+Carmen's                          11 12-02-01
+Carmen's                          12 14-07-15
+Carmen's                          12 15-08-30
+John Adams                        16 16-10-01
+Audry's                           17 15-08-03
+ABC Contractors                   20 15-07-10
+Audry's                           21 16-08-15
+John Adams                        20 16-03-01
+
+
+
+--RETAILER_INFO
+This will give the manager a clear sense of what product 
+is bought from which retailer, and also the information about
+how long the product have been purchased, as well as the current
+status of the product
+RETAILER_NAME                  TOOL_NAME                     TOOL_COST  Number of Year bought TI_STATUS      
+------------------------------ ----------------------------- ---------- --------------------- ----------
+John Deer                      Tractor/mower                    5001.99                     7 Destroyed      
+John Deer                      Tractor/mower                    5001.99                     4 Rented         
+John Deer                      Tractor/mower                    5001.99                     2 Available      
+YYY Tractors                   Tractor                             6000                     2 Available      
+YYY Tractors                   Tractor                             6000                     2 Available      
+Johnson                        Grass trimmer                     150.89                     6 Rented         
+Johnson                        Grass trimmer                     150.89                     5 Rented         
+Johnson                        Grass trimmer                     150.89                     5 Destroyed      
+Johnson                        Grass trimmer                     150.89                     4 Destroyed      
+Johnson                        Grass trimmer                     150.89                     3 Rented         
+Johnson                        Grass trimmer                     150.89                     2 Rented         
+
+RETAILER_NAME                  TOOL_NAME                     TOOL_COST  Number of Year bought TI_STATUS      
+------------------------------ ----------------------------- ---------- --------------------- ----------
+XXX's manufacturing            Tree pruning shears                499.5                     3 Available      
+XXX's manufacturing            Tree pruning shears                499.5                     3 Available   

@@ -1,0 +1,118 @@
+We, MAHNOOR, KHAI, HAO, declare that the attached assignment is our own work in accordance with the Seneca Academic Policy.  No part of this assignment has been copied manually or electronically from any other source (including web sites) or distributed to other students.
+
+Question 1 A
+
+LAST_NAME               
+-------------------------
+Zlotkey                   
+
+Question 1 B
+
+Number of Locations
+-------------------
+                  5 
+Question 2
+
+Area code      Count
+--------- ----------
+011                4 
+515                7 
+590                3 
+603                1 
+650                5 
+
+Question 3
+
+    Others
+----------
+         4 
+
+Question 4
+
+DEPARTMENT_ID Mid salary
+------------- ----------
+           20       9500 
+           80       9800 
+           90      20500 
+          110      10150 
+
+Question 5
+
+DEPARTMENT_ID Total bonuses
+------------- -------------
+           10          1000 
+           20          2000 
+           50          5000 
+           60          3000 
+           80          1500 
+           90          3000 
+          110          2000 
+
+ 7 rows selected 
+
+Question 6
+
+DEPARTMENT_NAME                ADDRESS                                                                                           
+------------------------------ ---------------------------------------------------------------------------------------------------
+IT                             2014 Jabberwocky Rd, Southlake, Texas                                                               
+Marketing                      147 Spadina Ave, Toronto, Ontario                                                                   
+Sales                          Magdalen Centre, The Oxford Science Park, Oxford, Oxford                                            
+Shipping                       2011 Interiors Blvd, South San Francisco, California                                                
+
+
+Question 7
+ 
+LAST_NAME                 EMPLOYEE_ID
+------------------------- -----------
+Hunold                            103 
+King                              100 
+Kochhar                           101 
+Lorentz                           107 
+Matos                             143 
+Mourgos                           124 
+Rajs                              141 
+Taylor                            176 
+Vargas                            144 
+Whalen                            200 
+Zlotkey                           149 
+
+ 11 rows selected 
+
+Question 8 
+
+LAST_NAME                 EMPLOYEE_ID
+------------------------- -----------
+Hunold                            103 
+King                              100 
+Kochhar                           101 
+Lorentz                           107 
+Matos                             143 
+Mourgos                           124 
+Rajs                              141 
+Taylor                            176 
+Vargas                            144 
+Whalen                            200 
+Zlotkey                           149 
+
+ 11 rows selected 
+
+Question 9
+
+Area code Percentage
+--------- ----------
+603                5 
+590               15 
+011               20 
+650               25 
+515               35 
+
+Question 10
+
+LOCATION_ID Mid salary
+----------- ----------
+       1400       6600 
+       1500       4150 
+       1700      14200 
+       1800       9500 
+       2500       9800 
+

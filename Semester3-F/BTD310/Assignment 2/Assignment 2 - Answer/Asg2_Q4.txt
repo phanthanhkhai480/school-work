@@ -1,0 +1,50 @@
+--Inserted into Retailer Table
+1 row inserted.
+1 row inserted.
+1 row inserted.
+1 row inserted.
+
+--Inserted into Tools Table
+1 rows inserted.
+1 rows inserted.
+1 rows inserted.
+1 rows inserted.
+
+--Inserted into Contractor Table
+1 row inserted.
+1 row inserted.
+1 row inserted.
+1 row inserted.
+
+--Inserted into Tool Instance Table
+1 row inserted.
+1 row inserted.
+1 row inserted.
+1 row inserted.
+1 row inserted.
+1 row inserted.
+1 row inserted.
+1 row inserted.
+1 row inserted.
+1 row inserted.
+1 row inserted.
+1 row inserted.
+1 row inserted.
+
+--Inserted into Rental + Detail Rental table 
+1 row inserted.    --RENTAL
+1 row inserted.     --DETAILRENTAL
+1 row inserted.    --RENTAL
+1 row inserted.     --DETAILRENTAL
+1 row inserted.    --RENTAL
+1 row inserted.     --DETAILRENTAL
+1 row inserted.    --RENTAL
+1 row inserted.     --DETAILRENTAL
+1 row inserted.    --RENTAL
+1 row inserted.     --DETAILRENTAL
+1 row inserted.    --RENTAL
+1 row inserted.     --DETAILRENTAL
+1 row inserted.    --RENTAL
+1 row inserted.     --DETAILRENTAL
+1 row inserted.    --RENTAL
+1 row inserted.     --DETAILRENTAL

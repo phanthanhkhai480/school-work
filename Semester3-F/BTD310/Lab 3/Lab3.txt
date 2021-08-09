@@ -1,0 +1,159 @@
+We, Khai, Mahnoor, and Hao declare that the attached assignment is our own work in accordance with the Seneca Academic Policy.  No part of this assignment has been copied manually or electronically from any other source (including web sites) or distributed to other students.
+
+Question 1
+Housing Expenses                                                                                                                                                               
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Steven earns $24000 monthly and  no  commission to afford spending $8,000.00 on housing                                                                                          
+Neena earns $17000 monthly and  no  commission to afford spending $5,666.67 on housing                                                                                           
+Lex earns $17000 monthly and  no  commission to afford spending $5,666.67 on housing                                                                                             
+Alexander earns $9000 monthly and  no  commission to afford spending $3,000.00 on housing                                                                                        
+Bruce earns $6000 monthly and  no  commission to afford spending $2,000.00 on housing                                                                                            
+Diana earns $4200 monthly and  no  commission to afford spending $1,400.00 on housing                                                                                            
+Kevin earns $5800 monthly and  no  commission to afford spending $1,933.33 on housing                                                                                            
+Trenna earns $3500 monthly and  no  commission to afford spending $1,166.67 on housing                                                                                           
+Curtis earns $3100 monthly and  no  commission to afford spending $1,033.33 on housing                                                                                           
+Randall earns $2600 monthly and  no  commission to afford spending $866.67 on housing                                                                                            
+Peter earns $2500 monthly and  no  commission to afford spending $833.33 on housing                                                                                              
+Eleni earns $10500 monthly and %20 commission to afford spending $3,500.00 on housing                                                                                            
+Ellen earns $11000 monthly and %30 commission to afford spending $3,666.67 on housing                                                                                            
+Jonathon earns $8600 monthly and %20 commission to afford spending $2,866.67 on housing                                                                                          
+Kimberely earns $7000 monthly and %15 commission to afford spending $2,333.33 on housing                                                                                         
+Jennifer earns $4400 monthly and  no  commission to afford spending $1,466.67 on housing                                                                                         
+Michael earns $13000 monthly and  no  commission to afford spending $4,333.33 on housing                                                                                         
+Pat earns $6000 monthly and  no  commission to afford spending $2,000.00 on housing                                                                                              
+Shelley earns $12000 monthly and  no  commission to afford spending $4,000.00 on housing                                                                                         
+William earns $8300 monthly and  no  commission to afford spending $2,766.67 on housing                                                                                          
+
+ 20 rows selected 
+
+ Question2
+
+LAST_NAME                 Hire Date            20 years celebration 
+------------------------- -------------------- ----------------------
+King                      WEDNESDAY, 17/jun/87 FRIDAY, 22/Jun/2007    
+Kochhar                   THURSDAY , 21/sep/89 FRIDAY, 25/Sep/2009    
+De Haan                   WEDNESDAY, 13/jan/93 FRIDAY, 18/Jan/2013    
+Hunold                    WEDNESDAY, 03/jan/90 FRIDAY, 8/Jan/2010     
+Ernst                     TUESDAY  , 21/may/91 FRIDAY, 27/May/2011    
+Lorentz                   SUNDAY   , 07/feb/99 FRIDAY, 8/Feb/2019     
+Mourgos                   TUESDAY  , 16/nov/99 FRIDAY, 22/Nov/2019    
+Rajs                      TUESDAY  , 17/oct/95 FRIDAY, 23/Oct/2015    
+Davies                    WEDNESDAY, 29/jan/97 FRIDAY, 3/Feb/2017     
+Matos                     SUNDAY   , 15/mar/98 FRIDAY, 16/Mar/2018    
+Vargas                    THURSDAY , 09/jul/98 FRIDAY, 13/Jul/2018    
+Zlotkey                   SATURDAY , 29/jan/00 FRIDAY, 31/Jan/2020    
+Abel                      SATURDAY , 11/may/96 FRIDAY, 13/May/2016    
+Taylor                    TUESDAY  , 24/mar/98 FRIDAY, 30/Mar/2018    
+Grant                     MONDAY   , 24/may/99 FRIDAY, 31/May/2019    
+Whalen                    THURSDAY , 17/sep/87 FRIDAY, 21/Sep/2007    
+Hartstein                 SATURDAY , 17/feb/96 FRIDAY, 19/Feb/2016    
+Fay                       SUNDAY   , 17/aug/97 FRIDAY, 18/Aug/2017    
+Higgins                   TUESDAY  , 07/jun/94 FRIDAY, 13/Jun/2014    
+Gietz                     TUESDAY  , 07/jun/94 FRIDAY, 13/Jun/2014    
+
+ 20 rows selected 
+
+Question 3
+Day of Hire                                    
+------------------------------------------------
+MONDAY, the Twenty-Fourth of May, 1999           
+TUESDAY, the Seventh of June, 1994               
+TUESDAY, the Twenty-Fourth of March, 1998        
+TUESDAY, the Seventh of June, 1994               
+TUESDAY, the Seventeenth of October, 1995        
+TUESDAY, the Sixteenth of November, 1999         
+TUESDAY, the Twenty-First of May, 1991           
+WEDNESDAY, the Twenty-Ninth of January, 1997     
+WEDNESDAY, the Seventeenth of June, 1987         
+WEDNESDAY, the Thirteenth of January, 1993       
+WEDNESDAY, the Third of January, 1990            
+THURSDAY, the Ninth of July, 1998                
+THURSDAY, the Twenty-First of September, 1989    
+THURSDAY, the Seventeenth of September, 1987     
+SATURDAY, the Seventeenth of February, 1996      
+SATURDAY, the Twenty-Ninth of January, 2000      
+SATURDAY, the Eleventh of May, 1996              
+SUNDAY, the Fifteenth of March, 1998             
+SUNDAY, the Seventh of February, 1999            
+SUNDAY, the Seventeenth of August, 1997          
+
+ 20 rows selected 
+
+Question 4
+LAST_NAME                 PHONE_NUMBER         REGION
+------------------------- -------------------- ------
+Whalen                    515.123.4444         A      
+King                      515.123.4567         A      
+Kochhar                   515.123.4568         A      
+De Haan                   515.123.4569         A      
+Hartstein                 515.123.5555         A      
+Higgins                   515.123.8080         A      
+Gietz                     515.123.8181         A      
+Hunold                    590.423.4567         B      
+Ernst                     590.423.4568         B      
+Lorentz                   590.423.5567         B      
+Fay                       603.123.6666         C      
+Vargas                    650.121.2004         D      
+Matos                     650.121.2874         D      
+Davies                    650.121.2994         D      
+Rajs                      650.121.8009         D      
+Mourgos                   650.123.5234         D      
+Zlotkey                   011.44.1344.429018   E      
+Grant                     011.44.1644.429263   E      
+Taylor                    011.44.1644.429265   E      
+Abel                      011.44.1644.429267   E      
+
+ 20 rows selected 
+
+Question5
+LAST_NAME                 PHONE_NUMBER         REGION
+------------------------- -------------------- ------
+Whalen                    515.123.4444         A      
+King                      515.123.4567         A      
+Kochhar                   515.123.4568         A      
+De Haan                   515.123.4569         A      
+Hartstein                 515.123.5555         A      
+Higgins                   515.123.8080         A      
+Gietz                     515.123.8181         A      
+Hunold                    590.423.4567         B      
+Ernst                     590.423.4568         B      
+Lorentz                   590.423.5567         B      
+Fay                       603.123.6666         C      
+Vargas                    650.121.2004         D      
+Matos                     650.121.2874         D      
+Davies                    650.121.2994         D      
+Rajs                      650.121.8009         D      
+Mourgos                   650.123.5234         D      
+Zlotkey                   011.44.1344.429018   E      
+Grant                     011.44.1644.429263   E      
+Taylor                    011.44.1644.429265   E      
+Abel                      011.44.1644.429267   E      
+
+ 20 rows selected 
+
+Question6
+HIRE_DATE 1995
+--------- ----
+17-JUN-87 0    
+21-SEP-89 0    
+13-JAN-93 0    
+03-JAN-90 0    
+21-MAY-91 0    
+07-FEB-99 0    
+16-NOV-99 0    
+17-OCT-95 1    
+29-JAN-97 0    
+15-MAR-98 0    
+09-JUL-98 0    
+29-JAN-00 0    
+11-MAY-96 0    
+24-MAR-98 0    
+24-MAY-99 0    
+17-SEP-87 0    
+17-FEB-96 0    
+17-AUG-97 0    
+07-JUN-94 0    
+07-JUN-94 0    
+
+ 20 rows selected 
+

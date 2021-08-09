@@ -1,0 +1,10 @@
+Maximum salary in department 10 is 4400
+
+The highest salary in department 10 is 4400
+earn by Whalen
+
+b_id
+----
+1700
+
+

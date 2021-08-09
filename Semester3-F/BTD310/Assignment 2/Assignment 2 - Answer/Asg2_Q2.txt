@@ -1,0 +1,54 @@
+--Contractor Table
+Name                         Null?    Type          
+---------------------------- -------- ------------- 
+CONTRACTOR_NUM               NOT NULL NUMBER(10)    
+CONTRACTOR_NAME              NOT NULL VARCHAR2(25)  
+CONTRACTOR_PHONE_NUM         NOT NULL VARCHAR2(15)  
+CONTRACTOR_ADDRESS_STREET             VARCHAR2(100) 
+CONTRACTOR_ADDRESS_CITY               VARCHAR2(30)  
+CONTRACTOR_ADDRESS_STATEPROV          VARCHAR2(20)  
+CONTRACTOR_ADDDRESS_ZIP               VARCHAR2(10)  
+CONTRACTOR_JOIN_DATE         NOT NULL DATE    
+
+--Retailer Table
+Name          Null?    Type         
+------------- -------- ------------ 
+RETAILER_NUM  NOT NULL NUMBER(10)   
+RETAILER_NAME NOT NULL VARCHAR2(30) 
+
+--Tool Table
+Name             Null?    Type          
+---------------- -------- ------------- 
+TOOL_NUM         NOT NULL NUMBER(10)    
+TOOL_NAME        NOT NULL VARCHAR2(100) 
+TOOL_COST                 NUMBER(10,2)  
+TOOL_LENGTH               NUMBER(10,2)  
+TOOL_WIDTH                NUMBER(10,2)  
+TOOL_HEIGHT               NUMBER(10,2)  
+TOOL_WEIGHTCLASS          VARCHAR2(20)  
+RETAILER_NUM     NOT NULL NUMBER(10)    
+
+--Tool Instance Table
+Name            Null?    Type         
+--------------- -------- ------------ 
+TI_NUM          NOT NULL NUMBER(10)   
+TOOL_NUM        NOT NULL NUMBER(10)   
+TI_PURCHASEDATE NOT NULL DATE         
+TI_STATUS       NOT NULL VARCHAR2(15) 
+
+-Detail Rental Table
+Name                Null?    Type       
+------------------- -------- ---------- 
+RENT_NUM            NOT NULL NUMBER(10) 
+TI_NUM              NOT NULL NUMBER(10) 
+DETAIL_FEE          NOT NULL NUMBER(10) 
+DETAIL_DAILYLATEFEE          NUMBER(10) 
+DETAIL_DUEDATE      NOT NULL DATE       
+DETAIL_RETURNDATE            DATE    
+
+--Rental Table
+Name           Null?    Type       
+-------------- -------- ---------- 
+RENT_NUM       NOT NULL NUMBER(10) 
+CONTRACTOR_NUM NOT NULL NUMBER(10) 
+RENT_DATE      NOT NULL DATE       
