@@ -1,0 +1,28 @@
+{
+  "name": "web322-app",
+  "version": "1.0.0",
+  "description": "default",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Patrick Crawford",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0",
+    "pg": "^6.4.2",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^3.31.1"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "default"
+  },
+  "keywords": [
+    "default"
+  ]
+}
