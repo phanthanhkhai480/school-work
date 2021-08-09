@@ -23,16 +23,5 @@ export class DisplayCurrencyService {
         return mCurrency_;
       }) 
     );
-
-    // return this.http.get<{[key:string]: displayCurrency}>(this.url).
-    // pipe(
-    //   map(responseData => {
-    //     const mCurrency_ = [];
-    //     for (const item in responseData){
-    //       mCurrency_.push(new displayCurrency(responseData[item].id_, responseData[item].currency_));
-    //     }
-    //     return mCurrency_;
-    //   }) 
-    // );
   }
 }

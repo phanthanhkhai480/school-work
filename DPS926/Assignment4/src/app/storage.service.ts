@@ -22,7 +22,8 @@ export class StorageService {
   public takeData(carrier:string, currency:string, quote:string, 
     origin:string, destination:string, departureDate:string, returnDate:string){
     var temp1 = new QuoteManager(carrier, quote, currency, origin, destination, departureDate, returnDate);
-    this._storage?.set(quote, temp1);
+    var key = carrier + quote + currency + origin + destination + departureDate + returnDate;
+    this._storage?.set(key, temp1);
     this.logAllTasks();   
   }
 
@@ -44,32 +45,13 @@ export class StorageService {
   }
 
   public async deleteAllTasks(){
-    if (this._storage != null){
-      await this._storage.clear();
-      this.logAllTasks();
-    } 
-    else {
-      const alert = await this.alertController.create({
-        cssClass: 'Error',
-        message: 'There is nothing to delete',
-        buttons: ['OK']
-      });
-      await alert.present();   
-    }
+    await this._storage.clear();
+    this.logAllTasks();
   }
 
   public async deleteOneTask(task: QuoteManager){
-    if (this._storage != null){
-      await this._storage.remove(task.quote_price);
-      this.logAllTasks();
-    } 
-    else {
-      const alert = await this.alertController.create({
-        cssClass: 'Error',
-        message: 'There is nothing to delete',
-        buttons: ['OK']
-      });
-      await alert.present();   
-    }
+    var key = task.carrier + task.quote_price + task.currency_symbol + task.place_origin + task.place_destintion + task.time_depart + task.time_return;
+    await this._storage.remove(key);
+    this.logAllTasks();
   }
 }

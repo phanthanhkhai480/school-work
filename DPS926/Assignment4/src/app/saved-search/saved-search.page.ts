@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
 import { QuoteManager } from '../flight-model/quoteManager.model';
 import { StorageService } from '../storage.service';
