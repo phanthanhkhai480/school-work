@@ -1,0 +1,41 @@
+/* Place all of your CSS Code in this file */
+
+body {color: Chartreuse;}
+
+nav {background-color: Coral;}
+
+footer {background-color: Crimson;}
+
+header
+{
+	text-decoration: underline;
+	
+line-height: 2;
+}
+
+h1.AnimalsWorld {
+	font-style: Arial;
+	color: Cyan;
+	text-align: center;
+}
+div.main-table-container{
+	line-height: 2;
+	overflow-y: scroll;
+	color: BlueViolet;
+	text-indent: 50px;
+}
+table.main-table-top>tbody>tr>th{
+	text-align:center ;
+	color: AntiqueWhite;
+	text-decoration: none;
+}
+table.main-table>tbody>tr>td{
+	text-align: left;
+	color: CornflowerBlue;
+	text-decoration: none;
+	text-indent: 10px;
+}
+table.main-table>tbody>tr>td>p>span{
+	color: DarkMagenta;
+	text-decoration: none;
+}

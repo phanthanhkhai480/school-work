@@ -1,0 +1,118 @@
+.text 
+{
+	color: red;
+	font-weight: light;
+	font-size: 18px;
+}
+
+.text1
+{
+	font-size: 25px;
+}
+
+.text2
+{
+	font-size: 30px;
+}
+
+.jobduty
+{
+    width: 400px;
+	min-height: 150px;
+    padding: 6px 5px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+}
+
+header
+{
+	background-color: red;
+	text-align: left;
+	padding-top: 10px;
+	font: Arial;
+	color: white;
+	font-weight: light;
+}
+
+body
+{
+	text-align: center;
+	font-family: inherit;
+	font-size: 70%;
+}
+
+label
+{
+	display: inline-block;
+	width: 200px;
+	text-align: right;
+}
+
+input, select
+{
+    width: 350px;
+    padding: 4px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+	box-shadow: 5px 5px 5px grey;
+}
+
+input:focus
+{
+	border: 2px solid blue;
+}
+
+fieldset
+{
+	display: inline;
+	margin: auto;
+	width: 400px
+}
+
+#basicinformation>h2, #education>h2, #workexperience>h2, #attachments>h2
+{
+	text-align:left;
+	background-color: gainsboro;
+	font-size: 23px;
+}
+
+#basicinformation, #education, #workexperience, #attachments
+{
+	color:black;
+	line-height: 250%;
+	font-size: 20px;
+	padding: 20px;
+	text-shadow: 0px -1px 0px black;
+	box-shadow:         0px 2px 1px rgba(50, 50, 50, 0.75);
+	border-radius: 30px;
+	background: rgb(210, 20, 20);
+	background: -webkit-linear-gradient(left, grey 30%, grey 70%);
+	background: -o-linear-gradient(left, grey 30% grey 70%);
+	background: linear-gradient(to right, lavender 30%, lavender 70%);
+	-webkit-box-shadow: 0px 2px 1px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    0px 2px 1px rgba(50, 50, 50, 0.75);
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+}
+
+.button
+{
+	background-color: #f44336;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}

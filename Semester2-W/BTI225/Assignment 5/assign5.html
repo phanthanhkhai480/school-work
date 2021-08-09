@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="css/assign5.css" type="text/css"/>
+	<head>  
+		<title> Personal Information Collector </title>
+		<header>	<h2 class="text2"> Personal Information Register </h2>		</header>
+		<h3 align="left" class="text1"> Canadian Immigration and Citizenship </h3>
+		<p align="left" class="text"> *Required Information</p>
+		
+		<script type="text/javascript" src="script.js"> </script>
+	</head>
+
+	<body>
+	<form action="https://httpbin.org/post" method="get" target="_blank" 
+			onsubmit="returnFormValidation():">
+		<section id="basicinformation">
+			<h2> Basic Information </h2>
+				<label> Email  <span style="color:red"> * </span> </label>
+					<input type="email" name="mail" id="mail" required> <br>
+				<label> Password <span style="color:red"> * </span> </label>
+					<input type="password" name="pass" id="pass" onchange="password(this.value)" required> <br>
+					<p id="passWarning"> </p>
+				<label> Retype Password <span style="color:red"> * </span> </label>
+					<input type="password" name="retype" id="retype" onchange="retypePassword(this.value)" required> <br>
+					<p id="retypePassWarning"> </p>
+				<label> First Name <span style="color:red"> * </span> </label>
+					<input type="text" name="fname" id="fname" onchange="firstName(this.value)" required> <br>
+					<p id="fnameWarning"> </p>
+				<label> Last Name <span style="color:red"> * </span> </label>
+					<input type="text" name="lname" name="lname" onchange="lastName(this.value)" required> <br>
+					<p id="lnameWarning"> </p>
+				<label> Phone Number <span style="color:red"> * </span> </label>
+					<input type="tel" name="phone" id="phone" placeholder="999-999-9999" onchange="phoneNumber(this.value)" required> <br>
+					<p id="phoneWarning"> </p>
+				<label> Address <span style="color:red"> * </span> </label>
+					<input type="text" name="homeadd" required> <br>
+				<label> City <span style="color:red"> * </span> </label>
+					<input type="text" name="city" required> <br>
+				<label> Province <span style="color:red"> * </span> </label>
+					<select>
+						<optgroup label="Provinces">
+							<option value="Ontario"> ON </option>
+							<option value="Quebec"> QB </option>
+							<option value="Nova Scotia"> NS </option>
+							<option value="New Brunswick"> NB </option>
+							<option value="Manitoba"> MB </option>
+							<option value="British Columbia"> BC </option>
+							<option value="Prince Edward Island"> PE </option>
+							<option value="Saskatchewan"> SK </option>
+							<option value="Alberta"> AB </option>
+							<option value="Newfoundland and Labrador"> NL </option>
+						</optgroup>
+						<optgroup label="Territories">
+							<option value="Northwest Territories"> NT </option>
+							<option value="Yukon"> YT </option>
+							<option value="Nunavut"> NU </option>
+						</optgroup>
+					</select> <br>
+				<label> Country <span style="color:red"> * </span> </label>
+					<select>
+						<option value="Canada"> Canada </option>
+						<option value="United States"> United States </option>
+						<option value="Vietnam"> Vietnam </option>
+						<option value="Korea"> Korea </option>
+						<option value="Spain"> Spain </option>
+					</select>
+		</section>
+		<section id="education">
+			<h2> Education </h2>
+				<label> School <span style="color:red"> * </span> </label>
+					<input type="text" name="school" required> <br>
+				<label> Program <span style="color:red"> * </span> </label>
+					<input type="text" name="program" required> <br>
+				<label> Education Level <span style="color:red"> * </span> </label>
+					<select>
+						<option value="empty" selected="0" name="levelofeducation"> -empty- </option>
+						<option value="TechDip" name="levelofeducation"> Technical Diploma </option>
+						<option value="CollDip" name="levelofeducation"> College Diploma </option>
+						<option value="Bachelor" name="levelofeducation"> Bachelor Degree </option>
+						<option value="Master" name="levelofeducation"> Master Degree </option>
+						<option value="other" name="levelofeducation"> other </option>
+					</select> <br>
+				<fieldset>	
+				<legend> Education Status <span style="color:red"> * </span> </legend>
+					<input class="circle" type="radio" name="education" value="Graduated" > Graduated <br>
+					<input class="circle" type="radio" name="education" value="CurrentEnrolled" > Current Enrolled <br>
+					<input class="circle" type="radio" name="education" value="DidntGraduated"  > Didn't Graduated <br>
+				</fieldset> <br>
+				<label> Graduation Date </label>
+					<input type="text" name="GraDate" required> <br>
+		</section>
+		<section id="workexperience">
+		<h2> Work Experience </h2>
+			<label> Employer </label> 
+				<input type="text" name="employer" option> <br>
+			<label> Job Title </label> 
+				<input type="text" name="jobtitle" option> <br>
+			<label> Job Duty </label> 
+				<textarea class="jobduty" type="textarea" name="jobduty" option> </textarea> <br>
+			<label> Worked Year </label> 
+				<input type="number" name="workedyear" option> <br>
+		</section>
+		<section id="attachments">
+		<h2> Attachments </h2>
+			<label> Attachments </label> 
+				<input type="file" name="attachments"  multiple option> <br>
+			<button type="reset" class="button"> Reset </button>
+			<button type="submit" class="button"> Submit </button>
+		</section>
+	</form>
+	</body>
+	
+	<footer>
+		<h2> Seneca College </h2>
+	</footer>
+	
+</html>
+		

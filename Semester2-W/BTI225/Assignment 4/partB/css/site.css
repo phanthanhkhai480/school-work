@@ -1,0 +1,143 @@
+.main-container
+{
+    max-width: 960;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-container>nav
+{
+    width: 30%;
+    float: left;
+}
+
+.main-container .main
+{
+    width: 70%;
+    float: right;
+}
+
+.main-container>header
+{
+    padding: 10px;
+    background-color: #eeeeee;
+    border-bottom: 1, #cccccc;
+    margin-bottom: 30;
+}
+
+.main-container>header>h1
+{
+    width: 70%;
+    font-size: 24px;
+    float: right;
+    text-align: right;
+    margin-top: 10;
+}
+
+.main-container>footer
+{
+    clear: both;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #eeeeee;
+    border-top: 1, #cccccc;
+    font-size: 13;
+}
+
+.main-container>header>#logo
+{
+    width: 30%;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#logo img
+{
+    width: 94;
+    vertical-align: middle;
+}
+
+nav>ul
+{
+    list-style-type: none;
+}
+
+nav>ul>li>a
+{
+    display: block;
+    text-decoration: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px; 
+}
+
+div.province
+{
+	width: 30%;
+	float: left;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	margin-left: 5px;
+	margin-right: 5px;
+	height: 310px;
+}
+
+div.province .description
+{
+	max-height: 165px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	margin-bottom: 4px;
+	margin-top: 4px;
+}
+
+div.province>a
+{
+	display: block;
+	text-align: middle;
+	background-color: #555555;
+	color: #eeeeee;
+	text-decoration: none;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.main-container .main>img.flag
+{
+	width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
