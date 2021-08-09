@@ -1,0 +1,4 @@
+﻿  fight.cpp
+d:\study\btp200 workshop\btp-workshop7\at_home\fight.cpp(50): warning C4018: '<': signed/unsigned mismatch
+  at_home.vcxproj -> D:\Study\BTP200 workshop\BTP-Workshop7\at_home\Debug\at_home.exe
+  at_home.vcxproj -> D:\Study\BTP200 workshop\BTP-Workshop7\at_home\Debug\at_home.pdb (Full PDB)

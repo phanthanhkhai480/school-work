@@ -1,0 +1,10 @@
+
+In line number 12 of your output:
+The output should be:
+(double) B equals 0.333
+But your output is: 
+(double) B equals 2
+                  ^
+------------------|
+Professor's character ASCII code: hex(30), dec(48)
+un-matched character ASCII code: hex(32), dec(50)

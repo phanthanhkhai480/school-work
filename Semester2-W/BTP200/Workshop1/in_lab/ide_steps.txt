@@ -1,0 +1,27 @@
+Steps to create a simple console application in Visual Studio
+1. Open Visual Studio (Community version 2015)
+2. Click on File --> New Project
+3. Choose the template (in C++ and C, click on C++  and choose Win32 Console Application), click OK
+4. Click Next, Choose Console Application, uncheck SDL (Security Development Lifecycle), click on Empty Project, and finish
+5. Right click on the Source Files, go to Add new Item
+6. Choose the C++ file, if you are using C++, leave it as filename.cpp and for C is filename.c, for header file, just replace the desire name and ignore the extension
+7. When you have the template that is ready for coding, remember to add the following
+	a.For C++
+		#include<iostream>
+		#include "headerfile.h" *if necessary*
+		using namespace std
+		int main(void)
+		{
+			code implementations and prototypes
+			return 0;
+		}
+	b. For C
+		#include<stdio.h>
+		int main()
+		{
+			code implementations and prototypes
+			return 0;
+		}
+8. Have fun and enjoy coding, remember to fix all the bugs before compile
+	
+

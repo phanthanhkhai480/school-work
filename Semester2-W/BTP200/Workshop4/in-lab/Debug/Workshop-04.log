@@ -1,0 +1,7 @@
+﻿  passenger.cpp
+c:\users\phan thanh khai\desktop\study\btp200 workshop\btp-workshop4\in-lab\passenger.cpp(32): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: see declaration of 'strcpy'
+c:\users\phan thanh khai\desktop\study\btp200 workshop\btp-workshop4\in-lab\passenger.cpp(33): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: see declaration of 'strcpy'
+  Workshop-04.vcxproj -> C:\Users\Phan Thanh Khai\Desktop\Study\BTP200 Workshop\BTP-Workshop4\in-lab\Debug\Workshop-04.exe
+  Workshop-04.vcxproj -> C:\Users\Phan Thanh Khai\Desktop\Study\BTP200 Workshop\BTP-Workshop4\in-lab\Debug\Workshop-04.pdb (Full PDB)

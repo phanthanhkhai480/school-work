@@ -1,0 +1,8 @@
+1) What is meant by a safe empty state? What other safe empty state you would choose for the type Passenger? Explain why.
+- Safe Empty State use when the passing value isn't satisfy with the condition, then we delete the passing value and set all the member to 0,
+empty string or null pointer to avoid garbage value. I used the safe empty state for the checking valid Passenger, for accompanied friends. 
+
+2) Describe a case where having multiple constructors for the type Passenger
+would simplify the code of clients that use it. 
+- It is the case like we did in this workshop, where we have 2 constructors for Passenger that break down the work and make the code easier to
+edit and it is easier to pass the value since non of the passing value are the same

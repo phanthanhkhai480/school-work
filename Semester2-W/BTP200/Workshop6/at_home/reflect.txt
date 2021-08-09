@@ -1,0 +1,12 @@
+1) Explain why the copy assignment operator must check for self-assignment before doing anything else.
+- It must validate the information at it is receiving in order to make sure that they are not copying an invalid data or unwanted data
+
+2) Explain why a copy constructor and copy assignment operator are needed when a class uses dynamic memory allocation to hold its resources.
+- Copy Constructor means to copy the value of data member to another variables
+- Copy Assignment Operator means to copy the whole constructor data value to another instance of constructor which possible and available to hold the copy value
+- It is useful because after the function is going out of scoop, all the value will be delete and the copy function will keep the value running, just passing from another instances to another to instances
+
+3) Explain why is it important to avoid duplication of code and how did you accomplish it in this workshop.
+- Duplication of code means it will run the function or passing variable twice.
+- One thing I've learnt in this workshop is the destructor and the way it works. It was repeated multiple times to delete the value of data member in function when it was called
+- I also learnt about the copy constructor and operator

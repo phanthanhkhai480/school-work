@@ -1,0 +1,11 @@
+﻿  Perishable.cpp
+  NonPerishable.cpp
+t:\btp-milestone4\nonperishable.cpp(49): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+  Item.cpp
+  Error.cpp
+  Date.cpp
+  06-PerDisplayTest.cpp
+  Generating Code...
+  LINK : T:\BTP-Milestone4\Debug\MS4.exe not found or not built by the last incremental link; performing full link
+  MS4.vcxproj -> T:\BTP-Milestone4\Debug\MS4.exe
+  MS4.vcxproj -> T:\BTP-Milestone4\Debug\MS4.pdb (Full PDB)

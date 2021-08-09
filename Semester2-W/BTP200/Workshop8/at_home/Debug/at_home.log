@@ -1,0 +1,8 @@
+﻿  CheckingAccount.cpp
+t:\btp-workshop8\at_home\checkingaccount.cpp(39): warning C4800: 'double': forcing value to bool 'true' or 'false' (performance warning)
+t:\btp-workshop8\at_home\checkingaccount.cpp(41): warning C4800: 'double': forcing value to bool 'true' or 'false' (performance warning)
+  Generating Code...
+  Skipping... (no relevant changes detected)
+  w8_at_home.cpp
+  at_home.vcxproj -> T:\BTP-Workshop8\at_home\Debug\at_home.exe
+  at_home.vcxproj -> T:\BTP-Workshop8\at_home\Debug\at_home.pdb (Full PDB)

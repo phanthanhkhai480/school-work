@@ -1,0 +1,15 @@
+1. Why did we choose m_health to be a signed integer? (Hint: what happens if the
+Hero has a health of 1, and someone does 2 points of damage to them.)
+- Signed Integer means m_health can be either positive or negative, which we use to identify which heroes
+died first, by choosing which heroes have the negative m_health
+
+2. Does the Hero class need to know about the existence of the class SuperHero?
+(Hint: do a search in Hero.cpp, does the word “SuperHero” appear anywhere in it?)
+How about the reverse, does SuperHero know about the Hero class?
+- No, because Hero class has no relation to the SuperHero class, but the SuperHero class does need to know
+about the existance of Hero class
+
+3. The program prints out “AncientBattle!” when 2 Heros fight. It prints out
+“SuperFight!” when 2 SuperHeros fight. When you try to make a Hero fight a
+SuperHero, what did it print out?
+- It will print "AncientBattle" because SuperHero and Hero attack, they will just attack as normal Hero

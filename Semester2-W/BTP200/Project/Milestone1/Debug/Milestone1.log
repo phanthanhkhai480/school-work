@@ -1,0 +1,39 @@
+﻿Build started 15/03/2017 10:58:25 CH.
+     1>Project "C:\Users\Phan Thanh Khai\Desktop\Study\BTP200 workshop\Final Project\BTP-Milestone1\Milestone1.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Date.cpp Error.cpp
+         Error.cpp
+         Date.cpp
+     1>c:\users\phan thanh khai\desktop\study\btp200 workshop\final project\btp-milestone1\date.cpp(80): error C3867: 'ict::Date::value': function call missing argument list; use '&ict::Date::value' to create a pointer to member
+     1>c:\users\phan thanh khai\desktop\study\btp200 workshop\final project\btp-milestone1\date.cpp(80): error C2446: '==' : no conversion from 'int (__thiscall ict::Date::* )(void) const' to 'int'
+                 There is no context in which this conversion is possible
+     1>c:\users\phan thanh khai\desktop\study\btp200 workshop\final project\btp-milestone1\date.cpp(80): error C2040: '==' : 'int' differs in levels of indirection from 'int (__thiscall ict::Date::* )(void) const'
+     1>c:\users\phan thanh khai\desktop\study\btp200 workshop\final project\btp-milestone1\date.cpp(87): error C3867: 'ict::Date::value': function call missing argument list; use '&ict::Date::value' to create a pointer to member
+     1>c:\users\phan thanh khai\desktop\study\btp200 workshop\final project\btp-milestone1\date.cpp(87): error C2446: '!=' : no conversion from 'int (__thiscall ict::Date::* )(void) const' to 'int'
+                 There is no context in which this conversion is possible
+     1>c:\users\phan thanh khai\desktop\study\btp200 workshop\final project\btp-milestone1\date.cpp(87): error C2040: '!=' : 'int' differs in levels of indirection from 'int (__thiscall ict::Date::* )(void) const'
+     1>c:\users\phan thanh khai\desktop\study\btp200 workshop\final project\btp-milestone1\date.cpp(94): error C3867: 'ict::Date::value': function call missing argument list; use '&ict::Date::value' to create a pointer to member
+     1>c:\users\phan thanh khai\desktop\study\btp200 workshop\final project\btp-milestone1\date.cpp(94): error C2446: '<' : no conversion from 'int (__thiscall ict::Date::* )(void) const' to 'int'
+                 There is no context in which this conversion is possible
+     1>c:\users\phan thanh khai\desktop\study\btp200 workshop\final project\btp-milestone1\date.cpp(94): error C2297: '<' : illegal, right operand has type 'int (__thiscall ict::Date::* )(void) const'
+     1>c:\users\phan thanh khai\desktop\study\btp200 workshop\final project\btp-milestone1\date.cpp(101): error C3867: 'ict::Date::value': function call missing argument list; use '&ict::Date::value' to create a pointer to member
+     1>c:\users\phan thanh khai\desktop\study\btp200 workshop\final project\btp-milestone1\date.cpp(101): error C2446: '>' : no conversion from 'int (__thiscall ict::Date::* )(void) const' to 'int'
+                 There is no context in which this conversion is possible
+     1>c:\users\phan thanh khai\desktop\study\btp200 workshop\final project\btp-milestone1\date.cpp(101): error C2297: '>' : illegal, right operand has type 'int (__thiscall ict::Date::* )(void) const'
+     1>c:\users\phan thanh khai\desktop\study\btp200 workshop\final project\btp-milestone1\date.cpp(108): error C3867: 'ict::Date::value': function call missing argument list; use '&ict::Date::value' to create a pointer to member
+     1>c:\users\phan thanh khai\desktop\study\btp200 workshop\final project\btp-milestone1\date.cpp(108): error C2446: '<=' : no conversion from 'int (__thiscall ict::Date::* )(void) const' to 'int'
+                 There is no context in which this conversion is possible
+     1>c:\users\phan thanh khai\desktop\study\btp200 workshop\final project\btp-milestone1\date.cpp(108): error C2297: '<=' : illegal, right operand has type 'int (__thiscall ict::Date::* )(void) const'
+     1>c:\users\phan thanh khai\desktop\study\btp200 workshop\final project\btp-milestone1\date.cpp(115): error C3867: 'ict::Date::value': function call missing argument list; use '&ict::Date::value' to create a pointer to member
+     1>c:\users\phan thanh khai\desktop\study\btp200 workshop\final project\btp-milestone1\date.cpp(115): error C2446: '>=' : no conversion from 'int (__thiscall ict::Date::* )(void) const' to 'int'
+                 There is no context in which this conversion is possible
+     1>c:\users\phan thanh khai\desktop\study\btp200 workshop\final project\btp-milestone1\date.cpp(115): error C2297: '>=' : illegal, right operand has type 'int (__thiscall ict::Date::* )(void) const'
+     1>c:\users\phan thanh khai\desktop\study\btp200 workshop\final project\btp-milestone1\date.cpp(156): error C2572: 'ict::Date::read' : redefinition of default parameter : parameter 1
+                 c:\users\phan thanh khai\desktop\study\btp200 workshop\final project\btp-milestone1\date.h(54) : see declaration of 'ict::Date::read'
+     1>c:\users\phan thanh khai\desktop\study\btp200 workshop\final project\btp-milestone1\date.cpp(206): error C3867: 'ict::Date::dateOnly': function call missing argument list; use '&ict::Date::dateOnly' to create a pointer to member
+         Generating Code...
+     1>Done Building Project "C:\Users\Phan Thanh Khai\Desktop\Study\BTP200 workshop\Final Project\BTP-Milestone1\Milestone1.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.72

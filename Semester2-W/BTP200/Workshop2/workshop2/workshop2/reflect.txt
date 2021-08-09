@@ -1,0 +1,11 @@
+1) What happens to dynamic memory if it is not deallocated?
+- Deallocated means to remove a value of a number in a array, to dellocated them from the array
+
+2) What is the difference between dynamic and static memory? Give examples
+from you code where have you used dynamic memory and where have you
+used static memory.
+- Static memory means global variables, use when the program begins. It is declared to use in the entire program without restriction
+- Dynamic memory means 	local variable, use only inside a function or a specific location and can't be access outside, or with restriction and to redeclare in order to use
+
+3) Explain what have you learned in this workshop
+- I've learned about how to allocated value in the array, how to access function inside a namespace as well as how to do overloading function

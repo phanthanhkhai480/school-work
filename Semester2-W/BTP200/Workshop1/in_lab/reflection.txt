@@ -1,0 +1,7 @@
+1. What is a namespace? Explain its purpose.
+- A namespace is group that can contain all the prototypes or implementation which make it easier when you need to call them somewhere else
+- Purpose of namespace is to avoid same variable name as it usually happen. So you can have many variable X, Y and Z but each has to be in different namespace 
+
+2. Why header files are needed? Explain. 
+- Header Files are needed  because it improve build time as there can be many people work together in a signle file, which they splitted up the work and write in header file, then include
+in the main. It is also easier to find mistake because they all divided into small file with just little coding. 

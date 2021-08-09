@@ -1,0 +1,23 @@
+1.What happened when you tried to put your templated functions inside data.cpp? Does it work when you move the entire function to data.h?
+- The main when it call the template, only call the header for reference. If the header doesn't contain the template, what happen is compiler
+will compile error because it cannot reference the fucntion that is calling. Same thing, if you move entire thing to data.cpp. 
+
+2.Move one templated function into ws10_lab.cpp. Does it work now? Does it have to be defined before it is used, above  main(), or can be it defined below main()?
+- If you put the template above the main, it will work because it can reference the template before a function can call it. 
+However, if I put it after the main(), it will not work because the function will be called first and there is no reference for it. 
+
+3.In the function average, we used a static_cast to convert an integer to a double. 
+If you convert a double to an integer and print it out, how many digits after the decimal place will it have?
+- If you convert a double to integer, you will have around 5 to 6 zeros after the dot since all the decimal value are gone
+but you haven't set precision for the number so it still assume the number is in type double in fact what it is receiving is integer
+
+4.Could you have done this lab without templates, by just overloading your functions in data.h to accept both integer and double arguments? 
+What advantage do we get by using templates?
+- I can do it without template, but then I will have 2 same function with the only differences is one will accept double 
+while other one can only accept integer. The advantages of templates is that you only have to code the function one time
+and it can receive different type of variable and convert it to the approriate 
+
+ 
+5.Are the following equivalent? 
+template<class T> and template<typename T> ?
+- Yes, they are the same thing, while typename T is a function itself, but class T contain many function of typename T

@@ -1,0 +1,15 @@
+﻿  Fraction.cpp
+c:\users\phan thanh khai\desktop\study\btp200 workshop\btp-workshop5\at_home\fraction.h(39): error C2535: 'sict::Fraction::operator int(void)': member function already defined or declared
+  c:\users\phan thanh khai\desktop\study\btp200 workshop\btp-workshop5\at_home\fraction.h(37): note: see declaration of 'sict::Fraction::operator int'
+c:\users\phan thanh khai\desktop\study\btp200 workshop\btp-workshop5\at_home\fraction.cpp(114): error C2511: 'sict::Fraction sict::Fraction::operator *(int)': overloaded member function not found in 'sict::Fraction'
+  c:\users\phan thanh khai\desktop\study\btp200 workshop\btp-workshop5\at_home\fraction.h(11): note: see declaration of 'sict::Fraction'
+c:\users\phan thanh khai\desktop\study\btp200 workshop\btp-workshop5\at_home\fraction.cpp(116): error C2671: 'sict::Fraction::*': static member functions do not have 'this' pointers
+c:\users\phan thanh khai\desktop\study\btp200 workshop\btp-workshop5\at_home\fraction.cpp(116): error C2227: left of '->num' must point to class/struct/union/generic type
+c:\users\phan thanh khai\desktop\study\btp200 workshop\btp-workshop5\at_home\fraction.cpp(117): error C2671: 'sict::Fraction::*': static member functions do not have 'this' pointers
+c:\users\phan thanh khai\desktop\study\btp200 workshop\btp-workshop5\at_home\fraction.cpp(117): error C2227: left of '->denom' must point to class/struct/union/generic type
+  Generating Code...
+  Compiling...
+  w5_at_home.cpp
+c:\users\phan thanh khai\desktop\study\btp200 workshop\btp-workshop5\at_home\fraction.h(39): error C2535: 'sict::Fraction::operator int(void)': member function already defined or declared
+  c:\users\phan thanh khai\desktop\study\btp200 workshop\btp-workshop5\at_home\fraction.h(37): note: see declaration of 'sict::Fraction::operator int'
+  Generating Code...

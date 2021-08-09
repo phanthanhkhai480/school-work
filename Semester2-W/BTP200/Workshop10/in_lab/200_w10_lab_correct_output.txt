@@ -1,0 +1,12 @@
+                Year           2000           2001           2002           2003           2004
+          Population      281421906      285317559      287973924      290788976      293656842
+        ViolentCrime        1425486        1439480        1423677        1383676        1360088
+    ViolentCrimeRate         506.50         504.50         494.40         475.80         463.20
+      GrandTheftAuto        1160002        1228391        1246646        1261226        1237851
+  GrandTheftAutoRate         412.20         430.50         432.90         433.70         421.50
+
+Population change from 2000 to 2004 is 12.23 million
+Violent Crime trend is down
+There are 1.23 million Grand Theft Auto incidents on average a year
+The Minimum Violent Crime rate was 463
+The Maximum Violent Crime rate was 506

@@ -1,0 +1,8 @@
+﻿  w3_in_lab.cpp
+  CreditCard.cpp
+c:\users\phan thanh khai\desktop\study\btp200 workshop\btp-workshop3\in_lab\creditcard.cpp(10): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: see declaration of 'strcpy'
+  Generating Code...
+  LINK : C:\Users\Phan Thanh Khai\Desktop\Study\BTP200 Workshop\BTP-Workshop3\in_lab\Debug\in_lab.exe not found or not built by the last incremental link; performing full link
+  in_lab.vcxproj -> C:\Users\Phan Thanh Khai\Desktop\Study\BTP200 Workshop\BTP-Workshop3\in_lab\Debug\in_lab.exe
+  in_lab.vcxproj -> C:\Users\Phan Thanh Khai\Desktop\Study\BTP200 Workshop\BTP-Workshop3\in_lab\Debug\in_lab.pdb (Full PDB)

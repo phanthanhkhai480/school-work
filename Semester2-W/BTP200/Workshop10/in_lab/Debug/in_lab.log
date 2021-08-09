@@ -1,0 +1,10 @@
+﻿  ws10_lab.cpp
+t:\btp-workshop10\in_lab\ws10_lab.cpp(177): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+t:\btp-workshop10\in_lab\ws10_lab.cpp(49): warning C4101: 'comma': unreferenced local variable
+  t:\btp-workshop10\in_lab\ws10_lab.cpp(139): note: see reference to function template instantiation 'bool readRow<int>(std::istream &,const char *,T *,int)' being compiled
+          with
+          [
+              T=int
+          ]
+  in_lab.vcxproj -> T:\BTP-Workshop10\in_lab\Debug\in_lab.exe
+  in_lab.vcxproj -> T:\BTP-Workshop10\in_lab\Debug\in_lab.pdb (Full PDB)

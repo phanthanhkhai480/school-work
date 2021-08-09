@@ -1,0 +1,13 @@
+1- In a file called reflect.txt and using examples from your own code explain which
+features of object orientation you used.
+- I used class to contain all of the function that I wrote to make my program work. So inside the class, I create different member of variable and used for function to access and
+store information. For exmaple, in the code, I create function name() so it can pass the name to the variable I declared in the class, initialize same process for card number, card
+institution number, expiry date and number in the back, then the card valid I used all of the information that I already save them in the class to check whether if they all fall into
+the correct position and the write is to access all the variable in the class to save data into it
+
+2- Explain your understanding of the do-while loop written in the main program,
+especially the condition that makes it stop. Also explain the choice of type for
+storing the credit card number
+- The do-while loop written in the main program represent for the condition in which in the information the user entered is correct or not. If the information
+is correct within the condition, then it will skip the loop and go to the next one, otherwise, it will just keep repeat until all of the information is correct
+- The type used for Credit Card Number is long long (16 byte), which is to store a very large number like credit card number

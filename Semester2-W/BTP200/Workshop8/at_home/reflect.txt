@@ -1,0 +1,10 @@
+1. What is the difference between an abstract base class and a concrete class?
+- Abstract class is a class which one or more methods are declared but not defined, as part of class
+- Concrete class is a class in which you defined the mothods and defined it, either from the current one or the abstract of another one
+
+2. Why do we need to have a pure virtual function in a base class?
+- Pure Virtual appear on the base class is to allow inherited class to use the function in the base class by either derived it or override the function. 
+- Virtual means that the current function might be use later by another class
+
+3. Explain what have you learned in this workshop
+- I've learned about virtual as well as override, how override use to inherit and use the virtual

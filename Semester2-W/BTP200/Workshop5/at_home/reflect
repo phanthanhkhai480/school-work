@@ -1,0 +1,12 @@
+1. Discuss why operator+= should return a reference to Fraction.
+- Because when we doing the calculation for the operator, we will return all value to the left-hand variable, therefore the value isn't constant and we need reference to access as it can
+change anytime
+ 
+2. In w5_in_lab.cpp (tester module), we calculated B+3 successfully. Explain how it is
+possible while we did not define the operator+ function for Fraction and integer.
+- Because we define in constructor of Fraction that denominator will be interger over 1, therefore the operator+ function will automatically understand that the integer is a fraction
+
+3. Explain what have you learned in this workshop.
+- I've learned how the friend function work as well as I've learnt something new called explicit where I can pass the value and it will return the calculation right away without
+implement it.
+- I've learned how operator work as there are many type of operator and each of them will need to declare differently.

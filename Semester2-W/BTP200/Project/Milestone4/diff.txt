@@ -1,0 +1,10 @@
+
+In line number 30 of your output:
+The output should be:
+Price: 10
+But your output is: 
+Price: abc
+       ^
+-------|
+Professor's character ASCII code: hex(31), dec(49)
+un-matched character ASCII code: hex(61), dec(97)
