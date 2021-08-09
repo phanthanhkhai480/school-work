@@ -1,0 +1,23 @@
+{
+  "name": "bti32-app",
+  "version": "1.0.0",
+  "description": "default",
+  "main": "server.js",
+  "scripts": {
+    "test": "default",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "default"
+  },
+  "keywords": [
+    "default"
+  ],
+  "author": "Khai Phan",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2"
+  },
+  "devDependencies": {}
+}
