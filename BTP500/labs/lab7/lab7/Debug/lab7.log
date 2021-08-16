@@ -1,6 +1,0 @@
-﻿  lab7.cpp
-  lab7tester.cpp
-  Generating Code...
-lab7tester.obj : error LNK2005: "void __cdecl printArray(int * const,int)" (?printArray@@YAXQAHH@Z) already defined in lab7experiment.obj
-lab7tester.obj : error LNK2005: _main already defined in lab7experiment.obj
-C:\Users\phant\Desktop\Semester10\BTP500\labs-btp500-khai-phan\lab7\lab7\Debug\lab7.exe : fatal error LNK1169: one or more multiply defined symbols found

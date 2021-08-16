@@ -1,9 +1,0 @@
-﻿  lab8tester.cpp
-C:\Users\phant\Desktop\Semester10\BTP500\labs-btp500-khai-phan\lab8\lab8.h(405,7): warning C4101: 'j': unreferenced local variable
-C:\Users\phant\Desktop\Semester10\BTP500\labs-btp500-khai-phan\lab8\lab8.h(403): message : while compiling class template member function 'void Queue<BST<int>::print::Output>::grow(void)'
-C:\Users\phant\Desktop\Semester10\BTP500\labs-btp500-khai-phan\lab8\lab8.h(425): message : see reference to function template instantiation 'void Queue<BST<int>::print::Output>::grow(void)' being compiled
-C:\Users\phant\Desktop\Semester10\BTP500\labs-btp500-khai-phan\lab8\lab8.h(354): message : see reference to class template instantiation 'Queue<BST<int>::print::Output>' being compiled
-C:\Users\phant\Desktop\Semester10\BTP500\labs-btp500-khai-phan\lab8\lab8.h(338): message : while compiling class template member function 'void BST<int>::print(void) const'
-C:\Users\phant\Desktop\Semester10\BTP500\labs-btp500-khai-phan\lab8\lab8tester.cpp(128): message : see reference to function template instantiation 'void BST<int>::print(void) const' being compiled
-C:\Users\phant\Desktop\Semester10\BTP500\labs-btp500-khai-phan\lab8\lab8tester.cpp(40): message : see reference to class template instantiation 'BST<int>' being compiled
-  lab8.vcxproj -> C:\Users\phant\Desktop\Semester10\BTP500\labs-btp500-khai-phan\lab8\lab8\Debug\lab8.exe
