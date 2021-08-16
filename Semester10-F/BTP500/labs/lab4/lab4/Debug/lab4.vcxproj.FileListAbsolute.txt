@@ -1,0 +1,2 @@
+C:\Users\phant\Desktop\Semester10\BTP500\labs-btp500-khai-phan\VS project\lab4\Debug\lab4.exe
+C:\Users\phant\Desktop\Semester10\BTP500\labs-btp500-khai-phan\VS project\lab4\Debug\lab4.pdb

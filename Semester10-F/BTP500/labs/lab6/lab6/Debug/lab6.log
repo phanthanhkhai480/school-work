@@ -1,0 +1,3 @@
+﻿lab6tester.obj : error LNK2005: "void __cdecl printArray(int * const,int)" (?printArray@@YAXQAHH@Z) already defined in lab6experiments.obj
+lab6tester.obj : error LNK2005: _main already defined in lab6experiments.obj
+C:\Users\phant\Desktop\Semester10\BTP500\labs-btp500-khai-phan\VS project\lab6\Debug\lab6.exe : fatal error LNK1169: one or more multiply defined symbols found
