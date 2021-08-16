@@ -17,7 +17,7 @@ function drawGrass len wid numBlades = (
 
 function main = (
 	--delete objects
-	drawGrass 50 500 2000
+	drawGrass 1000 1000 2000
 )
 
 main()
