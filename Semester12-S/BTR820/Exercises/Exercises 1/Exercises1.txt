@@ -1,0 +1,8 @@
+I am working on Photogrammetry Scan to find out how we can construct a set of 2D images into a 3D object that allows engineering, 
+architect and sometimes programmer to edit the 3D object and export back to a set of 2D images with the new change with multiple 
+angle view. This will help others user, especially non-technical user to better understand the procedure of editing a 3D model. 
+The reason I choose this topic as my research question is because I have had a chance to work with Photogrammetry in my previous 
+Co-Op term and I found that is very interesting to discover. I realize that Photogrammetry has many application into our society, 
+such as using to build a model house before builder can use that to build a house, apply different change to the current house so 
+owner can visualize what each change will look like, etc., I found this is a very new concept and topic that many people don't even 
+notice or care about so I want to spread this new technology knowledge to everyone.
