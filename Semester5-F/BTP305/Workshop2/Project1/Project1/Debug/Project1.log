@@ -1,0 +1,88 @@
+﻿  Text.cpp
+c:\users\phant\onedrive\desktop\seneca college\3rd year (5)\btp 305\workshop2\project1\project1\text.cpp(38): error C2679: binary '=': no operator found which takes a right-hand operand of type 'std::string *' (or there is no acceptable conversion)
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.15.26726\include\xstring(2501): note: could be 'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(const _Elem)'
+          with
+          [
+              _Elem=char
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.15.26726\include\xstring(2496): note: or       'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(const _Elem *const )'
+          with
+          [
+              _Elem=char
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.15.26726\include\xstring(2465): note: or       'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(const std::basic_string<char,std::char_traits<char>,std::allocator<char>> &)'
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.15.26726\include\xstring(2425): note: or       'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(std::initializer_list<_Elem>)'
+          with
+          [
+              _Elem=char
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.15.26726\include\xstring(2300): note: or       'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(std::basic_string<char,std::char_traits<char>,std::allocator<char>> &&) noexcept(<expr>)'
+  c:\users\phant\onedrive\desktop\seneca college\3rd year (5)\btp 305\workshop2\project1\project1\text.cpp(38): note: while trying to match the argument list '(std::string, std::string *)'
+c:\users\phant\onedrive\desktop\seneca college\3rd year (5)\btp 305\workshop2\project1\project1\text.cpp(41): error C2672: 'getline': no matching overloaded function found
+c:\users\phant\onedrive\desktop\seneca college\3rd year (5)\btp 305\workshop2\project1\project1\text.cpp(41): error C2784: 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &,std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'std::basic_istream<_Elem,_Traits> &' from 'std::ifstream'
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.15.26726\include\string(160): note: see declaration of 'std::getline'
+c:\users\phant\onedrive\desktop\seneca college\3rd year (5)\btp 305\workshop2\project1\project1\text.cpp(41): error C2784: 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &,std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'std::basic_string<_Elem,_Traits,_Alloc> &' from 'char'
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.15.26726\include\string(160): note: see declaration of 'std::getline'
+c:\users\phant\onedrive\desktop\seneca college\3rd year (5)\btp 305\workshop2\project1\project1\text.cpp(41): error C2780: 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &,std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)': expects 3 arguments - 2 provided
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.15.26726\include\string(149): note: see declaration of 'std::getline'
+c:\users\phant\onedrive\desktop\seneca college\3rd year (5)\btp 305\workshop2\project1\project1\text.cpp(41): error C2784: 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &&,std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'std::basic_istream<_Elem,_Traits> &&' from 'std::ifstream'
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.15.26726\include\string(129): note: see declaration of 'std::getline'
+c:\users\phant\onedrive\desktop\seneca college\3rd year (5)\btp 305\workshop2\project1\project1\text.cpp(41): error C2784: 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &&,std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'std::basic_string<_Elem,_Traits,_Alloc> &' from 'char'
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.15.26726\include\string(129): note: see declaration of 'std::getline'
+c:\users\phant\onedrive\desktop\seneca college\3rd year (5)\btp 305\workshop2\project1\project1\text.cpp(41): error C2780: 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &&,std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)': expects 3 arguments - 2 provided
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.15.26726\include\string(76): note: see declaration of 'std::getline'
+c:\users\phant\onedrive\desktop\seneca college\3rd year (5)\btp 305\workshop2\project1\project1\text.cpp(51): error C2679: binary '=': no operator found which takes a right-hand operand of type 'std::string *' (or there is no acceptable conversion)
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.15.26726\include\xstring(2501): note: could be 'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(const _Elem)'
+          with
+          [
+              _Elem=char
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.15.26726\include\xstring(2496): note: or       'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(const _Elem *const )'
+          with
+          [
+              _Elem=char
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.15.26726\include\xstring(2465): note: or       'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(const std::basic_string<char,std::char_traits<char>,std::allocator<char>> &)'
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.15.26726\include\xstring(2425): note: or       'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(std::initializer_list<_Elem>)'
+          with
+          [
+              _Elem=char
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.15.26726\include\xstring(2300): note: or       'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(std::basic_string<char,std::char_traits<char>,std::allocator<char>> &&) noexcept(<expr>)'
+  c:\users\phant\onedrive\desktop\seneca college\3rd year (5)\btp 305\workshop2\project1\project1\text.cpp(51): note: while trying to match the argument list '(std::string, std::string *)'
+c:\users\phant\onedrive\desktop\seneca college\3rd year (5)\btp 305\workshop2\project1\project1\text.cpp(52): warning C4018: '<': signed/unsigned mismatch
+c:\users\phant\onedrive\desktop\seneca college\3rd year (5)\btp 305\workshop2\project1\project1\text.cpp(62): error C2678: binary '!=': no operator found which takes a left-hand operand of type 'std::string' (or there is no acceptable conversion)
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.15.26726\include\system_error(306): note: could be 'bool std::operator !=(const std::error_condition &,const std::error_condition &) noexcept'
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.15.26726\include\system_error(301): note: or       'bool std::operator !=(const std::error_condition &,const std::error_code &) noexcept'
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.15.26726\include\system_error(296): note: or       'bool std::operator !=(const std::error_code &,const std::error_condition &) noexcept'
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.15.26726\include\system_error(291): note: or       'bool std::operator !=(const std::error_code &,const std::error_code &) noexcept'
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.15.26726\include\exception(346): note: or       'bool std::operator !=(const std::exception_ptr &,std::nullptr_t) noexcept'
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.15.26726\include\exception(341): note: or       'bool std::operator !=(std::nullptr_t,const std::exception_ptr &) noexcept'
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.15.26726\include\exception(336): note: or       'bool std::operator !=(const std::exception_ptr &,const std::exception_ptr &) noexcept'
+  c:\users\phant\onedrive\desktop\seneca college\3rd year (5)\btp 305\workshop2\project1\project1\text.cpp(62): note: while trying to match the argument list '(std::string, nullptr)'
+c:\users\phant\onedrive\desktop\seneca college\3rd year (5)\btp 305\workshop2\project1\project1\text.cpp(64): error C2440: 'delete': cannot convert from 'std::string' to 'void*'
+  c:\users\phant\onedrive\desktop\seneca college\3rd year (5)\btp 305\workshop2\project1\project1\text.cpp(64): note: No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+c:\users\phant\onedrive\desktop\seneca college\3rd year (5)\btp 305\workshop2\project1\project1\text.cpp(67): error C2679: binary '=': no operator found which takes a right-hand operand of type 'std::string *' (or there is no acceptable conversion)
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.15.26726\include\xstring(2501): note: could be 'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(const _Elem)'
+          with
+          [
+              _Elem=char
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.15.26726\include\xstring(2496): note: or       'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(const _Elem *const )'
+          with
+          [
+              _Elem=char
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.15.26726\include\xstring(2465): note: or       'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(const std::basic_string<char,std::char_traits<char>,std::allocator<char>> &)'
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.15.26726\include\xstring(2425): note: or       'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(std::initializer_list<_Elem>)'
+          with
+          [
+              _Elem=char
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.15.26726\include\xstring(2300): note: or       'std::basic_string<char,std::char_traits<char>,std::allocator<char>> &std::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator =(std::basic_string<char,std::char_traits<char>,std::allocator<char>> &&) noexcept(<expr>)'
+  c:\users\phant\onedrive\desktop\seneca college\3rd year (5)\btp 305\workshop2\project1\project1\text.cpp(67): note: while trying to match the argument list '(std::string, std::string *)'
+c:\users\phant\onedrive\desktop\seneca college\3rd year (5)\btp 305\workshop2\project1\project1\text.cpp(68): warning C4018: '<': signed/unsigned mismatch
+c:\users\phant\onedrive\desktop\seneca college\3rd year (5)\btp 305\workshop2\project1\project1\text.cpp(87): error C2440: 'delete': cannot convert from 'std::string' to 'void*'
+  c:\users\phant\onedrive\desktop\seneca college\3rd year (5)\btp 305\workshop2\project1\project1\text.cpp(87): note: No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+c:\users\phant\onedrive\desktop\seneca college\3rd year (5)\btp 305\workshop2\project1\project1\text.cpp(97): error C2440: 'delete': cannot convert from 'std::string' to 'void*'
+  c:\users\phant\onedrive\desktop\seneca college\3rd year (5)\btp 305\workshop2\project1\project1\text.cpp(97): note: No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called

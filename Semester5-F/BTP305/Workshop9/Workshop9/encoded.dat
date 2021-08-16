@@ -1,0 +1,11 @@
+Compound types are types that a programmer constructs from a language's
+fundamental types and/or other compound types.  In C++11, compound types
+include pointers and references to existing types, enumerations of named
+constant values, arrays of objects of an existing type, classes and function
+types.  C++11 clarified the difference between lvalues and rvalues and
+references to each, which helped simplify many of the facilities available
+in the standard library.
+
+This chapter describes the non-function types in detail.  The description
+includes a review of one-dimensional arrays in both static and dynamic memory
+and shows how to allocate multi-dimensional arrays in both static and dH_P\XR;\T\^CHeYTUTBRCXAEX^_^WR]PBBTBCTGXTFBR]PBBUTWX_XEX^_BX_EC^UDRTB;\^GTR^_BECDRE^CBP_U\^GTPBBXV_\T_E^ATCPE^CBP_UX_R]DUTBUTR]PCPEX^_B^W;BATRXP]\T\STCBBDRYPBSXEWXT]UBR]PBBGPCXPS]TBP_UR]PBBWD_REX^_B;

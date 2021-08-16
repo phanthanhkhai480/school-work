@@ -1,0 +1,106 @@
+\hypertarget{class_task}{}\section{Task Class Reference}
+\label{class_task}\index{Task@{Task}}
+Inheritance diagram for Task\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_task}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_task_a43834b15cba574ccd4f25af665649776}{Task}} (std\+::string \&)
+\item 
+\mbox{\hyperlink{class_task_a60073fae7e07b8d1721b1bc73adcc6c8}{Task}} (\mbox{\hyperlink{class_task}{Task}} \&)=delete
+\item 
+\mbox{\hyperlink{class_task}{Task}} \& \mbox{\hyperlink{class_task_a95c7171fb2f939f1e4ae9a82f1c7c32d}{operator=}} (\mbox{\hyperlink{class_task}{Task}} \&)=delete
+\item 
+\mbox{\hyperlink{class_task_ae146c98551f244f62b93bc7b4e334580}{Task}} (\mbox{\hyperlink{class_task}{Task}} \&\&)=delete
+\item 
+\mbox{\hyperlink{class_task}{Task}} \& \mbox{\hyperlink{class_task_ada7e932e1a40e87069806c264ca3b2c5}{operator=}} (\mbox{\hyperlink{class_task}{Task}} \&\&)=delete
+\item 
+\mbox{\Hypertarget{class_task_a77d0a5c728a3d0bec89217afbd3addfd}\label{class_task_a77d0a5c728a3d0bec89217afbd3addfd}} 
+void {\bfseries Run\+Process} (std\+::ostream \&os)
+\item 
+bool \mbox{\hyperlink{class_task_ad5f00535195117634b86714e628abd77}{Move\+Task}} ()
+\item 
+void \mbox{\hyperlink{class_task_aca65eac4162faecd7cce47db096183fc}{set\+Next\+Task}} (\mbox{\hyperlink{class_task}{Task}} \&task)
+\item 
+bool \mbox{\hyperlink{class_task_a6cfa898328059215d5a89f27aac7985b}{get\+Completed}} (\mbox{\hyperlink{class_customer_order}{Customer\+Order}} \&src)
+\item 
+void \mbox{\hyperlink{class_task_ad94a831f3fd8c66b41a1dd24f751cbb1}{Validate}} (std\+::ostream \&os)
+\item 
+\mbox{\hyperlink{class_task}{Task}} \& \mbox{\hyperlink{class_task_a3ed2681da2f886dc5742dc180f03a3b8}{operator+=}} (\mbox{\hyperlink{class_customer_order}{Customer\+Order}} \&\&new\+Order)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_task_a43834b15cba574ccd4f25af665649776}\label{class_task_a43834b15cba574ccd4f25af665649776}} 
+\index{Task@{Task}!Task@{Task}}
+\index{Task@{Task}!Task@{Task}}
+\subsubsection{\texorpdfstring{Task()}{Task()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Task\+::\+Task (\begin{DoxyParamCaption}\item[{std\+::string \&}]{abc }\end{DoxyParamCaption})}
+
+Custom Constructor !$>$ \mbox{\Hypertarget{class_task_a60073fae7e07b8d1721b1bc73adcc6c8}\label{class_task_a60073fae7e07b8d1721b1bc73adcc6c8}} 
+\index{Task@{Task}!Task@{Task}}
+\index{Task@{Task}!Task@{Task}}
+\subsubsection{\texorpdfstring{Task()}{Task()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Task\+::\+Task (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_task}{Task}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+Uninitialized copy constructor !$>$ \mbox{\Hypertarget{class_task_ae146c98551f244f62b93bc7b4e334580}\label{class_task_ae146c98551f244f62b93bc7b4e334580}} 
+\index{Task@{Task}!Task@{Task}}
+\index{Task@{Task}!Task@{Task}}
+\subsubsection{\texorpdfstring{Task()}{Task()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Task\+::\+Task (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_task}{Task}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+Uninitialized move constructor !$>$ 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_task_a6cfa898328059215d5a89f27aac7985b}\label{class_task_a6cfa898328059215d5a89f27aac7985b}} 
+\index{Task@{Task}!get\+Completed@{get\+Completed}}
+\index{get\+Completed@{get\+Completed}!Task@{Task}}
+\subsubsection{\texorpdfstring{get\+Completed()}{getCompleted()}}
+{\footnotesize\ttfamily bool Task\+::get\+Completed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_customer_order}{Customer\+Order}} \&}]{src }\end{DoxyParamCaption})}
+
+$<$ set the next available task for the order !$>$ complete the order on queue !$>$ \mbox{\Hypertarget{class_task_ad5f00535195117634b86714e628abd77}\label{class_task_ad5f00535195117634b86714e628abd77}} 
+\index{Task@{Task}!Move\+Task@{Move\+Task}}
+\index{Move\+Task@{Move\+Task}!Task@{Task}}
+\subsubsection{\texorpdfstring{Move\+Task()}{MoveTask()}}
+{\footnotesize\ttfamily bool Task\+::\+Move\+Task (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+$<$ fill last order on order queue !$>$ \mbox{\Hypertarget{class_task_a3ed2681da2f886dc5742dc180f03a3b8}\label{class_task_a3ed2681da2f886dc5742dc180f03a3b8}} 
+\index{Task@{Task}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!Task@{Task}}
+\subsubsection{\texorpdfstring{operator+=()}{operator+=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_task}{Task}} \& Task\+::operator+= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_customer_order}{Customer\+Order}} \&\&}]{new\+Order }\end{DoxyParamCaption})}
+
+move an order to the front of the queue !$>$ \mbox{\Hypertarget{class_task_a95c7171fb2f939f1e4ae9a82f1c7c32d}\label{class_task_a95c7171fb2f939f1e4ae9a82f1c7c32d}} 
+\index{Task@{Task}!operator=@{operator=}}
+\index{operator=@{operator=}!Task@{Task}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_task}{Task}}\& Task\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_task}{Task}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+Uninitialized copy assignment !$>$ \mbox{\Hypertarget{class_task_ada7e932e1a40e87069806c264ca3b2c5}\label{class_task_ada7e932e1a40e87069806c264ca3b2c5}} 
+\index{Task@{Task}!operator=@{operator=}}
+\index{operator=@{operator=}!Task@{Task}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_task}{Task}}\& Task\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_task}{Task}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+Uninitialized move assignment !$>$ \mbox{\Hypertarget{class_task_aca65eac4162faecd7cce47db096183fc}\label{class_task_aca65eac4162faecd7cce47db096183fc}} 
+\index{Task@{Task}!set\+Next\+Task@{set\+Next\+Task}}
+\index{set\+Next\+Task@{set\+Next\+Task}!Task@{Task}}
+\subsubsection{\texorpdfstring{set\+Next\+Task()}{setNextTask()}}
+{\footnotesize\ttfamily void Task\+::set\+Next\+Task (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_task}{Task}} \&}]{task }\end{DoxyParamCaption})}
+
+$<$ move move completed task to next part !$>$ \mbox{\Hypertarget{class_task_ad94a831f3fd8c66b41a1dd24f751cbb1}\label{class_task_ad94a831f3fd8c66b41a1dd24f751cbb1}} 
+\index{Task@{Task}!Validate@{Validate}}
+\index{Validate@{Validate}!Task@{Task}}
+\subsubsection{\texorpdfstring{Validate()}{Validate()}}
+{\footnotesize\ttfamily void Task\+::\+Validate (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption})}
+
+validate the next available task !$>$ 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Task.\+h\item 
+Task.\+cpp\end{DoxyCompactItemize}

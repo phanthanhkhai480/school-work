@@ -1,0 +1,3 @@
+﻿  CustomerOrder.cpp
+e:\btp 305\project\milestones 2\milestone2\milestone2\customerorder.cpp(106): warning C4715: 'CustomerOrder::getItemFillState': not all control paths return a value
+  Milestone2.vcxproj -> E:\BTP 305\Project\Milestones 2\Milestone2\Debug\Milestone2.exe

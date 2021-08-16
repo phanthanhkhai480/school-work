@@ -1,0 +1,11 @@
+﻿  L0.cpp
+c:\users\phant\onedrive\desktop\btp305\workshop0\workshop0\l0.cpp(30): error C2664: 'Student::Student(Student &&)': cannot convert argument 1 from 'const char [5]' to 'char *'
+  c:\users\phant\onedrive\desktop\btp305\workshop0\workshop0\l0.cpp(30): note: Conversion from string literal loses const qualifier (see /Zc:strictStrings)
+c:\users\phant\onedrive\desktop\btp305\workshop0\workshop0\l0.cpp(31): error C2664: 'Student::Student(Student &&)': cannot convert argument 1 from 'const char [4]' to 'char *'
+  c:\users\phant\onedrive\desktop\btp305\workshop0\workshop0\l0.cpp(31): note: Conversion from string literal loses const qualifier (see /Zc:strictStrings)
+c:\users\phant\onedrive\desktop\btp305\workshop0\workshop0\l0.cpp(32): error C2664: 'Student::Student(Student &&)': cannot convert argument 1 from 'const char [8]' to 'char *'
+  c:\users\phant\onedrive\desktop\btp305\workshop0\workshop0\l0.cpp(32): note: Conversion from string literal loses const qualifier (see /Zc:strictStrings)
+c:\users\phant\onedrive\desktop\btp305\workshop0\workshop0\l0.cpp(33): error C2664: 'Student::Student(Student &&)': cannot convert argument 1 from 'const char [5]' to 'char *'
+  c:\users\phant\onedrive\desktop\btp305\workshop0\workshop0\l0.cpp(33): note: Conversion from string literal loses const qualifier (see /Zc:strictStrings)
+c:\users\phant\onedrive\desktop\btp305\workshop0\workshop0\l0.cpp(34): error C2664: 'Student::Student(Student &&)': cannot convert argument 1 from 'const char [8]' to 'char *'
+  c:\users\phant\onedrive\desktop\btp305\workshop0\workshop0\l0.cpp(34): note: Conversion from string literal loses const qualifier (see /Zc:strictStrings)

@@ -1,0 +1,6 @@
+﻿  Item.cpp
+e:\school\3rd year (5)\btp 305\project\milestone1\milestone1\item.cpp(23): warning C4267: '=': conversion from 'size_t' to 'unsigned int', possible loss of data
+e:\school\3rd year (5)\btp 305\project\milestone1\milestone1\item.cpp(31): warning C4267: '=': conversion from 'size_t' to 'unsigned int', possible loss of data
+e:\school\3rd year (5)\btp 305\project\milestone1\milestone1\item.cpp(39): warning C4267: '=': conversion from 'size_t' to 'unsigned int', possible loss of data
+e:\school\3rd year (5)\btp 305\project\milestone1\milestone1\item.cpp(46): warning C4267: '=': conversion from 'size_t' to 'unsigned int', possible loss of data
+  Milestone1.vcxproj -> E:\School\3rd Year (5)\BTP 305\Project\Milestone1\x64\Debug\Milestone1.exe

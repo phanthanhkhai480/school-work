@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="struct_item_info" kind="struct" language="C++" prot="public">
+    <compoundname>ItemInfo</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_item_info_1ae443b3ad2e7a2d7b70aa48b72948fab0" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string ItemInfo::ItemName</definition>
+        <argsstring></argsstring>
+        <name>ItemName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomerOrder.h" line="10" column="1" bodyfile="CustomerOrder.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_item_info_1af47c788cac4e53c9c3f08e8602d4e622" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int ItemInfo::SerialNumber</definition>
+        <argsstring></argsstring>
+        <name>SerialNumber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomerOrder.h" line="11" column="1" bodyfile="CustomerOrder.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_item_info_1aba6969821f7becd562a2d5d159b7e978" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ItemInfo::FillState</definition>
+        <argsstring></argsstring>
+        <name>FillState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomerOrder.h" line="12" column="1" bodyfile="CustomerOrder.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_item_info_1aae5f84bd3f117f37547f074b2a49a85e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ItemInfo::ItemInfo</definition>
+        <argsstring>(std::string src)</argsstring>
+        <name>ItemInfo</name>
+        <param>
+          <type>std::string</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CustomerOrder.h" line="14" column="1" bodyfile="CustomerOrder.h" bodystart="14" bodyend="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="CustomerOrder.h" line="9" column="1" bodyfile="CustomerOrder.h" bodystart="8" bodyend="15"/>
+    <listofallmembers>
+      <member refid="struct_item_info_1aba6969821f7becd562a2d5d159b7e978" prot="public" virt="non-virtual"><scope>ItemInfo</scope><name>FillState</name></member>
+      <member refid="struct_item_info_1aae5f84bd3f117f37547f074b2a49a85e" prot="public" virt="non-virtual"><scope>ItemInfo</scope><name>ItemInfo</name></member>
+      <member refid="struct_item_info_1ae443b3ad2e7a2d7b70aa48b72948fab0" prot="public" virt="non-virtual"><scope>ItemInfo</scope><name>ItemName</name></member>
+      <member refid="struct_item_info_1af47c788cac4e53c9c3f08e8602d4e622" prot="public" virt="non-virtual"><scope>ItemInfo</scope><name>SerialNumber</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

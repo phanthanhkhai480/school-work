@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_line_manager" kind="class" language="C++" prot="public">
+    <compoundname>LineManager</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_line_manager_1a3d9249757e99a143d16a176e9e7556f3" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="class_task" kindref="compound">Task</ref> * &gt;</type>
+        <definition>std::vector&lt;Task*&gt; LineManager::AssemblyLine</definition>
+        <argsstring></argsstring>
+        <name>AssemblyLine</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LineManager.h" line="12" column="1" bodyfile="LineManager.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_line_manager_1aad12a30c469c839159a9cc60c5ec8d83" prot="private" static="no" mutable="no">
+        <type>std::deque&lt; <ref refid="class_customer_order" kindref="compound">CustomerOrder</ref> &gt;</type>
+        <definition>std::deque&lt;CustomerOrder&gt; LineManager::ToBeFilled</definition>
+        <argsstring></argsstring>
+        <name>ToBeFilled</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LineManager.h" line="13" column="1" bodyfile="LineManager.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_line_manager_1af6d64d5ea606ce96d4c43d0bd3e2dcb4" prot="private" static="no" mutable="no">
+        <type>std::deque&lt; <ref refid="class_customer_order" kindref="compound">CustomerOrder</ref> &gt;</type>
+        <definition>std::deque&lt;CustomerOrder&gt; LineManager::Completed</definition>
+        <argsstring></argsstring>
+        <name>Completed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LineManager.h" line="14" column="1" bodyfile="LineManager.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_line_manager_1afef0ad07bbe7f5c5f47db726afec4b07" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int LineManager::CustomerOrder_Count</definition>
+        <argsstring></argsstring>
+        <name>CustomerOrder_Count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LineManager.h" line="15" column="1" bodyfile="LineManager.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_line_manager_1a2927d6e91aa3bba5151c3043598a0737" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LineManager::LineManager</definition>
+        <argsstring>(std::string &amp;, std::vector&lt; Task *&gt; &amp;, std::vector&lt; CustomerOrder &gt; &amp;)</argsstring>
+        <name>LineManager</name>
+        <param>
+          <type>std::string &amp;</type>
+        </param>
+        <param>
+          <type>std::vector&lt; <ref refid="class_task" kindref="compound">Task</ref> *&gt; &amp;</type>
+        </param>
+        <param>
+          <type>std::vector&lt; <ref refid="class_customer_order" kindref="compound">CustomerOrder</ref> &gt; &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LineManager.h" line="20" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_line_manager_1ad18c4a41e40fbfb89b6b218dfefa31ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool LineManager::Run</definition>
+        <argsstring>(std::ostream &amp;)</argsstring>
+        <name>Run</name>
+        <param>
+          <type>std::ostream &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LineManager.h" line="24" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="LineManager.h" line="11" column="1" bodyfile="LineManager.h" bodystart="10" bodyend="25"/>
+    <listofallmembers>
+      <member refid="class_line_manager_1a3d9249757e99a143d16a176e9e7556f3" prot="private" virt="non-virtual"><scope>LineManager</scope><name>AssemblyLine</name></member>
+      <member refid="class_line_manager_1af6d64d5ea606ce96d4c43d0bd3e2dcb4" prot="private" virt="non-virtual"><scope>LineManager</scope><name>Completed</name></member>
+      <member refid="class_line_manager_1afef0ad07bbe7f5c5f47db726afec4b07" prot="private" virt="non-virtual"><scope>LineManager</scope><name>CustomerOrder_Count</name></member>
+      <member refid="class_line_manager_1a2927d6e91aa3bba5151c3043598a0737" prot="public" virt="non-virtual"><scope>LineManager</scope><name>LineManager</name></member>
+      <member refid="class_line_manager_1ad18c4a41e40fbfb89b6b218dfefa31ed" prot="public" virt="non-virtual"><scope>LineManager</scope><name>Run</name></member>
+      <member refid="class_line_manager_1aad12a30c469c839159a9cc60c5ec8d83" prot="private" virt="non-virtual"><scope>LineManager</scope><name>ToBeFilled</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

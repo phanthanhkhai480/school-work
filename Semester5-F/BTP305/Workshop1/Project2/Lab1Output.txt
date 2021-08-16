@@ -1,0 +1,4 @@
+Command Line : C:\Users\phant\OneDrive\Desktop\BTP305\Workshop1\Debug\Project2.exe ipc440, btb500 
+ The Maximum number of characters stored : 3
+0:ipc
+1:btb

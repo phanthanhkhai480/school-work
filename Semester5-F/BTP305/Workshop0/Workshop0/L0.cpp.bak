@@ -1,0 +1,47 @@
+// Workshops.cpp : Defines the entry point for the console application.
+// file level documentation
+
+#define _CRT_SECURE_NO_WARNINGS
+#include <string>
+#include <iostream>
+#include "L0.h"
+
+
+std::ostream& Person::display(std::ostream& os) {
+	return os << "Person: " << name << std::endl;
+}
+
+
+std::ostream& Student::display(std::ostream& os) {
+	return os << "Student: " << name << " - Number: " << number << std::endl;
+}
+
+
+Student::Student(char * na, int nm) {
+	this->name = na;
+	this->number = nm;
+}
+
+
+int main(void) {
+	char c;
+	int i;
+	Person* studentList[5];
+	studentList[0] = new Student("Jane", 1);
+	studentList[1] = new Student("Jim", 2);
+	studentList[2] = new Student("Jacques", 3);
+	studentList[3] = new Student("Juan", 4);
+	studentList[4] = new Student("Junlian", 5);
+
+	for (i = 0; i <= NO_OF_STUDENTS; i++);
+	if (i = 0) {
+		std::cout << "Front of the Line: ";
+		studentList[i]->display(std::cout);
+	}
+	else {
+		std::cout << "Followers: ";
+		studentList[i]->display(std::cout);
+	}
+
+	std::cin >> c;
+};

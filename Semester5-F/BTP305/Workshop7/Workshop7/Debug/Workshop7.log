@@ -1,0 +1,14 @@
+﻿  w7.cpp
+e:\school\3rd year (5)\btp 305\workshop7\workshop7\datatable.h(100): warning C4244: 'argument': conversion from 'double' to 'const unsigned int', possible loss of data
+  e:\school\3rd year (5)\btp 305\workshop7\workshop7\datatable.h(97): note: while compiling class template member function 'T w7::DataTable<T>::median(void) const'
+          with
+          [
+              T=float
+          ]
+  e:\school\3rd year (5)\btp 305\workshop7\workshop7\w7.cpp(47): note: see reference to function template instantiation 'T w7::DataTable<T>::median(void) const' being compiled
+          with
+          [
+              T=float
+          ]
+  e:\school\3rd year (5)\btp 305\workshop7\workshop7\w7.cpp(33): note: see reference to class template instantiation 'w7::DataTable<float>' being compiled
+  Workshop7.vcxproj -> E:\School\3rd Year (5)\BTP 305\Workshop7\Debug\Workshop7.exe

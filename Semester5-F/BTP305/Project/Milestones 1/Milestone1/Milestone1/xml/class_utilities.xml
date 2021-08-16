@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_utilities" kind="class" language="C++" prot="public">
+    <compoundname>Utilities</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_utilities_1aa565da6871f35516f94658a8d322876c" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t Utilities::field_width</definition>
+        <argsstring></argsstring>
+        <name>field_width</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>attribute to set max field width for display !&gt; </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Utilities.h" line="9" column="1" bodyfile="Utilities.h" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_utilities_1a1c6d4f7786813a4ee8ef21667bb8ac50" prot="private" static="yes" mutable="no">
+        <type>char</type>
+        <definition>char Utilities::delimiter</definition>
+        <argsstring></argsstring>
+        <name>delimiter</name>
+        <initializer>= &apos;a&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>delimiter use to break string !&gt; </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Utilities.h" line="10" column="1" bodyfile="Utilities.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_utilities_1ab1676c9ce35cf347a73d16f1094e1271" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Utilities::Utilities</definition>
+        <argsstring>()</argsstring>
+        <name>Utilities</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Default Constructor !&gt; </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Utilities.h" line="13" column="1" bodyfile="Utilities.cpp" bodystart="10" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="class_utilities_1ac988cf9fa28095c6e5e478364a7115af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Utilities::setFieldWidth</definition>
+        <argsstring>(size_t)</argsstring>
+        <name>setFieldWidth</name>
+        <param>
+          <type>size_t</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>set field_width with a value !&gt; </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Utilities.h" line="14" column="1" bodyfile="Utilities.cpp" bodystart="15" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_utilities_1a4d76700f1ca78a0fcac71661ac05a137" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>std::size_t Utilities::getFieldWidth</definition>
+        <argsstring>() const</argsstring>
+        <name>getFieldWidth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>function return field_width length !&gt; </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Utilities.h" line="15" column="1" bodyfile="Utilities.cpp" bodystart="20" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_utilities_1a965e959066042decc812c4e8b8602a7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::string</type>
+        <definition>const string Utilities::extractToken</definition>
+        <argsstring>(const std::string &amp;, size_t &amp;, bool &amp;)</argsstring>
+        <name>extractToken</name>
+        <param>
+          <type>const std::string &amp;</type>
+        </param>
+        <param>
+          <type>size_t &amp;</type>
+        </param>
+        <param>
+          <type>bool &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>function break down string, begin a certain position and stop at deliminator !&gt; </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Utilities.h" line="16" column="1" bodyfile="Utilities.cpp" bodystart="26" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="class_utilities_1a8335fa01c68450eceb6f409fd6c2469d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const char</type>
+        <definition>const char Utilities::getDelimiter</definition>
+        <argsstring>() const</argsstring>
+        <name>getDelimiter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>function return delimiter !&gt; </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Utilities.h" line="20" column="1" bodyfile="Utilities.cpp" bodystart="65" bodyend="68"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_utilities_1a6961ff17f2a37332cff6ef51940b9c7b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Utilities::setDelimiter</definition>
+        <argsstring>(const char)</argsstring>
+        <name>setDelimiter</name>
+        <param>
+          <type>const char</type>
+          <defname>delim</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>set delimiter to break down string !&gt; </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Utilities.h" line="18" column="1" bodyfile="Utilities.cpp" bodystart="60" bodyend="63"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Utilities.h" line="8" column="1" bodyfile="Utilities.h" bodystart="7" bodyend="22"/>
+    <listofallmembers>
+      <member refid="class_utilities_1a1c6d4f7786813a4ee8ef21667bb8ac50" prot="private" virt="non-virtual"><scope>Utilities</scope><name>delimiter</name></member>
+      <member refid="class_utilities_1a965e959066042decc812c4e8b8602a7e" prot="public" virt="non-virtual"><scope>Utilities</scope><name>extractToken</name></member>
+      <member refid="class_utilities_1aa565da6871f35516f94658a8d322876c" prot="private" virt="non-virtual"><scope>Utilities</scope><name>field_width</name></member>
+      <member refid="class_utilities_1a8335fa01c68450eceb6f409fd6c2469d" prot="public" virt="non-virtual"><scope>Utilities</scope><name>getDelimiter</name></member>
+      <member refid="class_utilities_1a4d76700f1ca78a0fcac71661ac05a137" prot="public" virt="non-virtual"><scope>Utilities</scope><name>getFieldWidth</name></member>
+      <member refid="class_utilities_1a6961ff17f2a37332cff6ef51940b9c7b" prot="public" virt="non-virtual"><scope>Utilities</scope><name>setDelimiter</name></member>
+      <member refid="class_utilities_1ac988cf9fa28095c6e5e478364a7115af" prot="public" virt="non-virtual"><scope>Utilities</scope><name>setFieldWidth</name></member>
+      <member refid="class_utilities_1ab1676c9ce35cf347a73d16f1094e1271" prot="public" virt="non-virtual"><scope>Utilities</scope><name>Utilities</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,260 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_task" kind="class" language="C++" prot="public">
+    <compoundname>Task</compoundname>
+    <basecompoundref refid="class_item" prot="public" virt="non-virtual">Item</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_task_1a2551dfcaa10c72ccfc3eafdc5da1046b" prot="private" static="no" mutable="no">
+        <type>std::deque&lt; <ref refid="class_customer_order" kindref="compound">CustomerOrder</ref> &gt;</type>
+        <definition>std::deque&lt;CustomerOrder&gt; Task::Orders</definition>
+        <argsstring></argsstring>
+        <name>Orders</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Task.h" line="11" column="1" bodyfile="Task.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_task_1a807b3d92124302dda71855f7617e778d" prot="private" static="no" mutable="no">
+        <type><ref refid="class_task" kindref="compound">Task</ref> *</type>
+        <definition>Task* Task::pNextTask</definition>
+        <argsstring></argsstring>
+        <name>pNextTask</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Task.h" line="13" column="1" bodyfile="Task.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_task_1a43834b15cba574ccd4f25af665649776" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Task::Task</definition>
+        <argsstring>(std::string &amp;)</argsstring>
+        <name>Task</name>
+        <param>
+          <type>std::string &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Task.h" line="16" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_task_1a60073fae7e07b8d1721b1bc73adcc6c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Task::Task</definition>
+        <argsstring>(Task &amp;)=delete</argsstring>
+        <name>Task</name>
+        <param>
+          <type><ref refid="class_task" kindref="compound">Task</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Task.h" line="18" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_task_1a95c7171fb2f939f1e4ae9a82f1c7c32d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_task" kindref="compound">Task</ref> &amp;</type>
+        <definition>Task&amp; Task::operator=</definition>
+        <argsstring>(Task &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="class_task" kindref="compound">Task</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Task.h" line="19" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_task_1ae146c98551f244f62b93bc7b4e334580" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Task::Task</definition>
+        <argsstring>(Task &amp;&amp;)=delete</argsstring>
+        <name>Task</name>
+        <param>
+          <type><ref refid="class_task" kindref="compound">Task</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Task.h" line="20" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_task_1ada7e932e1a40e87069806c264ca3b2c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_task" kindref="compound">Task</ref> &amp;</type>
+        <definition>Task&amp; Task::operator=</definition>
+        <argsstring>(Task &amp;&amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="class_task" kindref="compound">Task</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Task.h" line="21" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_task_1a1e056ba737379522c8ca23f78929f2f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Task::RunProcess</definition>
+        <argsstring>(std::ostream &amp;)</argsstring>
+        <name>RunProcess</name>
+        <param>
+          <type>std::ostream &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Task.h" line="23" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_task_1ad5f00535195117634b86714e628abd77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Task::MoveTask</definition>
+        <argsstring>()</argsstring>
+        <name>MoveTask</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Task.h" line="24" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_task_1a957d04414498932e8cdc7591722ae0bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Task::setNextTask</definition>
+        <argsstring>(Task &amp;)</argsstring>
+        <name>setNextTask</name>
+        <param>
+          <type><ref refid="class_task" kindref="compound">Task</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Task.h" line="25" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_task_1af412b718cbb68e36a9c840c42ae2a23a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Task::getCompleted</definition>
+        <argsstring>(CustomerOrder &amp;)</argsstring>
+        <name>getCompleted</name>
+        <param>
+          <type><ref refid="class_customer_order" kindref="compound">CustomerOrder</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Task.h" line="26" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_task_1af0b6fb016e2dbd6a5f972d8c74dee39e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Task::Validate</definition>
+        <argsstring>(std::ostream &amp;)</argsstring>
+        <name>Validate</name>
+        <param>
+          <type>std::ostream &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Task.h" line="27" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_task_1a88789fc0b8fb6e1a7fcf35392daeab92" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_task" kindref="compound">Task</ref> &amp;</type>
+        <definition>Task&amp; Task::operator+=</definition>
+        <argsstring>(CustomerOrder &amp;&amp;)</argsstring>
+        <name>operator+=</name>
+        <param>
+          <type><ref refid="class_customer_order" kindref="compound">CustomerOrder</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Task.h" line="29" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="10">
+        <label>Item</label>
+        <link refid="class_item"/>
+      </node>
+      <node id="9">
+        <label>Task</label>
+        <link refid="class_task"/>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="12">
+        <label>Item</label>
+        <link refid="class_item"/>
+      </node>
+      <node id="11">
+        <label>Task</label>
+        <link refid="class_task"/>
+        <childnode refid="12" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Task.h" line="10" column="1" bodyfile="Task.h" bodystart="9" bodyend="31"/>
+    <listofallmembers>
+      <member refid="class_item_1a41852668dc58d933f786007835dbd8b5" prot="public" virt="non-virtual"><scope>Task</scope><name>display</name></member>
+      <member refid="class_task_1af412b718cbb68e36a9c840c42ae2a23a" prot="public" virt="non-virtual"><scope>Task</scope><name>getCompleted</name></member>
+      <member refid="class_item_1a906722df9ab3f424d32c4106ff64aa15" prot="public" virt="non-virtual"><scope>Task</scope><name>getName</name></member>
+      <member refid="class_item_1ad4d1e93eb012fb0124fa274284fb415c" prot="public" virt="non-virtual"><scope>Task</scope><name>getQuantity</name></member>
+      <member refid="class_item_1a73bb3db4f7f0c571d6527d70875db284" prot="public" virt="non-virtual"><scope>Task</scope><name>getSerialNumber</name></member>
+      <member refid="class_item_1ab7cd3059adc4e1639714eea98d0dafc6" prot="public" virt="non-virtual"><scope>Task</scope><name>Item</name></member>
+      <member refid="class_task_1ad5f00535195117634b86714e628abd77" prot="public" virt="non-virtual"><scope>Task</scope><name>MoveTask</name></member>
+      <member refid="class_task_1a88789fc0b8fb6e1a7fcf35392daeab92" prot="public" virt="non-virtual"><scope>Task</scope><name>operator+=</name></member>
+      <member refid="class_task_1a95c7171fb2f939f1e4ae9a82f1c7c32d" prot="public" virt="non-virtual"><scope>Task</scope><name>operator=</name></member>
+      <member refid="class_task_1ada7e932e1a40e87069806c264ca3b2c5" prot="public" virt="non-virtual"><scope>Task</scope><name>operator=</name></member>
+      <member refid="class_task_1a2551dfcaa10c72ccfc3eafdc5da1046b" prot="private" virt="non-virtual"><scope>Task</scope><name>Orders</name></member>
+      <member refid="class_task_1a807b3d92124302dda71855f7617e778d" prot="private" virt="non-virtual"><scope>Task</scope><name>pNextTask</name></member>
+      <member refid="class_task_1a1e056ba737379522c8ca23f78929f2f7" prot="public" virt="non-virtual"><scope>Task</scope><name>RunProcess</name></member>
+      <member refid="class_task_1a957d04414498932e8cdc7591722ae0bd" prot="public" virt="non-virtual"><scope>Task</scope><name>setNextTask</name></member>
+      <member refid="class_task_1a43834b15cba574ccd4f25af665649776" prot="public" virt="non-virtual"><scope>Task</scope><name>Task</name></member>
+      <member refid="class_task_1a60073fae7e07b8d1721b1bc73adcc6c8" prot="public" virt="non-virtual"><scope>Task</scope><name>Task</name></member>
+      <member refid="class_task_1ae146c98551f244f62b93bc7b4e334580" prot="public" virt="non-virtual"><scope>Task</scope><name>Task</name></member>
+      <member refid="class_item_1ae54aa11885082b7f5e37a925dace0c65" prot="public" virt="non-virtual"><scope>Task</scope><name>updateQuantity</name></member>
+      <member refid="class_task_1af0b6fb016e2dbd6a5f972d8c74dee39e" prot="public" virt="non-virtual"><scope>Task</scope><name>Validate</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.14">
+  <compound refid="class_customer_order" kind="class"><name>CustomerOrder</name>
+    <member refid="class_customer_order_1abf3c0370c931c8c0b8e6b1d8bebe2f1e" kind="variable"><name>Name</name></member>
+    <member refid="class_customer_order_1aee78f24fdf5704d99da7e57f2a51611c" kind="variable"><name>Product</name></member>
+    <member refid="class_customer_order_1a7f5cab63034deb512e4032ddfaee2218" kind="variable"><name>ItemCount</name></member>
+    <member refid="class_customer_order_1a5491929a718ae2f58af35564cbf8957e" kind="variable"><name>ItemList</name></member>
+    <member refid="class_customer_order_1a4bdf8ceff97cf912ff16a117c67c8a32" kind="variable"><name>field_width</name></member>
+    <member refid="class_customer_order_1acbab5cc6c05427a4f4fbba49c3b74f46" kind="function"><name>CustomerOrder</name></member>
+    <member refid="class_customer_order_1a00e1cb818605bcd7457febba4ca9e166" kind="function"><name>CustomerOrder</name></member>
+    <member refid="class_customer_order_1ae36af98287386c97b66537ac463b09c6" kind="function"><name>~CustomerOrder</name></member>
+    <member refid="class_customer_order_1a88603e0493f6bf116b6301be6f36b152" kind="function"><name>CustomerOrder</name></member>
+    <member refid="class_customer_order_1a1a83b197a0ca27da950b7321273c46a5" kind="function"><name>operator=</name></member>
+    <member refid="class_customer_order_1ac46e4af986aecae685a6d745d98b0381" kind="function"><name>CustomerOrder</name></member>
+    <member refid="class_customer_order_1a0567505c22f226c50eeb925e611b411b" kind="function"><name>operator=</name></member>
+    <member refid="class_customer_order_1a36aede6a3339abdd2f476119dea55cf4" kind="function"><name>getOrderFillState</name></member>
+    <member refid="class_customer_order_1a108f3b4e8ebe8075642b24a5d06ed869" kind="function"><name>getItemFillState</name></member>
+    <member refid="class_customer_order_1a935ba17e7f591b90bde0c3dc5b5eb8e5" kind="function"><name>fillItem</name></member>
+    <member refid="class_customer_order_1a7ae264df8502dca90853887064922abe" kind="function"><name>Display</name></member>
+  </compound>
+  <compound refid="class_item" kind="class"><name>Item</name>
+    <member refid="class_item_1a342b7a351c9ae1c5430aa3ef65b670bd" kind="variable"><name>name</name></member>
+    <member refid="class_item_1ab6b7a3aadafe9c0ca34fda0b225b4410" kind="variable"><name>serialNumber</name></member>
+    <member refid="class_item_1ab43cccd97bb17afb92ee761a32f427b5" kind="variable"><name>Quantity</name></member>
+    <member refid="class_item_1a7417563f4b149d5e531cea1e993f66f6" kind="variable"><name>description</name></member>
+    <member refid="class_item_1ac7ddd68d918d4c72dc69f0a76b9908ef" kind="variable"><name>field_width</name></member>
+    <member refid="class_item_1ab7cd3059adc4e1639714eea98d0dafc6" kind="function"><name>Item</name></member>
+    <member refid="class_item_1a906722df9ab3f424d32c4106ff64aa15" kind="function"><name>getName</name></member>
+    <member refid="class_item_1a73bb3db4f7f0c571d6527d70875db284" kind="function"><name>getSerialNumber</name></member>
+    <member refid="class_item_1ad4d1e93eb012fb0124fa274284fb415c" kind="function"><name>getQuantity</name></member>
+    <member refid="class_item_1ae54aa11885082b7f5e37a925dace0c65" kind="function"><name>updateQuantity</name></member>
+    <member refid="class_item_1a41852668dc58d933f786007835dbd8b5" kind="function"><name>display</name></member>
+  </compound>
+  <compound refid="struct_item_info" kind="struct"><name>ItemInfo</name>
+    <member refid="struct_item_info_1ae443b3ad2e7a2d7b70aa48b72948fab0" kind="variable"><name>ItemName</name></member>
+    <member refid="struct_item_info_1af47c788cac4e53c9c3f08e8602d4e622" kind="variable"><name>SerialNumber</name></member>
+    <member refid="struct_item_info_1aba6969821f7becd562a2d5d159b7e978" kind="variable"><name>FillState</name></member>
+    <member refid="struct_item_info_1aae5f84bd3f117f37547f074b2a49a85e" kind="function"><name>ItemInfo</name></member>
+  </compound>
+  <compound refid="class_line_manager" kind="class"><name>LineManager</name>
+    <member refid="class_line_manager_1a3d9249757e99a143d16a176e9e7556f3" kind="variable"><name>AssemblyLine</name></member>
+    <member refid="class_line_manager_1aad12a30c469c839159a9cc60c5ec8d83" kind="variable"><name>ToBeFilled</name></member>
+    <member refid="class_line_manager_1af6d64d5ea606ce96d4c43d0bd3e2dcb4" kind="variable"><name>Completed</name></member>
+    <member refid="class_line_manager_1afef0ad07bbe7f5c5f47db726afec4b07" kind="variable"><name>CustomerOrder_Count</name></member>
+    <member refid="class_line_manager_1a2927d6e91aa3bba5151c3043598a0737" kind="function"><name>LineManager</name></member>
+    <member refid="class_line_manager_1ad18c4a41e40fbfb89b6b218dfefa31ed" kind="function"><name>Run</name></member>
+  </compound>
+  <compound refid="class_task" kind="class"><name>Task</name>
+    <member refid="class_task_1a2551dfcaa10c72ccfc3eafdc5da1046b" kind="variable"><name>Orders</name></member>
+    <member refid="class_task_1a807b3d92124302dda71855f7617e778d" kind="variable"><name>pNextTask</name></member>
+    <member refid="class_task_1a43834b15cba574ccd4f25af665649776" kind="function"><name>Task</name></member>
+    <member refid="class_task_1a60073fae7e07b8d1721b1bc73adcc6c8" kind="function"><name>Task</name></member>
+    <member refid="class_task_1a95c7171fb2f939f1e4ae9a82f1c7c32d" kind="function"><name>operator=</name></member>
+    <member refid="class_task_1ae146c98551f244f62b93bc7b4e334580" kind="function"><name>Task</name></member>
+    <member refid="class_task_1ada7e932e1a40e87069806c264ca3b2c5" kind="function"><name>operator=</name></member>
+    <member refid="class_task_1a1e056ba737379522c8ca23f78929f2f7" kind="function"><name>RunProcess</name></member>
+    <member refid="class_task_1ad5f00535195117634b86714e628abd77" kind="function"><name>MoveTask</name></member>
+    <member refid="class_task_1a957d04414498932e8cdc7591722ae0bd" kind="function"><name>setNextTask</name></member>
+    <member refid="class_task_1af412b718cbb68e36a9c840c42ae2a23a" kind="function"><name>getCompleted</name></member>
+    <member refid="class_task_1af0b6fb016e2dbd6a5f972d8c74dee39e" kind="function"><name>Validate</name></member>
+    <member refid="class_task_1a88789fc0b8fb6e1a7fcf35392daeab92" kind="function"><name>operator+=</name></member>
+  </compound>
+  <compound refid="class_utilities" kind="class"><name>Utilities</name>
+    <member refid="class_utilities_1aa565da6871f35516f94658a8d322876c" kind="variable"><name>field_width</name></member>
+    <member refid="class_utilities_1a1c6d4f7786813a4ee8ef21667bb8ac50" kind="variable"><name>delimiter</name></member>
+    <member refid="class_utilities_1ab1676c9ce35cf347a73d16f1094e1271" kind="function"><name>Utilities</name></member>
+    <member refid="class_utilities_1ac988cf9fa28095c6e5e478364a7115af" kind="function"><name>setFieldWidth</name></member>
+    <member refid="class_utilities_1a4d76700f1ca78a0fcac71661ac05a137" kind="function"><name>getFieldWidth</name></member>
+    <member refid="class_utilities_1a965e959066042decc812c4e8b8602a7e" kind="function"><name>extractToken</name></member>
+    <member refid="class_utilities_1a8335fa01c68450eceb6f409fd6c2469d" kind="function"><name>getDelimiter</name></member>
+    <member refid="class_utilities_1a6961ff17f2a37332cff6ef51940b9c7b" kind="function"><name>setDelimiter</name></member>
+  </compound>
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="_assembly_line_8cpp" kind="file"><name>AssemblyLine.cpp</name>
+    <member refid="_assembly_line_8cpp_1a52d810f38ddd978513f5a071715112eb" kind="variable"><name>Inventory</name></member>
+    <member refid="_assembly_line_8cpp_1ac243ef574668eba3b0967e73a9d81ae6" kind="function"><name>RunM1</name></member>
+    <member refid="_assembly_line_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="_customer_order_8h" kind="file"><name>CustomerOrder.h</name>
+  </compound>
+  <compound refid="_item_8cpp" kind="file"><name>Item.cpp</name>
+  </compound>
+  <compound refid="_item_8h" kind="file"><name>Item.h</name>
+    <member refid="_item_8h_1ae923513243df5de84b0dc0b0beb8a953" kind="variable"><name>CODE_WIDTH</name></member>
+  </compound>
+  <compound refid="_line_manager_8h" kind="file"><name>LineManager.h</name>
+  </compound>
+  <compound refid="_task_8h" kind="file"><name>Task.h</name>
+  </compound>
+  <compound refid="_utilities_8cpp" kind="file"><name>Utilities.cpp</name>
+  </compound>
+  <compound refid="_utilities_8h" kind="file"><name>Utilities.h</name>
+  </compound>
+</doxygenindex>

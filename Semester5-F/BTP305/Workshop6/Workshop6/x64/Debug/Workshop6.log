@@ -1,0 +1,13 @@
+﻿  iProduct.cpp
+c:\users\phant\onedrive\desktop\school\3rd year (5)\btp 305\workshop6\workshop6\product.h(8): error C2504: 'iProduct': base class undefined
+c:\users\phant\onedrive\desktop\school\3rd year (5)\btp 305\workshop6\workshop6\iproduct.cpp(38): error C2440: '=': cannot convert from 'w6::Product *' to 'w6::iProduct *'
+  c:\users\phant\onedrive\desktop\school\3rd year (5)\btp 305\workshop6\workshop6\iproduct.cpp(38): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+c:\users\phant\onedrive\desktop\school\3rd year (5)\btp 305\workshop6\workshop6\iproduct.cpp(45): error C2440: '=': cannot convert from 'w6::TaxableProduct *' to 'w6::iProduct *'
+  c:\users\phant\onedrive\desktop\school\3rd year (5)\btp 305\workshop6\workshop6\iproduct.cpp(45): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+  Product.cpp
+c:\users\phant\onedrive\desktop\school\3rd year (5)\btp 305\workshop6\workshop6\taxableproduct.h(10): error C2504: 'Product': base class undefined
+  TaxableProduct.cpp
+c:\users\phant\onedrive\desktop\school\3rd year (5)\btp 305\workshop6\workshop6\taxableproduct.cpp(7): fatal error C1075: '{': no matching token found
+  w6.cpp
+c:\users\phant\onedrive\desktop\school\3rd year (5)\btp 305\workshop6\workshop6\product.h(8): error C2504: 'iProduct': base class undefined
+  Generating Code...

@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="_line_manager_8h" kind="file" language="C++">
+    <compoundname>LineManager.h</compoundname>
+    <includes local="no">iostream</includes>
+    <includes local="no">deque</includes>
+    <includes local="no">fstream</includes>
+    <includes local="no">vector</includes>
+    <includes refid="_customer_order_8h" local="yes">CustomerOrder.h</includes>
+    <includes refid="_task_8h" local="yes">Task.h</includes>
+    <incdepgraph>
+      <node id="40">
+        <label>Task.h</label>
+        <link refid="_task_8h_source"/>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>iomanip</label>
+      </node>
+      <node id="39">
+        <label>string</label>
+      </node>
+      <node id="41">
+        <label>Item.h</label>
+        <link refid="_item_8h_source"/>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>fstream</label>
+      </node>
+      <node id="33">
+        <label>LineManager.h</label>
+        <link refid="_line_manager_8h"/>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>CustomerOrder.h</label>
+        <link refid="_customer_order_8h_source"/>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>vector</label>
+      </node>
+      <node id="43">
+        <label>Utilities.h</label>
+        <link refid="_utilities_8h_source"/>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>iostream</label>
+      </node>
+      <node id="35">
+        <label>deque</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_line_manager" prot="public">LineManager</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>LINE_MANAGER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LINE_MANAGER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;deque&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;CustomerOrder.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Task.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="class_line_manager" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_line_manager" kindref="compound">LineManager</ref></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;Task*&gt;<sp/>AssemblyLine;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>std::deque&lt;CustomerOrder&gt;<sp/>ToBeFilled;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Queue<sp/>of<sp/>Customer<sp/>Orders<sp/>to<sp/>be<sp/>filled</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>std::deque&lt;CustomerOrder&gt;<sp/>Completed;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Queue<sp/>of<sp/>Customer<sp/>Orders<sp/>completed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>CustomerOrder_Count;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//The<sp/>number<sp/>of<sp/>customer<sp/>orders<sp/>the<sp/>process<sp/>started<sp/>with</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Constructor<sp/>sets<sp/>the<sp/>assembly<sp/>line<sp/>up<sp/>by<sp/>setting<sp/>up<sp/>the<sp/>tasks<sp/>pNextTask<sp/>information</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//and<sp/>moves<sp/>all<sp/>the<sp/>CustomerOrder<sp/>objects<sp/>into<sp/>the<sp/>ToBeFilled<sp/>queue</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_line_manager" kindref="compound">LineManager</ref>(std::string&amp;,<sp/>std::vector&lt;Task*&gt;&amp;,<sp/>std::vector&lt;CustomerOrder&gt;&amp;);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Processes<sp/>each<sp/>assembly<sp/>line<sp/>task<sp/>and<sp/>moves<sp/>the<sp/>CustomerOrders<sp/>through<sp/>the<sp/>line</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Returning<sp/>true<sp/>if<sp/>all<sp/>items<sp/>have<sp/>been<sp/>completed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>Run(std::ostream&amp;);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="LineManager.h"/>
+  </compounddef>
+</doxygen>
