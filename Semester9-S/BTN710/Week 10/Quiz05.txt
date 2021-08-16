@@ -1,0 +1,65 @@
+3 types of Firewall: Packet Filtering, Packet Application and Packet Inspection
+Packet Filtering check one packet at a time (by checking the header and spoofed ID address),
+	it has multiple distinct stages and each stages use different filtering rules.
+Use Access Control List (ACL) to allow each connection. Apply from first to last rules
+Application Firewall is a firewall that controls input, output and access from an application/service
+Intrusion Detection System (IDS) look for suspicious traffic, will alert user for potential serious attack
+Intrusion Prevention System (IPS) use filtered IDS, identify the spectrum of each attack and allows firm
+	to determine the risk. 
+Unified Threat Management (UTM) is application that use the support firewall to eliminate Internet threat
+DMZ required all incoming traffic to pass through it before heading to the firewall, it is known as a
+	subnet for servers and application proxy firewalls. It must be strong to handle all of the
+	incoming connection because that will be the first point attacker will attack
+
+
+Host is any device that contain an IP address
+Backup data, Restrict Physical Access to hosts, Install OS with secure options, install patches to avoid
+	vulnerabilities, manage access and permission, ecrypted data, add additional firewall, read log
+Use different baseline for different OS and different server functions
+Use VM to increase fault tolerance, reduce the chance of getting attack and perform any necessary test
+	before rolling out
+Do vulnerability testing for detect any loop holes or vulnerability
+
+
+Many application run with super user (root) permission
+Avoid any default security and always apply patches when available to enhance security
+Add additional authentication, authorization and auditing layer
+Buffer Overflow Attacks: specified action are needed in some coding languages, some doesn't require.
+	When user sending too much data, the buffer might overflow and overwriting an adjacent to RAM
+Login Bypass: enter URL or SQL for login details
+Cross-site Scripting (XSS): One user send an anonymous data type or script to server. The server store
+	the information and when somebody request an access to that data, the server will send the scripting
+	packet to the user company and damage the computer
+SQL Injection: use a SQL query to execute command in database. If the attacker known the structure of SQL,
+	they can easily perform an attack using just SQL query to extract and read the data
+user who understand directory structure can use URL as a way to access into root data of a server and
+	access many more detail of the root, including file contain
+Use error log to understand what type of attack is happening for future prevention
+Dancing Pig argument are malicious link that persuade the victim to click to. It's usually similar to
+	what user is looking for on that page (ex. Download button)
+Other Client-Side attacks: 
+- File reading: turn victim computer to unintended file server, executing command on CMD
+- Redirection: automatic redirect to unwanted page
+- Cookies: use to track users at website and their behaviour
+
+
+Shadowing: backup copy of each file every few minutes
+Increment Backup: only detect changes and backup the changes
+Restoration Order: do the full backup and incremental later, otherwise newer files will be overwritten
+Continous Data Protion (CDP): has 2 server continously backup each others
+Raid 0: use 2 disk speed, raid 1 write copy on each disk
+Raid 5 is parity, use XOR'ing to calculate the data value of other disks.
+	Take Box 1 in Disk 1 and Box 2 in Disk 2, use XOR'ing to have Parity of Box 1&2 in Disk 3.
+	Use that to calculate data lost for future recovery
+Restrict access to DBs via DBMS, rename admin accs, disable guest/public accs, use lowest permission
+Key Escrow: store a copy of the key in a safe place, central key on corp, server
+Data Loss Prevention (DLP): use policies, procedures and systems designed to avoid data leaking
+Personally Identifiable Information (PII): information that can use to uniquely identify a person, include
+	name, personal identification number, address, photo,...
+Knowing a few information can have a high chance to identify the actual person
+
+
+
+
+
+

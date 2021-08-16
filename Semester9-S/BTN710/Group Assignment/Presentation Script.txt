@@ -1,0 +1,28 @@
+Hi everyone, today our group would like to present a network exploit
+that we have been working throughout the term. Our group member are
+Khai, Marco, Andriy and Carlianz. 
+
+For the first part, I will quickly talk about the method we will use
+for the exploit, the website, the applications and the operating system.
+
+For the exploit, our group has decided to work on DDoS attack, specifically
+on direct attack to the host target. We could perform an SQL injection,
+but it seems that most of us has already try that method out so we are
+interesting to know one more way of doing the exploit.
+
+Software we will be using is HULK (stand for HTTP Unbearable Load King). 
+Since this is just a free software to monitor how the test work, they 
+are not as strong as the botnet (which will cause us money if we decide
+to hire one), but botnet is illegal and too much powerful for us to use,
+HULK will be safe option to proceed. Details about HULK will be demonstrate
+later by Marco.
+
+Since we will be using the free version, it will not be powerful enough
+to take down an actual host website (like heroku, they are built to stand
+with millions of requests).
+
+
+
+
+
+
