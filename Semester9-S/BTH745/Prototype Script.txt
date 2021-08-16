@@ -1,0 +1,36 @@
+Hi everyone, Welcome to our group prototype
+
+There are a few things we want to address you guys before the test can begin
+	1. The test is based on our approach for this, therefore, only the main 
+functionality we focused on will work. Not ALL functionality and buttons 
+exist on the screen will work.
+	2. The best option to know which interaction we offer is to click outside 
+the UI area. A quick flash will pop-up to display where did our group put 
+the interaction in.
+	3. Some of the interaction we have prepare are:
+	- Login and Create an Account in the Login page
+	- Create Account in the Sign-up page
+	- Switching between Group and Individual Chat, Filter, Searching option,
+		Chat File Access should work on all of the prototypes.
+ 
+Here's our approach for this prototypes:
+	- Automatic Coding Language Detection 	(no interaction require)
+	- Code Colour format like VS 		(no interaction require)
+	- Use GitHub to share files 		(interaction require)
+	- Code Debugging in App  		(interaction require)
+	     (ensure that code is actually running)
+	- File Access 				(interaction require)
+
+HERE IS THE TASK THAT EACH TESTER NEED TO FOLLOW:
+-From the main screen, navigate to individual chat section and open GitHub.
+-From the current screen, navigate to searching and open File Access.
+-From the current screen, navigate to Android Filter and Debug a program from the chat.
+	Ensure the program is running.
+
+
+If it is possible, please have a time recorder to measure how long does it take
+to find each of the approaches. The entire experiment should take less than 5m. 
+
+Note to Observer
+ERROR is count when tester click on OTHER running function besides the one they are suppose to
+For example: if tester is test to find File Access, they cannot mistaken click on Filter option

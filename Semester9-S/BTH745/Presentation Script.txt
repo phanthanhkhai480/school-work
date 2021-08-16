@@ -1,0 +1,12 @@
+For Test Cases, we want to perform as many test cases related to our approach as possible. However, about half 
+of our approach features was implemented to display without any interaction required, those are Coding Language 
+detected and Coding colour formatted, which I will show you later on
+
+Therefore, it left us with 2 features with required interaction are GitHub interaction testing and in-app 
+Code Debugging. I also add an optional test case as it is partially relevant to our approach, which is the File Access.
+
+This is an image of what user should expect when they testing for GitHub interaction.
+And this one is for Code Debugging.
+This one is also Code Debugging, but running with a result.
+The last one is how the File Access should be display. So in the picture, you can easily see the Coding Language
+detection features and the coding colour formatted. 
