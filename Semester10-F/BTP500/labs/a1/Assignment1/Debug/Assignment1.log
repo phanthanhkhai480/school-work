@@ -1,0 +1,26 @@
+﻿  cachelisttester.cpp
+C:\Users\phant\Desktop\Semester10\BTP500\labs-btp500-khai-phan\a1-a1-khai-phan\cachelisttester.cpp(227,9): warning C4101: 'listSize': unreferenced local variable
+C:\Users\phant\Desktop\Semester10\BTP500\labs-btp500-khai-phan\a1-a1-khai-phan\cachelisttester.cpp(321,9): warning C4101: 'listSize': unreferenced local variable
+C:\Users\phant\Desktop\Semester10\BTP500\labs-btp500-khai-phan\a1-a1-khai-phan\cachelisttester.cpp(420,9): warning C4101: 'listSize': unreferenced local variable
+C:\Users\phant\Desktop\Semester10\BTP500\labs-btp500-khai-phan\a1-a1-khai-phan\cachelisttester.cpp(514,9): warning C4101: 'listSize': unreferenced local variable
+C:\Users\phant\Desktop\Semester10\BTP500\labs-btp500-khai-phan\a1-a1-khai-phan\cachelisttester.cpp(612,9): warning C4101: 'listSize': unreferenced local variable
+C:\Users\phant\Desktop\Semester10\BTP500\labs-btp500-khai-phan\a1-a1-khai-phan\cachelisttester.cpp(692,9): warning C4101: 'listSize': unreferenced local variable
+C:\Users\phant\Desktop\Semester10\BTP500\labs-btp500-khai-phan\a1-a1-khai-phan\cachelist.h(393,35): error C2064: term does not evaluate to a function taking 1 arguments
+C:\Users\phant\Desktop\Semester10\BTP500\labs-btp500-khai-phan\a1-a1-khai-phan\cachelist.h(354): message : while compiling class template member function 'void CacheList<Record>::merge(CacheList<Record> &)'
+C:\Users\phant\Desktop\Semester10\BTP500\labs-btp500-khai-phan\a1-a1-khai-phan\cachelisttester.cpp(1059): message : see reference to function template instantiation 'void CacheList<Record>::merge(CacheList<Record> &)' being compiled
+C:\Users\phant\Desktop\Semester10\BTP500\labs-btp500-khai-phan\a1-a1-khai-phan\cachelisttester.cpp(123): message : see reference to class template instantiation 'CacheList<Record>' being compiled
+  majorityelement.cpp
+  timer.cpp
+C:\Users\phant\Desktop\Semester10\BTP500\labs-btp500-khai-phan\a1-a1-khai-phan\timer.cpp(17,19): error C2065: 'CLOCK_MONOTONIC_RAW': undeclared identifier
+C:\Users\phant\Desktop\Semester10\BTP500\labs-btp500-khai-phan\a1-a1-khai-phan\timer.cpp(17,5): error C3861: 'clock_gettime': identifier not found
+C:\Users\phant\Desktop\Semester10\BTP500\labs-btp500-khai-phan\a1-a1-khai-phan\timer.cpp(28,19): error C2065: 'CLOCK_MONOTONIC_RAW': undeclared identifier
+C:\Users\phant\Desktop\Semester10\BTP500\labs-btp500-khai-phan\a1-a1-khai-phan\timer.cpp(28,5): error C3861: 'clock_gettime': identifier not found
+C:\Users\phant\Desktop\Semester10\BTP500\labs-btp500-khai-phan\a1-a1-khai-phan\timer.cpp(46,19): error C2065: 'CLOCK_MONOTONIC_RAW': undeclared identifier
+C:\Users\phant\Desktop\Semester10\BTP500\labs-btp500-khai-phan\a1-a1-khai-phan\timer.cpp(46,5): error C3861: 'clock_gettime': identifier not found
+C:\Users\phant\Desktop\Semester10\BTP500\labs-btp500-khai-phan\a1-a1-khai-phan\timer.cpp(52,23): error C2065: 'CLOCK_MONOTONIC_RAW': undeclared identifier
+C:\Users\phant\Desktop\Semester10\BTP500\labs-btp500-khai-phan\a1-a1-khai-phan\timer.cpp(52,9): error C3861: 'clock_gettime': identifier not found
+C:\Users\phant\Desktop\Semester10\BTP500\labs-btp500-khai-phan\a1-a1-khai-phan\timer.cpp(63,19): error C2065: 'CLOCK_MONOTONIC_RAW': undeclared identifier
+C:\Users\phant\Desktop\Semester10\BTP500\labs-btp500-khai-phan\a1-a1-khai-phan\timer.cpp(63,5): error C3861: 'clock_gettime': identifier not found
+C:\Users\phant\Desktop\Semester10\BTP500\labs-btp500-khai-phan\a1-a1-khai-phan\timer.cpp(77,19): error C2065: 'CLOCK_MONOTONIC_RAW': undeclared identifier
+C:\Users\phant\Desktop\Semester10\BTP500\labs-btp500-khai-phan\a1-a1-khai-phan\timer.cpp(77,5): error C3861: 'clock_gettime': identifier not found
+  Generating Code...

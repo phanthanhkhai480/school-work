@@ -1,0 +1,8 @@
+Test 1 - Simple testing: passed.
+Test 2 - Testing 100 element array: passed.
+Test 3 - Testing 5000 element array: passed.
+Test 4 - Testing large array with a majorityelement: passed.
+Test 5 - Testing edge cases: passed.
+131073 * 4 arrays processed in 0.0108615 seconds
+Test 6 - Timing Test: passed.
+Congratulations! You have passed testing for A1 part 1

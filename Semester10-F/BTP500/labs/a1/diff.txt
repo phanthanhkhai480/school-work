@@ -1,0 +1,14 @@
+In line number 11 of your output:
+The output should be:
+Test 11 - merge function: passed.
+^
+But your output is: 
+Other size: 0
+^
+
+Unmatched character details:
+The character in column 1 is supposed to be:
+  [T] ASCII code(84)
+but you printed
+  [O] ASCII code(79)
+
