@@ -1,0 +1,1862 @@
+Script started on Wed 17 May 2017 02:47:05 PM EDT
+yliu421@matrix:~/unx510/lab2> exitman ls exit[Kfind -size +10kls -R -s=50k[K 50k+50ksR[Kman lsls -h[K[K[K[K[K[K-unx510/lab2
+bash: -unx510/lab2: No such file or directory
+yliu421@matrix:~/unx510/lab2> -unx510/lab2unx510/lab2[K~unx510/lab2
+[H[JUNX510 Lab 2:  Notes
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+Some important notes on this Lab:
+
+(1) You do NOT have to do this whole Lab in one sitting!  Any completed sections will be tracked.
+
+(2) You may abort the Lab at any time by pressing Ctrl-c but you may lose any work done on an incomplete
+section.
+
+(3) Instructions for each page will be displayed at the bottom of the screen.
+
+(4) The answers expected in this Lab are derived from the Lab itself and the course notes. The course
+notes should be used as a reference, if required. Using Google or another search engine may provide
+answers that are not accepted by the Lab.
+
+(5) This Lab is maintained by Les Czegel. Please try to resolve any problems with your instructor who
+will determine if Les should be contacted.
+[46;1H--------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2:  Selection Menu
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 Redirection And Pipes - Completed[m
+2 Linking Files And Directories - Completed[m
+3 [7mCommand Summary[m
+4 [7mLinux Processes[m
+5 [7mRegular Expressions Using grep[m
+6 [7msed And awk[m
+7 [7mInteractive Shell Environment[m
+
+8 [7mSubmit UNX510 Lab 2[m
+
+The highlighted lines above indicate the incomplete parts of the Lab.
+There is a total possible mark of 3, with 0.5 marks deducted for each
+incomplete part. Late marks will be deducted at the rate of 0.3 marks (10%)
+per day for Labs submitted after midnight of May 26 2017.
+
+
+[46;1H--------------------------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: 3
+[H[JUNX510 Lab 2.3:  Command Summary
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 Command Summary - Part 1 - Completed[m
+2 Command Summary - Part 2 - Completed[m
+3 [7mCommand Summary - Part 3[m
+
+Note that the highlighted lines indicate the incomplete sections of
+this part of the Lab.
+
+Section 3 can only be done when the other sections have been
+completed.
+[46;1H--------------------------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: 3
+[H[JUNX510 Lab 2.3:  Command Summary (Part 3)
+[1;101HPage 1/10
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+The purpose of this section is to reinforce your skills with issuing UNIX commands covered previously.
+
+You will be asked to enter a single UNIX command for various situations.
+
+*** All paths must be relative, unless requested otherwise. Note that in most cases, only the shortest
+possible command line will be accepted.***
+[46;1H--------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.3:  Command Summary (Part 3)
+[1;101HPage 2/10
+[2;1H--------------------------------------------------------------------------------------------------------------[01;34msample_dir2[00m
+`-- [01;34msample_dir[00m
+    |-- [01;34madmin[00m
+    |-- [01;34mcambridge[00m
+    |   `-- [01;34msecurity[00m
+    |       |-- annex
+    |       `-- parking
+    |-- [01;32mhistory.exe[00m
+    |-- [01;34mmarkham[00m
+    |   |-- annex
+    |   |-- building1
+    |   `-- parking
+    `-- [01;34mstenton[00m
+        |-- f1
+        |-- f12
+        |-- f2
+        |-- [01;34mgen_ed[00m
+        |   |-- Holidays
+        |   `-- cars2
+        |-- [01;34mlib_arts[00m
+        |   `-- english.txt
+        `-- phone_directory
+
+Display the contents of the file '.bashrc' within the home directory of your instructor (userid les.czegel):
+[46;1H--------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[48;1H$  c [48;5H[48;1H$  ca [48;6H[48;1H$  cat [48;7H[48;1H$  cat  [48;8H[48;1H$  cat ~ [48;9H[48;1H$  cat ~l [48;10H[48;1H$  cat ~le [48;11H[48;1H$  cat ~les [48;12H[48;1H$  cat ~les. [48;13H[48;1H$  cat ~les.c [48;14H[48;1H$  cat ~les.cr [48;15H[48;1H$  cat ~les.c [48;14H[48;1H$  cat ~les.cz [48;15H[48;1H$  cat ~les.cze [48;16H[48;1H$  cat ~les.czeg [48;17H[48;1H$  cat ~les.czege [48;18H[48;1H$  cat ~les.czegel [48;19H[48;1H$  cat ~les.czegel/ [48;20H[48;1H$  cat ~les.czegel/. [48;21H[48;1H$  cat ~les.czegel/.b [48;22H[48;1H$  cat ~les.czegel/.ba [48;23H[48;1H$  cat ~les.czegel/.bas [48;24H[48;1H$  cat ~les.czegel/.bash [48;25H[48;1H$  cat ~les.czegel/.bashr [48;26H[48;1H$  cat ~les.czegel/.bashrc [48;27H[H[JUNX510 Lab 2.3:  Command Summary (Part 3)
+[1;101HPage 3/10
+[2;1H--------------------------------------------------------------------------------------------------------------
+$  cat ~les.czegel/.bashrc
+# .bashrc
+
+# User specific aliases and functions
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+# stty erase ^?
+# PS1='${PWD#~/}: '
+# FCEDIT=/usr/bin/vi
+# export FCEDIT
+# VISUAL=/usr/bin/vi
+# PATH=$PATH:$HOME/scripts
+# umask 077
+# set -o vi
+# alias ls='ls --color=never'
+# mesg n
+[46;1H--------------------------------------------------------------------------------------------------------------
+                                                                                                              [47;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 2.3:  Command Summary (Part 3)
+[1;101HPage 3/10
+[2;1H--------------------------------------------------------------------------------------------------------------[01;34msample_dir2[00m
+`-- [01;34msample_dir[00m
+    |-- [01;34madmin[00m
+    |-- [01;34mcambridge[00m
+    |   `-- [01;34msecurity[00m
+    |       |-- annex
+    |       `-- parking
+    |-- [01;32mhistory.exe[00m
+    |-- [01;34mmarkham[00m
+    |   |-- annex
+    |   |-- building1
+    |   `-- parking
+    `-- [01;34mstenton[00m
+        |-- f1
+        |-- f12
+        |-- f2
+        |-- [01;34mgen_ed[00m
+        |   |-- Holidays
+        |   `-- cars2
+        |-- [01;34mlib_arts[00m
+        |   `-- english.txt
+        `-- phone_directory
+
+Your current directory is sample_dir. Display the 2nd line of the file cars2, translated to uppercase
+(hint: start with a 'head' command):
+[46;1H--------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[48;1H$  h [48;5H[48;1H$  he [48;6H[48;1H$  hea [48;7H[48;1H$  head [48;8H[48;1H$  head  [48;9H[48;1H$  head s [48;10H[48;1H$  head st [48;11H[48;1H$  head ste [48;12H[48;1H$  head sten [48;13H[48;1H$  head ste [48;12H[48;1H$  head st [48;11H[48;1H$  head s [48;10H[48;1H$  head  [48;9H[48;1H$  head - [48;10H[48;1H$  head -2 [48;11H[48;1H$  head -2  [48;12H[48;1H$  head -2 s [48;13H[48;1H$  head -2 st [48;14H[48;1H$  head -2 ste [48;15H[48;1H$  head -2 sten [48;16H[48;1H$  head -2 stent [48;17H[48;1H$  head -2 stento [48;18H[48;1H$  head -2 stenton [48;19H[48;1H$  head -2 stenton/ [48;20H[48;1H$  head -2 stenton/g [48;21H[48;1H$  head -2 stenton/ge [48;22H[48;1H$  head -2 stenton/gen [48;23H[48;1H$  head -2 stenton/gen_ [48;24H[48;1H$  head -2 stenton/gen_e [48;25H[48;1H$  head -2 stenton/gen_ed [48;26H[48;1H$  head -2 stenton/gen_ed/ [48;27H[48;1H$  head -2 stenton/gen_ed/c [48;28H[48;1H$  head -2 stenton/gen_ed/ca [48;29H[48;1H$  head -2 stenton/gen_ed/car [48;30H[48;1H$  head -2 stenton/gen_ed/cars [48;31H[48;1H$  head -2 stenton/gen_ed/cars2 [48;32H[48;1H$  head -2 stenton/gen_ed/cars2  [48;33H[48;1H$  head -2 stenton/gen_ed/cars2 | [48;34H[48;1H$  head -2 stenton/gen_ed/cars2 |  [48;35H[48;1H$  head -2 stenton/gen_ed/cars2 | t [48;36H[48;1H$  head -2 stenton/gen_ed/cars2 | ta [48;37H[48;1H$  head -2 stenton/gen_ed/cars2 | tai [48;38H[48;1H$  head -2 stenton/gen_ed/cars2 | tail [48;39H[48;1H$  head -2 stenton/gen_ed/cars2 | tail  [48;40H[48;1H$  head -2 stenton/gen_ed/cars2 | tail - [48;41H[48;1H$  head -2 stenton/gen_ed/cars2 | tail -1 [48;42H[48;1H$  head -2 stenton/gen_ed/cars2 | tail -1  [48;43H[48;1H$  head -2 stenton/gen_ed/cars2 | tail -1 | [48;44H[48;1H$  head -2 stenton/gen_ed/cars2 | tail -1 |  [48;45H[48;1H$  head -2 stenton/gen_ed/cars2 | tail -1 | t [48;46H[48;1H$  head -2 stenton/gen_ed/cars2 | tail -1 | tr [48;47H[48;1H$  head -2 stenton/gen_ed/cars2 | tail -1 | tr  [48;48H[48;1H$  head -2 stenton/gen_ed/cars2 | tail -1 | tr " [48;49H[48;1H$  head -2 stenton/gen_ed/cars2 | tail -1 | tr "[ [48;50H[48;1H$  head -2 stenton/gen_ed/cars2 | tail -1 | tr "[a [48;51H[48;1H$  head -2 stenton/gen_ed/cars2 | tail -1 | tr "[a- [48;52H[48;1H$  head -2 stenton/gen_ed/cars2 | tail -1 | tr "[a-z [48;53H[48;1H$  head -2 stenton/gen_ed/cars2 | tail -1 | tr "[a-z] [48;54H[48;1H$  head -2 stenton/gen_ed/cars2 | tail -1 | tr "[a-z]" [48;55H[48;1H$  head -2 stenton/gen_ed/cars2 | tail -1 | tr "[a-z]"  [48;56H[48;1H$  head -2 stenton/gen_ed/cars2 | tail -1 | tr "[a-z]" " [48;57H[48;1H$  head -2 stenton/gen_ed/cars2 | tail -1 | tr "[a-z]" "[ [48;58H[48;1H$  head -2 stenton/gen_ed/cars2 | tail -1 | tr "[a-z]" "[A [48;59H[48;1H$  head -2 stenton/gen_ed/cars2 | tail -1 | tr "[a-z]" "[A- [48;60H[48;1H$  head -2 stenton/gen_ed/cars2 | tail -1 | tr "[a-z]" "[A-Z [48;61H[48;1H$  head -2 stenton/gen_ed/cars2 | tail -1 | tr "[a-z]" "[A-Z] [48;62H[48;1H$  head -2 stenton/gen_ed/cars2 | tail -1 | tr "[a-z]" "[A-Z]" [48;63H[H[JUNX510 Lab 2.3:  Command Summary (Part 3)
+[1;101HPage 4/10
+[2;1H--------------------------------------------------------------------------------------------------------------
+$  head -2 stenton/gen_ed/cars2 | tail -1 | tr "[a-z]" "[A-Z]"
+CHEVY   NOVA    79      60      3000
+[46;1H--------------------------------------------------------------------------------------------------------------
+                                                                                                              [47;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 2.3:  Command Summary (Part 3)
+[1;101HPage 4/10
+[2;1H--------------------------------------------------------------------------------------------------------------[01;34msample_dir2[00m
+`-- [01;34msample_dir[00m
+    |-- [01;34madmin[00m
+    |-- [01;34mcambridge[00m
+    |   `-- [01;34msecurity[00m
+    |       |-- annex
+    |       `-- parking
+    |-- [01;32mhistory.exe[00m
+    |-- [01;34mmarkham[00m
+    |   |-- annex
+    |   |-- building1
+    |   `-- parking
+    `-- [01;34mstenton[00m
+        |-- f1
+        |-- f12
+        |-- f2
+        |-- [01;34mgen_ed[00m
+        |   |-- Holidays
+        |   `-- cars2
+        |-- [01;34mlib_arts[00m
+        |   `-- english.txt
+        `-- phone_directory
+
+Your current directory is sample_dir. Display cars2 sorted numerically by the 4th field:
+[46;1H--------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[48;1H$  s [48;5H[48;1H$  so [48;6H[48;1H$  sor [48;7H[48;1H$  sort [48;8H[48;1H$  sort  [48;9H[48;1H$  sort - [48;10H[48;1H$  sort -n [48;11H[48;1H$  sort -nk [48;12H[48;1H$  sort -nk  [48;13H[48;1H$  sort -nk 4 [48;14H[48;1H$  sort -nk 4  [48;15H[48;1H$  sort -nk 4 s [48;16H[48;1H$  sort -nk 4 st [48;17H[48;1H$  sort -nk 4 ste [48;18H[48;1H$  sort -nk 4 sten [48;19H[48;1H$  sort -nk 4 stent [48;20H[48;1H$  sort -nk 4 stento [48;21H[48;1H$  sort -nk 4 stenton [48;22H[48;1H$  sort -nk 4 stenton/ [48;23H[48;1H$  sort -nk 4 stenton/s [48;24H[48;1H$  sort -nk 4 stenton/ [48;23H[48;1H$  sort -nk 4 stenton/g [48;24H[48;1H$  sort -nk 4 stenton/ge [48;25H[48;1H$  sort -nk 4 stenton/gen [48;26H[48;1H$  sort -nk 4 stenton/gen_ [48;27H[48;1H$  sort -nk 4 stenton/gen_e [48;28H[48;1H$  sort -nk 4 stenton/gen_ed [48;29H[48;1H$  sort -nk 4 stenton/gen_ed/ [48;30H[48;1H$  sort -nk 4 stenton/gen_ed/c [48;31H[48;1H$  sort -nk 4 stenton/gen_ed/ca [48;32H[48;1H$  sort -nk 4 stenton/gen_ed/car [48;33H[48;1H$  sort -nk 4 stenton/gen_ed/cars [48;34H[48;1H$  sort -nk 4 stenton/gen_ed/cars2 [48;35H[H[JUNX510 Lab 2.3:  Command Summary (Part 3)
+[1;101HPage 5/10
+[2;1H--------------------------------------------------------------------------------------------------------------
+$  sort -nk 4 stenton/gen_ed/cars2
+ford    thundbd 84      10      17000
+ford    ltd     83      15      10500
+ford    bronco  83      25      9525
+honda   accord  81      30      6000
+ford    mustang 65      45      17000
+Chevy   nova    80      50      3500
+chevy   nova    79      60      3000
+plym    fury    77      73      2500
+chevy   impala  65      85      1550
+volvo   gl      78      102     9850
+fiat    600     65      115     450
+toyota  tercel  82      180     750
+[46;1H--------------------------------------------------------------------------------------------------------------
+                                                                                                              [47;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 2.3:  Command Summary (Part 3)
+[1;101HPage 5/10
+[2;1H--------------------------------------------------------------------------------------------------------------[01;34msample_dir2[00m
+`-- [01;34msample_dir[00m
+    |-- [01;34madmin[00m
+    |-- [01;34mcambridge[00m
+    |   `-- [01;34msecurity[00m
+    |       |-- annex
+    |       `-- parking
+    |-- [01;32mhistory.exe[00m
+    |-- [01;34mmarkham[00m
+    |   |-- annex
+    |   |-- building1
+    |   `-- parking
+    `-- [01;34mstenton[00m
+        |-- f1
+        |-- f12
+        |-- f2
+        |-- [01;34mgen_ed[00m
+        |   |-- Holidays
+        |   `-- cars2
+        |-- [01;34mlib_arts[00m
+        |   `-- english.txt
+        `-- phone_directory
+
+Your current directory is sample_dir. Display only the 1st field (last name) of each record in
+phone_directory using 'cut'. Note that the field delimiter is a space:
+[46;1H--------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[48;1H$  c [48;5H[48;1H$  cu [48;6H[48;1H$  cut [48;7H[48;1H$  cut  [48;8H[48;1H$  cut s [48;9H[48;1H$  cut st [48;10H[48;1H$  cut ste [48;11H[48;1H$  cut sten [48;12H[48;1H$  cut stent [48;13H[48;1H$  cut stento [48;14H[48;1H$  cut stenton [48;15H[48;1H$  cut stenton/ [48;16H[48;1H$  cut stenton/p [48;17H[48;1H$  cut stenton/ph [48;18H[48;1H$  cut stenton/pho [48;19H[48;1H$  cut stenton/phon [48;20H[48;1H$  cut stenton/phone [48;21H[48;1H$  cut stenton/phone_ [48;22H[48;1H$  cut stenton/phone_d [48;23H[48;1H$  cut stenton/phone_di [48;24H[48;1H$  cut stenton/phone_dir [48;25H[48;1H$  cut stenton/phone_dire [48;26H[48;1H$  cut stenton/phone_direc [48;27H[48;1H$  cut stenton/phone_direct [48;28H[48;1H$  cut stenton/phone_directo [48;29H[48;1H$  cut stenton/phone_director [48;30H[48;1H$  cut stenton/phone_directory [48;31H[48;1H$  cut stenton/phone_directory  [48;32H[48;31H[48;30H[48;29H[48;29H[48;29H[48;29H[48;29H[48;29H[48;29H[48;29H[48;29H[48;29H[48;29H[48;29H[48;29H[48;29H[48;29H[48;29H[48;28H[48;27H[48;26H[48;25H[48;24H[48;23H[48;22H[48;21H[48;20H[48;19H[48;18H[48;17H[48;16H[48;15H[48;14H[48;13H[48;12H[48;11H[48;10H[48;9H[48;8H[48;7H[48;6H[48;5H[48;6H[48;7H[48;1H$  cut  stenton/phone_directory  [48;8H[48;1H$  cut - stenton/phone_directory  [48;9H[48;1H$  cut -f stenton/phone_directory  [48;10H[48;1H$  cut -f2 stenton/phone_directory  [48;11H[H[JUNX510 Lab 2.3:  Command Summary (Part 3)
+[1;101HPage 5/10
+[2;1H--------------------------------------------------------------------------------------------------------------[01;34msample_dir2[00m
+`-- [01;34msample_dir[00m
+    |-- [01;34madmin[00m
+    |-- [01;34mcambridge[00m
+    |   `-- [01;34msecurity[00m
+    |       |-- annex
+    |       `-- parking
+    |-- [01;32mhistory.exe[00m
+    |-- [01;34mmarkham[00m
+    |   |-- annex
+    |   |-- building1
+    |   `-- parking
+    `-- [01;34mstenton[00m
+        |-- f1
+        |-- f12
+        |-- f2
+        |-- [01;34mgen_ed[00m
+        |   |-- Holidays
+        |   `-- cars2
+        |-- [01;34mlib_arts[00m
+        |   `-- english.txt
+        `-- phone_directory
+
+Your current directory is sample_dir. Display only the 1st field (last name) of each record in
+phone_directory using 'cut'. Note that the field delimiter is a space:
+
+You entered: cut -f2 stenton/phone_directory 
+Please try again.
+
+Hint:
+No hints in this section
+[46;1H--------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[48;1H$  cut -f2 stenton/phone_directory                                                                        [48;36H[48;35H[48;34H[48;33H[48;33H[48;33H[48;33H[48;33H[48;33H[48;33H[48;33H[48;33H[48;33H[48;33H[48;33H[48;33H[48;33H[48;33H[48;33H[48;33H[48;33H[48;33H[48;33H[48;33H[48;33H[48;33H[48;33H[48;1H$  cut -f2 stenton/phone_directoDry  [48;34H[48;33H[48;32H[48;31H[48;30H[48;29H[48;28H[48;27H[48;26H[48;25H[48;24H[48;23H[48;22H[48;21H[48;20H[48;19H[48;18H[48;17H[48;16H[48;15H[48;14H[48;13H[48;12H[48;11H[48;10H[48;9H[48;8H[48;7H[48;1H$  cut  -f2 stenton/phone_directoDry  [48;8H[48;1H$  cut - -f2 stenton/phone_directoDry  [48;9H[48;1H$  cut -d -f2 stenton/phone_directoDry  [48;10H[48;1H$  cut -d' -f2 stenton/phone_directoDry  [48;11H[48;1H$  cut -d'  -f2 stenton/phone_directoDry  [48;12H[48;1H$  cut -d' ' -f2 stenton/phone_directoDry  [48;13H[H[JUNX510 Lab 2.3:  Command Summary (Part 3)
+[1;101HPage 5/10
+[2;1H--------------------------------------------------------------------------------------------------------------[01;34msample_dir2[00m
+`-- [01;34msample_dir[00m
+    |-- [01;34madmin[00m
+    |-- [01;34mcambridge[00m
+    |   `-- [01;34msecurity[00m
+    |       |-- annex
+    |       `-- parking
+    |-- [01;32mhistory.exe[00m
+    |-- [01;34mmarkham[00m
+    |   |-- annex
+    |   |-- building1
+    |   `-- parking
+    `-- [01;34mstenton[00m
+        |-- f1
+        |-- f12
+        |-- f2
+        |-- [01;34mgen_ed[00m
+        |   |-- Holidays
+        |   `-- cars2
+        |-- [01;34mlib_arts[00m
+        |   `-- english.txt
+        `-- phone_directory
+
+Your current directory is sample_dir. Display only the 1st field (last name) of each record in
+phone_directory using 'cut'. Note that the field delimiter is a space:
+
+You entered: cut -d' ' -f2 stenton/phone_directoDry 
+Please try again.
+
+Hint:
+No hints in this section
+[46;1H--------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[48;1H$  cut -d' ' -f2 stenton/phone_directoDry                                                                 [48;43H[48;42H[48;41H[48;40H[48;40H[48;40H[48;40H[48;40H[48;40H[48;40H[48;40H[48;40H[48;40H[48;39H[48;38H[48;37H[48;36H[48;35H[48;34H[48;33H[48;32H[48;31H[48;30H[48;29H[48;28H[48;27H[48;26H[48;25H[48;24H[48;23H[48;22H[48;21H[48;20H[48;19H[48;18H[48;17H[48;1H$  cut -d' ' -f stenton/phone_directoDry  [48;16H[48;1H$  cut -d' ' -f1 stenton/phone_directoDry  [48;17H[H[JUNX510 Lab 2.3:  Command Summary (Part 3)
+[1;101HPage 5/10
+[2;1H--------------------------------------------------------------------------------------------------------------[01;34msample_dir2[00m
+`-- [01;34msample_dir[00m
+    |-- [01;34madmin[00m
+    |-- [01;34mcambridge[00m
+    |   `-- [01;34msecurity[00m
+    |       |-- annex
+    |       `-- parking
+    |-- [01;32mhistory.exe[00m
+    |-- [01;34mmarkham[00m
+    |   |-- annex
+    |   |-- building1
+    |   `-- parking
+    `-- [01;34mstenton[00m
+        |-- f1
+        |-- f12
+        |-- f2
+        |-- [01;34mgen_ed[00m
+        |   |-- Holidays
+        |   `-- cars2
+        |-- [01;34mlib_arts[00m
+        |   `-- english.txt
+        `-- phone_directory
+
+Your current directory is sample_dir. Display only the 1st field (last name) of each record in
+phone_directory using 'cut'. Note that the field delimiter is a space:
+
+You entered: cut -d' ' -f1 stenton/phone_directoDry 
+Please try again.
+
+Hint:
+No hints in this section
+[46;1H--------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[48;4H[48;1H$  cut -d' ' -f1 stenton/phone_directoDry                                                                 [48;43H[48;42H[48;41H[48;40H[48;39H[48;38H[48;37H[48;36H[48;35H[48;34H[48;33H[48;32H[48;31H[48;30H[48;29H[48;28H[48;27H[48;26H[48;25H[48;24H[48;23H[48;22H[48;21H[48;20H[48;19H[48;18H[48;17H[48;16H[48;15H[48;14H[48;13H[48;1H$  cut -d'  -f1 stenton/phone_directoDry  [48;12H[48;1H$  cut -d' -f1 stenton/phone_directoDry  [48;11H[48;1H$  cut -d -f1 stenton/phone_directoDry  [48;10H[48;1H$  cut - -f1 stenton/phone_directoDry  [48;9H[48;1H$  cut  -f1 stenton/phone_directoDry  [48;8H[48;1H$  cut -f1 stenton/phone_directoDry  [48;7H[H[JUNX510 Lab 2.3:  Command Summary (Part 3)
+[1;101HPage 5/10
+[2;1H--------------------------------------------------------------------------------------------------------------[01;34msample_dir2[00m
+`-- [01;34msample_dir[00m
+    |-- [01;34madmin[00m
+    |-- [01;34mcambridge[00m
+    |   `-- [01;34msecurity[00m
+    |       |-- annex
+    |       `-- parking
+    |-- [01;32mhistory.exe[00m
+    |-- [01;34mmarkham[00m
+    |   |-- annex
+    |   |-- building1
+    |   `-- parking
+    `-- [01;34mstenton[00m
+        |-- f1
+        |-- f12
+        |-- f2
+        |-- [01;34mgen_ed[00m
+        |   |-- Holidays
+        |   `-- cars2
+        |-- [01;34mlib_arts[00m
+        |   `-- english.txt
+        `-- phone_directory
+
+Your current directory is sample_dir. Display only the 1st field (last name) of each record in
+phone_directory using 'cut'. Note that the field delimiter is a space:
+
+You entered: cut -f1 stenton/phone_directoDry 
+Please try again.
+
+Hint:
+No hints in this section
+[46;1H--------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[48;1H$  cut -f1 stenton/phone_directoDry                                                                       [48;37H[48;36H[48;35H[48;34H[48;33H[48;32H[48;31H[48;30H[48;29H[48;28H[48;27H[48;26H[48;27H[48;28H[48;29H[48;30H[48;31H[48;32H[48;33H[48;34H[48;35H[48;34H[48;1H$  cut -f1 stenton/phone_directory  [48;33H[48;34H[48;35H[H[JUNX510 Lab 2.3:  Command Summary (Part 3)
+[1;101HPage 5/10
+[2;1H--------------------------------------------------------------------------------------------------------------[01;34msample_dir2[00m
+`-- [01;34msample_dir[00m
+    |-- [01;34madmin[00m
+    |-- [01;34mcambridge[00m
+    |   `-- [01;34msecurity[00m
+    |       |-- annex
+    |       `-- parking
+    |-- [01;32mhistory.exe[00m
+    |-- [01;34mmarkham[00m
+    |   |-- annex
+    |   |-- building1
+    |   `-- parking
+    `-- [01;34mstenton[00m
+        |-- f1
+        |-- f12
+        |-- f2
+        |-- [01;34mgen_ed[00m
+        |   |-- Holidays
+        |   `-- cars2
+        |-- [01;34mlib_arts[00m
+        |   `-- english.txt
+        `-- phone_directory
+
+Your current directory is sample_dir. Display only the 1st field (last name) of each record in
+phone_directory using 'cut'. Note that the field delimiter is a space:
+
+You entered: cut -f1 stenton/phone_directory 
+Please try again.
+
+Hint:
+No hints in this section
+[46;1H--------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[48;1H$  cut -f1 stenton/phone_directory                                                                        [48;36H[48;36H[48;36H[48;1H$  cut -f1 stenton/phone_directoDry                                                                       [48;37H[48;1H$  cut -d' ' -f1 stenton/phone_directoDry                                                                 [48;43H[48;42H[48;41H[48;40H[48;1H$  cut -d' ' -f1 stenton/phone_directory  [48;39H[H[JUNX510 Lab 2.3:  Command Summary (Part 3)
+[1;101HPage 6/10
+[2;1H--------------------------------------------------------------------------------------------------------------
+$  cut -d' ' -f1 stenton/phone_directory 
+ABED
+ABRAHAMS
+ADAMS
+ADAMS
+ADAMS
+ADAMS
+ADAMSON
+ADIE
+AGAR
+AGASAN
+AGRO
+AHMAD
+AITCHISON
+ALDOROTY
+ALDWORTH
+ALEXANDER
+ALEXIN
+ALLEN
+ALLUM
+ALLUM
+ALSOP
+ALTER
+ALTER
+AMBER
+AMIRI
+AMUCHASTEGUI
+ANDREWS
+ANDREWS
+ANGUS
+ANSELM
+ANTOINE
+APPLEBAUM
+AQUILINA
+ARATHYMOS
+ARAVANDINO
+ARCHER
+ARCHER
+ARMSTRONG
+ARTOPOULO
+ASSIRI
+ASTLE
+ATHEY
+ATHOE
+ATHWAL
+ATKINS
+ATKINS
+AU
+AUN
+AUSTIN
+BACHMANN
+BACON
+BACVAR
+BADGER
+BADIALI
+BAILEY
+BAKER
+BAKER
+BAKER
+BAKER
+BALAKJI
+BALE
+BALLANTYNE
+BARBER
+BARENSCHER
+BARET
+BARG
+BARKER
+BARKER
+BARNES
+BARNES
+BARRETT
+BARRETT
+BARTLETT
+BARTRAM
+BAUER
+BAZINET
+BEATIE
+BECHTOLD
+BECKER
+BEDDER
+BEEMSTERBOER
+BEESLEY
+BELCHER
+BELL
+BELL
+BELL
+BELL
+BELL
+BELL
+BELTRANO
+BELVEDERE
+BEMISTER
+BENISTY
+BENJAMIN
+BENN
+BENNETT
+BENNETT
+BENNICI
+BENSON
+BERARDI
+BERMAN
+BERMAN
+BEVACQUA
+BEVERLY
+BHANJI
+BIELAWSKI
+BIESER
+BIGLEY
+BINDRA
+BINGHAM
+BIRCHALL
+BIRCHALL
+BISCHOFF
+BISHOP
+BISHOP
+BISSOON
+BLACK
+BLACK
+BLAIN
+BLAIN
+BLOXHAM
+BLUNDY
+BOEHLKE
+BOEHLKE
+BOLAN
+BONIKOWSKA
+BOOTH
+BOREAN
+BOREAN
+BORG-OLIVIER
+BOSTROM
+BOULTBEE
+BOUND
+BOURGON
+BOURGON
+BOUT
+BOWDEN
+BOWLER
+BOYCZUK
+BOZAK
+BRADLEY
+BRADLEY
+BRANDT
+BRANGMAN
+BRANNAN
+BRASH
+BRAYMAN
+BRENDEL
+BRIERLEY
+BRODHECKER
+BRODIE
+BROOKES
+BROOKMAN
+BROPHY
+BROWN
+BROWN
+BROWN
+BROWN
+BROWN
+BRUBACHER
+BRUDNICKI
+BRUNO
+BRYSON
+BUCCITTI
+BUCCITTI
+BUCHMUELLER
+BUCKLEY
+BUDGET
+BULMER
+BUNA
+BURGESS
+BURKE
+BURKE
+BURKE
+BURLEY
+BURLEY
+BURMAN
+BURNIE
+BURNS
+BURNS
+BURROUGHES
+BURSCHBERG
+BURSEY
+BURTON
+BURTON
+BUTCHER
+BUTLER
+BYCE
+BYERLAY
+BYERS
+BYRNE
+BZONKOVA
+CACERES
+CADOO
+CALABRESE
+CALDER
+CALDWELL
+CALLAHAN
+CALLINGHAM
+CAMERON
+CAMERON
+CAMERON
+CAMPBELL
+CAMPBELL
+CAMPBELL
+CAMPBELL
+CANNEY
+CARAVELLA
+CARCONE
+CARMICHEAL
+CARPINO
+CARSON
+CARSON
+CARTER
+CARTER
+CARTWRIGHT
+CARUSO
+CASCIARO
+CASEY
+CASSIANI
+CASTELLI
+CAVALLARO
+CAVALLIN
+CAVANAGH
+CAVERLEY
+CELIC
+CELLINO
+CENTORAME
+CHAN
+CHAN
+CHANDLER
+CHANG
+CHAPMAN
+CHERRY
+CHEUNG
+CHEUNG
+CHIM
+CHIU
+CHOAT
+CHOLKAN
+CHOP
+CHOPOWICK
+CHORLEY
+CHOUDHRY
+CHOY
+CHRISTEN
+CHRISTIAN
+CHUA
+CHUI
+CHUN
+CHUNG
+CHURCHMAN
+CHVOSTEK
+CIAMPINI
+CICCARELLI
+CIPOLLONE
+CLARE
+CLARK
+CLARK
+CLARK
+CLARK-BONDY
+CLARKSON
+CLEMENS
+CLEMENTE
+CLIMIE
+CLOUSTON
+CNTR
+COATES
+COATES
+COHEN
+COLE
+COLELLA
+COLEMAN
+COLEMAN
+COLIN
+COLIN
+COLLINS
+COLLINS
+COLLINS
+COLLINS
+COLTER
+COMBETTO
+COMBETTO
+CONNOLLY
+CONRAD
+COOMBER
+COOPER
+COOPER
+COOPER
+COPP
+CORMICK
+CORN
+CORRY
+COSENTINO
+COULSON
+COULTER
+COULTER
+COURT
+COUTINHO
+COUTU
+[46;1H--------------------------------------------------------------------------------------------------------------
+                                                                                                              [47;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 2.3:  Command Summary (Part 3)
+[1;101HPage 6/10
+[2;1H--------------------------------------------------------------------------------------------------------------[01;34msample_dir2[00m
+`-- [01;34msample_dir[00m
+    |-- [01;34madmin[00m
+    |-- [01;34mcambridge[00m
+    |   `-- [01;34msecurity[00m
+    |       |-- annex
+    |       `-- parking
+    |-- [01;32mhistory.exe[00m
+    |-- [01;34mmarkham[00m
+    |   |-- annex
+    |   |-- building1
+    |   `-- parking
+    `-- [01;34mstenton[00m
+        |-- f1
+        |-- f12
+        |-- f2
+        |-- [01;34mgen_ed[00m
+        |   |-- Holidays
+        |   `-- cars2
+        |-- [01;34mlib_arts[00m
+        |   `-- english.txt
+        `-- phone_directory
+
+Your current directory is sample_dir. Find the records in cars2 that contain the string "ford", and
+display the number of bytes in the result:
+[46;1H--------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[48;1H$  g [48;5H[48;1H$  gr [48;6H[48;1H$  gre [48;7H[48;1H$  grep [48;8H[48;1H$  grep  [48;9H[48;1H$  grep " [48;10H[48;1H$  grep "f [48;11H[48;1H$  grep "fo [48;12H[48;1H$  grep "for [48;13H[48;1H$  grep "ford [48;14H[48;1H$  grep "ford" [48;15H[48;1H$  grep "ford"  [48;16H[48;1H$  grep "ford" s [48;17H[48;1H$  grep "ford" st [48;18H[48;1H$  grep "ford" ste [48;19H[48;1H$  grep "ford" sten [48;20H[48;1H$  grep "ford" stent [48;21H[48;1H$  grep "ford" stento [48;22H[48;1H$  grep "ford" stenton [48;23H[48;1H$  grep "ford" stenton/ [48;24H[48;1H$  grep "ford" stenton/c [48;25H[48;1H$  grep "ford" stenton/ca [48;26H[48;1H$  grep "ford" stenton/car [48;27H[48;1H$  grep "ford" stenton/cars [48;28H[48;1H$  grep "ford" stenton/cars2 [48;29H[48;1H$  grep "ford" stenton/cars [48;28H[48;1H$  grep "ford" stenton/car [48;27H[48;1H$  grep "ford" stenton/ca [48;26H[48;1H$  grep "ford" stenton/c [48;25H[48;1H$  grep "ford" stenton/ [48;24H[48;1H$  grep "ford" stenton/g [48;25H[48;1H$  grep "ford" stenton/ge [48;26H[48;1H$  grep "ford" stenton/gen [48;27H[48;27H[48;1H$  grep "ford" stenton/gen_ [48;28H[48;1H$  grep "ford" stenton/gen_e [48;29H[48;1H$  grep "ford" stenton/gen_ed [48;30H[48;1H$  grep "ford" stenton/gen_ed/ [48;31H[48;1H$  grep "ford" stenton/gen_ed/c [48;32H[48;1H$  grep "ford" stenton/gen_ed/ca [48;33H[48;1H$  grep "ford" stenton/gen_ed/car [48;34H[48;1H$  grep "ford" stenton/gen_ed/cars [48;35H[48;1H$  grep "ford" stenton/gen_ed/cars2 [48;36H[H[JUNX510 Lab 2.3:  Command Summary (Part 3)
+[1;101HPage 6/10
+[2;1H--------------------------------------------------------------------------------------------------------------[01;34msample_dir2[00m
+`-- [01;34msample_dir[00m
+    |-- [01;34madmin[00m
+    |-- [01;34mcambridge[00m
+    |   `-- [01;34msecurity[00m
+    |       |-- annex
+    |       `-- parking
+    |-- [01;32mhistory.exe[00m
+    |-- [01;34mmarkham[00m
+    |   |-- annex
+    |   |-- building1
+    |   `-- parking
+    `-- [01;34mstenton[00m
+        |-- f1
+        |-- f12
+        |-- f2
+        |-- [01;34mgen_ed[00m
+        |   |-- Holidays
+        |   `-- cars2
+        |-- [01;34mlib_arts[00m
+        |   `-- english.txt
+        `-- phone_directory
+
+Your current directory is sample_dir. Find the records in cars2 that contain the string "ford", and
+display the number of bytes in the result:
+
+You entered: grep "ford" stenton/gen_ed/cars2
+Please try again.
+
+Hint:
+No hints in this section
+[46;1H--------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[48;1H$  grep "ford" stenton/gen_ed/cars2                                                                       [48;36H[48;35H[48;34H[48;33H[48;32H[48;31H[48;30H[48;29H[48;28H[48;27H[48;26H[48;25H[48;24H[48;23H[48;22H[48;21H[48;20H[48;19H[48;18H[48;19H[48;20H[48;21H[48;22H[48;23H[48;24H[48;25H[48;26H[48;27H[48;28H[48;29H[48;30H[48;31H[48;32H[48;33H[48;34H[48;35H[48;36H[48;1H$  grep "ford" stenton/gen_ed/cars2  [48;37H[48;1H$  grep "ford" stenton/gen_ed/cars2 | [48;38H[48;1H$  grep "ford" stenton/gen_ed/cars2 |  [48;39H[48;1H$  grep "ford" stenton/gen_ed/cars2 | w [48;40H[48;1H$  grep "ford" stenton/gen_ed/cars2 | wc [48;41H[48;1H$  grep "ford" stenton/gen_ed/cars2 | wc  [48;42H[48;1H$  grep "ford" stenton/gen_ed/cars2 | wc - [48;43H[48;1H$  grep "ford" stenton/gen_ed/cars2 | wc -c [48;44H[H[JUNX510 Lab 2.3:  Command Summary (Part 3)
+[1;101HPage 7/10
+[2;1H--------------------------------------------------------------------------------------------------------------
+$  grep "ford" stenton/gen_ed/cars2 | wc -c
+151
+[46;1H--------------------------------------------------------------------------------------------------------------
+                                                                                                              [47;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 2.3:  Command Summary (Part 3)
+[1;101HPage 7/10
+[2;1H--------------------------------------------------------------------------------------------------------------[01;34msample_dir2[00m
+`-- [01;34msample_dir[00m
+    |-- [01;34madmin[00m
+    |-- [01;34mcambridge[00m
+    |   `-- [01;34msecurity[00m
+    |       |-- annex
+    |       `-- parking
+    |-- [01;32mhistory.exe[00m
+    |-- [01;34mmarkham[00m
+    |   |-- annex
+    |   |-- building1
+    |   `-- parking
+    `-- [01;34mstenton[00m
+        |-- f1
+        |-- f12
+        |-- f2
+        |-- [01;34mgen_ed[00m
+        |   |-- Holidays
+        |   `-- cars2
+        |-- [01;34mlib_arts[00m
+        |   `-- english.txt
+        `-- phone_directory
+
+Your current directory is sample_dir. Change the permissions (using octal) for cars2 so that an 'ls -l'
+listing would show rwxr-x--x:
+[46;1H--------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[48;1H$  c [48;5H[48;1H$  ch [48;6H[48;1H$  cho [48;7H[48;1H$  ch [48;6H[48;1H$  chm [48;7H[48;1H$  chmo [48;8H[48;1H$  chmod [48;9H[48;1H$  chmod  [48;10H[48;1H$  chmod s [48;11H[48;1H$  chmod st [48;12H[48;1H$  chmod ste [48;13H[48;1H$  chmod sten [48;14H[48;1H$  chmod stent [48;15H[48;1H$  chmod stento [48;16H[48;1H$  chmod stenton [48;17H[48;1H$  chmod stenton/ [48;18H[48;17H[48;16H[48;15H[48;14H[48;13H[48;12H[48;11H[48;10H[48;1H$  chmod ustenton/ [48;11H[48;1H$  chmod u=stenton/ [48;12H[48;1H$  chmod u=rstenton/ [48;13H[48;1H$  chmod u=rwstenton/ [48;14H[48;1H$  chmod u=rwxstenton/ [48;15H[48;1H$  chmod u=rwx stenton/ [48;16H[48;1H$  chmod u=rwxstenton/ [48;15H[48;1H$  chmod u=rwx,stenton/ [48;16H[48;1H$  chmod u=rwx, stenton/ [48;17H[48;1H$  chmod u=rwx, gstenton/ [48;18H[48;1H$  chmod u=rwx, g=stenton/ [48;19H[48;1H$  chmod u=rwx, g=rstenton/ [48;20H[48;1H$  chmod u=rwx, g=r-stenton/ [48;21H[48;1H$  chmod u=rwx, g=rstenton/ [48;20H[48;1H$  chmod u=rwx, g=rxstenton/ [48;21H[48;1H$  chmod u=rwx, g=rx,stenton/ [48;22H[48;1H$  chmod u=rwx, g=rx, stenton/ [48;23H[48;1H$  chmod u=rwx, g=rx, ostenton/ [48;24H[48;1H$  chmod u=rwx, g=rx, o=stenton/ [48;25H[48;1H$  chmod u=rwx, g=rx, o=xstenton/ [48;26H[48;1H$  chmod u=rwx, g=rx, o=x stenton/ [48;27H[48;28H[48;29H[48;30H[48;31H[48;32H[48;33H[48;34H[48;35H[48;1H$  chmod u=rwx, g=rx, o=x stenton/c [48;36H[48;1H$  chmod u=rwx, g=rx, o=x stenton/ca [48;37H[48;1H$  chmod u=rwx, g=rx, o=x stenton/car [48;38H[48;1H$  chmod u=rwx, g=rx, o=x stenton/cars [48;39H[48;1H$  chmod u=rwx, g=rx, o=x stenton/cars2 [48;40H[H[JUNX510 Lab 2.3:  Command Summary (Part 3)
+[1;101HPage 7/10
+[2;1H--------------------------------------------------------------------------------------------------------------[01;34msample_dir2[00m
+`-- [01;34msample_dir[00m
+    |-- [01;34madmin[00m
+    |-- [01;34mcambridge[00m
+    |   `-- [01;34msecurity[00m
+    |       |-- annex
+    |       `-- parking
+    |-- [01;32mhistory.exe[00m
+    |-- [01;34mmarkham[00m
+    |   |-- annex
+    |   |-- building1
+    |   `-- parking
+    `-- [01;34mstenton[00m
+        |-- f1
+        |-- f12
+        |-- f2
+        |-- [01;34mgen_ed[00m
+        |   |-- Holidays
+        |   `-- cars2
+        |-- [01;34mlib_arts[00m
+        |   `-- english.txt
+        `-- phone_directory
+
+Your current directory is sample_dir. Change the permissions (using octal) for cars2 so that an 'ls -l'
+listing would show rwxr-x--x:
+
+You entered: chmod u=rwx, g=rx, o=x stenton/cars2
+Please try again.
+
+Hint:
+No hints in this section
+[46;1H--------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[48;1H$  chmod u=rwx, g=rx, o=x stenton/cars2                                                                   [48;40H[48;39H[48;38H[48;37H[48;36H[48;35H[48;34H[48;33H[48;32H[48;31H[48;30H[48;29H[48;28H[48;27H[48;26H[48;25H[48;24H[48;23H[48;22H[48;21H[48;20H[48;19H[48;18H[48;17H[48;16H[48;15H[48;1H$  chmod u=rw, g=rx, o=x stenton/cars2 [48;14H[48;1H$  chmod u=r, g=rx, o=x stenton/cars2 [48;13H[48;1H$  chmod u=, g=rx, o=x stenton/cars2 [48;12H[48;1H$  chmod u=7, g=rx, o=x stenton/cars2 [48;13H[48;14H[48;15H[48;16H[48;17H[48;18H[48;19H[48;1H$  chmod u=7, g=r, o=x stenton/cars2 [48;18H[48;1H$  chmod u=7, g=, o=x stenton/cars2 [48;17H[48;1H$  chmod u=7, g=5, o=x stenton/cars2 [48;18H[48;19H[48;20H[48;21H[48;22H[48;23H[48;1H$  chmod u=7, g=5, o= stenton/cars2 [48;22H[48;1H$  chmod u=7, g=5, o=1 stenton/cars2 [48;23H[H[JUNX510 Lab 2.3:  Command Summary (Part 3)
+[1;101HPage 7/10
+[2;1H--------------------------------------------------------------------------------------------------------------[01;34msample_dir2[00m
+`-- [01;34msample_dir[00m
+    |-- [01;34madmin[00m
+    |-- [01;34mcambridge[00m
+    |   `-- [01;34msecurity[00m
+    |       |-- annex
+    |       `-- parking
+    |-- [01;32mhistory.exe[00m
+    |-- [01;34mmarkham[00m
+    |   |-- annex
+    |   |-- building1
+    |   `-- parking
+    `-- [01;34mstenton[00m
+        |-- f1
+        |-- f12
+        |-- f2
+        |-- [01;34mgen_ed[00m
+        |   |-- Holidays
+        |   `-- cars2
+        |-- [01;34mlib_arts[00m
+        |   `-- english.txt
+        `-- phone_directory
+
+Your current directory is sample_dir. Change the permissions (using octal) for cars2 so that an 'ls -l'
+listing would show rwxr-x--x:
+
+You entered: chmod u=7, g=5, o=1 stenton/cars2
+Please try again.
+
+Hint:
+No hints in this section
+[46;1H--------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[48;1H$  chmod u=7, g=5, o=1 stenton/cars2                                                                      [48;37H[48;36H[48;35H[48;34H[48;33H[48;32H[48;31H[48;30H[48;29H[48;28H[48;27H[48;26H[48;25H[48;24H[48;1H$  chmod u=7, g=5, o=1stenton/cars2 [48;23H[48;1H$  chmod u=7, g=5, o=stenton/cars2 [48;22H[48;1H$  chmod u=7, g=5, ostenton/cars2 [48;21H[48;1H$  chmod u=7, g=5, stenton/cars2 [48;20H[48;1H$  chmod u=7, g=5,stenton/cars2 [48;19H[48;1H$  chmod u=7, g=5stenton/cars2 [48;18H[48;1H$  chmod u=7, g=stenton/cars2 [48;17H[48;1H$  chmod u=7, gstenton/cars2 [48;16H[48;1H$  chmod u=7, stenton/cars2 [48;15H[48;1H$  chmod u=7,stenton/cars2 [48;14H[48;1H$  chmod u=7stenton/cars2 [48;13H[48;1H$  chmod u=stenton/cars2 [48;12H[48;1H$  chmod ustenton/cars2 [48;11H[48;1H$  chmod stenton/cars2 [48;10H[48;1H$  chmodstenton/cars2 [48;9H[48;1H$  chmod stenton/cars2 [48;10H[48;1H$  chmod 7stenton/cars2 [48;11H[48;1H$  chmod 75stenton/cars2 [48;12H[48;1H$  chmod 751stenton/cars2 [48;13H[H[JUNX510 Lab 2.3:  Command Summary (Part 3)
+[1;101HPage 7/10
+[2;1H--------------------------------------------------------------------------------------------------------------[01;34msample_dir2[00m
+`-- [01;34msample_dir[00m
+    |-- [01;34madmin[00m
+    |-- [01;34mcambridge[00m
+    |   `-- [01;34msecurity[00m
+    |       |-- annex
+    |       `-- parking
+    |-- [01;32mhistory.exe[00m
+    |-- [01;34mmarkham[00m
+    |   |-- annex
+    |   |-- building1
+    |   `-- parking
+    `-- [01;34mstenton[00m
+        |-- f1
+        |-- f12
+        |-- f2
+        |-- [01;34mgen_ed[00m
+        |   |-- Holidays
+        |   `-- cars2
+        |-- [01;34mlib_arts[00m
+        |   `-- english.txt
+        `-- phone_directory
+
+Your current directory is sample_dir. Change the permissions (using octal) for cars2 so that an 'ls -l'
+listing would show rwxr-x--x:
+
+You entered: chmod 751stenton/cars2
+Please try again.
+
+Hint:
+No hints in this section
+[46;1H--------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[48;1H$  chmod 751stenton/cars2                                                                                 [48;26H[48;25H[48;24H[48;23H[48;22H[48;21H[48;20H[48;19H[48;18H[48;17H[48;16H[48;15H[48;14H[48;13H[48;1H$  chmod 751 stenton/cars2 [48;14H[H[JUNX510 Lab 2.3:  Command Summary (Part 3)
+[1;101HPage 7/10
+[2;1H--------------------------------------------------------------------------------------------------------------[01;34msample_dir2[00m
+`-- [01;34msample_dir[00m
+    |-- [01;34madmin[00m
+    |-- [01;34mcambridge[00m
+    |   `-- [01;34msecurity[00m
+    |       |-- annex
+    |       `-- parking
+    |-- [01;32mhistory.exe[00m
+    |-- [01;34mmarkham[00m
+    |   |-- annex
+    |   |-- building1
+    |   `-- parking
+    `-- [01;34mstenton[00m
+        |-- f1
+        |-- f12
+        |-- f2
+        |-- [01;34mgen_ed[00m
+        |   |-- Holidays
+        |   `-- cars2
+        |-- [01;34mlib_arts[00m
+        |   `-- english.txt
+        `-- phone_directory
+
+Your current directory is sample_dir. Change the permissions (using octal) for cars2 so that an 'ls -l'
+listing would show rwxr-x--x:
+
+You entered: chmod 751 stenton/cars2
+Please try again.
+
+Hint:
+No hints in this section
+[46;1H--------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[48;1H$  chmod 751 stenton/cars2                                                                                [48;27H[48;26H[48;25H[48;24H[48;23H[48;22H[48;1H$  chmod 751 stenton/gcars2 [48;23H[48;1H$  chmod 751 stenton/gecars2 [48;24H[48;1H$  chmod 751 stenton/gencars2 [48;25H[48;1H$  chmod 751 stenton/gen_cars2 [48;26H[48;1H$  chmod 751 stenton/gen_ecars2 [48;27H[48;1H$  chmod 751 stenton/gen_edcars2 [48;28H[48;1H$  chmod 751 stenton/gen_ed/cars2 [48;29H[H[JUNX510 Lab 2.3:  Command Summary (Part 3)
+[1;101HPage 8/10
+[2;1H--------------------------------------------------------------------------------------------------------------
+$  chmod 751 stenton/gen_ed/cars2
+[46;1H--------------------------------------------------------------------------------------------------------------
+                                                                                                              [47;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 2.3:  Command Summary (Part 3)
+[1;101HPage 8/10
+[2;1H--------------------------------------------------------------------------------------------------------------[01;34msample_dir2[00m
+`-- [01;34msample_dir[00m
+    |-- [01;34madmin[00m
+    |-- [01;34mcambridge[00m
+    |   `-- [01;34msecurity[00m
+    |       |-- annex
+    |       `-- parking
+    |-- [01;32mhistory.exe[00m
+    |-- [01;34mmarkham[00m
+    |   |-- annex
+    |   |-- building1
+    |   `-- parking
+    `-- [01;34mstenton[00m
+        |-- f1
+        |-- f12
+        |-- f2
+        |-- [01;34mgen_ed[00m
+        |   |-- Holidays
+        |   `-- [00;32mcars2[00m
+        |-- [01;34mlib_arts[00m
+        |   `-- english.txt
+        `-- phone_directory
+
+Your current directory is sample_dir. Add the permission (using symbolic) for gen_ed so that all users
+can access the file cars2:
+[46;1H--------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[48;1H$  c [48;5H[48;1H$  ch [48;6H[48;1H$  chm [48;7H[48;1H$  chmo [48;8H[48;1H$  chmod [48;9H[48;1H$  chmod  [48;10H[48;1H$  chmod r [48;11H[48;1H$  chmod  [48;10H[48;1H$  chmod a [48;11H[48;1H$  chmod a+ [48;12H[48;1H$  chmod a+x [48;13H[48;1H$  chmod a+x  [48;14H[48;1H$  chmod a+x s [48;15H[48;1H$  chmod a+x st [48;16H[48;1H$  chmod a+x ste [48;17H[48;1H$  chmod a+x sten [48;18H[48;1H$  chmod a+x stent [48;19H[48;1H$  chmod a+x stento [48;20H[48;1H$  chmod a+x stenton [48;21H[H[JUNX510 Lab 2.3:  Command Summary (Part 3)
+[1;101HPage 8/10
+[2;1H--------------------------------------------------------------------------------------------------------------[01;34msample_dir2[00m
+`-- [01;34msample_dir[00m
+    |-- [01;34madmin[00m
+    |-- [01;34mcambridge[00m
+    |   `-- [01;34msecurity[00m
+    |       |-- annex
+    |       `-- parking
+    |-- [01;32mhistory.exe[00m
+    |-- [01;34mmarkham[00m
+    |   |-- annex
+    |   |-- building1
+    |   `-- parking
+    `-- [01;34mstenton[00m
+        |-- f1
+        |-- f12
+        |-- f2
+        |-- [01;34mgen_ed[00m
+        |   |-- Holidays
+        |   `-- [00;32mcars2[00m
+        |-- [01;34mlib_arts[00m
+        |   `-- english.txt
+        `-- phone_directory
+
+Your current directory is sample_dir. Add the permission (using symbolic) for gen_ed so that all users
+can access the file cars2:
+
+You entered: chmod a+x stenton
+Please try again.
+
+Hint:
+No hints in this section
+[46;1H--------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[48;1H$  chmod a+x stenton                                                                                      [48;21H[48;1H$  chmod a+x stenton/ [48;22H[48;1H$  chmod a+x stenton/g [48;23H[48;1H$  chmod a+x stenton/ge [48;24H[48;1H$  chmod a+x stenton/gen [48;25H[48;1H$  chmod a+x stenton/gen- [48;26H[48;1H$  chmod a+x stenton/gen-e [48;27H[48;1H$  chmod a+x stenton/gen-ed [48;28H[H[JUNX510 Lab 2.3:  Command Summary (Part 3)
+[1;101HPage 8/10
+[2;1H--------------------------------------------------------------------------------------------------------------[01;34msample_dir2[00m
+`-- [01;34msample_dir[00m
+    |-- [01;34madmin[00m
+    |-- [01;34mcambridge[00m
+    |   `-- [01;34msecurity[00m
+    |       |-- annex
+    |       `-- parking
+    |-- [01;32mhistory.exe[00m
+    |-- [01;34mmarkham[00m
+    |   |-- annex
+    |   |-- building1
+    |   `-- parking
+    `-- [01;34mstenton[00m
+        |-- f1
+        |-- f12
+        |-- f2
+        |-- [01;34mgen_ed[00m
+        |   |-- Holidays
+        |   `-- [00;32mcars2[00m
+        |-- [01;34mlib_arts[00m
+        |   `-- english.txt
+        `-- phone_directory
+
+Your current directory is sample_dir. Add the permission (using symbolic) for gen_ed so that all users
+can access the file cars2:
+
+You entered: chmod a+x stenton/gen-ed
+Please try again.
+
+Hint:
+No hints in this section
+[46;1H--------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[48;1H$  chmod a+x stenton/gen-ed                                                                               [48;28H[48;27H[48;26H[48;1H$  chmod a+x stenton/gened [48;25H[48;1H$  chmod a+x stenton/gen_ed [48;26H[H[JUNX510 Lab 2.3:  Command Summary (Part 3)
+[1;101HPage 9/10
+[2;1H--------------------------------------------------------------------------------------------------------------
+$  chmod a+x stenton/gen_ed
+[46;1H--------------------------------------------------------------------------------------------------------------
+                                                                                                              [47;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 2.3:  Command Summary (Part 3)
+[1;101HPage 9/10
+[2;1H--------------------------------------------------------------------------------------------------------------[01;34msample_dir2[00m
+`-- [01;34msample_dir[00m
+    |-- [01;34madmin[00m
+    |-- [01;34mcambridge[00m
+    |   `-- [01;34msecurity[00m
+    |       |-- annex
+    |       `-- parking
+    |-- [01;32mhistory.exe[00m
+    |-- [01;34mmarkham[00m
+    |   |-- annex
+    |   |-- building1
+    |   `-- parking
+    `-- [01;34mstenton[00m
+        |-- f1
+        |-- f12
+        |-- f2
+        |-- [01;34mgen_ed[00m
+        |   |-- Holidays
+        |   `-- [00;32mcars2[00m
+        |-- [01;34mlib_arts[00m
+        |   `-- english.txt
+        `-- phone_directory
+
+Your current directory is sample_dir. Create a hard link to cars2, called cars3 within sample_dir:
+[46;1H--------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[48;1H$  l [48;5H[48;1H$  ln [48;6H[48;1H$  ln  [48;7H[48;1H$  ln s [48;8H[48;1H$  ln sa [48;9H[48;1H$  ln sam [48;10H[48;1H$  ln sa [48;9H[48;1H$  ln s [48;8H[48;1H$  ln  [48;7H[48;1H$  ln s [48;8H[48;1H$  ln st [48;9H[48;1H$  ln ste [48;10H[48;1H$  ln sten [48;11H[48;1H$  ln stent [48;12H[48;1H$  ln stento [48;13H[48;1H$  ln stenton [48;14H[48;1H$  ln stenton/ [48;15H[48;1H$  ln stenton/g [48;16H[48;1H$  ln stenton/ge [48;17H[48;1H$  ln stenton/gen [48;18H[48;1H$  ln stenton/gen_ [48;19H[48;1H$  ln stenton/gen_e [48;20H[48;1H$  ln stenton/gen_ed [48;21H[48;1H$  ln stenton/gen_ed/ [48;22H[48;1H$  ln stenton/gen_ed/c [48;23H[48;1H$  ln stenton/gen_ed/ca [48;24H[48;1H$  ln stenton/gen_ed/car [48;25H[48;1H$  ln stenton/gen_ed/cars [48;26H[48;1H$  ln stenton/gen_ed/cars2 [48;27H[48;1H$  ln stenton/gen_ed/cars2  [48;28H[48;1H$  ln stenton/gen_ed/cars2 c [48;29H[48;1H$  ln stenton/gen_ed/cars2 ca [48;30H[48;1H$  ln stenton/gen_ed/cars2 car [48;31H[48;1H$  ln stenton/gen_ed/cars2 cars [48;32H[48;1H$  ln stenton/gen_ed/cars2 cars3 [48;33H[H[JUNX510 Lab 2.3:  Command Summary (Part 3)
+[1;101HPage 10/10
+[2;1H--------------------------------------------------------------------------------------------------------------
+$  ln stenton/gen_ed/cars2 cars3
+[46;1H--------------------------------------------------------------------------------------------------------------
+                                                                                                              [47;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 2.3:  Command Summary (Part 3)
+[1;101HPage 10/10
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+Congratulations!
+
+You have successfully completed this section!
+[46;1H--------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.3:  Command Summary
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 Command Summary - Part 1 - Completed[m
+2 Command Summary - Part 2 - Completed[m
+3 Command Summary - Part 3 - Completed[m
+
+Note that the highlighted lines indicate the incomplete sections of
+this part of the Lab.
+
+Section 3 can only be done when the other sections have been
+completed.
+[46;1H--------------------------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: 
+[H[JUNX510 Lab 2.3:  Command Summary
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 Command Summary - Part 1 - Completed[m
+2 Command Summary - Part 2 - Completed[m
+3 Command Summary - Part 3 - Completed[m
+
+Note that the highlighted lines indicate the incomplete sections of
+this part of the Lab.
+
+Section 3 can only be done when the other sections have been
+completed.
+[46;1H--------------------------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: 
+[H[JUNX510 Lab 2.3:  Command Summary
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 Command Summary - Part 1 - Completed[m
+2 Command Summary - Part 2 - Completed[m
+3 Command Summary - Part 3 - Completed[m
+
+Note that the highlighted lines indicate the incomplete sections of
+this part of the Lab.
+
+Section 3 can only be done when the other sections have been
+completed.
+[46;1H--------------------------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: 
+[H[JUNX510 Lab 2.3:  Command Summary
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 Command Summary - Part 1 - Completed[m
+2 Command Summary - Part 2 - Completed[m
+3 Command Summary - Part 3 - Completed[m
+
+Note that the highlighted lines indicate the incomplete sections of
+this part of the Lab.
+
+Section 3 can only be done when the other sections have been
+completed.
+[46;1H--------------------------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: q
+[H[JUNX510 Lab 2:  Selection Menu
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 Redirection And Pipes - Completed[m
+2 Linking Files And Directories - Completed[m
+3 Command Summary - Completed[m
+4 [7mLinux Processes[m
+5 [7mRegular Expressions Using grep[m
+6 [7msed And awk[m
+7 [7mInteractive Shell Environment[m
+
+8 [7mSubmit UNX510 Lab 2[m
+
+The highlighted lines above indicate the incomplete parts of the Lab.
+There is a total possible mark of 3, with 0.5 marks deducted for each
+incomplete part. Late marks will be deducted at the rate of 0.3 marks (10%)
+per day for Labs submitted after midnight of May 26 2017.
+
+
+[46;1H--------------------------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: 4
+[H[JUNX510 Lab 2.4:  Linux Processes
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 [7mProcess Concepts[m
+2 [7mManaging Processes[m
+3 [7mReview Exercise[m
+
+Note that the highlighted lines indicate the incomplete sections of
+this part of the Lab.
+
+The Review Exercise can only be done when the other sections have
+been completed.
+[46;1H--------------------------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: 1
+[H[JUNX510 Lab 2.4:  Process Concepts
+[1;101HPage 1/17
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+Process Concepts
+
+As mentioned in previous lessons, an operating system controls the hardware and software resources of
+a computer system.
+
+These software resources (programs) work with the various hardware resources such as the CPU, memory,
+input/output devices, and networking connections.
+[46;1H--------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.4:  Process Concepts
+[1;101HPage 2/17
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+Since the computer may have only one or a few processors to manage computer resources as well as allow
+many end-users to run their own programs, a mechanism is required to schedule and allocate CPU time for
+these "simultaneously" running programs.
+
+In Unix and Linux operating systems, a running program (any type of running program) is referred to as a
+"process".
+[46;1H--------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.4:  Process Concepts
+[1;101HPage 3/17
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+In Linux and Unix, whenever a command is issued or a program executed, a process is initiated.
+
+For identification purposes a PID or "Process IDentification" number is assigned to the process. This
+allows the user to keep track of the process and abort it if necessary.
+[46;1H--------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.4:  Process Concepts
+[1;101HPage 4/17
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+To demonstrate, open another bash shell window.
+
+Let's view the processes that are running that are allowing us to connect to the server.
+
+Issue the following command in the other window:
+
+     ps
+[46;1H--------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.4:  Process Concepts
+[1;101HPage 5/17
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+The first column (PID) shows the process number. The right column shows the name of the program that
+is running.
+
+You should see several processes that are running. One is the "bash" shell (your login shell), and the
+actual "ps" command that you issued.
+[46;1H--------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.4:  Process Concepts
+[1;101HPage 6/17
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+These processes are related to each other.  To view the relationship between the processes, issue the
+following command in the other window:
+
+     ps f -f
+[46;1H--------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).ps
+[H[JUNX510 Lab 2.4:  Process Concepts
+[1;101HPage 7/17
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+You can use this command output to trace the relationship between a process (PID) and it's parent process
+(PPID):
+
+  - find the PPID of the ps, this will match
+    the PID of it's parent bash shell
+
+  - the PPID of that bash shell will match the
+    PID of it's parent
+[46;1H--------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.4:  Process Concepts
+[1;101HPage 8/17
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+In another column, you will see either "S" or "R".  These characters represent the "state" of the process.
+
+The state "R" indicates that the process is "Runnable" which is either running, or queued by the scheduling
+program to be run. The state "S" indicates that the process is sleeping, waiting for the child process(es)
+to end, in order to "wake-up" or "run".
+[46;1H--------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.4:  Process Concepts
+[1;101HPage 9/17
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+There are other process states in addition to "R" and "S":
+
+T - Stopped
+X - Terminated or "dead" process
+Z - Defunct process, but still using resources
+    (dead, but still "running" - like a "Zombie")
+[46;1H--------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.4:  Process Concepts
+[1;101HPage 10/17
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+So far, you have only seen processes that have run from your shell.  You can use the "-u" option with
+the ps command to view all processes relating to a user (like "yliu421" - i.e. you!).
+
+Issue the following command in the other window:
+
+     ps f -fu yliu421
+[46;1H--------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).m^H
+[H[JUNX510 Lab 2.4:  Process Concepts
+[1;101HPage 11/17
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+Your Linux session (shell) was run from the sshd process when you connected to the server via your
+SSH program.
+
+Here are a few other "sshd" processes that are running, some are other users that have connected to
+the server:
+
+root         1     0  0 03:27 ?        00:00:02 /sbin/init showopts
+root      1762     1  0 03:28 ?        00:00:04 /usr/sbin/sshd -o PidFile=/var/run/sshd.init.pid
+root      7072  1762  0 14:45 ?        00:00:00 sshd: yliu421 [priv]                               
+yliu421   7100  7072  0 14:45 ?        00:00:00 sshd: yliu421@pts/3,pts/0                          
+root      1762     1  0 03:28 ?        00:00:04 /usr/sbin/sshd -o PidFile=/var/run/sshd.init.pid
+root      7072  1762  0 14:45 ?        00:00:00 sshd: yliu421 [priv]                               
+yliu421   7100  7072  0 14:45 ?        00:00:00 sshd: yliu421@pts/3,pts/0                          
+root     21744  1762  0 15:24 ?        00:00:00 sshd: zlauzon [priv]                               
+zlauzon  21799 21744  0 15:25 ?        00:00:00 sshd: zlauzon@pts/2                                
+root     22278  1762  0 15:28 ?        00:00:00 sshd: gmacedo-de-albuquerq [priv]                  
+48513    22297 22278  0 15:28 ?        00:00:00 sshd: gmacedo-de-albuquerq@pts/5                   
+root     24496  1762  0 13:52 ?        00:00:00 sshd: abansal5 [priv]                              
+abansal5 24526 24496  0 13:52 ?        00:00:00 sshd: abansal5@pts/1                               
+[46;1H--------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.4:  Process Concepts
+[1;101HPage 12/17
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+Notice that these ssh processes can be traced to a program that permits SSH connections to the server called:
+
+/usr/sbin/sshd
+
+This process, in turn, can be traced back to PID 1.
+
+This is a special program called "init" which is used to start programs after the kernel (PID 0) was
+started following the server "boot-up".
+[46;1H--------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.4:  Process Concepts
+[1;101HPage 13/17
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+The "init" program launches the "start-up" programs and controls the processes. There are many other
+processes besides sshd including: program scheduler (cron), print job management (spooler), etc...
+
+Many of the programs that the "init" program runs are independent of the shell. In other words, the
+program or process "disconnects itself" from the terminal and runs in the background. These types of
+programs are referred to as "daemons".
+[46;1H--------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.4:  Process Concepts
+[1;101HPage 14/17
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+A user can issue the "ps -e" option to view every process on your system. There are many programs or
+processes that can be identified as "daemons" simply by viewing a "d" at the end of the program name.
+
+For example, these are all the lines from "ps -ef" that end in "d":
+
+root       321     1  0 03:28 ?        00:00:00 /sbin/udevd
+root       453   321  0 03:28 ?        00:00:00 /sbin/udevd
+root       454   321  0 03:28 ?        00:00:00 /sbin/udevd
+root       588     1  0 03:28 ?        00:00:00 /lib/systemd/systemd-logind
+root       815     1  0 03:28 ?        00:00:00 /sbin/acpid
+root       867     1  0 03:28 ?        00:00:38 /usr/bin/vmtoolsd
+root      1077     1  0 03:28 ?        00:00:01 /opt/simpana/Base/cvlaunchd
+root      1136     1  0 03:28 ?        00:00:08 /opt/simpana/Base/cvd
+root      1240     1  0 03:28 ?        00:00:04 /opt/simpana/Base/cvfwd
+root      1626     1  0 03:28 ?        00:00:02 /usr/sbin/nscd
+root      1740     1  0 03:28 ?        00:00:00 /sbin/rpcbind
+root      1749     1  0 03:28 ?        00:00:00 /usr/sbin/ypbind
+root      1762     1  0 03:28 ?        00:00:04 /usr/sbin/sshd -o PidFile=/var/run/sshd.init.pid
+root      1780     1  0 03:28 ?        00:00:01 /usr/sbin/automount -p /var/run/automount.pid
+root      1829     1  0 03:28 ?        00:00:22 /usr/sbin/snmpd -r -A -LF n /var/log/net-snmpd.log -p /var/run/snmpd.pid
+[46;1H--------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.4:  Process Concepts
+[1;101HPage 15/17
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+A simple, but useful command when viewing process relationships is the "pstree" command. This command will
+"draw" a tree-diagram showing the relationships of processes running on a computer system.
+
+For example, issue pstree for your userid in the other window:
+
+   pstree -A yliu421
+[46;1H--------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).p
+[H[JUNX510 Lab 2.4:  Process Concepts
+[1;101HPage 16/17
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+You can see the direct relationship of your processes.
+
+You can also view process relationships for all processes running on the computer system by issuing the
+pstree command without any arguments.  You may or may not need the -A option, depending on whether your
+session is set up to support the ASCII character set.
+
+Notice all the processes that are branching-off the ssh daemon when you enter the following command in
+the other window:
+ 
+     pstree -A
+[46;1H--------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.4:  Process Concepts
+[1;101HPage 17/17
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+Now that you have a basic understanding about processes you need to learn to control them. You will be
+learning how to do this in the next section, "Managing Processes".
+[46;1H--------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.4:  Linux Processes
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 Process Concepts - Completed[m
+2 [7mManaging Processes[m
+3 [7mReview Exercise[m
+
+Note that the highlighted lines indicate the incomplete sections of
+this part of the Lab.
+
+The Review Exercise can only be done when the other sections have
+been completed.
+[46;1H--------------------------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: 2
+[H[JUNX510 Lab 2.4:  Command Substitution
+[1;101HPage 1/18
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+Managing Processes
+
+When you issue a command in Unix / Linux, a new child process is created and executed. The parent process,
+your shell, is suspended or "sleeps" until the child process terminates.
+
+As a result, your terminal may be "tied-up" while running long and time-consuming programs or commands.
+
+There is a method to have child processes run in the background to "free-up" the parent process or terminal.
+Processes that are run in the background, but are still "tied" to a terminal, are referred to as "jobs".
+[46;1H--------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.4:  Command Substitution
+[1;101HPage 2/18
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+To run a command in the background, type an ampersand "&" symbol after the command or program name.
+
+To demonstrate background processes, we will use a command that never ends, "tail -f cars".  This command
+will display the last 10 lines of the specified file and will stay active to display any lines that are
+added to the file.  This is a very useful command for system administrators to view changes to a file,
+such as a log file, in real time.
+
+In another ssh window, change to a directory that you have the "cars" file, or copy it from
+"~unx510/2017b/cars".  Then issue the following command:
+
+     tail -f cars
+[46;1H--------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.4:  Command Substitution
+[1;101HPage 3/18
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+Once you're satisfied that the command isn't ending, hit <Ctrl>-c (in the other window!!!).
+
+Now try running the command in the background:
+
+     tail -f cars &
+[46;1H--------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.4:  Command Substitution
+[1;101HPage 4/18
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+You should have seen a number in square brackets, which is the "job number", followed by the process ID
+of the new process.
+
+Also notice that you received terminal control immediately, even though the "tail" is still running.
+This is a big advantage of using background processes.
+
+Now, issue the command again:
+
+     tail -f cars &
+[46;1H--------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.4:  Command Substitution
+[1;101HPage 5/18
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+Now we have two background jobs running.
+
+Get a third background job running:
+
+     tail -f cars &
+[46;1H--------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.4:  Command Substitution
+[1;101HPage 6/18
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+To view information regarding processes or jobs that are running in the background, issue the following
+command in the other window:
+
+     jobs
+[46;1H--------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.4:  Command Substitution
+[1;101HPage 7/18
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+The diplay provides the following job or process information:
+
+[#]   Indicates job number
+
+ + Indicates most recent job sent to background
+
+ - Indicates second most recent job sent to background
+[46;1H--------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.4:  Command Substitution
+[1;101HPage 8/18
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+The plus sign "+" is useful, since you may want to bring the most recent job to the foreground by simply
+issuing the command "fg" by itself.
+
+You may also want to specify the job # that you want to bring to the foreground. Let's bring job #2 to
+the foreground.  (We could also use PID instead of job #).
+
+Issue the following command:
+
+     fg %2
+[46;1H--------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.4:  Command Substitution
+[1;101HPage 9/18
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+Good. Your command "tail -f cars" is now running on your terminal or "in the foreground".
+
+As before, the tail has control of the terminal.  Let's stop it by hitting <Ctrl>-z (in the other window!!!).
+
+Note that <Ctrl>-c would terminate a foreground process, while <Ctrl>-z just stops it from running. Now
+issue the following command
+
+     jobs
+[46;1H--------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.4:  Command Substitution
+[1;101HPage 10/18
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+Notice that job #2 is no longer running.
+
+You can continue a job "running" in the background.  This allows the user to run long commands or programs
+in the background without occupying the terminal.
+
+Let's run job #2 in the background again. Issue the following command:
+
+     bg %2
+[46;1H--------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.4:  Command Substitution
+[1;101HPage 11/18
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+You can terminate a job that is running in the background by issuing the "kill" command specifying either
+the job number or PID.
+
+Unpriviledged (non-administrator) users can only kill their own processes or jobs. Root (administrator)
+can kill any process.
+
+Issue the command:
+
+     kill %3
+[46;1H--------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.4:  Command Substitution
+[1;101HPage 12/18
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+Hit <Enter>, and you should get a message showing that job #3 was terminated.
+
+Now, again, issue a command to display the other jobs that are running in the background:
+
+     jobs
+[46;1H--------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.4:  Command Substitution
+[1;101HPage 13/18
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+The kill command actually sent a "signal" to the job or process that was running in the background. A
+signal is a special code that is sent from one process to another.
+
+Some signals are:
+
+Sig#  SigName    Description
+1     SIGHUP     Terminal Disconnect
+2     SIGINT     Terminal Interrupt (<Ctrl>-c)
+      SIGTSTP    Stop process
+15    SIGTERM    Terminate process Gracefully (kill pid or %job)
+9     SIGKILL    Terminate process Forcefully (kill -9 pid or %job)
+[46;1H--------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.4:  Command Substitution
+[1;101HPage 14/18
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+Let's send signal SIGTSTP to stop job #1 by issuing the "kill" command with signal SIGTSTP.
+
+This is the equivalent of <Ctrl>-z for a foreground job.  It will stop the process from running, but
+will not terminate it.
+
+Enter the following command:
+
+     kill -SIGTSTP %1
+[46;1H--------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.4:  Command Substitution
+[1;101HPage 15/18
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+Hit <Enter>, and you should get a message showing that job #1 was stopped.
+
+Now, again, issue a command to display the background jobs:
+
+     jobs
+[46;1H--------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.4:  Command Substitution
+[1;101HPage 16/18
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+Note that there are two signals that can be used to kill a job. Signal #15 (SIGTERM) is the default kill
+signal, and should always be tried first.
+
+Signal #9 (SIGKILL) should only be used as a last resort, if signal #15 doesn't work.  This would mean
+that either the program was written to ignore signal #15, or there is some kind of a problem.  Signal #9
+cannot be ignored, but will not clean up resources, such as memory and page space.
+
+Let's kill the two remaining processes, by entering the following command:
+
+     kill %1 %2
+[46;1H--------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.4:  Command Substitution
+[1;101HPage 17/18
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+Hit <Enter>, and you should get a message showing that jobs #1 and #2 were terminated.
+
+Now, again, issue a command to display any background jobs:
+
+     jobs
+[46;1H--------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.4:  Command Substitution
+[1;101HPage 18/18
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+Good. There should be no jobs that are running in the background.
+
+That concludes this section.  Now it's time to do the Review section!
+[46;1H--------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.4:  Linux Processes
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 Process Concepts - Completed[m
+2 Managing Processes - Completed[m
+3 [7mReview Exercise[m
+
+Note that the highlighted lines indicate the incomplete sections of
+this part of the Lab.
+
+The Review Exercise can only be done when the other sections have
+been completed.
+[46;1H--------------------------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: 3
+[H[JUNX510 Lab 2.4:  Review
+[1;101HPage 1/7
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+Review Exercise
+
+The purpose of this section is to reinforce your skills with issuing UNIX commands covered in the
+previous sections.
+
+You will be asked to enter a single UNIX command for the following situations.
+[46;1H--------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.4:  Review
+[1;101HPage 2/7
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+Question 1
+
+Enter the command that is used to display currently running processes, including an option to display
+PPID's (parent process id's):
+[46;1H--------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+>  [?1h=[48;1H>  p [48;5H[48;1H>  ps [48;6H[48;1H>  ps  [48;7H[48;1H>  ps f [48;8H[48;1H>  ps f  [48;9H[48;1H>  ps f - [48;10H[48;1H>  ps f -f [48;11H[H[JUNX510 Lab 2.4:  Review
+[1;101HPage 2/7
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+Question 1
+
+Enter the command that is used to display currently running processes, including an option to display
+PPID's (parent process id's):
+
+You entered: ps f -f
+Please try again.
+[46;1H--------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+>  [?1h=[48;1H>  p [48;5H[48;1H>  ps [48;6H[H[JUNX510 Lab 2.4:  Review
+[1;101HPage 2/7
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+Question 1
+
+Enter the command that is used to display currently running processes, including an option to display
+PPID's (parent process id's):
+
+You entered: ps
+Please try again.
+[46;1H--------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+>  [?1h=[48;1H>  p [48;5H[48;1H>  ps [48;6H[48;1H>  ps  [48;7H[48;1H>  ps - [48;8H[48;1H>  ps -f [48;9H[48;1H>  ps - [48;8H[48;1H>  ps  [48;7H[48;1H>  ps f [48;8H[H[JUNX510 Lab 2.4:  Review
+[1;101HPage 2/7
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+Question 1
+
+Enter the command that is used to display currently running processes, including an option to display
+PPID's (parent process id's):
+
+You entered: ps f
+Please try again.
+[46;1H--------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+>  [?1h=[48;1H>  p [48;5H[48;1H>  ps [48;6H[48;1H>  ps  [48;7H[48;1H>  ps - [48;8H[48;1H>  ps -f [48;9H[48;1H>  ps - [48;8H[48;1H>  ps  [48;7H[48;1H>  ps f [48;8H[48;1H>  ps f  [48;9H[48;1H>  ps f - [48;10H[48;1H>  ps f -f [48;11H[H[JUNX510 Lab 2.4:  Review
+[1;101HPage 2/7
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+Question 1
+
+Enter the command that is used to display currently running processes, including an option to display
+PPID's (parent process id's):
+
+You entered: ps f -f
+Please try again.
+[46;1H--------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+>  [?1h=[48;1H>  p [48;5H[48;1H>  ps [48;6H[H[JUNX510 Lab 2.4:  Review
+[1;101HPage 2/7
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+Question 1
+
+Enter the command that is used to display currently running processes, including an option to display
+PPID's (parent process id's):
+
+You entered: ps
+Please try again.
+[46;1H--------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+>  [?1h=[48;1H>  p [48;5H[48;1H>  ps [48;6H[48;1H>  ps  [48;7H[48;1H>  ps - [48;8H[48;1H>  ps -f [48;9H[48;1H>  ps -fm [48;10H[H[JUNX510 Lab 2.4:  Review
+[1;101HPage 2/7
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+Question 1
+
+Enter the command that is used to display currently running processes, including an option to display
+PPID's (parent process id's):
+
+You entered: ps -fm
+Please try again.
+[46;1H--------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+>  [?1h=[48;1H>  m [48;5H[H[JUNX510 Lab 2.4:  Linux Processes
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 Process Concepts - Completed[m
+2 Managing Processes - Completed[m
+3 [7mReview Exercise[m
+
+Note that the highlighted lines indicate the incomplete sections of
+this part of the Lab.
+
+The Review Exercise can only be done when the other sections have
+been completed.
+[46;1H--------------------------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: q
+[H[JUNX510 Lab 2:  Selection Menu
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 Redirection And Pipes - Completed[m
+2 Linking Files And Directories - Completed[m
+3 Command Summary - Completed[m
+4 [7mLinux Processes[m
+5 [7mRegular Expressions Using grep[m
+6 [7msed And awk[m
+7 [7mInteractive Shell Environment[m
+
+8 [7mSubmit UNX510 Lab 2[m
+
+The highlighted lines above indicate the incomplete parts of the Lab.
+There is a total possible mark of 3, with 0.5 marks deducted for each
+incomplete part. Late marks will be deducted at the rate of 0.3 marks (10%)
+per day for Labs submitted after midnight of May 26 2017.
+
+
+[46;1H--------------------------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: q
+[H[Jyliu421@matrix:~/unx510/lab2> exit
+exit
+
+Script done on Wed 17 May 2017 04:01:41 PM EDT

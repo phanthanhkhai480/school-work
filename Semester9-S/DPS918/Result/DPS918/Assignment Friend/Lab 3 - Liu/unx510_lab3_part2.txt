@@ -1,0 +1,1578 @@
+Script started on Thu 25 May 2017 12:45:44 PM EDT
+yliu421@matrix:~/unx510/lab3> ~unx510/lab3
+[H[JUNX510 Lab 3:  Notes
+[2;1H--------------------------------------------------------------------------------------------
+
+Some important notes on this Lab:
+
+(1) You do NOT have to do this whole Lab in one sitting!  Any completed sections will
+be tracked.
+
+(2) You may abort the Lab at any time by pressing Ctrl-c but you may lose any work done
+on an incomplete section.
+
+(3) Instructions for each page will be displayed at the bottom of the screen.
+
+(4) The answers expected in this Lab are derived from the Lab itself and the course
+notes. The course notes should be used as a reference, if required. Using Google or
+another search engine may provide answers that are not accepted by the Lab.
+
+(5) This Lab is maintained by Les Czegel. Please try to resolve any problems with your
+instructor who will determine if Les should be contacted.
+[42;1H--------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 3:  Selection Menu
+[2;1H--------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 Introduction To Scripting (phone) - Completed[m
+2 More Scripting (add) - Completed[m
+3 [7mYet More Scripting (oldfiles)[m
+4 [7mScripting (saferm)[m
+
+5 [7mSubmit UNX510 Lab 3[m
+
+The highlighted lines above indicate the incomplete parts of the Lab.
+There is a total possible mark of 4, with 1 mark deducted for each
+incomplete part. Late marks will be deducted at the rate of 0.4 marks (10%)
+per day for Labs submitted after midnight of June 2 2017.
+
+
+[42;1H--------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: 3
+[H[JUNX510 Lab 3.3:  Yet More Scripting (oldfiles)
+[2;1H--------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 [7m'oldfiles' script[m
+2 [7m'oldfiles2' script[m
+
+Note that the highlighted lines indicate the incomplete sections of
+this part of the Lab.
+
+Section 2 can only be done when the other section has been completed.
+[42;1H--------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: 1
+[H[JUNX510 Lab 3.3:  'oldfiles' Script
+[1;83HPage 1/10
+[2;1H--------------------------------------------------------------------------------------------
+
+You're going to write 2 versions of a script, adding functionality at each stage.
+
+Open up a new shell window, so you can read the instructions in this window while
+executing them in the other window.
+
+If you haven't already done so, create a directory called 'scripts' within your home
+directory.
+[42;1H--------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 3.3:  'oldfiles' Script
+[1;83HPage 2/10
+[2;1H--------------------------------------------------------------------------------------------
+
+If you haven't already done so, edit the file ".bashrc" in your home directory and add
+the following two lines at the end of the file:
+
+PATH=$PATH:~/scripts
+
+umask 077
+
+The first line will ensure that you can execute your scripts regardless of your current
+directory, and the second line will ensure that other students can't copy your files.
+
+If you don't have a file called ".bashrc" in your home directory, create it and add the
+above two lines.
+[42;1H--------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 3.3:  'oldfiles' Script
+[1;83HPage 3/10
+[2;1H--------------------------------------------------------------------------------------------
+
+If you have changed the ".bashrc" file during this session, enter the "bash" command by
+itself in order to start an interactive subshell.  This well allow ".bashrc" to execute.
+Pay close attention to make sure there are no errors.
+[42;1H--------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 3.3:  'oldfiles' Script
+[1;83HPage 4/10
+[2;1H--------------------------------------------------------------------------------------------
+
+You will write a bash shell script called 'oldfiles' which takes one argument, the name
+of a directory, and adds the extension ".old" to all visible files in the directory that
+don't already have it.  Treat subdirectories the same as ordinary files.  For example:
+
+$ ls
+file1 file2.old file3old file4.old
+$ oldfiles .
+$ ls
+file1.old file2.old file3old.old file4.old
+[42;1H--------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 3.3:  'oldfiles' Script
+[1;83HPage 5/10
+[2;1H--------------------------------------------------------------------------------------------
+
+Start by creating a file called 'oldfiles', within the ~/scripts directory.  It should
+begin with a line indicating that it needs to run in a bash shell:
+
+#!/bin/bash
+
+Try using vi for this, just for the practice.
+[42;1H--------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 3.3:  'oldfiles' Script
+[1;83HPage 6/10
+[2;1H--------------------------------------------------------------------------------------------
+
+Within 'oldfiles', use a "for" control structure to loop through all the non-hidden
+filenames in the directory name in $1.  Check the lecture notes for an example.  Use a
+meaningful loop variable, for example "filename" would make sense.  Also, use command
+substitution with "ls $1" instead of an ambiguous filename, or you'll descend into
+subdirectories.
+
+Within the loop, just echo the value of the "filename" variable, to make sure you're
+looping the right way.
+
+Save the program, give yourself execute permission, and test it out.  To aid your testing,
+create a test directory and use touch to create some filenames with and without the
+".old" extension.  Then test your script and make sure that all the filenames in the
+specified directory are displayed.
+
+[42;1H--------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 3.3:  'oldfiles' Script
+[1;83HPage 7/10
+[2;1H--------------------------------------------------------------------------------------------
+
+Make sure the current version of your script works correctly before going on.
+
+Next, within the loop, continue to use an "echo" to display the value of the "filename"
+variable, and pipe the output into a "grep".  The grep should search for the ".old"
+extension.  A regular expression such as "\.old$" would be the easiest way to do this.
+
+Don't worry about changing the names yet, simply let "grep" display the filenames that
+already have the extension.
+
+Test your script again, and make sure it displays the correct filenames.
+[42;1H--------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).^[:wq
+[H[JUNX510 Lab 3.3:  'oldfiles' Script
+[1;83HPage 8/10
+[2;1H--------------------------------------------------------------------------------------------
+
+Within the loop, check the exit status of the "grep" with an "if" control structure. If
+the "grep" is unsuccessful in finding ".old", then the file should be renamed.
+
+The renaming can be done with a simple "mv" command, renaming "$1/$filename" to
+"$1/$filename.old".
+
+Once this works, don't forget to redirect the "grep" output to "/dev/null".
+
+Again, check that your script works correctly.
+[42;1H--------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).!
+[H[JFiles created in 'testdir':
+file1  file2.old  file3old  file4.old
+
+Execution of 'oldfiles testdir':
+
+
+Files in 'testdir' after 'oldfiles' was run:
+file1.old  file2.old  file3old.old  file4.old
+
+Please hit <Enter> to continue with the Lab
+
+[H[JUNX510 Lab 3.3:  'oldfiles' Script
+[1;83HPage 10/10
+[2;1H--------------------------------------------------------------------------------------------
+
+Good!
+
+You may now proceed to the next version of the script.
+[42;1H--------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 3.3:  Yet More Scripting (oldfiles)
+[2;1H--------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 'oldfiles' script - Completed[m
+2 [7m'oldfiles2' script[m
+
+Note that the highlighted lines indicate the incomplete sections of
+this part of the Lab.
+
+Section 2 can only be done when the other section has been completed.
+[42;1H--------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: 2
+[H[JUNX510 Lab 3.3:  'oldfiles2' Script
+[1;83HPage 1/5
+[2;1H--------------------------------------------------------------------------------------------
+
+Shell Scripting Exercise
+
+The purpose of this section is to reinforce your skills with writing UNIX scripts covered
+in the previous sections.
+[42;1H--------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 3.3:  'oldfiles2' Script
+[1;83HPage 2/5
+[2;1H--------------------------------------------------------------------------------------------
+
+Copy your script 'oldfiles' to 'oldfiles2'.
+
+The way the 'oldfiles' script was written is inefficient from a computer utilization
+point of view.  We're looping through ALL the filenames, and then using an "if" inside
+the loop to determine if each file should be renamed.
+
+It would be more efficient to just loop through the filenames that need to be changed.
+[42;1H--------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 3.3:  'oldfiles2' Script
+[1;83HPage 3/5
+[2;1H--------------------------------------------------------------------------------------------
+
+Modify the command substitution that's being used to create the loop values that will
+be placed into the "filename" variable.
+
+Instead of just an "ls $1", pipe the output into a "grep".  The "grep" will search for all
+filenames that DO NOT end in ".old".  This can easily be done with the "grep -v" option.
+
+With this approach, you can get rid of the "echo ... | grep ..."  and the "if" control
+structure inside the loop, and simply do the rename.
+
+Again, check that your script works correctly.
+[42;1H--------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JFiles created in 'testdir':
+file1  file2.old  file3old  file4.old
+
+Execution of 'oldfiles2 testdir':
+
+
+Files in 'testdir' after 'oldfiles2' was run:
+file1.old  file2.old  file3old.old  file4.old
+
+Please hit <Enter> to continue with the Lab
+
+[H[JUNX510 Lab 3.3:  'oldfiles2' Script
+[1;83HPage 5/5
+[2;1H--------------------------------------------------------------------------------------------
+
+Congratulations!
+
+You have successfully completed 'Yet More Scripting'!
+[42;1H--------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 3.3:  Yet More Scripting (oldfiles)
+[2;1H--------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 'oldfiles' script - Completed[m
+2 'oldfiles2' script - Completed[m
+
+Note that the highlighted lines indicate the incomplete sections of
+this part of the Lab.
+
+Section 2 can only be done when the other section has been completed.
+[42;1H--------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: q
+[H[JUNX510 Lab 3:  Selection Menu
+[2;1H--------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 Introduction To Scripting (phone) - Completed[m
+2 More Scripting (add) - Completed[m
+3 Yet More Scripting (oldfiles) - Completed[m
+4 [7mScripting (saferm)[m
+
+5 [7mSubmit UNX510 Lab 3[m
+
+The highlighted lines above indicate the incomplete parts of the Lab.
+There is a total possible mark of 4, with 1 mark deducted for each
+incomplete part. Late marks will be deducted at the rate of 0.4 marks (10%)
+per day for Labs submitted after midnight of June 2 2017.
+
+
+[42;1H--------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: 4
+[H[JUNX510 Lab 3.4:  Scripting (saferm)
+[2;1H--------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 [7m'saferm' script[m
+2 [7m'saferm2' script[m
+
+Note that the highlighted lines indicate the incomplete sections of
+this part of the Lab.
+
+Section 2 can only be done when the other section has been completed.
+[42;1H--------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: 1
+[H[JUNX510 Lab 3.4:  'saferm' Script
+[1;83HPage 1/11
+[2;1H--------------------------------------------------------------------------------------------
+
+You're going to write 2 versions of a script, adding functionality at each stage.
+
+Open up a new shell window, so you can read the instructions in this window while
+executing them in the other window.
+
+If you haven't already done so, create a directory called 'scripts' within your home
+directory.
+[42;1H--------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 3.4:  'saferm' Script
+[1;83HPage 2/11
+[2;1H--------------------------------------------------------------------------------------------
+
+If you haven't already done so, edit the file ".bashrc" in your home directory and add
+the following two lines at the end of the file:
+
+PATH=$PATH:~/scripts
+
+umask 077
+
+The first line will ensure that you can execute your scripts regardless of your current
+directory, and the second line will ensure that other students can't copy your files.
+
+If you don't have a file called ".bashrc" in your home directory, create it and add the
+above two lines.
+[42;1H--------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 3.4:  'saferm' Script
+[1;83HPage 3/11
+[2;1H--------------------------------------------------------------------------------------------
+
+If you have changed the ".bashrc" file during this session, enter the "bash" command by
+itself in order to start an interactive subshell.  This well allow ".bashrc" to execute.
+Pay close attention to make sure there are no errors.
+[42;1H--------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 3.4:  'saferm' Script
+[1;83HPage 4/11
+[2;1H--------------------------------------------------------------------------------------------
+
+You will write a bash shell script called "saferm" that satisfies the following
+requirements:
+
+Usage:  saferm -l (or a filename)
+
+saferm is a replacement for the rm utility. Rather than removing files, it moves them into
+a directory called ".saferm" in the user's home directory. If "~/.saferm" doesn't exist, it
+will be created.  The "-l" options lists the current contents of the "~/.saferm" directory.
+
+Either the -l option or a valid existing filename must be specified, otherwise a suitable
+error message will be displayed and the script will terminate.
+
+Hit "Enter" to see some examples of using saferm.
+[42;1H--------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 3.4:  'saferm' Script
+[1;83HPage 5/11
+[2;1H--------------------------------------------------------------------------------------------
+
+Here's an example of saferm at work, including the exit status of each execution:
+
+$ ls -l testdir
+total 0
+-rw------- 1 joe.brown users 0 Apr  3 23:46 file1
+-rw------- 1 joe.brown users 0 Apr  3 23:46 file2
+$ saferm
+Usage:  saferm  -l  (or a filename)
+$ echo $?
+1
+$ saferm -l testdir/file1
+Usage:  saferm  -l  (or a filename)
+$ echo $?
+1
+$ saferm testdir/file2
+$ echo $?
+0
+$ saferm -l
+total 0
+-rw------- 1 joe.brown users 0 Apr  3 23:46 file2
+$ echo $?
+0
+$ ls -l testdir
+total 0
+-rw------- 1 joe.brown users 0 Apr  3 23:46 file1
+$
+[42;1H--------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 3.4:  'saferm' Script
+[1;83HPage 6/11
+[2;1H--------------------------------------------------------------------------------------------
+
+Start by creating a file called 'saferm', within the ~/scripts directory.  It should
+begin with a line indicating that it needs to run in a bash shell:
+
+#!/bin/bash
+
+Try using vi for this, just for the practice.
+[42;1H--------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 3.4:  'saferm' Script
+[1;83HPage 7/11
+[2;1H--------------------------------------------------------------------------------------------
+
+Next, ensure that exactly one argument was passed using an "if" statement. If anything
+other than one argument was passed, display the error message "Usage:  saferm  -l  (or
+a filename)" and terminate the script with an exit status of 1 (that's the number 1).
+
+Save the program, give yourself execute permission, and test it out.  Try running your
+script with various numbers of arguments, and check that the error message displays when
+appropriate, and that the exit status "$?" is correct in each case.
+[42;1H--------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).if
+[H[JUNX510 Lab 3.4:  'saferm' Script
+[1;83HPage 8/11
+[2;1H--------------------------------------------------------------------------------------------
+
+In the next part of the script, ensure that the "~/.saferm" directory exists using an
+"if" statement. If the directory doesn't exist, create it.
+
+Again, test your script, making sure that the directory is created when appropriate.
+[42;1H--------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 3.4:  'saferm' Script
+[1;83HPage 9/11
+[2;1H--------------------------------------------------------------------------------------------
+
+In the last part, check if "-l" was passed using an "if" statement.  If it was, then
+display the files in the "~/.saferm" directory. If "-l" was not passed, then assume that
+the argument is a valid filename, and move the filename to the "~/.saferm" directory.
+
+Again, test your script, making sure that some sample files are moved to the "~/.saferm"
+directory.  Also make sure that the "-l" option displays the contents of the "~/.saferm"
+directory, including any hidden files that were safely removed.
+[42;1H--------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).if
+[H[JExecution of 'ls -l testdir':
+total 0
+-rw------- 1 yliu421 users 0 May 25 13:48 file1
+-rw------- 1 yliu421 users 0 May 25 13:48 file2
+
+Execution of 'saferm':
+
+
+*** 'saferm' incorrectly produced no error messages
+
+*** 'saferm' incorrectly produced some output:
+Usage:  saferm  -l  (or a filename)
+
+
+Execution of 'saferm -l testdir/file1':
+
+
+*** 'saferm -l testdir/file1' incorrectly produced no error messages
+
+*** 'saferm -l testdir/file1' incorrectly produced some output:
+Usage:  saferm  -l  (or a filename)
+
+
+Execution of 'saferm testdir/file1 testdir/file2':
+
+
+*** 'saferm testdir/file1 testdir/file2' incorrectly produced no error messages
+
+*** 'saferm testdir/file1 testdir/file2' incorrectly produced some output:
+Usage:  saferm  -l  (or a filename)
+
+
+Execution of 'saferm testdir/file2':
+
+
+*** 'saferm testdir/file2' incorrectly produced some output:
+.saferm
+
+
+Execution of 'saferm -l':
+
+
+.saferm
+Execution of 'ls -l testdir':
+total 0
+-rw------- 1 yliu421 users 0 May 25 13:48 file1
+-rw------- 1 yliu421 users 0 May 25 13:48 file2
+
+*** Filenames don't seem to be correct
+
+
+Please hit <Enter> to continue with the Lab
+
+[H[JUNX510 Lab 3.4:  'saferm' Script
+[1;83HPage 10/11
+[2;1H--------------------------------------------------------------------------------------------
+
+Make sure that 'saferm' is working correctly, with the correct permissions, and that
+'scripts' is in your PATH
+[42;1H--------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).^[[A^[[A^[[A
+[H[JExecution of 'ls -l testdir':
+total 0
+-rw------- 1 yliu421 users 0 May 25 13:56 file1
+-rw------- 1 yliu421 users 0 May 25 13:56 file2
+
+Execution of 'saferm':
+
+
+*** 'saferm' incorrectly produced no error messages
+
+*** 'saferm' incorrectly produced some output:
+Usage:  saferm  -l  (or a filename)
+
+
+Execution of 'saferm -l testdir/file1':
+
+
+*** 'saferm -l testdir/file1' incorrectly produced no error messages
+
+*** 'saferm -l testdir/file1' incorrectly produced some output:
+Usage:  saferm  -l  (or a filename)
+
+
+Execution of 'saferm testdir/file1 testdir/file2':
+
+
+*** 'saferm testdir/file1 testdir/file2' incorrectly produced no error messages
+
+*** 'saferm testdir/file1 testdir/file2' incorrectly produced some output:
+Usage:  saferm  -l  (or a filename)
+
+
+Execution of 'saferm testdir/file2':
+
+
+
+Execution of 'saferm -l':
+
+
+.
+..
+file1
+file2
+Execution of 'ls -l testdir':
+total 0
+-rw------- 1 yliu421 users 0 May 25 13:56 file1
+
+
+Please hit <Enter> to continue with the Lab
+
+[H[JUNX510 Lab 3.4:  'saferm' Script
+[1;83HPage 10/11
+[2;1H--------------------------------------------------------------------------------------------
+
+Make sure that 'saferm' is working correctly, with the correct permissions, and that
+'scripts' is in your PATH
+[42;1H--------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JExecution of 'ls -l testdir':
+total 0
+-rw------- 1 yliu421 users 0 May 25 13:56 file1
+-rw------- 1 yliu421 users 0 May 25 13:56 file2
+
+Execution of 'saferm':
+
+
+*** 'saferm' incorrectly produced no error messages
+
+*** 'saferm' incorrectly produced some output:
+Usage:  saferm  -l  (or a filename)
+
+
+Execution of 'saferm -l testdir/file1':
+
+
+*** 'saferm -l testdir/file1' incorrectly produced no error messages
+
+*** 'saferm -l testdir/file1' incorrectly produced some output:
+Usage:  saferm  -l  (or a filename)
+
+
+Execution of 'saferm testdir/file1 testdir/file2':
+
+
+*** 'saferm testdir/file1 testdir/file2' incorrectly produced no error messages
+
+*** 'saferm testdir/file1 testdir/file2' incorrectly produced some output:
+Usage:  saferm  -l  (or a filename)
+
+
+Execution of 'saferm testdir/file2':
+
+
+
+Execution of 'saferm -l':
+
+
+.
+..
+file1
+file2
+Execution of 'ls -l testdir':
+total 0
+-rw------- 1 yliu421 users 0 May 25 13:56 file1
+
+
+Please hit <Enter> to continue with the Lab
+
+[H[JUNX510 Lab 3.4:  'saferm' Script
+[1;83HPage 10/11
+[2;1H--------------------------------------------------------------------------------------------
+
+Make sure that 'saferm' is working correctly, with the correct permissions, and that
+'scripts' is in your PATH
+[42;1H--------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).m
+[H[JExecution of 'ls -l testdir':
+total 0
+-rw------- 1 yliu421 users 0 May 25 13:58 file1
+-rw------- 1 yliu421 users 0 May 25 13:58 file2
+
+Execution of 'saferm':
+
+
+*** 'saferm' incorrectly produced no error messages
+
+*** 'saferm' incorrectly produced some output:
+Usage:  saferm  -l  (or a filename)
+
+
+Execution of 'saferm -l testdir/file1':
+
+
+*** 'saferm -l testdir/file1' incorrectly produced no error messages
+
+*** 'saferm -l testdir/file1' incorrectly produced some output:
+Usage:  saferm  -l  (or a filename)
+
+
+Execution of 'saferm testdir/file1 testdir/file2':
+
+
+*** 'saferm testdir/file1 testdir/file2' incorrectly produced no error messages
+
+*** 'saferm testdir/file1 testdir/file2' incorrectly produced some output:
+Usage:  saferm  -l  (or a filename)
+
+
+Execution of 'saferm testdir/file2':
+
+
+
+Execution of 'saferm -l':
+
+
+.
+..
+file1
+file2
+Execution of 'ls -l testdir':
+total 0
+-rw------- 1 yliu421 users 0 May 25 13:58 file1
+
+
+Please hit <Enter> to continue with the Lab
+
+[H[JUNX510 Lab 3.4:  Scripting (saferm)
+[2;1H--------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 [7m'saferm' script[m
+2 [7m'saferm2' script[m
+
+Note that the highlighted lines indicate the incomplete sections of
+this part of the Lab.
+
+Section 2 can only be done when the other section has been completed.
+[42;1H--------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: 1
+[H[JUNX510 Lab 3.4:  'saferm' Script
+[1;83HPage 1/11
+[2;1H--------------------------------------------------------------------------------------------
+
+You're going to write 2 versions of a script, adding functionality at each stage.
+
+Open up a new shell window, so you can read the instructions in this window while
+executing them in the other window.
+
+If you haven't already done so, create a directory called 'scripts' within your home
+directory.
+[42;1H--------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 3.4:  'saferm' Script
+[1;83HPage 2/11
+[2;1H--------------------------------------------------------------------------------------------
+
+If you haven't already done so, edit the file ".bashrc" in your home directory and add
+the following two lines at the end of the file:
+
+PATH=$PATH:~/scripts
+
+umask 077
+
+The first line will ensure that you can execute your scripts regardless of your current
+directory, and the second line will ensure that other students can't copy your files.
+
+If you don't have a file called ".bashrc" in your home directory, create it and add the
+above two lines.
+[42;1H--------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 3.4:  'saferm' Script
+[1;83HPage 3/11
+[2;1H--------------------------------------------------------------------------------------------
+
+If you have changed the ".bashrc" file during this session, enter the "bash" command by
+itself in order to start an interactive subshell.  This well allow ".bashrc" to execute.
+Pay close attention to make sure there are no errors.
+[42;1H--------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 3.4:  'saferm' Script
+[1;83HPage 4/11
+[2;1H--------------------------------------------------------------------------------------------
+
+You will write a bash shell script called "saferm" that satisfies the following
+requirements:
+
+Usage:  saferm -l (or a filename)
+
+saferm is a replacement for the rm utility. Rather than removing files, it moves them into
+a directory called ".saferm" in the user's home directory. If "~/.saferm" doesn't exist, it
+will be created.  The "-l" options lists the current contents of the "~/.saferm" directory.
+
+Either the -l option or a valid existing filename must be specified, otherwise a suitable
+error message will be displayed and the script will terminate.
+
+Hit "Enter" to see some examples of using saferm.
+[42;1H--------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 3.4:  'saferm' Script
+[1;83HPage 5/11
+[2;1H--------------------------------------------------------------------------------------------
+
+Here's an example of saferm at work, including the exit status of each execution:
+
+$ ls -l testdir
+total 0
+-rw------- 1 joe.brown users 0 Apr  3 23:46 file1
+-rw------- 1 joe.brown users 0 Apr  3 23:46 file2
+$ saferm
+Usage:  saferm  -l  (or a filename)
+$ echo $?
+1
+$ saferm -l testdir/file1
+Usage:  saferm  -l  (or a filename)
+$ echo $?
+1
+$ saferm testdir/file2
+$ echo $?
+0
+$ saferm -l
+total 0
+-rw------- 1 joe.brown users 0 Apr  3 23:46 file2
+$ echo $?
+0
+$ ls -l testdir
+total 0
+-rw------- 1 joe.brown users 0 Apr  3 23:46 file1
+$
+[42;1H--------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 3.4:  'saferm' Script
+[1;83HPage 6/11
+[2;1H--------------------------------------------------------------------------------------------
+
+Start by creating a file called 'saferm', within the ~/scripts directory.  It should
+begin with a line indicating that it needs to run in a bash shell:
+
+#!/bin/bash
+
+Try using vi for this, just for the practice.
+[42;1H--------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 3.4:  'saferm' Script
+[1;83HPage 7/11
+[2;1H--------------------------------------------------------------------------------------------
+
+Next, ensure that exactly one argument was passed using an "if" statement. If anything
+other than one argument was passed, display the error message "Usage:  saferm  -l  (or
+a filename)" and terminate the script with an exit status of 1 (that's the number 1).
+
+Save the program, give yourself execute permission, and test it out.  Try running your
+script with various numbers of arguments, and check that the error message displays when
+appropriate, and that the exit status "$?" is correct in each case.
+[42;1H--------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 3.4:  'saferm' Script
+[1;83HPage 8/11
+[2;1H--------------------------------------------------------------------------------------------
+
+In the next part of the script, ensure that the "~/.saferm" directory exists using an
+"if" statement. If the directory doesn't exist, create it.
+
+Again, test your script, making sure that the directory is created when appropriate.
+[42;1H--------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 3.4:  'saferm' Script
+[1;83HPage 9/11
+[2;1H--------------------------------------------------------------------------------------------
+
+In the last part, check if "-l" was passed using an "if" statement.  If it was, then
+display the files in the "~/.saferm" directory. If "-l" was not passed, then assume that
+the argument is a valid filename, and move the filename to the "~/.saferm" directory.
+
+Again, test your script, making sure that some sample files are moved to the "~/.saferm"
+directory.  Also make sure that the "-l" option displays the contents of the "~/.saferm"
+directory, including any hidden files that were safely removed.
+[42;1H--------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JExecution of 'ls -l testdir':
+total 0
+-rw------- 1 yliu421 users 0 May 25 14:00 file1
+-rw------- 1 yliu421 users 0 May 25 14:00 file2
+
+Execution of 'saferm':
+
+
+*** 'saferm' incorrectly produced no error messages
+
+*** 'saferm' incorrectly produced some output:
+Usage:  saferm  -l  (or a filename)
+
+
+Execution of 'saferm -l testdir/file1':
+
+
+*** 'saferm -l testdir/file1' incorrectly produced no error messages
+
+*** 'saferm -l testdir/file1' incorrectly produced some output:
+Usage:  saferm  -l  (or a filename)
+
+
+Execution of 'saferm testdir/file1 testdir/file2':
+
+
+*** 'saferm testdir/file1 testdir/file2' incorrectly produced no error messages
+
+*** 'saferm testdir/file1 testdir/file2' incorrectly produced some output:
+Usage:  saferm  -l  (or a filename)
+
+
+Execution of 'saferm testdir/file2':
+
+
+
+Execution of 'saferm -l':
+
+
+.
+..
+file1
+file2
+Execution of 'ls -l testdir':
+total 0
+-rw------- 1 yliu421 users 0 May 25 14:00 file1
+
+
+Please hit <Enter> to continue with the Lab
+
+[H[JUNX510 Lab 3.4:  'saferm' Script
+[1;83HPage 10/11
+[2;1H--------------------------------------------------------------------------------------------
+
+Make sure that 'saferm' is working correctly, with the correct permissions, and that
+'scripts' is in your PATH
+[42;1H--------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JExecution of 'ls -l testdir':
+total 0
+-rw------- 1 yliu421 users 0 May 25 14:06 file1
+-rw------- 1 yliu421 users 0 May 25 14:06 file2
+
+Execution of 'saferm':
+
+
+*** 'saferm' incorrectly produced no error messages
+
+*** 'saferm' incorrectly produced some output:
+Usage:  saferm  -l  (or a filename)
+
+
+Execution of 'saferm -l testdir/file1':
+
+
+*** 'saferm -l testdir/file1' incorrectly produced no error messages
+
+*** 'saferm -l testdir/file1' incorrectly produced some output:
+Usage:  saferm  -l  (or a filename)
+
+
+Execution of 'saferm testdir/file1 testdir/file2':
+
+
+*** 'saferm testdir/file1 testdir/file2' incorrectly produced no error messages
+
+*** 'saferm testdir/file1 testdir/file2' incorrectly produced some output:
+Usage:  saferm  -l  (or a filename)
+
+
+Execution of 'saferm testdir/file2':
+
+
+
+Execution of 'saferm -l':
+
+
+total 8
+drwx------  2 yliu421 users   30 May 25 14:06 .
+drwx--x--x 40 yliu421 users 4096 May 25 14:05 ..
+-rw-------  1 yliu421 users    0 May 25 13:53 file1
+-rw-------  1 yliu421 users    0 May 25 14:06 file2
+Execution of 'ls -l testdir':
+total 0
+-rw------- 1 yliu421 users 0 May 25 14:06 file1
+
+
+Please hit <Enter> to continue with the Lab
+
+[H[JUNX510 Lab 3.4:  'saferm' Script
+[1;83HPage 10/11
+[2;1H--------------------------------------------------------------------------------------------
+
+Make sure that 'saferm' is working correctly, with the correct permissions, and that
+'scripts' is in your PATH
+[42;1H--------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).m
+[H[JExecution of 'ls -l testdir':
+total 0
+-rw------- 1 yliu421 users 0 May 25 14:06 file1
+-rw------- 1 yliu421 users 0 May 25 14:06 file2
+
+Execution of 'saferm':
+
+
+*** 'saferm' incorrectly produced no error messages
+
+*** 'saferm' incorrectly produced some output:
+Usage:  saferm  -l  (or a filename)
+
+
+Execution of 'saferm -l testdir/file1':
+
+
+*** 'saferm -l testdir/file1' incorrectly produced no error messages
+
+*** 'saferm -l testdir/file1' incorrectly produced some output:
+Usage:  saferm  -l  (or a filename)
+
+
+Execution of 'saferm testdir/file1 testdir/file2':
+
+
+*** 'saferm testdir/file1 testdir/file2' incorrectly produced no error messages
+
+*** 'saferm testdir/file1 testdir/file2' incorrectly produced some output:
+Usage:  saferm  -l  (or a filename)
+
+
+Execution of 'saferm testdir/file2':
+
+
+
+Execution of 'saferm -l':
+
+
+total 8
+drwx------  2 yliu421 users   30 May 25 14:06 .
+drwx--x--x 40 yliu421 users 4096 May 25 14:05 ..
+-rw-------  1 yliu421 users    0 May 25 13:53 file1
+-rw-------  1 yliu421 users    0 May 25 14:06 file2
+Execution of 'ls -l testdir':
+total 0
+-rw------- 1 yliu421 users 0 May 25 14:06 file1
+
+
+Please hit <Enter> to continue with the Lab
+
+[H[JUNX510 Lab 3.4:  Scripting (saferm)
+[2;1H--------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 [7m'saferm' script[m
+2 [7m'saferm2' script[m
+
+Note that the highlighted lines indicate the incomplete sections of
+this part of the Lab.
+
+Section 2 can only be done when the other section has been completed.
+[42;1H--------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: 1
+[H[JUNX510 Lab 3.4:  'saferm' Script
+[1;83HPage 1/11
+[2;1H--------------------------------------------------------------------------------------------
+
+You're going to write 2 versions of a script, adding functionality at each stage.
+
+Open up a new shell window, so you can read the instructions in this window while
+executing them in the other window.
+
+If you haven't already done so, create a directory called 'scripts' within your home
+directory.
+[42;1H--------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 3.4:  'saferm' Script
+[1;83HPage 2/11
+[2;1H--------------------------------------------------------------------------------------------
+
+If you haven't already done so, edit the file ".bashrc" in your home directory and add
+the following two lines at the end of the file:
+
+PATH=$PATH:~/scripts
+
+umask 077
+
+The first line will ensure that you can execute your scripts regardless of your current
+directory, and the second line will ensure that other students can't copy your files.
+
+If you don't have a file called ".bashrc" in your home directory, create it and add the
+above two lines.
+[42;1H--------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 3.4:  'saferm' Script
+[1;83HPage 3/11
+[2;1H--------------------------------------------------------------------------------------------
+
+If you have changed the ".bashrc" file during this session, enter the "bash" command by
+itself in order to start an interactive subshell.  This well allow ".bashrc" to execute.
+Pay close attention to make sure there are no errors.
+[42;1H--------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 3.4:  'saferm' Script
+[1;83HPage 4/11
+[2;1H--------------------------------------------------------------------------------------------
+
+You will write a bash shell script called "saferm" that satisfies the following
+requirements:
+
+Usage:  saferm -l (or a filename)
+
+saferm is a replacement for the rm utility. Rather than removing files, it moves them into
+a directory called ".saferm" in the user's home directory. If "~/.saferm" doesn't exist, it
+will be created.  The "-l" options lists the current contents of the "~/.saferm" directory.
+
+Either the -l option or a valid existing filename must be specified, otherwise a suitable
+error message will be displayed and the script will terminate.
+
+Hit "Enter" to see some examples of using saferm.
+[42;1H--------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 3.4:  'saferm' Script
+[1;83HPage 5/11
+[2;1H--------------------------------------------------------------------------------------------
+
+Here's an example of saferm at work, including the exit status of each execution:
+
+$ ls -l testdir
+total 0
+-rw------- 1 joe.brown users 0 Apr  3 23:46 file1
+-rw------- 1 joe.brown users 0 Apr  3 23:46 file2
+$ saferm
+Usage:  saferm  -l  (or a filename)
+$ echo $?
+1
+$ saferm -l testdir/file1
+Usage:  saferm  -l  (or a filename)
+$ echo $?
+1
+$ saferm testdir/file2
+$ echo $?
+0
+$ saferm -l
+total 0
+-rw------- 1 joe.brown users 0 Apr  3 23:46 file2
+$ echo $?
+0
+$ ls -l testdir
+total 0
+-rw------- 1 joe.brown users 0 Apr  3 23:46 file1
+$
+[42;1H--------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 3.4:  'saferm' Script
+[1;83HPage 6/11
+[2;1H--------------------------------------------------------------------------------------------
+
+Start by creating a file called 'saferm', within the ~/scripts directory.  It should
+begin with a line indicating that it needs to run in a bash shell:
+
+#!/bin/bash
+
+Try using vi for this, just for the practice.
+[42;1H--------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 3.4:  'saferm' Script
+[1;83HPage 7/11
+[2;1H--------------------------------------------------------------------------------------------
+
+Next, ensure that exactly one argument was passed using an "if" statement. If anything
+other than one argument was passed, display the error message "Usage:  saferm  -l  (or
+a filename)" and terminate the script with an exit status of 1 (that's the number 1).
+
+Save the program, give yourself execute permission, and test it out.  Try running your
+script with various numbers of arguments, and check that the error message displays when
+appropriate, and that the exit status "$?" is correct in each case.
+[42;1H--------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 3.4:  'saferm' Script
+[1;83HPage 8/11
+[2;1H--------------------------------------------------------------------------------------------
+
+In the next part of the script, ensure that the "~/.saferm" directory exists using an
+"if" statement. If the directory doesn't exist, create it.
+
+Again, test your script, making sure that the directory is created when appropriate.
+[42;1H--------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 3.4:  'saferm' Script
+[1;83HPage 9/11
+[2;1H--------------------------------------------------------------------------------------------
+
+In the last part, check if "-l" was passed using an "if" statement.  If it was, then
+display the files in the "~/.saferm" directory. If "-l" was not passed, then assume that
+the argument is a valid filename, and move the filename to the "~/.saferm" directory.
+
+Again, test your script, making sure that some sample files are moved to the "~/.saferm"
+directory.  Also make sure that the "-l" option displays the contents of the "~/.saferm"
+directory, including any hidden files that were safely removed.
+[42;1H--------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JExecution of 'ls -l testdir':
+total 0
+-rw------- 1 yliu421 users 0 May 25 14:10 file1
+-rw------- 1 yliu421 users 0 May 25 14:10 file2
+
+Execution of 'saferm':
+
+
+*** 'saferm' incorrectly produced no error messages
+
+*** 'saferm' incorrectly produced some output:
+Usage:  saferm  -l  (or a filename)
+
+
+Execution of 'saferm -l testdir/file1':
+
+
+*** 'saferm -l testdir/file1' incorrectly produced no error messages
+
+*** 'saferm -l testdir/file1' incorrectly produced some output:
+Usage:  saferm  -l  (or a filename)
+
+
+Execution of 'saferm testdir/file1 testdir/file2':
+
+
+*** 'saferm testdir/file1 testdir/file2' incorrectly produced no error messages
+
+*** 'saferm testdir/file1 testdir/file2' incorrectly produced some output:
+Usage:  saferm  -l  (or a filename)
+
+
+Execution of 'saferm testdir/file2':
+
+
+
+Execution of 'saferm -l':
+
+
+total 8
+drwx------  2 yliu421 users   30 May 25 14:10 .
+drwx--x--x 40 yliu421 users 4096 May 25 14:05 ..
+-rw-------  1 yliu421 users    0 May 25 13:53 file1
+-rw-------  1 yliu421 users    0 May 25 14:10 file2
+Execution of 'ls -l testdir':
+total 0
+-rw------- 1 yliu421 users 0 May 25 14:10 file1
+
+
+Please hit <Enter> to continue with the Lab
+
+[H[JUNX510 Lab 3.4:  'saferm' Script
+[1;83HPage 10/11
+[2;1H--------------------------------------------------------------------------------------------
+
+Make sure that 'saferm' is working correctly, with the correct permissions, and that
+'scripts' is in your PATH
+[42;1H--------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JExecution of 'ls -l testdir':
+total 0
+-rw------- 1 yliu421 users 0 May 25 14:11 file1
+-rw------- 1 yliu421 users 0 May 25 14:11 file2
+
+Execution of 'saferm':
+
+
+*** 'saferm' incorrectly produced no error messages
+
+*** 'saferm' incorrectly produced some output:
+Usage:  saferm  -1  (or a filename)
+
+
+Execution of 'saferm -l testdir/file1':
+
+
+*** 'saferm -l testdir/file1' incorrectly produced no error messages
+
+*** 'saferm -l testdir/file1' incorrectly produced some output:
+Usage:  saferm  -1  (or a filename)
+
+
+Execution of 'saferm testdir/file1 testdir/file2':
+
+
+*** 'saferm testdir/file1 testdir/file2' incorrectly produced no error messages
+
+*** 'saferm testdir/file1 testdir/file2' incorrectly produced some output:
+Usage:  saferm  -1  (or a filename)
+
+
+Execution of 'saferm testdir/file2':
+
+
+
+Execution of 'saferm -l':
+
+
+total 8
+drwx------  2 yliu421 users   30 May 25 14:11 .
+drwx--x--x 40 yliu421 users 4096 May 25 14:11 ..
+-rw-------  1 yliu421 users    0 May 25 13:53 file1
+-rw-------  1 yliu421 users    0 May 25 14:11 file2
+Execution of 'ls -l testdir':
+total 0
+-rw------- 1 yliu421 users 0 May 25 14:11 file1
+
+
+Please hit <Enter> to continue with the Lab
+^[[A
+[H[JUNX510 Lab 3.4:  'saferm' Script
+[1;83HPage 10/11
+[2;1H--------------------------------------------------------------------------------------------
+
+Make sure that 'saferm' is working correctly, with the correct permissions, and that
+'scripts' is in your PATH
+[42;1H--------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JExecution of 'ls -l testdir':
+total 0
+-rw------- 1 yliu421 users 0 May 25 14:12 file1
+-rw------- 1 yliu421 users 0 May 25 14:12 file2
+
+Execution of 'saferm':
+
+
+Usage:  saferm  -1  (or a filename)
+
+Execution of 'saferm -l testdir/file1':
+
+
+Usage:  saferm  -1  (or a filename)
+
+Execution of 'saferm testdir/file1 testdir/file2':
+
+
+Usage:  saferm  -1  (or a filename)
+
+Execution of 'saferm testdir/file2':
+
+
+
+Execution of 'saferm -l':
+
+
+total 8
+drwx------  2 yliu421 users   30 May 25 14:12 .
+drwx--x--x 40 yliu421 users 4096 May 25 14:12 ..
+-rw-------  1 yliu421 users    0 May 25 13:53 file1
+-rw-------  1 yliu421 users    0 May 25 14:12 file2
+Execution of 'ls -l testdir':
+total 0
+-rw------- 1 yliu421 users 0 May 25 14:12 file1
+
+
+Please hit <Enter> to continue with the Lab
+
+[H[JUNX510 Lab 3.4:  'saferm' Script
+[1;83HPage 11/11
+[2;1H--------------------------------------------------------------------------------------------
+
+Good!
+
+You may now proceed to the next version of the script.
+[42;1H--------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 3.4:  Scripting (saferm)
+[2;1H--------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 'saferm' script - Completed[m
+2 [7m'saferm2' script[m
+
+Note that the highlighted lines indicate the incomplete sections of
+this part of the Lab.
+
+Section 2 can only be done when the other section has been completed.
+[42;1H--------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: 2
+[H[JUNX510 Lab 3.4:  'saferm2' Script
+[1;83HPage 1/7
+[2;1H--------------------------------------------------------------------------------------------
+
+Shell Scripting Exercise
+
+The purpose of this section is to reinforce your skills with writing UNIX scripts covered
+in the previous sections.
+[42;1H--------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 3.4:  'saferm2' Script
+[1;83HPage 2/7
+[2;1H--------------------------------------------------------------------------------------------
+
+Copy your script 'saferm' to 'saferm2'.
+
+The way the 'saferm' script was written does not properly handle trying to safely
+remove a filename that doesn't exist.  Try running saferm with a missing filename,
+and see what happens.
+[42;1H--------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 3.4:  'saferm2' Script
+[1;83HPage 3/7
+[2;1H--------------------------------------------------------------------------------------------
+
+Modify the 'saferm2' script so that if the specified filename doesn't exist, then display
+the error message "Filename 'xxx' does not exist", where 'xxx' will be replaced by the
+specified filename within single quotes.  The script should then terminate with an exit
+status of 2.
+
+Hit "Enter" to see some examples of using saferm2.
+[42;1H--------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 3.4:  'saferm2' Script
+[1;83HPage 4/7
+[2;1H--------------------------------------------------------------------------------------------
+
+Here's an example of saferm2 at work, including some of the resulting exit statuses:
+
+$ ls -l testdir
+total 0
+-rw------- 1 joe.brown users 0 Apr  4 00:48 file1
+-rw------- 1 joe.brown users 0 Apr  4 00:48 file2
+$ saferm2 testdir/file3
+Filename 'testdir/file3' does not exist
+$ echo $?
+2
+$ saferm2
+Usage:  saferm2  -l  (or a filename)
+$ echo $?
+1
+$ saferm2 testdir/file2
+$ echo $?
+0
+$ saferm2 testdir
+$ echo $?
+0
+$ saferm2 -l
+total 4
+-rw------- 1 joe.brown users    0 Apr  4 00:48 file2
+drwx------ 2 joe.brown users 4096 Apr  4 00:51 testdir
+$ ls -l testdir
+ls: cannot access testdir: No such file or directory
+$
+[42;1H--------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 3.4:  'saferm2' Script
+[1;83HPage 5/7
+[2;1H--------------------------------------------------------------------------------------------
+
+In order to do this, check if the specified filename exists using an "if" statement. If
+the filename doesn't exist, display the error message "Filename 'xxx' does not exist",
+where 'xxx' is replaced by the specified filename within single quotes, and terminate
+the script with an exit status of 2.  It makes sense to do this after the correct number
+of arguments has been verified.
+
+After making the change, try running your script with various invalid numbers of arguments,
+an invalid filename,and a valid filename, and check that the error messages display when
+appropriate, and that the exit status "$?" is correct in each case.
+[42;1H--------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JExecution of 'ls -l testdir':
+total 0
+-rw------- 1 yliu421 users 0 May 25 14:37 file1
+-rw------- 1 yliu421 users 0 May 25 14:37 file2
+
+Execution of 'saferm2 testdir/file3':
+
+
+Filename '/var/tmp/unx510.yliu421.lab3.3917.testdir/file3' does not exist
+
+Execution of 'saferm2':
+
+
+Usage:  saferm  -1  (or a filename)
+
+Execution of 'saferm2 -l testdir/file1':
+
+
+Usage:  saferm  -1  (or a filename)
+
+Execution of 'saferm2 testdir/file1 testdir/file2':
+
+
+Usage:  saferm  -1  (or a filename)
+
+Execution of 'saferm2 testdir/file2':
+
+
+
+Execution of 'saferm2 testdir':
+
+
+
+Execution of 'saferm2 -l':
+
+
+total 8
+drwx------  4 yliu421 users   83 May 25 14:37 .
+drwx--x--x 40 yliu421 users 4096 May 25 14:36 ..
+-rw-------  1 yliu421 users    0 May 25 13:53 file1
+-rw-------  1 yliu421 users    0 May 25 14:37 file2
+drwx------  2 yliu421 users   76 May 25 13:20 testdir
+drwxr-xr-x  2 yliu421 users   18 May 25 14:37 unx510.yliu421.lab3.3917.testdir
+Execution of 'ls -l testdir':
+ls: cannot access /var/tmp/unx510.yliu421.lab3.3917.testdir: No such file or directory
+
+
+Please hit <Enter> to continue with the Lab
+
+[H[JUNX510 Lab 3.4:  'saferm2' Script
+[1;83HPage 7/7
+[2;1H--------------------------------------------------------------------------------------------
+
+Congratulations!
+
+You have successfully completed 'Scripting (saferm)'!
+[42;1H--------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 3.4:  Scripting (saferm)
+[2;1H--------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 'saferm' script - Completed[m
+2 'saferm2' script - Completed[m
+
+Note that the highlighted lines indicate the incomplete sections of
+this part of the Lab.
+
+Section 2 can only be done when the other section has been completed.
+[42;1H--------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: q
+[H[JUNX510 Lab 3:  Selection Menu
+[2;1H--------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 Introduction To Scripting (phone) - Completed[m
+2 More Scripting (add) - Completed[m
+3 Yet More Scripting (oldfiles) - Completed[m
+4 Scripting (saferm) - Completed[m
+
+5 [7mSubmit UNX510 Lab 3[m
+
+The highlighted lines above indicate the incomplete parts of the Lab.
+There is a total possible mark of 4, with 1 mark deducted for each
+incomplete part. Late marks will be deducted at the rate of 0.4 marks (10%)
+per day for Labs submitted after midnight of June 2 2017.
+
+
+[42;1H--------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: 5
+[H[JUNX510 Lab 3.5:  Submit Lab 3
+[1;83HPage 1/2
+[2;1H--------------------------------------------------------------------------------------------Total marks obtained is 4 out of 4.
+
+    Lab 3 Section 1 was completed
+    Lab 3 Section 2 was completed
+    Lab 3 Section 3 was completed
+    Lab 3 Section 4 was completed
+
+Submission Confirmation
+
+You may now submit Lab 3 by typing 'Yes'.  If you do NOT want to submit at this time,
+type 'm' or 'M'.
+[42;1H--------------------------------------------------------------------------------------------
+Enter  'Yes' to submit  (or enter: 'm'-main menu):
+>  [?1h=[44;1H>  y [44;5H[44;1H>  ye [44;6H[44;1H>  yes [44;7H[H[JUNX510 Lab 3.5:  Submit Lab 3
+[1;83HPage 1/2
+[2;1H--------------------------------------------------------------------------------------------Total marks obtained is 4 out of 4.
+
+    Lab 3 Section 1 was completed
+    Lab 3 Section 2 was completed
+    Lab 3 Section 3 was completed
+    Lab 3 Section 4 was completed
+
+Submission Confirmation
+
+You may now submit Lab 3 by typing 'Yes'.  If you do NOT want to submit at this time,
+type 'm' or 'M'.
+
+You entered: yes
+Please try again.
+
+Hint:
+'Yes' needs to be capitalized as shown.
+[42;1H--------------------------------------------------------------------------------------------
+Enter  'Yes' to submit  (or enter: 'm'-main menu):
+>  [?1h=[44;1H>  Y [44;5H[44;1H>  Ye [44;6H[44;1H>  Yes [44;7H[H[JUNX510 Lab 3.5:  Submit Lab 3
+[1;83HPage 2/2
+[2;1H--------------------------------------------------------------------------------------------
+
+Congratulations!
+
+You have successfully submitted Lab 3!
+[42;1H--------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 3:  Selection Menu
+[2;1H--------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 Introduction To Scripting (phone) - Completed[m
+2 More Scripting (add) - Completed[m
+3 Yet More Scripting (oldfiles) - Completed[m
+4 Scripting (saferm) - Completed[m
+
+5 Submit UNX510 Lab 3 - Completed - 4 out of 4[m
+
+The highlighted lines above indicate the incomplete parts of the Lab.
+There is a total possible mark of 4, with 1 mark deducted for each
+incomplete part. Late marks will be deducted at the rate of 0.4 marks (10%)
+per day for Labs submitted after midnight of June 2 2017.
+
+
+[42;1H--------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: q
+[H[Jyliu421@matrix:~/unx510/lab3> exit
+exit
+
+Script done on Thu 25 May 2017 02:38:25 PM EDT

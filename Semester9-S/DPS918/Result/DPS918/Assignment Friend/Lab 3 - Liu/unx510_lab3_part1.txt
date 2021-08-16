@@ -1,0 +1,687 @@
+Script started on Thu 25 May 2017 08:17:46 AM EDT
+yliu421@matrix:~/unx510/lab3> un[K[K~unx510 [K/lab3
+[H[JUNX510 Lab 3:  Notes
+[2;1H--------------------------------------------------------------------------------
+
+Some important notes on this Lab:
+
+(1) You do NOT have to do this whole Lab in one sitting!  Any completed
+sections will be tracked.
+
+(2) You may abort the Lab at any time by pressing Ctrl-c but you may lose
+any work done on an incomplete section.
+
+(3) Instructions for each page will be displayed at the bottom of the screen.
+
+(4) The answers expected in this Lab are derived from the Lab itself
+and the course notes. The course notes should be used as a reference, if
+required. Using Google or another search engine may provide answers that
+are not accepted by the Lab.
+
+(5) This Lab is maintained by Les Czegel. Please try to resolve any problems
+with your instructor who will determine if Les should be contacted.
+[22;1H--------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 3:  Selection Menu
+[2;1H--------------------------------------------------------------------------------
+
+Available selections:
+
+1 [7mIntroduction To Scripting (phone)[m
+2 [7mMore Scripting (add)[m
+3 [7mYet More Scripting (oldfiles)[m
+4 [7mScripting (saferm)[m
+
+5 [7mSubmit UNX510 Lab 3[m
+
+The highlighted lines above indicate the incomplete parts of the Lab.
+There is a total possible mark of 4, with 1 mark deducted for each
+incomplete part. Late marks will be deducted at the rate of 0.4 marks (10%)
+per day for Labs submitted after midnight of June 2 2017.
+
+
+[22;1H--------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: 1
+[H[JUNX510 Lab 3.1:  Introduction To Scripting (phone)
+[2;1H--------------------------------------------------------------------------------
+
+Available selections:
+
+1 [7m'phone' script[m
+2 [7m'phone2' script[m
+3 [7m'phone3' script[m
+4 [7m'phone4' script[m
+
+Note that the highlighted lines indicate the incomplete sections of
+this part of the Lab.
+
+Section 4 can only be done when the other sections have been
+completed.
+[22;1H--------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: 1
+[H[JUNX510 Lab 3.1:  'phone' Script
+[1;71HPage 1/11
+[2;1H--------------------------------------------------------------------------------
+
+You're going to write 4 different versions of a script, adding functionality
+at each stage.  Let's start by creating a directory to contain the scripts,
+and any other scripts you'd like to place into it.
+
+Open up a new shell window, so you can read the instructions in this window
+while executing them in the other window.
+
+If you haven't already done so, create a directory called 'scripts' within
+your home directory.  Then hit 'Enter' on this window, it will check to
+ensure the directory was created:
+[22;1H--------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 3.1:  'phone' Script
+[1;117HPage 3/11
+[2;1H------------------------------------------------------------------------------------------------------------------------------
+
+In the other shell window, display the file:
+
+     ~unx510/2017b/phonebook
+
+This is the file that you will be using, within the 'phone' script, to display the record matching a requested name.
+[38;1H------------------------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 3.1:  'phone' Script
+[1;117HPage 4/11
+[2;1H------------------------------------------------------------------------------------------------------------------------------
+
+Try entering the following (in the other window):
+
+     grep -i cheryl ~unx510/2017b/phonebook
+[38;1H------------------------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).sp^H^H
+[H[JUNX510 Lab 3.1:  'phone' Script
+[1;117HPage 5/11
+[2;1H------------------------------------------------------------------------------------------------------------------------------
+
+Now create a file called 'phone', within the ~/scripts directory.  It should start with a line indicating that it needs
+to run in a bash shell, followed by the same line you just ran:
+
+     #!/bin/bash
+
+     grep -i cheryl ~unx510/2017b/phonebook
+
+Try using vi for this, just for the practice.
+[38;1H------------------------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).vi^H^H
+[H[JUNX510 Lab 3.1:  'phone' Script
+[1;117HPage 7/11
+[2;1H------------------------------------------------------------------------------------------------------------------------------
+
+Now give yourself execute permission for the 'phone' script, for example:
+
+     chmod u+x phone
+
+Also, add your 'scripts' directory to your PATH:
+
+     PATH=$PATH:~/scripts
+
+Now try running 'phone' and make sure it works.
+[38;1H------------------------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).P
+[H[JUNX510 Lab 3.1:  'phone' Script
+[1;117HPage 9/11
+[2;1H------------------------------------------------------------------------------------------------------------------------------
+
+Now change the 'phone' script so that it will allow the name to be specified as a command line argument.  For example,
+'phone cheryl' should display the results for 'cheryl', and 'phone joel' should display the results for 'joel'.  To do
+this, change the second line in the script so that instead of searching for 'cheryl', it searches for $1:
+
+     grep -i $1 ~unx510/2017b/phonebook
+
+Now try running 'phone cheryl' and 'phone joel' and make sure your script works.
+[38;1H------------------------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).vi
+[H[JUNX510 Lab 3.1:  'phone' Script
+[1;117HPage 11/11
+[2;1H------------------------------------------------------------------------------------------------------------------------------
+
+Good!
+
+You may now proceed to the next version of the script.
+[38;1H------------------------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 3.1:  Introduction To Scripting (phone)
+[2;1H------------------------------------------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 'phone' script - Completed[m
+2 [7m'phone2' script[m
+3 [7m'phone3' script[m
+4 [7m'phone4' script[m
+
+Note that the highlighted lines indicate the incomplete sections of
+this part of the Lab.
+
+Section 4 can only be done when the other sections have been
+completed.
+[38;1H------------------------------------------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: 2
+[H[JUNX510 Lab 3.1:  'phone2' Script
+[1;117HPage 1/4
+[2;1H------------------------------------------------------------------------------------------------------------------------------
+
+Copy your script 'phone' to 'phone2'.
+
+Now try running 'phone2 cheryl' and 'phone2 joel' (in another shell window) and make sure your script works.
+[38;1H------------------------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 3.1:  'phone2' Script
+[1;117HPage 2/4
+[2;1H------------------------------------------------------------------------------------------------------------------------------
+
+Change 'phone2' to prompt the user for a name to search for in the phonebook.  In order to do that, add the following
+two lines before the grep:
+
+     echo -n "Enter a name to search for: "
+
+     read name
+
+In order to use the name typed in by the user, the 'grep' needs to use the variable value $name instead of $1.  Now the
+user can simply enter 'phone2', then enter a name to search for in response to the prompt.
+
+Make the necessary changes, and try your 'phone2' script out, using both the names 'cheryl' and 'joel'.
+[38;1H------------------------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 3.1:  'phone2' Script
+[1;117HPage 4/4
+[2;1H------------------------------------------------------------------------------------------------------------------------------
+
+Good!
+
+You may now proceed to the next version of the script.
+[38;1H------------------------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 3.1:  Introduction To Scripting (phone)
+[2;1H------------------------------------------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 'phone' script - Completed[m
+2 'phone2' script - Completed[m
+3 [7m'phone3' script[m
+4 [7m'phone4' script[m
+
+Note that the highlighted lines indicate the incomplete sections of
+this part of the Lab.
+
+Section 4 can only be done when the other sections have been
+completed.
+[38;1H------------------------------------------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: 3
+[H[JUNX510 Lab 3.1:  'phone3' Script
+[1;117HPage 1/4
+[2;1H------------------------------------------------------------------------------------------------------------------------------
+
+Copy your script 'phone2' to 'phone3'.
+
+Now try running 'phone3' for both 'cheryl' and 'joel' (in another shell window) and make sure your script works.
+[38;1H------------------------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 3.1:  'phone3' Script
+[1;117HPage 2/4
+[2;1H------------------------------------------------------------------------------------------------------------------------------
+
+Change 'phone3' to prompt the user for a name to search for in the phonebook, but only if a name was not given as a
+positional parameter.  In other words, 'phone3 cheryl' would search for 'cheryl', but 'phone3' would request a name to
+search for.
+
+In order to do that, we'll assign the value of $1 to the variable 'name'.  Then we'll use an 'if' statement to determine
+if $name has a value.  If not, then we'll use a 'read' statement to get a value from the user.
+
+Use the following five lines to replace the 'echo' and 'read' statements:
+
+     name=$1
+
+     if [ "$name" = "" ]
+
+        then echo -n "Enter a name to search for: "
+
+             read name
+
+     fi
+
+Make the necessary changes, and try your 'phone3' script out, using both the names 'cheryl' and 'joel' as positional
+parameters and as values read from the user.
+[38;1H------------------------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 3.1:  'phone3' Script
+[1;117HPage 4/4
+[2;1H------------------------------------------------------------------------------------------------------------------------------
+
+Good!
+
+You may now proceed to the next version of the script.
+[38;1H------------------------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 3.1:  Introduction To Scripting (phone)
+[2;1H------------------------------------------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 'phone' script - Completed[m
+2 'phone2' script - Completed[m
+3 'phone3' script - Completed[m
+4 [7m'phone4' script[m
+
+Note that the highlighted lines indicate the incomplete sections of
+this part of the Lab.
+
+Section 4 can only be done when the other sections have been
+completed.
+[38;1H------------------------------------------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: 4
+[H[JUNX510 Lab 3.1:  'phone4' Script
+[1;117HPage 1/5
+[2;1H------------------------------------------------------------------------------------------------------------------------------
+
+Shell Scripting Exercise
+
+The purpose of this section is to reinforce your skills with writing UNIX scripts covered in the previous sections.
+[38;1H------------------------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 3.1:  'phone4' Script
+[1;117HPage 2/5
+[2;1H------------------------------------------------------------------------------------------------------------------------------
+
+Copy your script 'phone3' to 'phone4'.
+
+Test 'phone4' and make sure your script works.
+[38;1H------------------------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 3.1:  'phone4' Script
+[1;117HPage 3/5
+[2;1H------------------------------------------------------------------------------------------------------------------------------
+
+Try running 'phone4 xyz' and see what happens.
+
+Modify your program so that if no matching name is found, an appropriate message is displayed: "Name 'xyz' not in directory".
+
+You could use an 'if' statement to check the value of $? to see if the grep command was successful (remember, '0' indicates
+success).  If the grep is NOT successful, then echo the message (which includes the value of $name).  Give it a try.
+
+Make sure this works with both command line arguments and with a name read in from the user, and make sure you use the
+message EXACTLY as shown.
+[38;1H------------------------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).p
+[H[JUNX510 Lab 3.1:  'phone4' Script
+[1;117HPage 4/5
+[2;1H------------------------------------------------------------------------------------------------------------------------------
+
+'phone4' is not giving the correct output, make sure that it is correct, with the correct permissions, and that 'scripts'
+is in your PATH
+[38;1H------------------------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).vi
+[H[JUNX510 Lab 3.1:  'phone4' Script
+[1;117HPage 5/5
+[2;1H------------------------------------------------------------------------------------------------------------------------------
+
+Congratulations!
+
+You have successfully completed 'Introduction to Shell Scripting'!
+[38;1H------------------------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 3.1:  Introduction To Scripting (phone)
+[2;1H------------------------------------------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 'phone' script - Completed[m
+2 'phone2' script - Completed[m
+3 'phone3' script - Completed[m
+4 'phone4' script - Completed[m
+
+Note that the highlighted lines indicate the incomplete sections of
+this part of the Lab.
+
+Section 4 can only be done when the other sections have been
+completed.
+[38;1H------------------------------------------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: 
+[H[JUNX510 Lab 3.1:  Introduction To Scripting (phone)
+[2;1H------------------------------------------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 'phone' script - Completed[m
+2 'phone2' script - Completed[m
+3 'phone3' script - Completed[m
+4 'phone4' script - Completed[m
+
+Note that the highlighted lines indicate the incomplete sections of
+this part of the Lab.
+
+Section 4 can only be done when the other sections have been
+completed.
+[38;1H------------------------------------------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: q
+[H[JUNX510 Lab 3:  Selection Menu
+[2;1H------------------------------------------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 Introduction To Scripting (phone) - Completed[m
+2 [7mMore Scripting (add)[m
+3 [7mYet More Scripting (oldfiles)[m
+4 [7mScripting (saferm)[m
+
+5 [7mSubmit UNX510 Lab 3[m
+
+The highlighted lines above indicate the incomplete parts of the Lab.
+There is a total possible mark of 4, with 1 mark deducted for each
+incomplete part. Late marks will be deducted at the rate of 0.4 marks (10%)
+per day for Labs submitted after midnight of June 2 2017.
+
+
+[38;1H------------------------------------------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: 2
+[H[JUNX510 Lab 3.2:  More Scripting (add)
+[2;1H------------------------------------------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 [7m'add' script[m
+2 [7m'add2' script[m
+
+Note that the highlighted lines indicate the incomplete sections of
+this part of the Lab.
+
+Section 2 can only be done when the other section has been completed.
+[38;1H------------------------------------------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: 1
+[H[JUNX510 Lab 3.2:  'add' Script
+[1;117HPage 1/10
+[2;1H------------------------------------------------------------------------------------------------------------------------------
+
+You're going to write 2 versions of a script, adding functionality at each stage.
+
+Open up a new shell window, so you can read the instructions in this window while executing them in the other window.
+
+If you haven't already done so, create a directory called 'scripts' within your home directory.
+[38;1H------------------------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 3.2:  'add' Script
+[1;117HPage 2/10
+[2;1H------------------------------------------------------------------------------------------------------------------------------
+
+If you haven't already done so, edit the file ".bashrc" in your home directory and add the following two lines at the
+end of the file:
+
+PATH=$PATH:~/scripts
+
+umask 077
+
+The first line will ensure that you can execute your scripts regardless of your current directory, and the second line
+will ensure that other students can't copy your files.
+
+If you don't have a file called ".bashrc" in your home directory, create it and add the above two lines.
+[38;1H------------------------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 3.2:  'add' Script
+[1;117HPage 3/10
+[2;1H------------------------------------------------------------------------------------------------------------------------------
+
+If you have changed the ".bashrc" file during this session, enter the "bash" command by itself in order to start an
+interactive subshell.  This well allow ".bashrc" to execute.  Pay close attention to make sure there are no errors.
+[38;1H------------------------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 3.2:  'add' Script
+[1;117HPage 4/10
+[2;1H------------------------------------------------------------------------------------------------------------------------------
+
+You will write a bash shell script called 'add' that satisfies the following requirements:
+
+Usage: add number-list
+
+'add' will add the numbers (integers) in the list and display the total. For example:
+
+add 4 -3 12 9
+
+will produce the number "22" as output.
+[38;1H------------------------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 3.2:  'add' Script
+[1;117HPage 5/10
+[2;1H------------------------------------------------------------------------------------------------------------------------------
+
+Start by creating a file called 'add', within the ~/scripts directory.  It should begin with a line indicating that it
+needs to run in a bash shell:
+
+#!/bin/bash
+
+Try using vi for this, just for the practice.
+[38;1H------------------------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 3.2:  'add' Script
+[1;117HPage 6/10
+[2;1H------------------------------------------------------------------------------------------------------------------------------
+
+Within 'add', use the "for" control structure to loop through all the positional parameters.  Use a meaningful loop
+variable, for example "number" would make sense.
+
+Within the loop, just echo the value of the "number" variable, to make sure you're looping the right way.
+
+Save the program, give yourself execute permission, and test it out.
+
+For example:
+
+add 4 -3 12 9
+
+should produce the output:
+
+4
+-3
+12
+9
+[38;1H------------------------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).for
+[H[JUNX510 Lab 3.2:  'add' Script
+[1;117HPage 7/10
+[2;1H------------------------------------------------------------------------------------------------------------------------------
+
+Make sure the current version of your script works correctly before going on.
+
+Next, initialize a variable called "sum" to 0, before the "for" loop.  You will use this variable to add each positional
+variable one-by-one, so starting it at zero should make sense.
+
+Don't worry about the adding for now, but echo out the value of the variable "sum" after the loop.
+
+Test your script again, make sure it displays the positional parameters and the zero at the end.
+[38;1H------------------------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 3.2:  'add' Script
+[1;117HPage 8/10
+[2;1H------------------------------------------------------------------------------------------------------------------------------
+
+Finally, within the loop, instead of echoing out the value of the loop variable "number", add it to the variable "sum".
+
+Use the x=$((x + y)) arithmetic format, as described in the lecture notes.
+
+Again, check that it works.  Make sure that
+
+add 4 -3 12 9
+
+will produce the number "22" as output. Try 'add' with other numbers as well.
+[38;1H------------------------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).^[[A^[[A
+[H[JUNX510 Lab 3.2:  'add' Script
+[1;117HPage 10/10
+[2;1H------------------------------------------------------------------------------------------------------------------------------
+
+Good!
+
+You may now proceed to the next version of the script.
+[38;1H------------------------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 3.2:  More Scripting (add)
+[2;1H------------------------------------------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 'add' script - Completed[m
+2 [7m'add2' script[m
+
+Note that the highlighted lines indicate the incomplete sections of
+this part of the Lab.
+
+Section 2 can only be done when the other section has been completed.
+[38;1H------------------------------------------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: 2
+[H[JUNX510 Lab 3.2:  'add2' Script
+[1;117HPage 1/9
+[2;1H------------------------------------------------------------------------------------------------------------------------------
+
+Shell Scripting Exercise
+
+The purpose of this section is to reinforce your skills with writing UNIX scripts covered in the previous sections.
+[38;1H------------------------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 3.2:  'add2' Script
+[1;117HPage 2/9
+[2;1H------------------------------------------------------------------------------------------------------------------------------
+
+Copy your script 'add' to 'add2'.
+
+Try running:
+
+add2 4 -3 twelve nine
+
+You will change the script so that it will display the following message EXACTLY:
+
+add2 4 -3 twelve nine
+Sorry, 'twelve' is not a number
+
+Notice that only the first problem was found, and then
+the script terminated.  Hit <Enter> to explore an appropriate
+approach.
+[38;1H------------------------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).a
+[H[JUNX510 Lab 3.2:  'add2' Script
+[1;117HPage 3/9
+[2;1H------------------------------------------------------------------------------------------------------------------------------
+
+The best approach is to check each positional parameter within the loop, before the addition.
+
+You will use an "echo" to display the value of the "number" variable, and pipe the output into a "grep".  The "grep"
+should search for a single character which is NOT a digit or a plus or minus sign.  A character class, something like
+"[^0-9+-]" would be the easiest way to do this.
+
+If the "grep" is successful, then the message should be displayed and the script terminated.
+
+Continue to the next step to see how to start.
+[38;1H------------------------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 3.2:  'add2' Script
+[1;117HPage 4/9
+[2;1H------------------------------------------------------------------------------------------------------------------------------
+
+Start this step by just adding the correct "echo" piped into the correct "grep", without redirecting the output, and
+make sure the script acts appropriately, for example:
+
+add2 4 -3 12 9
+22
+
+add2 4 -3 twelve nine
+twelve
+nine
+1
+[38;1H------------------------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).^[[C^[[C^[[C^[[Ci^[[C^[[C^[[C^[[C
+[H[JUNX510 Lab 3.2:  'add2' Script
+[1;117HPage 5/9
+[2;1H------------------------------------------------------------------------------------------------------------------------------
+
+Now add an "if" structure right after the "echo ... | grep ...", testing the exit status of the "grep".  If the "grep"
+was successful, then the appropriate message should be displayed, and the script terminated.  Make sure the script acts
+appropriately, for example:
+
+add2 4 -3 12 9
+22
+
+add2 4 -3 twelve nine
+twelve
+Sorry, 'twelve' is not a number
+[38;1H------------------------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 3.2:  'add2' Script
+[1;117HPage 6/9
+[2;1H------------------------------------------------------------------------------------------------------------------------------
+
+Finally, redirect the output of the grep to "/dev/null".  Make sure the script acts correctly, for example:
+
+add2 4 -3 12 9
+22
+
+add2 4 -3 twelve nine
+Sorry, 'twelve' is not a number
+[38;1H------------------------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 3.2:  'add2' Script
+[1;117HPage 8/9
+[2;1H------------------------------------------------------------------------------------------------------------------------------
+
+'add2 4 -3 twelve nine' is not giving the correct output, make sure that it is correct, with the correct permissions,
+and that 'scripts' is in your PATH
+[38;1H------------------------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).^[^[i^[[Cnu
+[H[JUNX510 Lab 3.2:  'add2' Script
+[1;117HPage 8/9
+[2;1H------------------------------------------------------------------------------------------------------------------------------
+
+'add2 4 -3 twelve nine' is not giving the correct output, make sure that it is correct, with the correct permissions,
+and that 'scripts' is in your PATH
+[38;1H------------------------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).i
+[H[JUNX510 Lab 3.2:  'add2' Script
+[1;117HPage 9/9
+[2;1H------------------------------------------------------------------------------------------------------------------------------
+
+Congratulations!
+
+You have successfully completed 'More Scripting'!
+[38;1H------------------------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 3.2:  More Scripting (add)
+[2;1H------------------------------------------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 'add' script - Completed[m
+2 'add2' script - Completed[m
+
+Note that the highlighted lines indicate the incomplete sections of
+this part of the Lab.
+
+Section 2 can only be done when the other section has been completed.
+[38;1H------------------------------------------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: q
+[H[JUNX510 Lab 3:  Selection Menu
+[2;1H------------------------------------------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 Introduction To Scripting (phone) - Completed[m
+2 More Scripting (add) - Completed[m
+3 [7mYet More Scripting (oldfiles)[m
+4 [7mScripting (saferm)[m
+
+5 [7mSubmit UNX510 Lab 3[m
+
+The highlighted lines above indicate the incomplete parts of the Lab.
+There is a total possible mark of 4, with 1 mark deducted for each
+incomplete part. Late marks will be deducted at the rate of 0.4 marks (10%)
+per day for Labs submitted after midnight of June 2 2017.
+
+
+[38;1H------------------------------------------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: q
+[H[Jyliu421@matrix:~/unx510/lab3> exit
+exit
+
+Script done on Thu 25 May 2017 09:37:02 AM EDT

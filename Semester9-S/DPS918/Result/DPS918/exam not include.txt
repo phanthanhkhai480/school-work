@@ -1,0 +1,57 @@
+The List below is not include on the exam. 
+
+Lecture 1
+History 
+
+Lecture 2
+Shell Arithmetic
+
+    expr is used to evaluate integer expressions in the Bourne shell (also works in Bash and Korn)
+        spacing is inflexible, and special characters must be quoted
+        eg. expr \( 2 + 3 \) \* 5
+        eg. x=`expr $x + 1`
+    let performs arithmetic in Bash and Korn shells
+        $ is optional in front of variables:
+        let x=(2+3)*5
+        spacing is flexible if expression is within quotes:
+        let "x = x + 1"
+
+
+Lecture 3
+
+
+Lecture 4
+until
+
+Lecture 5
+
+Lecture 6
+Globbing Shell Options (bash only)
+
+Lecture 7
+
+Lecture 8
+
+
+Lecture 9
+Recursive Functions
+
+Lecture 10
+Associative Arrays
+
+Lecture 11
+
+Lecture 12
+`command-line` 
+
+Lecture 13
+(whole chapter)
+
+Lecture 14
+
+http://www.hlevkin.com/Shell_progr/hellobash.htm
+http://www.freeos.com/guides/lsst/ch08.html
+https://www.proprofs.com/quiz-school/story.php?title=unix-shell-scripting-assessment
+http://www.techbeamers.com/20-shell-scripting-questions-answers/
+
+lamaral@oxfordproperties

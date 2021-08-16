@@ -1,0 +1,2722 @@
+Script started on Tue 09 May 2017 02:03:45 PM EDT
+yliu421@matrix:~/unx510> -[K~unx510/lab1
+[H[JUNX510 Lab 1:  Notes
+[2;1H-------------------------------------------------------------------------------------------------------------------
+
+Some important notes on this Lab:
+
+(1) You do NOT have to do this whole Lab in one sitting!  Any completed sections will be tracked.
+
+(2) You may abort the Lab at any time by pressing Ctrl-c but you may lose any work done on an incomplete section.
+
+(3) Instructions for each page will be displayed at the bottom of the screen.
+
+(4) The answers expected in this Lab are derived from the Lab itself and the course notes. The course notes
+should be used as a reference, if required. Using Google or another search engine may provide answers that
+are not accepted by the Lab.
+
+(5) This Lab is maintained by Les Czegel. Please try to resolve any problems with your instructor who will
+determine if Les should be contacted.
+[29;1H-------------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 1:  Selection Menu
+[2;1H-------------------------------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 Introduction To Unix Commands - Completed[m
+2 Basic Unix Commands - Completed[m
+3 Directory Management - Completed[m
+4 [7mPractice Commands To Create A Directory Structure[m
+5 [7mCreate A Directory Structure[m
+6 [7mPractice Specifying Path Names[m
+7 [7mPermissions[m
+
+8 [7mSubmit UNX510 Lab 1[m
+
+The highlighted lines above indicate the incomplete parts of the Lab.
+There is a total possible mark of 3, with 0.5 marks deducted for each
+incomplete part. Late marks will be deducted at the rate of 0.3 marks (10%)
+per day for Labs submitted after midnight of May 19 2017.
+
+
+[29;1H-------------------------------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: 4
+[H[JUNX510 Lab 1.4:  Practice Commands To Create A Directory Structure
+[1;110HPage 1/26
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+Practice Commands to Create a Directory Structure
+
+
+
+The purpose of this section is to reinforce your skills with issuing UNIX commands covered previously.
+
+You will be asked to enter a single UNIX command for the following situations. If you are unable to successfully
+issue the UNIX command after several attempts, a hint will be provided.
+
+*** Note that in most cases, only the shortest possible command line will be accepted.***
+[33;1H-----------------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 1.4:  Practice Commands To Create A Directory Structure
+[1;110HPage 2/26
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+You are currently in your home directory.  Within your home directory, create a directory called lab1 using the
+shortest possible path name:
+[33;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[35;1H$  m [35;5H[35;1H$  mk [35;6H[35;1H$  mkd [35;7H[35;1H$  mkdi [35;8H[35;1H$  mkdir [35;9H[35;1H$  mkdir  [35;10H[35;1H$  mkdir l [35;11H[35;1H$  mkdir la [35;12H[35;1H$  mkdir lab [35;13H[35;1H$  mkdir lab1 [35;14H[H[JUNX510 Lab 1.4:  Practice Commands To Create A Directory Structure
+[1;110HPage 3/26
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+$  mkdir lab1
+[33;1H-----------------------------------------------------------------------------------------------------------------------
+                                                                                                                       [34;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 1.4:  Practice Commands To Create A Directory Structure
+[1;110HPage 3/26
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+Copy the file called cars that resides in the directory ~unx510/2017b to your lab1 directory:
+[33;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[35;1H$  c [35;5H[35;1H$  cp [35;6H[35;1H$  cp  [35;7H[35;1H$  cp ~ [35;8H[35;1H$  cp ~/ [35;9H[35;1H$  cp ~/u [35;10H[35;1H$  cp ~/un [35;11H[35;1H$  cp ~/unx [35;12H[35;1H$  cp ~/unx5 [35;13H[35;1H$  cp ~/unx51 [35;14H[35;1H$  cp ~/unx510 [35;15H[35;1H$  cp ~/unx510/ [35;16H[35;1H$  cp ~/unx510/2 [35;17H[35;1H$  cp ~/unx510/20 [35;18H[35;1H$  cp ~/unx510/201 [35;19H[35;1H$  cp ~/unx510/2017 [35;20H[35;1H$  cp ~/unx510/2017b [35;21H[35;1H$  cp ~/unx510/2017b/ [35;22H[35;1H$  cp ~/unx510/2017b/c [35;23H[35;1H$  cp ~/unx510/2017b/ca [35;24H[35;1H$  cp ~/unx510/2017b/car [35;25H[35;1H$  cp ~/unx510/2017b/cars [35;26H[35;1H$  cp ~/unx510/2017b/cars  [35;27H[35;1H$  cp ~/unx510/2017b/cars . [35;28H[35;1H$  cp ~/unx510/2017b/cars ./ [35;29H[35;1H$  cp ~/unx510/2017b/cars . [35;28H[35;1H$  cp ~/unx510/2017b/cars  [35;27H[35;1H$  cp ~/unx510/2017b/cars l [35;28H[35;1H$  cp ~/unx510/2017b/cars la [35;29H[35;1H$  cp ~/unx510/2017b/cars lab [35;30H[35;1H$  cp ~/unx510/2017b/cars lab1 [35;31H[H[JUNX510 Lab 1.4:  Practice Commands To Create A Directory Structure
+[1;110HPage 3/26
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+Copy the file called cars that resides in the directory ~unx510/2017b to your lab1 directory:
+
+You entered: cp ~/unx510/2017b/cars lab1
+Please try again.
+
+Hint:
+Use the correct path names.
+[33;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[35;1H$  cp ~/unx510/2017b/cars lab1                                                                                     [35;31H[35;30H[35;29H[35;28H[35;27H[35;1H$  cp ~/unx510/2017b/cars .lab1 [35;28H[35;1H$  cp ~/unx510/2017b/cars ./lab1 [35;29H[H[JUNX510 Lab 1.4:  Practice Commands To Create A Directory Structure
+[1;110HPage 3/26
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+Copy the file called cars that resides in the directory ~unx510/2017b to your lab1 directory:
+
+You entered: cp ~/unx510/2017b/cars ./lab1
+Please try again.
+
+Hint:
+Use the correct path names.
+[33;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[35;1H$  cp ~/unx510/2017b/cars ./lab1                                                                                   [35;33H[35;32H[35;31H[35;30H[35;29H[35;1H$  cp ~/unx510/2017b/cars .lab1 [35;28H[35;1H$  cp ~/unx510/2017b/cars lab1 [35;27H[35;26H[35;25H[35;24H[35;23H[35;22H[35;21H[35;20H[35;19H[35;18H[35;18H[35;18H[35;18H[35;18H[35;18H[35;18H[35;18H[35;18H[35;1H$  cp ~/unx510/20D17b/cars lab1 [35;19H[35;18H[35;17H[35;16H[35;15H[35;14H[35;13H[35;12H[35;11H[35;10H[35;9H[35;1H$  cp ~unx510/20D17b/cars lab1 [35;8H[H[JUNX510 Lab 1.4:  Practice Commands To Create A Directory Structure
+[1;110HPage 3/26
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+Copy the file called cars that resides in the directory ~unx510/2017b to your lab1 directory:
+
+You entered: cp ~unx510/20D17b/cars lab1
+Please try again.
+
+Hint:
+Try: cp ~unx510/2017b/cars lab1
+
+Hint:
+Use the correct path names.
+[33;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[35;1H$  cp ~unx510/20D17b/cars lab1                                                                                     [35;31H[35;30H[35;29H[35;28H[35;27H[35;26H[35;25H[35;24H[35;23H[35;22H[35;21H[35;20H[35;19H[35;18H[35;1H$  cp ~unx510/2017b/cars lab1 [35;17H[H[JUNX510 Lab 1.4:  Practice Commands To Create A Directory Structure
+[1;110HPage 4/26
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+$  cp ~unx510/2017b/cars lab1
+[33;1H-----------------------------------------------------------------------------------------------------------------------
+                                                                                                                       [34;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 1.4:  Practice Commands To Create A Directory Structure
+[1;110HPage 4/26
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+Make lab1 your present working directory:
+[33;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[35;1H$  c [35;5H[35;1H$  cd [35;6H[35;1H$  cd  [35;7H[35;1H$  cd l [35;8H[35;1H$  cd la [35;9H[35;1H$  cd lab [35;10H[35;1H$  cd lab1 [35;11H[H[JUNX510 Lab 1.4:  Practice Commands To Create A Directory Structure
+[1;110HPage 5/26
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+$  cd lab1
+[33;1H-----------------------------------------------------------------------------------------------------------------------
+                                                                                                                       [34;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 1.4:  Practice Commands To Create A Directory Structure
+[1;110HPage 5/26
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+Without changing working directories, list only the names of files in your home directory. Use the shortest
+possible pathname, and be sure that hidden files are also listed:
+[33;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[35;1H$  l [35;5H[35;1H$  ls [35;6H[35;1H$  ls  [35;7H[35;1H$  ls - [35;8H[35;1H$  ls -a [35;9H[35;1H$  ls -a  [35;10H[35;1H$  ls -a ~ [35;11H[35;1H$  ls -a ~/ [35;12H[H[JUNX510 Lab 1.4:  Practice Commands To Create A Directory Structure
+[1;110HPage 5/26
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+Without changing working directories, list only the names of files in your home directory. Use the shortest
+possible pathname, and be sure that hidden files are also listed:
+
+You entered: ls -a ~/
+Please try again.
+
+Hint:
+Use the correct path name.
+[33;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[35;1H$  ls -a ~/                                                                                                        [35;12H[35;1H$  ls -a ~ [35;11H[35;1H$  ls -a  [35;10H[35;1H$  ls -a . [35;11H[35;1H$  ls -a .. [35;12H[H[JUNX510 Lab 1.4:  Practice Commands To Create A Directory Structure
+[1;110HPage 6/26
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+$  ls -a ..
+.	       .profile		      Cplus	   bill1     lab1		phonebook2   testdir
+..	       .rhost		      DCN455	   bill2     lab4.c		phones	     testlab4.c
+.bash_history  .ssh		      Desktop	   bill3     linux_practices	pp	     text
+.bashrc        .ssh.old		      Documents    billlll   math		prac.txt     typescript
+.config        .tt.swp		      INT422	   bin	     math1		prn_pen      uli101
+.ddd	       .uli101.log.2015b      Test1.class  com_inv   message_parse	public_html  unsorted
+.dvipsrc       .unx510.log.2017b      Test1.java   comp_inv  message_parse.cpp	regex	     unx510
+.emacs	       .vim		      VI	   def_var   myHistory		regex.lab    vitutorials
+.fontconfig    .viminfo		      a		   dsa555    myscript		regex1.lab   wk2practice.pdf
+.fonts	       .vimrc		      a2a	   g++11     newjob1.txt	sample_dir1  work
+.forward       .xim.template	      a3_testdir   inven     oop244		sample_dir2  work1.txt
+.gitconfig     .xinitrc.template      annex	   inven2    oop345		scripts
+.gnu-emacs     .xsession-errors       awkExercise  ipc144    pdf		tem
+.inputrc       6vimtutor	      awklog	   jac44     phone_directory	temp.txt
+.lesshst       Acceptable-Use-Policy  bill	   jac444-c  phonebook		temp1
+[33;1H-----------------------------------------------------------------------------------------------------------------------
+                                                                                                                       [34;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 1.4:  Practice Commands To Create A Directory Structure
+[1;110HPage 6/26
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+Change to your home directory using the fewest possible keystrokes:
+[33;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[35;1H$  c [35;5H[35;1H$  cd [35;6H[H[JUNX510 Lab 1.4:  Practice Commands To Create A Directory Structure
+[1;110HPage 7/26
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+$  cd
+[33;1H-----------------------------------------------------------------------------------------------------------------------
+                                                                                                                       [34;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 1.4:  Practice Commands To Create A Directory Structure
+[1;110HPage 7/26
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+While in your home directory, create another directory called lab1a:
+[33;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[35;1H$  m [35;5H[35;1H$  mk [35;6H[35;1H$  mkd [35;7H[35;1H$  mkdi [35;8H[35;1H$  mkdir [35;9H[35;1H$  mkdir  [35;10H[35;1H$  mkdir l [35;11H[35;1H$  mkdir la [35;12H[35;1H$  mkdir lab [35;13H[35;1H$  mkdir lab1 [35;14H[35;1H$  mkdir lab1a [35;15H[H[JUNX510 Lab 1.4:  Practice Commands To Create A Directory Structure
+[1;110HPage 8/26
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+$  mkdir lab1a
+[33;1H-----------------------------------------------------------------------------------------------------------------------
+                                                                                                                       [34;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 1.4:  Practice Commands To Create A Directory Structure
+[1;110HPage 8/26
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+Move your lab1 directory (including its contents) into lab1a:
+[33;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[35;1H$  m [35;5H[35;1H$  ma [35;6H[35;1H$  m [35;5H[35;1H$  mv [35;6H[35;1H$  mv  [35;7H[35;1H$  mv l [35;8H[35;1H$  mv la [35;9H[35;1H$  mv lab [35;10H[35;1H$  mv lab1 [35;11H[35;1H$  mv lab1  [35;12H[35;1H$  mv lab1 l [35;13H[35;1H$  mv lab1 la [35;14H[35;1H$  mv lab1 lab [35;15H[35;1H$  mv lab1 lab1 [35;16H[35;1H$  mv lab1 lab1a [35;17H[H[JUNX510 Lab 1.4:  Practice Commands To Create A Directory Structure
+[1;110HPage 9/26
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+$  mv lab1 lab1a
+[33;1H-----------------------------------------------------------------------------------------------------------------------
+                                                                                                                       [34;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 1.4:  Practice Commands To Create A Directory Structure
+[1;110HPage 9/26
+[2;1H-----------------------------------------------------------------------------------------------------------------------[01;34mlab1a[00m
+`-- [01;34mlab1[00m
+    `-- cars
+
+Make lab1 your present working directory:
+[33;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[35;1H$  c [35;5H[35;1H$  cd [35;6H[35;1H$  cd  [35;7H[35;1H$  cd l [35;8H[35;1H$  cd la [35;9H[35;1H$  cd lab [35;10H[35;1H$  cd lab1 [35;11H[35;1H$  cd lab1a [35;12H[35;1H$  cd lab1a/ [35;13H[35;1H$  cd lab1a/l [35;14H[35;1H$  cd lab1a/la [35;15H[35;1H$  cd lab1a/lab [35;16H[35;1H$  cd lab1a/lab1 [35;17H[H[JUNX510 Lab 1.4:  Practice Commands To Create A Directory Structure
+[1;110HPage 10/26
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+$  cd lab1a/lab1
+[33;1H-----------------------------------------------------------------------------------------------------------------------
+                                                                                                                       [34;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 1.4:  Practice Commands To Create A Directory Structure
+[1;110HPage 10/26
+[2;1H-----------------------------------------------------------------------------------------------------------------------[01;34mlab1a[00m
+`-- [01;34mlab1[00m
+    `-- cars
+
+Within your current directory (lab1), view the complete contents of the file called cars:
+[33;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[35;1H$  c [35;5H[35;1H$  ca [35;6H[35;1H$  cat [35;7H[35;1H$  cat  [35;8H[35;1H$  cat c [35;9H[35;1H$  cat ca [35;10H[35;1H$  cat car [35;11H[35;1H$  cat cars [35;12H[H[JUNX510 Lab 1.4:  Practice Commands To Create A Directory Structure
+[1;110HPage 11/26
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+$  cat cars
+plym    fury    77      73      2500
+chevy   nova    79      60      3000
+ford    mustang 65      45      17000
+volvo   gl      78      102     9850
+ford    ltd     83      15      10500
+Chevy   nova    80      50      3500
+fiat    600     65      115     450
+honda   accord  81      30      6000
+ford    thundbd 84      10      17000
+toyota  tercel  82      180     750
+chevy   impala  65      85      1550
+ford    bronco  83      25      9525
+[33;1H-----------------------------------------------------------------------------------------------------------------------
+                                                                                                                       [34;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 1.4:  Practice Commands To Create A Directory Structure
+[1;110HPage 11/26
+[2;1H-----------------------------------------------------------------------------------------------------------------------[01;34mlab1a[00m
+`-- [01;34mlab1[00m
+    `-- cars
+
+Copy the file /etc/passwd to your current directory (lab1):
+[33;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[35;1H$  c [35;5H[35;1H$  cp [35;6H[35;1H$  cp  [35;7H[35;1H$  cp / [35;8H[35;1H$  cp /e [35;9H[35;1H$  cp /et [35;10H[35;1H$  cp /etc [35;11H[35;1H$  cp /etc/ [35;12H[35;1H$  cp /etc/p [35;13H[35;1H$  cp /etc/pa [35;14H[35;1H$  cp /etc/pas [35;15H[35;1H$  cp /etc/pass [35;16H[35;1H$  cp /etc/passw [35;17H[35;1H$  cp /etc/passwd [35;18H[35;1H$  cp /etc/passwd  [35;19H[35;1H$  cp /etc/passwd . [35;20H[H[JUNX510 Lab 1.4:  Practice Commands To Create A Directory Structure
+[1;110HPage 12/26
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+$  cp /etc/passwd .
+[33;1H-----------------------------------------------------------------------------------------------------------------------
+                                                                                                                       [34;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 1.4:  Practice Commands To Create A Directory Structure
+[1;110HPage 12/26
+[2;1H-----------------------------------------------------------------------------------------------------------------------[01;34mlab1a[00m
+`-- [01;34mlab1[00m
+    |-- cars
+    `-- passwd
+
+Create a subdirectory under your current directory (lab1) called lab1_sub:
+[33;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[35;1H$  m [35;5H[35;1H$  mk [35;6H[35;1H$  mkd [35;7H[35;1H$  mkdi [35;8H[35;1H$  mkdir [35;9H[35;1H$  mkdir  [35;10H[35;1H$  mkdir l [35;11H[35;1H$  mkdir la [35;12H[35;1H$  mkdir lab [35;13H[35;1H$  mkdir lab1 [35;14H[35;1H$  mkdir lab1_ [35;15H[35;1H$  mkdir lab1_s [35;16H[35;1H$  mkdir lab1_sb [35;17H[35;1H$  mkdir lab1_sbu [35;18H[35;1H$  mkdir lab1_sb [35;17H[35;1H$  mkdir lab1_s [35;16H[35;1H$  mkdir lab1_su [35;17H[35;1H$  mkdir lab1_sub [35;18H[H[JUNX510 Lab 1.4:  Practice Commands To Create A Directory Structure
+[1;110HPage 13/26
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+$  mkdir lab1_sub
+[33;1H-----------------------------------------------------------------------------------------------------------------------
+                                                                                                                       [34;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 1.4:  Practice Commands To Create A Directory Structure
+[1;110HPage 13/26
+[2;1H-----------------------------------------------------------------------------------------------------------------------[01;34mlab1a[00m
+`-- [01;34mlab1[00m
+    |-- cars
+    |-- [01;34mlab1_sub[00m
+    `-- passwd
+
+Copy the file /etc/group to your lab1_sub.  Your current directory is lab1:
+[33;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[35;1H$  c [35;5H[35;1H$  cp [35;6H[35;1H$  cp  [35;7H[35;1H$  cp / [35;8H[35;1H$  cp /e [35;9H[35;1H$  cp /et [35;10H[35;1H$  cp /etc [35;11H[35;1H$  cp /etc/ [35;12H[35;1H$  cp /etc/g [35;13H[35;1H$  cp /etc/gr [35;14H[35;1H$  cp /etc/gro [35;15H[35;1H$  cp /etc/grou [35;16H[35;1H$  cp /etc/group [35;17H[35;1H$  cp /etc/group  [35;18H[35;1H$  cp /etc/group . [35;19H[35;1H$  cp /etc/group ./ [35;20H[35;1H$  cp /etc/group . [35;19H[35;1H$  cp /etc/group  [35;18H[35;1H$  cp /etc/group l [35;19H[35;1H$  cp /etc/group la [35;20H[35;1H$  cp /etc/group lab [35;21H[35;1H$  cp /etc/group lab1 [35;22H[35;1H$  cp /etc/group lab1_ [35;23H[35;1H$  cp /etc/group lab1_s [35;24H[35;1H$  cp /etc/group lab1_su [35;25H[35;1H$  cp /etc/group lab1_sub [35;26H[H[JUNX510 Lab 1.4:  Practice Commands To Create A Directory Structure
+[1;110HPage 14/26
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+$  cp /etc/group lab1_sub
+[33;1H-----------------------------------------------------------------------------------------------------------------------
+                                                                                                                       [34;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 1.4:  Practice Commands To Create A Directory Structure
+[1;110HPage 14/26
+[2;1H-----------------------------------------------------------------------------------------------------------------------[01;34mlab1a[00m
+`-- [01;34mlab1[00m
+    |-- cars
+    |-- [01;34mlab1_sub[00m
+    |   `-- group
+    `-- passwd
+
+Copy your local copy of passwd (from lab1, your current directory) to lab1_sub, but make sure this newest copy
+is named passwd.copy:
+[33;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[35;1H$  c [35;5H[35;1H$  cp [35;6H[35;1H$  cp  [35;7H[35;1H$  cp p [35;8H[35;1H$  cp pa [35;9H[35;1H$  cp pas [35;10H[35;1H$  cp pass [35;11H[35;1H$  cp passw [35;12H[35;1H$  cp passwd [35;13H[35;1H$  cp passwd  [35;14H[35;1H$  cp passwd l [35;15H[35;1H$  cp passwd la [35;16H[35;1H$  cp passwd lab [35;17H[35;1H$  cp passwd lab1 [35;18H[35;1H$  cp passwd lab1_ [35;19H[35;1H$  cp passwd lab1_s [35;20H[35;1H$  cp passwd lab1_su [35;21H[35;1H$  cp passwd lab1_sub [35;22H[H[JUNX510 Lab 1.4:  Practice Commands To Create A Directory Structure
+[1;110HPage 14/26
+[2;1H-----------------------------------------------------------------------------------------------------------------------[01;34mlab1a[00m
+`-- [01;34mlab1[00m
+    |-- cars
+    |-- [01;34mlab1_sub[00m
+    |   `-- group
+    `-- passwd
+
+Copy your local copy of passwd (from lab1, your current directory) to lab1_sub, but make sure this newest copy
+is named passwd.copy:
+
+You entered: cp passwd lab1_sub
+Please try again.
+
+Hint:
+Use the correct path names.
+[33;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[35;1H$  cp passwd lab1_sub                                                                                              [35;22H[35;1H$  cp passwd lab1_sub/ [35;23H[35;1H$  cp passwd lab1_sub/p [35;24H[35;1H$  cp passwd lab1_sub/pa [35;25H[35;1H$  cp passwd lab1_sub/pas [35;26H[35;1H$  cp passwd lab1_sub/pass [35;27H[35;1H$  cp passwd lab1_sub/passw [35;28H[35;1H$  cp passwd lab1_sub/passwd [35;29H[H[JUNX510 Lab 1.4:  Practice Commands To Create A Directory Structure
+[1;110HPage 14/26
+[2;1H-----------------------------------------------------------------------------------------------------------------------[01;34mlab1a[00m
+`-- [01;34mlab1[00m
+    |-- cars
+    |-- [01;34mlab1_sub[00m
+    |   `-- group
+    `-- passwd
+
+Copy your local copy of passwd (from lab1, your current directory) to lab1_sub, but make sure this newest copy
+is named passwd.copy:
+
+You entered: cp passwd lab1_sub/passwd
+Please try again.
+
+Hint:
+Use the correct path names.
+[33;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[35;1H$  cp passwd lab1_sub/passwd                                                                                       [35;29H[H[JUNX510 Lab 1.4:  Practice Commands To Create A Directory Structure
+[1;110HPage 14/26
+[2;1H-----------------------------------------------------------------------------------------------------------------------[01;34mlab1a[00m
+`-- [01;34mlab1[00m
+    |-- cars
+    |-- [01;34mlab1_sub[00m
+    |   `-- group
+    `-- passwd
+
+Copy your local copy of passwd (from lab1, your current directory) to lab1_sub, but make sure this newest copy
+is named passwd.copy:
+
+You entered: cp passwd lab1_sub/passwd
+Please try again.
+
+Hint:
+Try: cp passwd lab1_sub/passwd.copy
+
+Hint:
+Use the correct path names.
+[33;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[35;1H$  cp passwd lab1_sub/passwd                                                                                       [35;29H[35;1H$  cp passwd lab1_sub/passwd. [35;30H[35;1H$  cp passwd lab1_sub/passwd.c [35;31H[35;1H$  cp passwd lab1_sub/passwd.co [35;32H[35;1H$  cp passwd lab1_sub/passwd.cop [35;33H[35;1H$  cp passwd lab1_sub/passwd.copy [35;34H[H[JUNX510 Lab 1.4:  Practice Commands To Create A Directory Structure
+[1;110HPage 15/26
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+$  cp passwd lab1_sub/passwd.copy
+[33;1H-----------------------------------------------------------------------------------------------------------------------
+                                                                                                                       [34;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 1.4:  Practice Commands To Create A Directory Structure
+[1;110HPage 15/26
+[2;1H-----------------------------------------------------------------------------------------------------------------------[01;34mlab1a[00m
+`-- [01;34mlab1[00m
+    |-- cars
+    |-- [01;34mlab1_sub[00m
+    |   |-- group
+    |   `-- passwd.copy
+    `-- passwd
+
+Your current directory is lab1.  Copy /etc/group to lab1_sub, naming the copy group.copy:
+[33;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[35;1H$  c [35;5H[35;1H$  cp [35;6H[35;1H$  cp  [35;7H[35;1H$  cp / [35;8H[35;1H$  cp /t [35;9H[35;1H$  cp / [35;8H[35;1H$  cp /e [35;9H[35;1H$  cp /et [35;10H[35;1H$  cp /etc [35;11H[35;1H$  cp /etc/ [35;12H[35;1H$  cp /etc/g [35;13H[35;1H$  cp /etc/gr [35;14H[35;1H$  cp /etc/gro [35;15H[35;1H$  cp /etc/grou [35;16H[35;1H$  cp /etc/group [35;17H[35;1H$  cp /etc/group  [35;18H[35;1H$  cp /etc/group l [35;19H[35;1H$  cp /etc/group la [35;20H[35;1H$  cp /etc/group lab [35;21H[35;1H$  cp /etc/group lab1 [35;22H[35;1H$  cp /etc/group lab1_ [35;23H[35;1H$  cp /etc/group lab1_s [35;24H[35;1H$  cp /etc/group lab1_su [35;25H[35;1H$  cp /etc/group lab1_sub [35;26H[35;1H$  cp /etc/group lab1_sub/ [35;27H[35;1H$  cp /etc/group lab1_sub/g [35;28H[35;1H$  cp /etc/group lab1_sub/gr [35;29H[35;1H$  cp /etc/group lab1_sub/gro [35;30H[35;1H$  cp /etc/group lab1_sub/grou [35;31H[35;1H$  cp /etc/group lab1_sub/group [35;32H[35;1H$  cp /etc/group lab1_sub/group. [35;33H[35;1H$  cp /etc/group lab1_sub/group.c [35;34H[35;1H$  cp /etc/group lab1_sub/group.co [35;35H[35;1H$  cp /etc/group lab1_sub/group.cop [35;36H[35;1H$  cp /etc/group lab1_sub/group.copy [35;37H[H[JUNX510 Lab 1.4:  Practice Commands To Create A Directory Structure
+[1;110HPage 16/26
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+$  cp /etc/group lab1_sub/group.copy
+[33;1H-----------------------------------------------------------------------------------------------------------------------
+                                                                                                                       [34;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 1.4:  Practice Commands To Create A Directory Structure
+[1;110HPage 16/26
+[2;1H-----------------------------------------------------------------------------------------------------------------------[01;34mlab1a[00m
+`-- [01;34mlab1[00m
+    |-- cars
+    |-- [01;34mlab1_sub[00m
+    |   |-- group
+    |   |-- group.copy
+    |   `-- passwd.copy
+    `-- passwd
+
+Your current directory is lab1.  Create a subdirectory under lab1_sub called lab1_sub.copy:
+[33;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[35;1H$  m [35;5H[35;1H$  mk [35;6H[35;1H$  mkd [35;7H[35;1H$  mkdi [35;8H[35;1H$  mkdir [35;9H[35;1H$  mkdir  [35;10H[35;1H$  mkdir - [35;11H[35;1H$  mkdir -p [35;12H[35;1H$  mkdir -p  [35;13H[35;1H$  mkdir -p [35;12H[35;1H$  mkdir - [35;11H[35;1H$  mkdir  [35;10H[35;1H$  mkdir l [35;11H[35;1H$  mkdir la [35;12H[35;1H$  mkdir lab [35;13H[35;1H$  mkdir lab1 [35;14H[35;1H$  mkdir lab1_ [35;15H[35;1H$  mkdir lab1_s [35;16H[35;1H$  mkdir lab1_su [35;17H[35;1H$  mkdir lab1_sub [35;18H[35;1H$  mkdir lab1_sub/ [35;19H[35;1H$  mkdir lab1_sub/l [35;20H[35;1H$  mkdir lab1_sub/la [35;21H[35;1H$  mkdir lab1_sub/lab [35;22H[35;1H$  mkdir lab1_sub/lab1 [35;23H[35;1H$  mkdir lab1_sub/lab1_ [35;24H[35;1H$  mkdir lab1_sub/lab1_s [35;25H[35;1H$  mkdir lab1_sub/lab1_su [35;26H[35;1H$  mkdir lab1_sub/lab1_sub [35;27H[35;1H$  mkdir lab1_sub/lab1_sub. [35;28H[35;1H$  mkdir lab1_sub/lab1_sub.c [35;29H[35;1H$  mkdir lab1_sub/lab1_sub.co [35;30H[35;1H$  mkdir lab1_sub/lab1_sub.cop [35;31H[35;1H$  mkdir lab1_sub/lab1_sub.copy [35;32H[H[JUNX510 Lab 1.4:  Practice Commands To Create A Directory Structure
+[1;110HPage 17/26
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+$  mkdir lab1_sub/lab1_sub.copy
+[33;1H-----------------------------------------------------------------------------------------------------------------------
+                                                                                                                       [34;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 1.4:  Practice Commands To Create A Directory Structure
+[1;110HPage 17/26
+[2;1H-----------------------------------------------------------------------------------------------------------------------[01;34mlab1a[00m
+`-- [01;34mlab1[00m
+    |-- cars
+    |-- [01;34mlab1_sub[00m
+    |   |-- group
+    |   |-- group.copy
+    |   |-- [01;34mlab1_sub.copy[00m
+    |   `-- passwd.copy
+    `-- passwd
+
+Your current directory is lab1.  List detailed info about the non-hidden files in the lab1_sub directory:
+[33;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[35;1H$  l [35;5H[35;1H$  ls [35;6H[35;1H$  ls  [35;7H[35;1H$  ls l [35;8H[35;1H$  ls la [35;9H[35;1H$  ls lab [35;10H[35;1H$  ls lab1 [35;11H[35;1H$  ls lab1s [35;12H[35;1H$  ls lab1su [35;13H[35;1H$  ls lab1s [35;12H[35;1H$  ls lab1 [35;11H[35;1H$  ls lab1_ [35;12H[35;1H$  ls lab1_s [35;13H[35;13H[35;1H$  ls lab1_su [35;14H[35;1H$  ls lab1_sub [35;15H[35;1H$  ls lab1_sub/ [35;16H[35;1H$  ls lab1_sub [35;15H[H[JUNX510 Lab 1.4:  Practice Commands To Create A Directory Structure
+[1;110HPage 17/26
+[2;1H-----------------------------------------------------------------------------------------------------------------------[01;34mlab1a[00m
+`-- [01;34mlab1[00m
+    |-- cars
+    |-- [01;34mlab1_sub[00m
+    |   |-- group
+    |   |-- group.copy
+    |   |-- [01;34mlab1_sub.copy[00m
+    |   `-- passwd.copy
+    `-- passwd
+
+Your current directory is lab1.  List detailed info about the non-hidden files in the lab1_sub directory:
+
+You entered: ls lab1_sub
+Please try again.
+
+Hint:
+Use the -l option with the correct path name.
+[33;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[35;1H$  ls lab1_sub                                                                                                     [35;15H[35;14H[35;13H[35;12H[35;11H[35;10H[35;9H[35;8H[35;7H[35;1H$  ls -lab1_sub [35;8H[35;1H$  ls -llab1_sub [35;9H[35;1H$  ls -l lab1_sub [35;10H[H[JUNX510 Lab 1.4:  Practice Commands To Create A Directory Structure
+[1;110HPage 18/26
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+$  ls -l lab1_sub
+total 12
+-rw------- 1 yliu421 users  637 May  9 14:12 group
+-rw------- 1 yliu421 users  637 May  9 14:15 group.copy
+drwx------ 2 yliu421 users    6 May  9 14:15 lab1_sub.copy
+-rw------- 1 yliu421 users 1643 May  9 14:14 passwd.copy
+[33;1H-----------------------------------------------------------------------------------------------------------------------
+                                                                                                                       [34;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 1.4:  Practice Commands To Create A Directory Structure
+[1;110HPage 18/26
+[2;1H-----------------------------------------------------------------------------------------------------------------------[01;34mlab1a[00m
+`-- [01;34mlab1[00m
+    |-- cars
+    |-- [01;34mlab1_sub[00m
+    |   |-- group
+    |   |-- group.copy
+    |   |-- [01;34mlab1_sub.copy[00m
+    |   `-- passwd.copy
+    `-- passwd
+
+Your current directory is lab1.  Copy ~/.bash_history to lab1_sub, calling it myHistory:
+[33;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[35;1H$  c [35;5H[35;1H$  cp [35;6H[35;1H$  cp  [35;7H[35;1H$  cp ~ [35;8H[35;1H$  cp ~/ [35;9H[35;1H$  cp ~/. [35;10H[35;1H$  cp ~/.h [35;11H[35;1H$  cp ~/. [35;10H[35;1H$  cp ~/.b [35;11H[35;1H$  cp ~/.ba [35;12H[35;1H$  cp ~/.bas [35;13H[35;1H$  cp ~/.bash [35;14H[35;1H$  cp ~/.bash_ [35;15H[35;1H$  cp ~/.bash_h [35;16H[35;1H$  cp ~/.bash_hi [35;17H[35;1H$  cp ~/.bash_his [35;18H[35;1H$  cp ~/.bash_hist [35;19H[35;1H$  cp ~/.bash_histo [35;20H[35;1H$  cp ~/.bash_histor [35;21H[35;1H$  cp ~/.bash_history [35;22H[35;1H$  cp ~/.bash_history  [35;23H[35;1H$  cp ~/.bash_history l [35;24H[35;1H$  cp ~/.bash_history la [35;25H[35;1H$  cp ~/.bash_history lab [35;26H[35;1H$  cp ~/.bash_history lab1 [35;27H[35;1H$  cp ~/.bash_history lab1_ [35;28H[35;1H$  cp ~/.bash_history lab1_s [35;29H[35;1H$  cp ~/.bash_history lab1_su [35;30H[35;1H$  cp ~/.bash_history lab1_sub [35;31H[35;1H$  cp ~/.bash_history lab1_sub/ [35;32H[35;1H$  cp ~/.bash_history lab1_sub/m [35;33H[35;1H$  cp ~/.bash_history lab1_sub/my [35;34H[35;1H$  cp ~/.bash_history lab1_sub/myH [35;35H[35;1H$  cp ~/.bash_history lab1_sub/myHi [35;36H[35;1H$  cp ~/.bash_history lab1_sub/myHis [35;37H[35;1H$  cp ~/.bash_history lab1_sub/myHist [35;38H[35;1H$  cp ~/.bash_history lab1_sub/myHisto [35;39H[35;1H$  cp ~/.bash_history lab1_sub/myHistor [35;40H[35;1H$  cp ~/.bash_history lab1_sub/myHistory [35;41H[H[JUNX510 Lab 1.4:  Practice Commands To Create A Directory Structure
+[1;110HPage 19/26
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+$  cp ~/.bash_history lab1_sub/myHistory
+[33;1H-----------------------------------------------------------------------------------------------------------------------
+                                                                                                                       [34;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 1.4:  Practice Commands To Create A Directory Structure
+[1;110HPage 19/26
+[2;1H-----------------------------------------------------------------------------------------------------------------------[01;34mlab1a[00m
+`-- [01;34mlab1[00m
+    |-- cars
+    |-- [01;34mlab1_sub[00m
+    |   |-- group
+    |   |-- group.copy
+    |   |-- [01;34mlab1_sub.copy[00m
+    |   |-- myHistory
+    |   `-- passwd.copy
+    `-- passwd
+
+Copy myHistory to your home directory:
+[33;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[35;1H$  c [35;5H[35;1H$  cp [35;6H[35;1H$  cp  [35;7H[35;1H$  cp l [35;8H[35;1H$  cp la [35;9H[35;1H$  cp lab [35;10H[35;1H$  cp lab1 [35;11H[35;1H$  cp lab1_ [35;12H[35;1H$  cp lab1_s [35;13H[35;1H$  cp lab1_su [35;14H[35;1H$  cp lab1_sub [35;15H[35;1H$  cp lab1_sub/ [35;16H[35;1H$  cp lab1_sub/m [35;17H[35;1H$  cp lab1_sub/my [35;18H[35;1H$  cp lab1_sub/myH [35;19H[35;1H$  cp lab1_sub/myHi [35;20H[35;1H$  cp lab1_sub/myHis [35;21H[35;1H$  cp lab1_sub/myHist [35;22H[35;1H$  cp lab1_sub/myHisto [35;23H[35;1H$  cp lab1_sub/myHistor [35;24H[35;1H$  cp lab1_sub/myHistory [35;25H[35;1H$  cp lab1_sub/myHistory  [35;26H[35;1H$  cp lab1_sub/myHistory   [35;27H[35;1H$  cp lab1_sub/myHistory  ~ [35;28H[H[JUNX510 Lab 1.4:  Practice Commands To Create A Directory Structure
+[1;110HPage 20/26
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+$  cp lab1_sub/myHistory  ~
+[33;1H-----------------------------------------------------------------------------------------------------------------------
+                                                                                                                       [34;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 1.4:  Practice Commands To Create A Directory Structure
+[1;110HPage 20/26
+[2;1H-----------------------------------------------------------------------------------------------------------------------[01;34mlab1a[00m
+`-- [01;34mlab1[00m
+    |-- cars
+    |-- [01;34mlab1_sub[00m
+    |   |-- group
+    |   |-- group.copy
+    |   |-- [01;34mlab1_sub.copy[00m
+    |   |-- myHistory
+    |   `-- passwd.copy
+    `-- passwd
+
+Your current directory is lab1.  Copy ~/.bash_history to lab1_sub.copy:
+[33;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[35;1H$  c [35;5H[35;1H$  cp [35;6H[35;1H$  cp  [35;7H[35;1H$  cp ~ [35;8H[35;1H$  cp ~/ [35;9H[35;1H$  cp ~/> [35;10H[35;1H$  cp ~/ [35;9H[35;1H$  cp ~/. [35;10H[35;1H$  cp ~/.b [35;11H[35;1H$  cp ~/.ba [35;12H[35;1H$  cp ~/.bas [35;13H[35;1H$  cp ~/.bash [35;14H[35;1H$  cp ~/.bash_ [35;15H[35;1H$  cp ~/.bash_h [35;16H[35;1H$  cp ~/.bash_hi [35;17H[35;1H$  cp ~/.bash_hit [35;18H[35;1H$  cp ~/.bash_hito [35;19H[35;1H$  cp ~/.bash_hitor [35;20H[35;1H$  cp ~/.bash_hitory [35;21H[35;1H$  cp ~/.bash_hitor [35;20H[35;1H$  cp ~/.bash_hito [35;19H[35;1H$  cp ~/.bash_hit [35;18H[35;1H$  cp ~/.bash_hi [35;17H[35;1H$  cp ~/.bash_his [35;18H[35;1H$  cp ~/.bash_hist [35;19H[35;1H$  cp ~/.bash_histo [35;20H[35;1H$  cp ~/.bash_histor [35;21H[35;1H$  cp ~/.bash_history [35;22H[35;1H$  cp ~/.bash_history  [35;23H[35;1H$  cp ~/.bash_history a [35;24H[35;1H$  cp ~/.bash_history ab [35;25H[35;1H$  cp ~/.bash_history a [35;24H[35;1H$  cp ~/.bash_history  [35;23H[35;1H$  cp ~/.bash_history l [35;24H[35;1H$  cp ~/.bash_history la [35;25H[35;1H$  cp ~/.bash_history lab [35;26H[35;1H$  cp ~/.bash_history lab1 [35;27H[35;1H$  cp ~/.bash_history lab1_ [35;28H[35;1H$  cp ~/.bash_history lab1_s [35;29H[35;1H$  cp ~/.bash_history lab1_su [35;30H[35;1H$  cp ~/.bash_history lab1_sub [35;31H[35;1H$  cp ~/.bash_history lab1_sub/ [35;32H[35;1H$  cp ~/.bash_history lab1_sub/l [35;33H[35;1H$  cp ~/.bash_history lab1_sub/la [35;34H[35;1H$  cp ~/.bash_history lab1_sub/lab [35;35H[35;1H$  cp ~/.bash_history lab1_sub/lab1 [35;36H[35;1H$  cp ~/.bash_history lab1_sub/lab1_ [35;37H[35;1H$  cp ~/.bash_history lab1_sub/lab1_s [35;38H[35;1H$  cp ~/.bash_history lab1_sub/lab1_su [35;39H[35;1H$  cp ~/.bash_history lab1_sub/lab1_sub [35;40H[35;1H$  cp ~/.bash_history lab1_sub/lab1_sub. [35;41H[35;1H$  cp ~/.bash_history lab1_sub/lab1_sub.c [35;42H[35;1H$  cp ~/.bash_history lab1_sub/lab1_sub.co [35;43H[35;1H$  cp ~/.bash_history lab1_sub/lab1_sub.cop [35;44H[35;1H$  cp ~/.bash_history lab1_sub/lab1_sub.copy [35;45H[H[JUNX510 Lab 1.4:  Practice Commands To Create A Directory Structure
+[1;110HPage 21/26
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+$  cp ~/.bash_history lab1_sub/lab1_sub.copy
+[33;1H-----------------------------------------------------------------------------------------------------------------------
+                                                                                                                       [34;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 1.4:  Practice Commands To Create A Directory Structure
+[1;110HPage 21/26
+[2;1H-----------------------------------------------------------------------------------------------------------------------[01;34mlab1a[00m
+`-- [01;34mlab1[00m
+    |-- cars
+    |-- [01;34mlab1_sub[00m
+    |   |-- group
+    |   |-- group.copy
+    |   |-- [01;34mlab1_sub.copy[00m
+    |   |   `-- .bash_history
+    |   |-- myHistory
+    |   `-- passwd.copy
+    `-- passwd
+
+Your current directory is lab1.  List detailed info about all the files in the lab1_sub.copy directory:
+[33;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[35;1H$  l [35;5H[35;1H$  ls [35;6H[35;1H$  ls  [35;7H[35;1H$  ls - [35;8H[35;1H$  ls -l [35;9H[35;1H$  ls -la [35;10H[35;1H$  ls -la  [35;11H[35;1H$  ls -la l [35;12H[35;1H$  ls -la lb [35;13H[35;1H$  ls -la lba [35;14H[35;1H$  ls -la lb [35;13H[35;1H$  ls -la l [35;12H[35;1H$  ls -la la [35;13H[35;1H$  ls -la lab [35;14H[35;1H$  ls -la lab_ [35;15H[35;1H$  ls -la lab_s [35;16H[35;1H$  ls -la lab_su [35;17H[35;1H$  ls -la lab_sub [35;18H[35;1H$  ls -la lab_su [35;17H[35;17H[35;1H$  ls -la lab_s [35;16H[35;1H$  ls -la lab_ [35;15H[35;1H$  ls -la lab [35;14H[35;1H$  ls -la lab1 [35;15H[35;1H$  ls -la lab1_ [35;16H[35;1H$  ls -la lab1_s [35;17H[35;1H$  ls -la lab1_su [35;18H[35;1H$  ls -la lab1_sub [35;19H[35;1H$  ls -la lab1_sub/ [35;20H[35;1H$  ls -la lab1_sub/l [35;21H[35;1H$  ls -la lab1_sub/la [35;22H[35;1H$  ls -la lab1_sub/lab [35;23H[35;1H$  ls -la lab1_sub/lab1 [35;24H[35;1H$  ls -la lab1_sub/lab1_ [35;25H[35;1H$  ls -la lab1_sub/lab1_s [35;26H[35;1H$  ls -la lab1_sub/lab1_su [35;27H[35;1H$  ls -la lab1_sub/lab1_sub [35;28H[35;1H$  ls -la lab1_sub/lab1_sub. [35;29H[35;1H$  ls -la lab1_sub/lab1_sub.c [35;30H[35;1H$  ls -la lab1_sub/lab1_sub.co [35;31H[35;1H$  ls -la lab1_sub/lab1_sub.com [35;32H[35;1H$  ls -la lab1_sub/lab1_sub.co [35;31H[35;1H$  ls -la lab1_sub/lab1_sub.cop [35;32H[35;1H$  ls -la lab1_sub/lab1_sub.copy [35;33H[H[JUNX510 Lab 1.4:  Practice Commands To Create A Directory Structure
+[1;110HPage 22/26
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+$  ls -la lab1_sub/lab1_sub.copy
+total 124
+drwx------ 2 yliu421 users     26 May  9 14:19 .
+drwx------ 3 yliu421 users     89 May  9 14:17 ..
+-rw------- 1 yliu421 users 125698 May  9 14:19 .bash_history
+[33;1H-----------------------------------------------------------------------------------------------------------------------
+                                                                                                                       [34;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 1.4:  Practice Commands To Create A Directory Structure
+[1;110HPage 22/26
+[2;1H-----------------------------------------------------------------------------------------------------------------------[01;34mlab1a[00m
+`-- [01;34mlab1[00m
+    |-- cars
+    |-- [01;34mlab1_sub[00m
+    |   |-- group
+    |   |-- group.copy
+    |   |-- [01;34mlab1_sub.copy[00m
+    |   |   `-- .bash_history
+    |   |-- myHistory
+    |   `-- passwd.copy
+    `-- passwd
+
+Your current directory is lab1.  Using rmdir, try to delete lab1_sub.copy, and note what happens:
+[33;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[35;1H$  r [35;5H[35;1H$  rm [35;6H[35;1H$  rm  [35;7H[35;1H$  rm l [35;8H[35;1H$  rm la [35;9H[35;1H$  rm lab [35;10H[35;1H$  rm lab1 [35;11H[35;1H$  rm lab1_ [35;12H[35;1H$  rm lab1_s [35;13H[35;1H$  rm lab1_su [35;14H[35;1H$  rm lab1_sub [35;15H[35;1H$  rm lab1_sub/ [35;16H[35;1H$  rm lab1_sub/l [35;17H[35;1H$  rm lab1_sub/la [35;18H[35;1H$  rm lab1_sub/lab [35;19H[35;1H$  rm lab1_sub/lab1 [35;20H[35;1H$  rm lab1_sub/lab1_ [35;21H[35;1H$  rm lab1_sub/lab1_s [35;22H[35;1H$  rm lab1_sub/lab1_su [35;23H[35;1H$  rm lab1_sub/lab1_sub [35;24H[35;1H$  rm lab1_sub/lab1_sub. [35;25H[35;1H$  rm lab1_sub/lab1_sub.c [35;26H[35;1H$  rm lab1_sub/lab1_sub.co [35;27H[35;1H$  rm lab1_sub/lab1_sub.cop [35;28H[35;1H$  rm lab1_sub/lab1_sub.copy [35;29H[H[JUNX510 Lab 1.4:  Practice Commands To Create A Directory Structure
+[1;110HPage 22/26
+[2;1H-----------------------------------------------------------------------------------------------------------------------[01;34mlab1a[00m
+`-- [01;34mlab1[00m
+    |-- cars
+    |-- [01;34mlab1_sub[00m
+    |   |-- group
+    |   |-- group.copy
+    |   |-- [01;34mlab1_sub.copy[00m
+    |   |   `-- .bash_history
+    |   |-- myHistory
+    |   `-- passwd.copy
+    `-- passwd
+
+Your current directory is lab1.  Using rmdir, try to delete lab1_sub.copy, and note what happens:
+
+You entered: rm lab1_sub/lab1_sub.copy
+Please try again.
+[33;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[35;1H$  rm lab1_sub/lab1_sub.copy                                                                                       [35;29H[35;28H[35;27H[35;26H[35;25H[35;25H[35;25H[35;25H[35;25H[35;25H[35;25H[35;25H[35;25H[35;25H[35;25H[35;25H[35;25H[35;25H[35;25H[35;25H[35;25H[35;25H[35;25H[35;24H[35;23H[35;22H[35;21H[35;20H[35;19H[35;18H[35;17H[35;16H[35;15H[35;14H[35;13H[35;12H[35;11H[35;10H[35;9H[35;8H[35;7H[35;6H[35;1H$  rmd lab1_sub/lab1_sub.copy [35;7H[35;1H$  rmdi lab1_sub/lab1_sub.copy [35;8H[35;1H$  rmdir lab1_sub/lab1_sub.copy [35;9H[H[JUNX510 Lab 1.4:  Practice Commands To Create A Directory Structure
+[1;110HPage 23/26
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+$  rmdir lab1_sub/lab1_sub.copy
+rmdir: failed to remove `lab1_sub/lab1_sub.copy': Directory not empty
+[33;1H-----------------------------------------------------------------------------------------------------------------------
+                                                                                                                       [34;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 1.4:  Practice Commands To Create A Directory Structure
+[1;110HPage 23/26
+[2;1H-----------------------------------------------------------------------------------------------------------------------[01;34mlab1a[00m
+`-- [01;34mlab1[00m
+    |-- cars
+    |-- [01;34mlab1_sub[00m
+    |   |-- group
+    |   |-- group.copy
+    |   |-- [01;34mlab1_sub.copy[00m
+    |   |   `-- .bash_history
+    |   |-- myHistory
+    |   `-- passwd.copy
+    `-- passwd
+
+Your current directory is lab1.  Delete .bash_history within lab1_sub.copy:
+[33;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[35;1H$  r [35;5H[35;1H$  rm [35;6H[35;1H$  rm  [35;7H[35;1H$  rm l [35;8H[35;1H$  rm  [35;7H[35;1H$  rm l [35;8H[35;1H$  rm la [35;9H[35;1H$  rm lab [35;10H[35;1H$  rm lab1 [35;11H[35;1H$  rm lab1_ [35;12H[35;1H$  rm lab1_s [35;13H[35;1H$  rm lab1_su [35;14H[35;1H$  rm lab1_sub [35;15H[35;1H$  rm lab1_sub/ [35;16H[35;1H$  rm lab1_sub/l [35;17H[35;1H$  rm lab1_sub/la [35;18H[35;1H$  rm lab1_sub/lab [35;19H[35;1H$  rm lab1_sub/lab1 [35;20H[35;1H$  rm lab1_sub/lab1/ [35;21H[35;1H$  rm lab1_sub/lab1 [35;20H[35;1H$  rm lab1_sub/lab1_ [35;21H[35;1H$  rm lab1_sub/lab1_s [35;22H[35;1H$  rm lab1_sub/lab1_su [35;23H[35;1H$  rm lab1_sub/lab1_sub [35;24H[35;1H$  rm lab1_sub/lab1_sub. [35;25H[35;1H$  rm lab1_sub/lab1_sub.c [35;26H[35;1H$  rm lab1_sub/lab1_sub.co [35;27H[35;1H$  rm lab1_sub/lab1_sub.cop [35;28H[35;1H$  rm lab1_sub/lab1_sub.copy [35;29H[35;1H$  rm lab1_sub/lab1_sub.copy/ [35;30H[35;1H$  rm lab1_sub/lab1_sub.copy/. [35;31H[35;1H$  rm lab1_sub/lab1_sub.copy/ [35;30H[35;1H$  rm lab1_sub/lab1_sub.copy/. [35;31H[35;1H$  rm lab1_sub/lab1_sub.copy/.b [35;32H[35;1H$  rm lab1_sub/lab1_sub.copy/.ba [35;33H[35;1H$  rm lab1_sub/lab1_sub.copy/.bas [35;34H[35;1H$  rm lab1_sub/lab1_sub.copy/.bash [35;35H[35;1H$  rm lab1_sub/lab1_sub.copy/.bash_ [35;36H[35;1H$  rm lab1_sub/lab1_sub.copy/.bash_h [35;37H[35;1H$  rm lab1_sub/lab1_sub.copy/.bash_hi [35;38H[35;1H$  rm lab1_sub/lab1_sub.copy/.bash_his [35;39H[35;1H$  rm lab1_sub/lab1_sub.copy/.bash_hist [35;40H[35;1H$  rm lab1_sub/lab1_sub.copy/.bash_histo [35;41H[35;1H$  rm lab1_sub/lab1_sub.copy/.bash_histor [35;42H[35;1H$  rm lab1_sub/lab1_sub.copy/.bash_history [35;43H[H[JUNX510 Lab 1.4:  Practice Commands To Create A Directory Structure
+[1;110HPage 24/26
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+$  rm lab1_sub/lab1_sub.copy/.bash_history
+[33;1H-----------------------------------------------------------------------------------------------------------------------
+                                                                                                                       [34;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 1.4:  Practice Commands To Create A Directory Structure
+[1;110HPage 24/26
+[2;1H-----------------------------------------------------------------------------------------------------------------------[01;34mlab1a[00m
+`-- [01;34mlab1[00m
+    |-- cars
+    |-- [01;34mlab1_sub[00m
+    |   |-- group
+    |   |-- group.copy
+    |   |-- [01;34mlab1_sub.copy[00m
+    |   |-- myHistory
+    |   `-- passwd.copy
+    `-- passwd
+
+Your current directory is lab1.  Using rmdir, try to delete lab1_sub.copy again. It should work this time:
+[33;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[35;1H$  r [35;5H[35;1H$  rm [35;6H[35;1H$  rmd [35;7H[35;1H$  rmdi [35;8H[35;1H$  rmdir [35;9H[35;1H$  rmdir  [35;10H[35;1H$  rmdir l [35;11H[35;1H$  rmdir la [35;12H[35;1H$  rmdir lab [35;13H[35;13H[35;13H[35;13H[35;1H$  rmdir la [35;12H[35;1H$  rmdir l [35;11H[35;1H$  rmdir  [35;10H[35;1H$  rmdir [35;9H[35;1H$  rmdi [35;8H[35;1H$  rmd [35;7H[35;1H$  rm [35;6H[35;1H$  r [35;5H[35;1H$   [35;4H[35;4H[35;4H[35;4H[35;1H$  r [35;5H[35;1H$  rm [35;6H[35;1H$  rmd [35;7H[35;1H$  rmdi [35;8H[35;1H$  rmdir [35;9H[35;1H$  rmdir  [35;10H[35;10H[35;10H[35;1H$  rmdir l [35;11H[35;1H$  rmdir la [35;12H[35;1H$  rmdir lab [35;13H[35;1H$  rmdir lab1 [35;14H[35;1H$  rmdir lab1_ [35;15H[35;1H$  rmdir lab1_s [35;16H[35;1H$  rmdir lab1_su [35;17H[35;1H$  rmdir lab1_sub [35;18H[35;1H$  rmdir lab1_sub/ [35;19H[35;1H$  rmdir lab1_sub/l [35;20H[35;1H$  rmdir lab1_sub/la [35;21H[35;1H$  rmdir lab1_sub/lab [35;22H[35;1H$  rmdir lab1_sub/lab_ [35;23H[35;1H$  rmdir lab1_sub/lab_s [35;24H[35;1H$  rmdir lab1_sub/lab_su [35;25H[35;1H$  rmdir lab1_sub/lab_sub [35;26H[35;1H$  rmdir lab1_sub/lab_sub. [35;27H[35;1H$  rmdir lab1_sub/lab_sub.c [35;28H[35;1H$  rmdir lab1_sub/lab_sub.co [35;29H[35;1H$  rmdir lab1_sub/lab_sub.cop [35;30H[35;1H$  rmdir lab1_sub/lab_sub.copp [35;31H[35;1H$  rmdir lab1_sub/lab_sub.coppy [35;32H[35;1H$  rmdir lab1_sub/lab_sub.copp [35;31H[35;1H$  rmdir lab1_sub/lab_sub.cop [35;30H[35;1H$  rmdir lab1_sub/lab_sub.co [35;29H[35;1H$  rmdir lab1_sub/lab_sub.cop [35;30H[35;1H$  rmdir lab1_sub/lab_sub.copy [35;31H[H[JUNX510 Lab 1.4:  Practice Commands To Create A Directory Structure
+[1;110HPage 24/26
+[2;1H-----------------------------------------------------------------------------------------------------------------------[01;34mlab1a[00m
+`-- [01;34mlab1[00m
+    |-- cars
+    |-- [01;34mlab1_sub[00m
+    |   |-- group
+    |   |-- group.copy
+    |   |-- [01;34mlab1_sub.copy[00m
+    |   |-- myHistory
+    |   `-- passwd.copy
+    `-- passwd
+
+Your current directory is lab1.  Using rmdir, try to delete lab1_sub.copy again. It should work this time:
+
+You entered: rmdir lab1_sub/lab_sub.copy
+Please try again.
+
+Hint:
+Use the correct path name.
+[33;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[35;1H$  rmdir lab1_sub/lab_sub.copy                                                                                     [35;31H[35;30H[35;29H[35;28H[35;27H[35;26H[35;26H[35;26H[35;26H[35;26H[35;26H[35;26H[35;25H[35;24H[35;23H[35;22H[35;1H$  rmdir lab1_sub/lab1_sub.copy [35;23H[H[JUNX510 Lab 1.4:  Practice Commands To Create A Directory Structure
+[1;110HPage 25/26
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+$  rmdir lab1_sub/lab1_sub.copy
+[33;1H-----------------------------------------------------------------------------------------------------------------------
+                                                                                                                       [34;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 1.4:  Practice Commands To Create A Directory Structure
+[1;110HPage 25/26
+[2;1H-----------------------------------------------------------------------------------------------------------------------[01;34mlab1a[00m
+`-- [01;34mlab1[00m
+    |-- cars
+    |-- [01;34mlab1_sub[00m
+    |   |-- group
+    |   |-- group.copy
+    |   |-- myHistory
+    |   `-- passwd.copy
+    `-- passwd
+
+Change to your home directory again, using the fewest possible keystrokes:
+[33;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[35;1H$  c [35;5H[35;1H$  cd [35;6H[H[JUNX510 Lab 1.4:  Practice Commands To Create A Directory Structure
+[1;110HPage 26/26
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+$  cd
+[33;1H-----------------------------------------------------------------------------------------------------------------------
+                                                                                                                       [34;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 1.4:  Practice Commands To Create A Directory Structure
+[1;110HPage 26/26
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+Congratulations!
+
+You have successfully completed this section!
+[33;1H-----------------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 1:  Selection Menu
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 Introduction To Unix Commands - Completed[m
+2 Basic Unix Commands - Completed[m
+3 Directory Management - Completed[m
+4 Practice Commands To Create A Directory Structure - Completed[m
+5 [7mCreate A Directory Structure[m
+6 [7mPractice Specifying Path Names[m
+7 [7mPermissions[m
+
+8 [7mSubmit UNX510 Lab 1[m
+
+The highlighted lines above indicate the incomplete parts of the Lab.
+There is a total possible mark of 3, with 0.5 marks deducted for each
+incomplete part. Late marks will be deducted at the rate of 0.3 marks (10%)
+per day for Labs submitted after midnight of May 19 2017.
+
+
+[33;1H-----------------------------------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: 5
+[H[JUNX510 Lab 1.5:  Create A Directory Structure
+[1;110HPage 1/3
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+Create a Directory Structure
+
+
+
+The purpose of this section is to reinforce your skills with issuing UNIX commands covered previously.
+
+You will be asked to create a reasonably complex directory structure.  This directory structure will be used in
+the next section.
+
+WARNING: Use a large screen with a fairly small font so that you can see the entire directory tree, plus the
+instructions. A size of at least 130 characters by 34 lines is required.
+[33;1H-----------------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 1.5:  Create A Directory Structure
+[1;110HPage 2/3
+[2;1H-----------------------------------------------------------------------------------------------------------------------[01;34msample_dir1[00m
+`-- [01;34msample_dir[00m
+    |-- [01;34madmin[00m
+    |-- [01;34mcambridge[00m
+    |   |-- [01;34mcafeteria[00m
+    |   |-- [01;34mlibrary[00m
+    |   `-- [01;34msecurity[00m
+    |       |-- annex
+    |       |-- building
+    |       `-- parking
+    |-- [01;34mfaculty[00m
+    |-- [01;32mhistory.exe[00m
+    |-- [01;34mmarkham[00m
+    |   |-- annex
+    |   |-- building1
+    |   `-- parking
+    |-- [01;34moxford[00m
+    |   |-- outline.doc
+    |   |-- [01;34mprogramming[00m
+    |   |   `-- report.pdf
+    |   `-- [01;34msecurity[00m
+    `-- [01;34mstenton[00m
+        |-- [01;34mgen_ed[00m
+        `-- [01;34mlib_arts[00m
+            |-- english.txt
+            `-- match.doc
+
+OPEN A NEW SSH WINDOW, and within your home directory, create a directory called sample_dir1 with the structure as
+shown above.  Directories are in blue. As you go along, check your progress using this command: ~unx510/2017b/showtree
+~/sample_dir1
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).pwd
+[H[JYou have not created the /home/yliu421/sample_dir1/sample_dir/cambridge/security directory, please do so.
+
+
+Press <Enter> to continue: 
+[H[JUNX510 Lab 1.5:  Create A Directory Structure
+[1;110HPage 2/3
+[2;1H-----------------------------------------------------------------------------------------------------------------------[01;34msample_dir1[00m
+`-- [01;34msample_dir[00m
+    |-- [01;34madmin[00m
+    |-- [01;34mcambridge[00m
+    |   |-- [01;34mcafeteria[00m
+    |   |-- [01;34mlibrary[00m
+    |   `-- [01;34msecurity[00m
+    |       |-- annex
+    |       |-- building
+    |       `-- parking
+    |-- [01;34mfaculty[00m
+    |-- [01;32mhistory.exe[00m
+    |-- [01;34mmarkham[00m
+    |   |-- annex
+    |   |-- building1
+    |   `-- parking
+    |-- [01;34moxford[00m
+    |   |-- outline.doc
+    |   |-- [01;34mprogramming[00m
+    |   |   `-- report.pdf
+    |   `-- [01;34msecurity[00m
+    `-- [01;34mstenton[00m
+        |-- [01;34mgen_ed[00m
+        `-- [01;34mlib_arts[00m
+            |-- english.txt
+            `-- match.doc
+
+OPEN A NEW SSH WINDOW, and within your home directory, create a directory called sample_dir1 with the structure as
+shown above.  Directories are in blue. As you go along, check your progress using this command: ~unx510/2017b/showtree
+~/sample_dir1
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 1.5:  Create A Directory Structure
+[1;110HPage 3/3
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+Congratulations!
+
+You have successfully completed this section!
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 1:  Selection Menu
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 Introduction To Unix Commands - Completed[m
+2 Basic Unix Commands - Completed[m
+3 Directory Management - Completed[m
+4 Practice Commands To Create A Directory Structure - Completed[m
+5 Create A Directory Structure - Completed[m
+6 [7mPractice Specifying Path Names[m
+7 [7mPermissions[m
+
+8 [7mSubmit UNX510 Lab 1[m
+
+The highlighted lines above indicate the incomplete parts of the Lab.
+There is a total possible mark of 3, with 0.5 marks deducted for each
+incomplete part. Late marks will be deducted at the rate of 0.3 marks (10%)
+per day for Labs submitted after midnight of May 19 2017.
+
+
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: 6
+[H[JUNX510 Lab 1.6:  Practice Specifying Path Names
+[1;110HPage 1/15
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+Practice Specifying Path Names
+
+The purpose of this section is to reinforce your skills with issuing UNIX commands covered previously.
+
+You will be asked to enter a single UNIX command for the following situations, using the directory structure
+created in the previous section.
+
+*** Note that in most cases, only the shortest possible command line will be accepted.***
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 1.6:  Practice Specifying Path Names
+[1;110HPage 2/15
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+Change to your home directory.
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[42;1H$  c [42;5H[42;1H$  cd [42;6H[H[JUNX510 Lab 1.6:  Practice Specifying Path Names
+[1;110HPage 3/15
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+$  cd
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+                                                                                                                       [41;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 1.6:  Practice Specifying Path Names
+[1;110HPage 3/15
+[2;1H-----------------------------------------------------------------------------------------------------------------------[01;34msample_dir1[00m
+`-- [01;34msample_dir[00m
+    |-- [01;34madmin[00m
+    |-- [01;34mcambridge[00m
+    |   |-- [01;34mcafeteria[00m
+    |   |-- [01;34mlibrary[00m
+    |   `-- [01;34msecurity[00m
+    |       |-- annex
+    |       |-- building
+    |       `-- parking
+    |-- [01;34mfaculty[00m
+    |-- [01;32mhistory.exe[00m
+    |-- [01;34mmarkham[00m
+    |   |-- annex
+    |   |-- building1
+    |   `-- parking
+    |-- [01;34moxford[00m
+    |   |-- outline.doc
+    |   |-- [01;34mprogramming[00m
+    |   |   `-- report.pdf
+    |   `-- [01;34msecurity[00m
+    `-- [01;34mstenton[00m
+        |-- [01;34mgen_ed[00m
+        `-- [01;34mlib_arts[00m
+            |-- english.txt
+            `-- match.doc
+
+sample_dir1 is a subdirectory of your current (home) directory. Move to sample_dir using a relative pathname:
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[42;1H$  c [42;5H[42;1H$  cd [42;6H[42;1H$  cd  [42;7H[42;1H$  cd s [42;8H[42;1H$  cd sa [42;9H[42;1H$  cd sam [42;10H[42;1H$  cd samp [42;11H[42;1H$  cd sampl [42;12H[42;1H$  cd sample [42;13H[42;1H$  cd sample_ [42;14H[42;1H$  cd sample_d [42;15H[42;1H$  cd sample_di [42;16H[42;1H$  cd sample_dir [42;17H[42;1H$  cd sample_dir1 [42;18H[42;1H$  cd sample_dir1/ [42;19H[42;1H$  cd sample_dir1/s [42;20H[42;1H$  cd sample_dir1/sa [42;21H[42;1H$  cd sample_dir1/sam [42;22H[42;22H[42;1H$  cd sample_dir1/samp [42;23H[42;1H$  cd sample_dir1/sampl [42;24H[42;1H$  cd sample_dir1/sample [42;25H[42;1H$  cd sample_dir1/sample_ [42;26H[42;1H$  cd sample_dir1/sample_d [42;27H[42;1H$  cd sample_dir1/sample_di [42;28H[42;1H$  cd sample_dir1/sample_dir [42;29H[H[JUNX510 Lab 1.6:  Practice Specifying Path Names
+[1;110HPage 4/15
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+$  cd sample_dir1/sample_dir
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+                                                                                                                       [41;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 1.6:  Practice Specifying Path Names
+[1;110HPage 4/15
+[2;1H-----------------------------------------------------------------------------------------------------------------------[01;34msample_dir1[00m
+`-- [01;34msample_dir[00m
+    |-- [01;34madmin[00m
+    |-- [01;34mcambridge[00m
+    |   |-- [01;34mcafeteria[00m
+    |   |-- [01;34mlibrary[00m
+    |   `-- [01;34msecurity[00m
+    |       |-- annex
+    |       |-- building
+    |       `-- parking
+    |-- [01;34mfaculty[00m
+    |-- [01;32mhistory.exe[00m
+    |-- [01;34mmarkham[00m
+    |   |-- annex
+    |   |-- building1
+    |   `-- parking
+    |-- [01;34moxford[00m
+    |   |-- outline.doc
+    |   |-- [01;34mprogramming[00m
+    |   |   `-- report.pdf
+    |   `-- [01;34msecurity[00m
+    `-- [01;34mstenton[00m
+        |-- [01;34mgen_ed[00m
+        `-- [01;34mlib_arts[00m
+            |-- english.txt
+            `-- match.doc
+
+Your current directory is sample_dir. Move to security (within cambridge) using a relative pathname:
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[42;1H$  c [42;5H[42;1H$  cd [42;6H[42;1H$  cd  [42;7H[42;1H$  cd c [42;8H[42;1H$  cd ca [42;9H[42;1H$  cd cam [42;10H[42;1H$  cd camp [42;11H[42;1H$  cd cam [42;10H[42;1H$  cd camb [42;11H[42;1H$  cd cambr [42;12H[42;1H$  cd cambri [42;13H[42;1H$  cd cambrid [42;14H[42;1H$  cd cambridg [42;15H[42;1H$  cd cambridge [42;16H[42;1H$  cd cambridge/ [42;17H[42;1H$  cd cambridge/s [42;18H[42;1H$  cd cambridge/se [42;19H[42;1H$  cd cambridge/sec [42;20H[42;1H$  cd cambridge/secu [42;21H[42;1H$  cd cambridge/secur [42;22H[42;1H$  cd cambridge/securi [42;23H[42;1H$  cd cambridge/securit [42;24H[42;1H$  cd cambridge/security [42;25H[H[JUNX510 Lab 1.6:  Practice Specifying Path Names
+[1;110HPage 5/15
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+$  cd cambridge/security
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+                                                                                                                       [41;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 1.6:  Practice Specifying Path Names
+[1;110HPage 5/15
+[2;1H-----------------------------------------------------------------------------------------------------------------------[01;34msample_dir1[00m
+`-- [01;34msample_dir[00m
+    |-- [01;34madmin[00m
+    |-- [01;34mcambridge[00m
+    |   |-- [01;34mcafeteria[00m
+    |   |-- [01;34mlibrary[00m
+    |   `-- [01;34msecurity[00m
+    |       |-- annex
+    |       |-- building
+    |       `-- parking
+    |-- [01;34mfaculty[00m
+    |-- [01;32mhistory.exe[00m
+    |-- [01;34mmarkham[00m
+    |   |-- annex
+    |   |-- building1
+    |   `-- parking
+    |-- [01;34moxford[00m
+    |   |-- outline.doc
+    |   |-- [01;34mprogramming[00m
+    |   |   `-- report.pdf
+    |   `-- [01;34msecurity[00m
+    `-- [01;34mstenton[00m
+        |-- [01;34mgen_ed[00m
+        `-- [01;34mlib_arts[00m
+            |-- english.txt
+            `-- match.doc
+
+Your current directory is security. Move to cambridge using a relative pathname:
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[42;1H$  c [42;5H[42;1H$  cd [42;6H[42;1H$  cd  [42;7H[42;1H$  cd . [42;8H[42;1H$  cd .. [42;9H[H[JUNX510 Lab 1.6:  Practice Specifying Path Names
+[1;110HPage 6/15
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+$  cd ..
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+                                                                                                                       [41;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 1.6:  Practice Specifying Path Names
+[1;110HPage 6/15
+[2;1H-----------------------------------------------------------------------------------------------------------------------[01;34msample_dir1[00m
+`-- [01;34msample_dir[00m
+    |-- [01;34madmin[00m
+    |-- [01;34mcambridge[00m
+    |   |-- [01;34mcafeteria[00m
+    |   |-- [01;34mlibrary[00m
+    |   `-- [01;34msecurity[00m
+    |       |-- annex
+    |       |-- building
+    |       `-- parking
+    |-- [01;34mfaculty[00m
+    |-- [01;32mhistory.exe[00m
+    |-- [01;34mmarkham[00m
+    |   |-- annex
+    |   |-- building1
+    |   `-- parking
+    |-- [01;34moxford[00m
+    |   |-- outline.doc
+    |   |-- [01;34mprogramming[00m
+    |   |   `-- report.pdf
+    |   `-- [01;34msecurity[00m
+    `-- [01;34mstenton[00m
+        |-- [01;34mgen_ed[00m
+        `-- [01;34mlib_arts[00m
+            |-- english.txt
+            `-- match.doc
+
+Your current directory is cambridge. Move to your home directory using a relative pathname (don't use cd by itself
+for this move):
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[42;1H$  c [42;5H[42;1H$  cd [42;6H[42;1H$  cd  [42;7H[42;1H$  cd ~ [42;8H[H[JUNX510 Lab 1.6:  Practice Specifying Path Names
+[1;110HPage 6/15
+[2;1H-----------------------------------------------------------------------------------------------------------------------[01;34msample_dir1[00m
+`-- [01;34msample_dir[00m
+    |-- [01;34madmin[00m
+    |-- [01;34mcambridge[00m
+    |   |-- [01;34mcafeteria[00m
+    |   |-- [01;34mlibrary[00m
+    |   `-- [01;34msecurity[00m
+    |       |-- annex
+    |       |-- building
+    |       `-- parking
+    |-- [01;34mfaculty[00m
+    |-- [01;32mhistory.exe[00m
+    |-- [01;34mmarkham[00m
+    |   |-- annex
+    |   |-- building1
+    |   `-- parking
+    |-- [01;34moxford[00m
+    |   |-- outline.doc
+    |   |-- [01;34mprogramming[00m
+    |   |   `-- report.pdf
+    |   `-- [01;34msecurity[00m
+    `-- [01;34mstenton[00m
+        |-- [01;34mgen_ed[00m
+        `-- [01;34mlib_arts[00m
+            |-- english.txt
+            `-- match.doc
+
+Your current directory is cambridge. Move to your home directory using a relative pathname (don't use cd by itself
+for this move):
+
+You entered: cd ~
+Please try again.
+
+Hint:
+No hints in this section
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[42;1H$  c [42;5H[42;1H$  cd [42;6H[42;1H$  cd  [42;7H[42;1H$  cd . [42;8H[42;1H$  cd .. [42;9H[42;1H$  cd ../ [42;10H[42;1H$  cd ../. [42;11H[42;1H$  cd ../.. [42;12H[42;1H$  cd ../../ [42;13H[42;1H$  cd ../../. [42;14H[42;1H$  cd ../../.. [42;15H[42;1H$  cd ../../../ [42;16H[H[JUNX510 Lab 1.6:  Practice Specifying Path Names
+[1;110HPage 6/15
+[2;1H-----------------------------------------------------------------------------------------------------------------------[01;34msample_dir1[00m
+`-- [01;34msample_dir[00m
+    |-- [01;34madmin[00m
+    |-- [01;34mcambridge[00m
+    |   |-- [01;34mcafeteria[00m
+    |   |-- [01;34mlibrary[00m
+    |   `-- [01;34msecurity[00m
+    |       |-- annex
+    |       |-- building
+    |       `-- parking
+    |-- [01;34mfaculty[00m
+    |-- [01;32mhistory.exe[00m
+    |-- [01;34mmarkham[00m
+    |   |-- annex
+    |   |-- building1
+    |   `-- parking
+    |-- [01;34moxford[00m
+    |   |-- outline.doc
+    |   |-- [01;34mprogramming[00m
+    |   |   `-- report.pdf
+    |   `-- [01;34msecurity[00m
+    `-- [01;34mstenton[00m
+        |-- [01;34mgen_ed[00m
+        `-- [01;34mlib_arts[00m
+            |-- english.txt
+            `-- match.doc
+
+Your current directory is cambridge. Move to your home directory using a relative pathname (don't use cd by itself
+for this move):
+
+You entered: cd ../../../
+Please try again.
+
+Hint:
+No hints in this section
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[42;1H$  c [42;5H[42;1H$  cd [42;6H[42;1H$  cd  [42;7H[H[JUNX510 Lab 1.6:  Practice Specifying Path Names
+[1;110HPage 6/15
+[2;1H-----------------------------------------------------------------------------------------------------------------------[01;34msample_dir1[00m
+`-- [01;34msample_dir[00m
+    |-- [01;34madmin[00m
+    |-- [01;34mcambridge[00m
+    |   |-- [01;34mcafeteria[00m
+    |   |-- [01;34mlibrary[00m
+    |   `-- [01;34msecurity[00m
+    |       |-- annex
+    |       |-- building
+    |       `-- parking
+    |-- [01;34mfaculty[00m
+    |-- [01;32mhistory.exe[00m
+    |-- [01;34mmarkham[00m
+    |   |-- annex
+    |   |-- building1
+    |   `-- parking
+    |-- [01;34moxford[00m
+    |   |-- outline.doc
+    |   |-- [01;34mprogramming[00m
+    |   |   `-- report.pdf
+    |   `-- [01;34msecurity[00m
+    `-- [01;34mstenton[00m
+        |-- [01;34mgen_ed[00m
+        `-- [01;34mlib_arts[00m
+            |-- english.txt
+            `-- match.doc
+
+Your current directory is cambridge. Move to your home directory using a relative pathname (don't use cd by itself
+for this move):
+
+You entered: cd 
+Please try again.
+
+Hint:
+No hints in this section
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[42;1H$  c [42;5H[42;1H$  cd [42;6H[42;1H$  cd  [42;7H[42;1H$  cd ! [42;8H[42;1H$  cd  [42;7H[42;1H$  cd ~ [42;8H[42;1H$  cd ~/ [42;9H[H[JUNX510 Lab 1.6:  Practice Specifying Path Names
+[1;110HPage 6/15
+[2;1H-----------------------------------------------------------------------------------------------------------------------[01;34msample_dir1[00m
+`-- [01;34msample_dir[00m
+    |-- [01;34madmin[00m
+    |-- [01;34mcambridge[00m
+    |   |-- [01;34mcafeteria[00m
+    |   |-- [01;34mlibrary[00m
+    |   `-- [01;34msecurity[00m
+    |       |-- annex
+    |       |-- building
+    |       `-- parking
+    |-- [01;34mfaculty[00m
+    |-- [01;32mhistory.exe[00m
+    |-- [01;34mmarkham[00m
+    |   |-- annex
+    |   |-- building1
+    |   `-- parking
+    |-- [01;34moxford[00m
+    |   |-- outline.doc
+    |   |-- [01;34mprogramming[00m
+    |   |   `-- report.pdf
+    |   `-- [01;34msecurity[00m
+    `-- [01;34mstenton[00m
+        |-- [01;34mgen_ed[00m
+        `-- [01;34mlib_arts[00m
+            |-- english.txt
+            `-- match.doc
+
+Your current directory is cambridge. Move to your home directory using a relative pathname (don't use cd by itself
+for this move):
+
+You entered: cd ~/
+Please try again.
+
+Hint:
+No hints in this section
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[42;1H$  c [42;5H[42;1H$  cd [42;6H[42;1H$  cd  [42;7H[42;1H$  cd . [42;8H[42;1H$  cd .. [42;9H[42;1H$  cd ../ [42;10H[42;1H$  cd ../. [42;11H[42;1H$  cd ../.. [42;12H[42;1H$  cd ../../ [42;13H[H[JUNX510 Lab 1.6:  Practice Specifying Path Names
+[1;110HPage 6/15
+[2;1H-----------------------------------------------------------------------------------------------------------------------[01;34msample_dir1[00m
+`-- [01;34msample_dir[00m
+    |-- [01;34madmin[00m
+    |-- [01;34mcambridge[00m
+    |   |-- [01;34mcafeteria[00m
+    |   |-- [01;34mlibrary[00m
+    |   `-- [01;34msecurity[00m
+    |       |-- annex
+    |       |-- building
+    |       `-- parking
+    |-- [01;34mfaculty[00m
+    |-- [01;32mhistory.exe[00m
+    |-- [01;34mmarkham[00m
+    |   |-- annex
+    |   |-- building1
+    |   `-- parking
+    |-- [01;34moxford[00m
+    |   |-- outline.doc
+    |   |-- [01;34mprogramming[00m
+    |   |   `-- report.pdf
+    |   `-- [01;34msecurity[00m
+    `-- [01;34mstenton[00m
+        |-- [01;34mgen_ed[00m
+        `-- [01;34mlib_arts[00m
+            |-- english.txt
+            `-- match.doc
+
+Your current directory is cambridge. Move to your home directory using a relative pathname (don't use cd by itself
+for this move):
+
+You entered: cd ../../
+Please try again.
+
+Hint:
+No hints in this section
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[42;1H$  cd ../../                                                                                                       [42;13H[42;1H$  cd ../../. [42;14H[42;1H$  cd ../../.. [42;15H[42;1H$  cd ../../../ [42;16H[H[JUNX510 Lab 1.6:  Practice Specifying Path Names
+[1;110HPage 6/15
+[2;1H-----------------------------------------------------------------------------------------------------------------------[01;34msample_dir1[00m
+`-- [01;34msample_dir[00m
+    |-- [01;34madmin[00m
+    |-- [01;34mcambridge[00m
+    |   |-- [01;34mcafeteria[00m
+    |   |-- [01;34mlibrary[00m
+    |   `-- [01;34msecurity[00m
+    |       |-- annex
+    |       |-- building
+    |       `-- parking
+    |-- [01;34mfaculty[00m
+    |-- [01;32mhistory.exe[00m
+    |-- [01;34mmarkham[00m
+    |   |-- annex
+    |   |-- building1
+    |   `-- parking
+    |-- [01;34moxford[00m
+    |   |-- outline.doc
+    |   |-- [01;34mprogramming[00m
+    |   |   `-- report.pdf
+    |   `-- [01;34msecurity[00m
+    `-- [01;34mstenton[00m
+        |-- [01;34mgen_ed[00m
+        `-- [01;34mlib_arts[00m
+            |-- english.txt
+            `-- match.doc
+
+Your current directory is cambridge. Move to your home directory using a relative pathname (don't use cd by itself
+for this move):
+
+You entered: cd ../../../
+Please try again.
+
+Hint:
+No hints in this section
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[42;1H$  cd ../../../                                                                                                    [42;16H[42;1H$  cd ../../.. [42;15H[H[JUNX510 Lab 1.6:  Practice Specifying Path Names
+[1;110HPage 7/15
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+$  cd ../../..
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+                                                                                                                       [41;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 1.6:  Practice Specifying Path Names
+[1;110HPage 7/15
+[2;1H-----------------------------------------------------------------------------------------------------------------------[01;34msample_dir1[00m
+`-- [01;34msample_dir[00m
+    |-- [01;34madmin[00m
+    |-- [01;34mcambridge[00m
+    |   |-- [01;34mcafeteria[00m
+    |   |-- [01;34mlibrary[00m
+    |   `-- [01;34msecurity[00m
+    |       |-- annex
+    |       |-- building
+    |       `-- parking
+    |-- [01;34mfaculty[00m
+    |-- [01;32mhistory.exe[00m
+    |-- [01;34mmarkham[00m
+    |   |-- annex
+    |   |-- building1
+    |   `-- parking
+    |-- [01;34moxford[00m
+    |   |-- outline.doc
+    |   |-- [01;34mprogramming[00m
+    |   |   `-- report.pdf
+    |   `-- [01;34msecurity[00m
+    `-- [01;34mstenton[00m
+        |-- [01;34mgen_ed[00m
+        `-- [01;34mlib_arts[00m
+            |-- english.txt
+            `-- match.doc
+
+Your current directory is your home directory. Move to stenton using a relative pathname:
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[42;1H$  c [42;5H[42;1H$  cd [42;6H[42;1H$  cd  [42;7H[42;1H$  cd s [42;8H[42;1H$  cd sa [42;9H[42;1H$  cd sam [42;10H[42;1H$  cd samp [42;11H[42;1H$  cd sampl [42;12H[42;1H$  cd sample [42;13H[42;1H$  cd sample_ [42;14H[42;1H$  cd sample_d [42;15H[42;1H$  cd sample_di [42;16H[42;1H$  cd sample_dir [42;17H[42;1H$  cd sample_dir1 [42;18H[42;1H$  cd sample_dir1/ [42;19H[42;1H$  cd sample_dir1/s [42;20H[42;1H$  cd sample_dir1/sa [42;21H[42;1H$  cd sample_dir1/sam [42;22H[42;1H$  cd sample_dir1/samp [42;23H[42;1H$  cd sample_dir1/sampl [42;24H[42;1H$  cd sample_dir1/sample [42;25H[42;1H$  cd sample_dir1/sample_ [42;26H[42;1H$  cd sample_dir1/sample_d [42;27H[42;1H$  cd sample_dir1/sample_di [42;28H[42;1H$  cd sample_dir1/sample_dir [42;29H[42;1H$  cd sample_dir1/sample_dir/ [42;30H[42;1H$  cd sample_dir1/sample_dir/s [42;31H[42;1H$  cd sample_dir1/sample_dir/st [42;32H[42;1H$  cd sample_dir1/sample_dir/ste [42;33H[42;1H$  cd sample_dir1/sample_dir/sten [42;34H[42;1H$  cd sample_dir1/sample_dir/stent [42;35H[42;1H$  cd sample_dir1/sample_dir/stento [42;36H[42;1H$  cd sample_dir1/sample_dir/stenton [42;37H[H[JUNX510 Lab 1.6:  Practice Specifying Path Names
+[1;110HPage 8/15
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+$  cd sample_dir1/sample_dir/stenton
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+                                                                                                                       [41;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 1.6:  Practice Specifying Path Names
+[1;110HPage 8/15
+[2;1H-----------------------------------------------------------------------------------------------------------------------[01;34msample_dir1[00m
+`-- [01;34msample_dir[00m
+    |-- [01;34madmin[00m
+    |-- [01;34mcambridge[00m
+    |   |-- [01;34mcafeteria[00m
+    |   |-- [01;34mlibrary[00m
+    |   `-- [01;34msecurity[00m
+    |       |-- annex
+    |       |-- building
+    |       `-- parking
+    |-- [01;34mfaculty[00m
+    |-- [01;32mhistory.exe[00m
+    |-- [01;34mmarkham[00m
+    |   |-- annex
+    |   |-- building1
+    |   `-- parking
+    |-- [01;34moxford[00m
+    |   |-- outline.doc
+    |   |-- [01;34mprogramming[00m
+    |   |   `-- report.pdf
+    |   `-- [01;34msecurity[00m
+    `-- [01;34mstenton[00m
+        |-- [01;34mgen_ed[00m
+        `-- [01;34mlib_arts[00m
+            |-- english.txt
+            `-- match.doc
+
+Your current directory is stenton. Make a copy of the file named parking (from the security directory), name it
+parking2, and place it in your current directory, using relative pathnames:
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[42;1H$  c [42;5H[42;1H$  cp [42;6H[42;1H$  cp  [42;7H[42;1H$  cp . [42;8H[42;1H$  cp .. [42;9H[42;1H$  cp ../ [42;10H[42;1H$  cp ../c [42;11H[42;1H$  cp ../ca [42;12H[42;1H$  cp ../cam [42;13H[42;1H$  cp ../camb [42;14H[42;1H$  cp ../cambr [42;15H[42;1H$  cp ../cambri [42;16H[42;1H$  cp ../cambrid [42;17H[42;1H$  cp ../cambridg [42;18H[42;1H$  cp ../cambridge [42;19H[42;1H$  cp ../cambridge/ [42;20H[42;1H$  cp ../cambridge/s [42;21H[42;1H$  cp ../cambridge/se [42;22H[42;1H$  cp ../cambridge/sec [42;23H[42;1H$  cp ../cambridge/secu [42;24H[42;1H$  cp ../cambridge/secur [42;25H[42;1H$  cp ../cambridge/securi [42;26H[42;1H$  cp ../cambridge/securit [42;27H[42;1H$  cp ../cambridge/security [42;28H[42;1H$  cp ../cambridge/security/ [42;29H[42;1H$  cp ../cambridge/security/p [42;30H[42;1H$  cp ../cambridge/security/pa [42;31H[42;1H$  cp ../cambridge/security/par [42;32H[42;1H$  cp ../cambridge/security/park [42;33H[42;1H$  cp ../cambridge/security/parki [42;34H[42;1H$  cp ../cambridge/security/parkin [42;35H[42;1H$  cp ../cambridge/security/parking [42;36H[42;1H$  cp ../cambridge/security/parking  [42;37H[42;1H$  cp ../cambridge/security/parking . [42;38H[42;1H$  cp ../cambridge/security/parking ./ [42;39H[42;1H$  cp ../cambridge/security/parking ./p [42;40H[42;1H$  cp ../cambridge/security/parking ./pa [42;41H[42;1H$  cp ../cambridge/security/parking ./par [42;42H[42;1H$  cp ../cambridge/security/parking ./park [42;43H[42;1H$  cp ../cambridge/security/parking ./parki [42;44H[42;1H$  cp ../cambridge/security/parking ./parkin [42;45H[42;1H$  cp ../cambridge/security/parking ./parking [42;46H[42;1H$  cp ../cambridge/security/parking ./parking2 [42;47H[H[JUNX510 Lab 1.6:  Practice Specifying Path Names
+[1;110HPage 8/15
+[2;1H-----------------------------------------------------------------------------------------------------------------------[01;34msample_dir1[00m
+`-- [01;34msample_dir[00m
+    |-- [01;34madmin[00m
+    |-- [01;34mcambridge[00m
+    |   |-- [01;34mcafeteria[00m
+    |   |-- [01;34mlibrary[00m
+    |   `-- [01;34msecurity[00m
+    |       |-- annex
+    |       |-- building
+    |       `-- parking
+    |-- [01;34mfaculty[00m
+    |-- [01;32mhistory.exe[00m
+    |-- [01;34mmarkham[00m
+    |   |-- annex
+    |   |-- building1
+    |   `-- parking
+    |-- [01;34moxford[00m
+    |   |-- outline.doc
+    |   |-- [01;34mprogramming[00m
+    |   |   `-- report.pdf
+    |   `-- [01;34msecurity[00m
+    `-- [01;34mstenton[00m
+        |-- [01;34mgen_ed[00m
+        `-- [01;34mlib_arts[00m
+            |-- english.txt
+            `-- match.doc
+
+Your current directory is stenton. Make a copy of the file named parking (from the security directory), name it
+parking2, and place it in your current directory, using relative pathnames:
+
+You entered: cp ../cambridge/security/parking ./parking2
+Please try again.
+
+Hint:
+No hints in this section
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[42;1H$  cp ../cambridge/security/parking ./parking2                                                                     [42;47H[42;46H[42;45H[42;44H[42;43H[42;42H[42;42H[42;42H[42;42H[42;42H[42;42H[42;41H[42;40H[42;39H[42;38H[42;37H[42;36H[42;35H[42;34H[42;33H[42;32H[42;31H[42;30H[42;29H[42;28H[42;27H[42;26H[42;25H[42;24H[42;23H[42;22H[42;21H[42;22H[42;23H[42;24H[42;25H[42;25H[42;25H[42;25H[42;25H[42;25H[42;25H[42;25H[42;25H[42;25H[42;25H[42;25H[42;25H[42;26H[42;27H[42;28H[42;29H[42;30H[42;31H[42;32H[42;33H[42;34H[42;35H[42;36H[42;37H[42;38H[42;39H[42;40H[42;39H[42;1H$  cp ../cambridge/security/parking .parking2 [42;38H[42;1H$  cp ../cambridge/security/parking parking2 [42;37H[H[JUNX510 Lab 1.6:  Practice Specifying Path Names
+[1;110HPage 9/15
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+$  cp ../cambridge/security/parking parking2
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+                                                                                                                       [41;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 1.6:  Practice Specifying Path Names
+[1;110HPage 9/15
+[2;1H-----------------------------------------------------------------------------------------------------------------------[01;34msample_dir1[00m
+`-- [01;34msample_dir[00m
+    |-- [01;34madmin[00m
+    |-- [01;34mcambridge[00m
+    |   |-- [01;34mcafeteria[00m
+    |   |-- [01;34mlibrary[00m
+    |   `-- [01;34msecurity[00m
+    |       |-- annex
+    |       |-- building
+    |       `-- parking
+    |-- [01;34mfaculty[00m
+    |-- [01;32mhistory.exe[00m
+    |-- [01;34mmarkham[00m
+    |   |-- annex
+    |   |-- building1
+    |   `-- parking
+    |-- [01;34moxford[00m
+    |   |-- outline.doc
+    |   |-- [01;34mprogramming[00m
+    |   |   `-- report.pdf
+    |   `-- [01;34msecurity[00m
+    `-- [01;34mstenton[00m
+        |-- [01;34mgen_ed[00m
+        |-- [01;34mlib_arts[00m
+        |   |-- english.txt
+        |   `-- match.doc
+        `-- parking2
+
+Your current directory is stenton. Remove the security directory, including it's contents (no prompting), using
+a relative pathname:
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[42;1H$  r [42;5H[42;1H$  rm [42;6H[42;1H$  rm  [42;7H[42;1H$  rm - [42;8H[42;1H$  rm -r [42;9H[42;1H$  rm -r  [42;10H[42;1H$  rm -r . [42;11H[42;1H$  rm -r .. [42;12H[42;1H$  rm -r ../ [42;13H[42;1H$  rm -r ../c [42;14H[42;1H$  rm -r ../ca [42;15H[42;1H$  rm -r ../cam [42;16H[42;1H$  rm -r ../camp [42;17H[42;1H$  rm -r ../cam [42;16H[42;1H$  rm -r ../camb [42;17H[42;1H$  rm -r ../cambr [42;18H[42;1H$  rm -r ../cambri [42;19H[42;1H$  rm -r ../cambrid [42;20H[42;1H$  rm -r ../cambridg [42;21H[42;1H$  rm -r ../cambridge [42;22H[42;1H$  rm -r ../cambridge/ [42;23H[42;1H$  rm -r ../cambridge/s [42;24H[42;1H$  rm -r ../cambridge/se [42;25H[42;1H$  rm -r ../cambridge/sec [42;26H[42;1H$  rm -r ../cambridge/secu [42;27H[42;1H$  rm -r ../cambridge/secur [42;28H[42;1H$  rm -r ../cambridge/securi [42;29H[42;1H$  rm -r ../cambridge/securit [42;30H[42;1H$  rm -r ../cambridge/security [42;31H[H[JUNX510 Lab 1.6:  Practice Specifying Path Names
+[1;110HPage 10/15
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+$  rm -r ../cambridge/security
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+                                                                                                                       [41;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 1.6:  Practice Specifying Path Names
+[1;110HPage 10/15
+[2;1H-----------------------------------------------------------------------------------------------------------------------[01;34msample_dir1[00m
+`-- [01;34msample_dir[00m
+    |-- [01;34madmin[00m
+    |-- [01;34mcambridge[00m
+    |   |-- [01;34mcafeteria[00m
+    |   `-- [01;34mlibrary[00m
+    |-- [01;34mfaculty[00m
+    |-- [01;32mhistory.exe[00m
+    |-- [01;34mmarkham[00m
+    |   |-- annex
+    |   |-- building1
+    |   `-- parking
+    |-- [01;34moxford[00m
+    |   |-- outline.doc
+    |   |-- [01;34mprogramming[00m
+    |   |   `-- report.pdf
+    |   `-- [01;34msecurity[00m
+    `-- [01;34mstenton[00m
+        |-- [01;34mgen_ed[00m
+        |-- [01;34mlib_arts[00m
+        |   |-- english.txt
+        |   `-- match.doc
+        `-- parking2
+
+Your current directory is stenton. Make a copy of the file annex (in markham), called annex2, and place it in markham:
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[42;1H$  c [42;5H[42;1H$  cp [42;6H[42;1H$  cp  [42;7H[42;1H$  cp . [42;8H[42;1H$  cp .. [42;9H[42;1H$  cp ../ [42;10H[42;1H$  cp ../m [42;11H[42;1H$  cp ../ma [42;12H[42;1H$  cp ../mar [42;13H[42;1H$  cp ../mark [42;14H[42;1H$  cp ../markh [42;15H[42;1H$  cp ../markha [42;16H[42;1H$  cp ../markham [42;17H[42;1H$  cp ../markham/ [42;18H[42;1H$  cp ../markham/a [42;19H[42;1H$  cp ../markham/an [42;20H[42;1H$  cp ../markham/ann [42;21H[42;1H$  cp ../markham/anne [42;22H[42;1H$  cp ../markham/annes [42;23H[42;1H$  cp ../markham/annes  [42;24H[42;1H$  cp ../markham/annes . [42;25H[42;1H$  cp ../markham/annes .. [42;26H[42;1H$  cp ../markham/annes ../ [42;27H[42;1H$  cp ../markham/annes ../m [42;28H[42;1H$  cp ../markham/annes ../ma [42;29H[42;1H$  cp ../markham/annes ../mar [42;30H[42;1H$  cp ../markham/annes ../mark [42;31H[42;1H$  cp ../markham/annes ../markh [42;32H[42;1H$  cp ../markham/annes ../markha [42;33H[42;1H$  cp ../markham/annes ../markham [42;34H[42;1H$  cp ../markham/annes ../markham/ [42;35H[42;1H$  cp ../markham/annes ../markham/a [42;36H[42;1H$  cp ../markham/annes ../markham/an [42;37H[42;1H$  cp ../markham/annes ../markham/ann [42;38H[42;1H$  cp ../markham/annes ../markham/anne [42;39H[42;1H$  cp ../markham/annes ../markham/annex [42;40H[42;1H$  cp ../markham/annes ../markham/annex2 [42;41H[42;40H[42;39H[42;38H[42;37H[42;36H[42;36H[42;36H[42;36H[42;36H[42;36H[42;36H[42;36H[42;36H[42;36H[42;36H[42;36H[42;36H[42;36H[42;36H[42;36H[42;36H[42;36H[42;37H[42;36H[42;35H[42;34H[42;33H[42;32H[42;31H[42;30H[42;29H[42;28H[42;27H[42;26H[42;25H[42;24H[42;23H[42;1H$  cp ../markham/anne ../markham/annex2 [42;22H[42;1H$  cp ../markham/annex ../markham/annex2 [42;23H[H[JUNX510 Lab 1.6:  Practice Specifying Path Names
+[1;110HPage 11/15
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+$  cp ../markham/annex ../markham/annex2
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+                                                                                                                       [41;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 1.6:  Practice Specifying Path Names
+[1;110HPage 11/15
+[2;1H-----------------------------------------------------------------------------------------------------------------------[01;34msample_dir1[00m
+`-- [01;34msample_dir[00m
+    |-- [01;34madmin[00m
+    |-- [01;34mcambridge[00m
+    |   |-- [01;34mcafeteria[00m
+    |   `-- [01;34mlibrary[00m
+    |-- [01;34mfaculty[00m
+    |-- [01;32mhistory.exe[00m
+    |-- [01;34mmarkham[00m
+    |   |-- annex
+    |   |-- annex2
+    |   |-- building1
+    |   `-- parking
+    |-- [01;34moxford[00m
+    |   |-- outline.doc
+    |   |-- [01;34mprogramming[00m
+    |   |   `-- report.pdf
+    |   `-- [01;34msecurity[00m
+    `-- [01;34mstenton[00m
+        |-- [01;34mgen_ed[00m
+        |-- [01;34mlib_arts[00m
+        |   |-- english.txt
+        |   `-- match.doc
+        `-- parking2
+
+Your current directory is stenton. Move to oxford using a relative-to-home pathname:
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[42;1H$  c [42;5H[42;1H$  cd [42;6H[42;1H$  cd  [42;7H[42;1H$  cd . [42;8H[42;1H$  cd .. [42;9H[42;1H$  cd ../ [42;10H[42;1H$  cd ../o [42;11H[42;1H$  cd ../ox [42;12H[42;1H$  cd ../oxf [42;13H[42;1H$  cd ../oxfo [42;14H[42;1H$  cd ../oxfor [42;15H[42;1H$  cd ../oxford [42;16H[H[JUNX510 Lab 1.6:  Practice Specifying Path Names
+[1;110HPage 11/15
+[2;1H-----------------------------------------------------------------------------------------------------------------------[01;34msample_dir1[00m
+`-- [01;34msample_dir[00m
+    |-- [01;34madmin[00m
+    |-- [01;34mcambridge[00m
+    |   |-- [01;34mcafeteria[00m
+    |   `-- [01;34mlibrary[00m
+    |-- [01;34mfaculty[00m
+    |-- [01;32mhistory.exe[00m
+    |-- [01;34mmarkham[00m
+    |   |-- annex
+    |   |-- annex2
+    |   |-- building1
+    |   `-- parking
+    |-- [01;34moxford[00m
+    |   |-- outline.doc
+    |   |-- [01;34mprogramming[00m
+    |   |   `-- report.pdf
+    |   `-- [01;34msecurity[00m
+    `-- [01;34mstenton[00m
+        |-- [01;34mgen_ed[00m
+        |-- [01;34mlib_arts[00m
+        |   |-- english.txt
+        |   `-- match.doc
+        `-- parking2
+
+Your current directory is stenton. Move to oxford using a relative-to-home pathname:
+
+You entered: cd ../oxford
+Please try again.
+
+Hint:
+No hints in this section
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[42;1H$  cd ../oxford                                                                                                    [42;16H[42;15H[42;14H[42;13H[42;12H[42;11H[42;12H[42;13H[42;14H[42;15H[42;16H[42;16H[42;1H$  cd ../oxfor [42;15H[42;1H$  cd ../oxfo [42;14H[42;1H$  cd ../oxf [42;13H[42;1H$  cd ../ox [42;12H[42;1H$  cd ../o [42;11H[42;1H$  cd ../ [42;10H[42;1H$  cd .. [42;9H[42;1H$  cd . [42;8H[42;1H$  cd  [42;7H[42;1H$  cd o [42;8H[42;1H$  cd ox [42;9H[42;1H$  cd oxf [42;10H[42;1H$  cd oxfo [42;11H[42;1H$  cd oxfor [42;12H[42;1H$  cd oxford [42;13H[H[JUNX510 Lab 1.6:  Practice Specifying Path Names
+[1;110HPage 11/15
+[2;1H-----------------------------------------------------------------------------------------------------------------------[01;34msample_dir1[00m
+`-- [01;34msample_dir[00m
+    |-- [01;34madmin[00m
+    |-- [01;34mcambridge[00m
+    |   |-- [01;34mcafeteria[00m
+    |   `-- [01;34mlibrary[00m
+    |-- [01;34mfaculty[00m
+    |-- [01;32mhistory.exe[00m
+    |-- [01;34mmarkham[00m
+    |   |-- annex
+    |   |-- annex2
+    |   |-- building1
+    |   `-- parking
+    |-- [01;34moxford[00m
+    |   |-- outline.doc
+    |   |-- [01;34mprogramming[00m
+    |   |   `-- report.pdf
+    |   `-- [01;34msecurity[00m
+    `-- [01;34mstenton[00m
+        |-- [01;34mgen_ed[00m
+        |-- [01;34mlib_arts[00m
+        |   |-- english.txt
+        |   `-- match.doc
+        `-- parking2
+
+Your current directory is stenton. Move to oxford using a relative-to-home pathname:
+
+You entered: cd oxford
+Please try again.
+
+Hint:
+No hints in this section
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[42;1H$  cd oxford                                                                                                       [42;13H[42;12H[42;11H[42;10H[42;9H[42;8H[42;7H[42;1H$  cd .oxford [42;8H[42;1H$  cd ..oxford [42;9H[42;1H$  cd ../oxford [42;10H[H[JUNX510 Lab 1.6:  Practice Specifying Path Names
+[1;110HPage 11/15
+[2;1H-----------------------------------------------------------------------------------------------------------------------[01;34msample_dir1[00m
+`-- [01;34msample_dir[00m
+    |-- [01;34madmin[00m
+    |-- [01;34mcambridge[00m
+    |   |-- [01;34mcafeteria[00m
+    |   `-- [01;34mlibrary[00m
+    |-- [01;34mfaculty[00m
+    |-- [01;32mhistory.exe[00m
+    |-- [01;34mmarkham[00m
+    |   |-- annex
+    |   |-- annex2
+    |   |-- building1
+    |   `-- parking
+    |-- [01;34moxford[00m
+    |   |-- outline.doc
+    |   |-- [01;34mprogramming[00m
+    |   |   `-- report.pdf
+    |   `-- [01;34msecurity[00m
+    `-- [01;34mstenton[00m
+        |-- [01;34mgen_ed[00m
+        |-- [01;34mlib_arts[00m
+        |   |-- english.txt
+        |   `-- match.doc
+        `-- parking2
+
+Your current directory is stenton. Move to oxford using a relative-to-home pathname:
+
+You entered: cd ../oxford
+Please try again.
+
+Hint:
+No hints in this section
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[42;1H$  cd ../oxford                                                                                                    [42;16H[42;15H[42;14H[42;13H[42;12H[42;12H[42;12H[42;1H$  cd ../oxDford [42;13H[42;12H[42;11H[42;10H[42;1H$  cd ..oxDford [42;9H[42;1H$  cd .oxDford [42;8H[42;1H$  cd oxDford [42;7H[42;1H$  cd ~oxDford [42;8H[42;1H$  cd ~/oxDford [42;9H[42;1H$  cd ~/soxDford [42;10H[42;1H$  cd ~/saoxDford [42;11H[42;1H$  cd ~/samoxDford [42;12H[42;1H$  cd ~/sampoxDford [42;13H[42;1H$  cd ~/samploxDford [42;14H[42;1H$  cd ~/sampleoxDford [42;15H[42;1H$  cd ~/sample_oxDford [42;16H[42;1H$  cd ~/sample_doxDford [42;17H[42;1H$  cd ~/sample_dioxDford [42;18H[42;1H$  cd ~/sample_diroxDford [42;19H[42;1H$  cd ~/sample_dir1oxDford [42;20H[42;1H$  cd ~/sample_dir1/oxDford [42;21H[42;1H$  cd ~/sample_dir1/soxDford [42;22H[42;1H$  cd ~/sample_dir1/saoxDford [42;23H[42;1H$  cd ~/sample_dir1/samoxDford [42;24H[42;1H$  cd ~/sample_dir1/sampoxDford [42;25H[42;1H$  cd ~/sample_dir1/samploxDford [42;26H[42;1H$  cd ~/sample_dir1/sampleoxDford [42;27H[42;1H$  cd ~/sample_dir1/sample_oxDford [42;28H[42;1H$  cd ~/sample_dir1/sample_doxDford [42;29H[42;1H$  cd ~/sample_dir1/sample_dioxDford [42;30H[42;1H$  cd ~/sample_dir1/sample_diroxDford [42;31H[42;1H$  cd ~/sample_dir1/sample_dir/oxDford [42;32H[H[JUNX510 Lab 1.6:  Practice Specifying Path Names
+[1;110HPage 11/15
+[2;1H-----------------------------------------------------------------------------------------------------------------------[01;34msample_dir1[00m
+`-- [01;34msample_dir[00m
+    |-- [01;34madmin[00m
+    |-- [01;34mcambridge[00m
+    |   |-- [01;34mcafeteria[00m
+    |   `-- [01;34mlibrary[00m
+    |-- [01;34mfaculty[00m
+    |-- [01;32mhistory.exe[00m
+    |-- [01;34mmarkham[00m
+    |   |-- annex
+    |   |-- annex2
+    |   |-- building1
+    |   `-- parking
+    |-- [01;34moxford[00m
+    |   |-- outline.doc
+    |   |-- [01;34mprogramming[00m
+    |   |   `-- report.pdf
+    |   `-- [01;34msecurity[00m
+    `-- [01;34mstenton[00m
+        |-- [01;34mgen_ed[00m
+        |-- [01;34mlib_arts[00m
+        |   |-- english.txt
+        |   `-- match.doc
+        `-- parking2
+
+Your current directory is stenton. Move to oxford using a relative-to-home pathname:
+
+You entered: cd ~/sample_dir1/sample_dir/oxDford
+Please try again.
+
+Hint:
+No hints in this section
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[42;1H$  cd ~/sample_dir1/sample_dir/oxDford                                                                             [42;39H[42;1H$  cd ~/sample_dir1/sample_dir/oxDford  [42;40H[42;1H$  cd ~/sample_dir1/sample_dir/oxDford   [42;41H[42;40H[42;39H[42;38H[42;37H[42;36H[42;35H[42;1H$  cd ~/sample_dir1/sample_dir/oxford   [42;34H[H[JUNX510 Lab 1.6:  Practice Specifying Path Names
+[1;110HPage 12/15
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+$  cd ~/sample_dir1/sample_dir/oxford  
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+                                                                                                                       [41;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 1.6:  Practice Specifying Path Names
+[1;110HPage 12/15
+[2;1H-----------------------------------------------------------------------------------------------------------------------[01;34msample_dir1[00m
+`-- [01;34msample_dir[00m
+    |-- [01;34madmin[00m
+    |-- [01;34mcambridge[00m
+    |   |-- [01;34mcafeteria[00m
+    |   `-- [01;34mlibrary[00m
+    |-- [01;34mfaculty[00m
+    |-- [01;32mhistory.exe[00m
+    |-- [01;34mmarkham[00m
+    |   |-- annex
+    |   |-- annex2
+    |   |-- building1
+    |   `-- parking
+    |-- [01;34moxford[00m
+    |   |-- outline.doc
+    |   |-- [01;34mprogramming[00m
+    |   |   `-- report.pdf
+    |   `-- [01;34msecurity[00m
+    `-- [01;34mstenton[00m
+        |-- [01;34mgen_ed[00m
+        |-- [01;34mlib_arts[00m
+        |   |-- english.txt
+        |   `-- match.doc
+        `-- parking2
+
+Your current directory is oxford. Make a copy of the file named outline.doc and place it into the sample_dir
+directory, using relative pathnames:
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[42;1H$  c [42;5H[42;1H$  cp [42;6H[42;1H$  cp  [42;7H[42;1H$  cp o [42;8H[42;1H$  cp ou [42;9H[42;1H$  cp out [42;10H[42;1H$  cp outl [42;11H[42;1H$  cp outli [42;12H[42;1H$  cp outlin [42;13H[42;1H$  cp outline [42;14H[42;1H$  cp outline. [42;15H[42;1H$  cp outline.c [42;16H[42;1H$  cp outline. [42;15H[42;1H$  cp outline.d [42;16H[42;1H$  cp outline.do [42;17H[42;1H$  cp outline.doc [42;18H[42;1H$  cp outline.doc  [42;19H[42;1H$  cp outline.doc   [42;20H[42;1H$  cp outline.doc  . [42;21H[42;1H$  cp outline.doc  .. [42;22H[42;1H$  cp outline.doc  ../ [42;23H[H[JUNX510 Lab 1.6:  Practice Specifying Path Names
+[1;110HPage 12/15
+[2;1H-----------------------------------------------------------------------------------------------------------------------[01;34msample_dir1[00m
+`-- [01;34msample_dir[00m
+    |-- [01;34madmin[00m
+    |-- [01;34mcambridge[00m
+    |   |-- [01;34mcafeteria[00m
+    |   `-- [01;34mlibrary[00m
+    |-- [01;34mfaculty[00m
+    |-- [01;32mhistory.exe[00m
+    |-- [01;34mmarkham[00m
+    |   |-- annex
+    |   |-- annex2
+    |   |-- building1
+    |   `-- parking
+    |-- [01;34moxford[00m
+    |   |-- outline.doc
+    |   |-- [01;34mprogramming[00m
+    |   |   `-- report.pdf
+    |   `-- [01;34msecurity[00m
+    `-- [01;34mstenton[00m
+        |-- [01;34mgen_ed[00m
+        |-- [01;34mlib_arts[00m
+        |   |-- english.txt
+        |   `-- match.doc
+        `-- parking2
+
+Your current directory is oxford. Make a copy of the file named outline.doc and place it into the sample_dir
+directory, using relative pathnames:
+
+You entered: cp outline.doc  ../
+Please try again.
+
+Hint:
+No hints in this section
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[42;1H$  cp outline.doc  ../                                                                                             [42;23H[42;1H$  cp outline.doc  .. [42;22H[H[JUNX510 Lab 1.6:  Practice Specifying Path Names
+[1;110HPage 13/15
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+$  cp outline.doc  ..
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+                                                                                                                       [41;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 1.6:  Practice Specifying Path Names
+[1;110HPage 13/15
+[2;1H-----------------------------------------------------------------------------------------------------------------------[01;34msample_dir1[00m
+`-- [01;34msample_dir[00m
+    |-- [01;34madmin[00m
+    |-- [01;34mcambridge[00m
+    |   |-- [01;34mcafeteria[00m
+    |   `-- [01;34mlibrary[00m
+    |-- [01;34mfaculty[00m
+    |-- [01;32mhistory.exe[00m
+    |-- [01;34mmarkham[00m
+    |   |-- annex
+    |   |-- annex2
+    |   |-- building1
+    |   `-- parking
+    |-- outline.doc
+    |-- [01;34moxford[00m
+    |   |-- outline.doc
+    |   |-- [01;34mprogramming[00m
+    |   |   `-- report.pdf
+    |   `-- [01;34msecurity[00m
+    `-- [01;34mstenton[00m
+        |-- [01;34mgen_ed[00m
+        |-- [01;34mlib_arts[00m
+        |   |-- english.txt
+        |   `-- match.doc
+        `-- parking2
+
+Your current directory is oxford. Display an 'ls -l' listing of the stenton directory, using an absolute
+pathname. Note that your home directory is /home/yliu421:
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[42;1H$  l [42;5H[42;1H$  ls [42;6H[42;1H$  ls  [42;7H[42;1H$  ls - [42;8H[42;1H$  ls -l [42;9H[42;1H$  ls -l  [42;10H[42;1H$  ls -l / [42;11H[42;1H$  ls -l /h [42;12H[42;1H$  ls -l /ho [42;13H[42;1H$  ls -l /hom [42;14H[42;1H$  ls -l /home [42;15H[42;1H$  ls -l /home/ [42;16H[42;1H$  ls -l /home/y [42;17H[42;1H$  ls -l /home/yl [42;18H[42;1H$  ls -l /home/yli [42;19H[42;1H$  ls -l /home/yliu [42;20H[42;1H$  ls -l /home/yliu4 [42;21H[42;1H$  ls -l /home/yliu42 [42;22H[42;1H$  ls -l /home/yliu421 [42;23H[42;1H$  ls -l /home/yliu421/ [42;24H[42;1H$  ls -l /home/yliu421/s [42;25H[42;1H$  ls -l /home/yliu421/sa [42;26H[42;1H$  ls -l /home/yliu421/sam [42;27H[42;1H$  ls -l /home/yliu421/samp [42;28H[42;1H$  ls -l /home/yliu421/sampl [42;29H[42;1H$  ls -l /home/yliu421/sample [42;30H[42;1H$  ls -l /home/yliu421/sample_ [42;31H[42;1H$  ls -l /home/yliu421/sample_d [42;32H[42;1H$  ls -l /home/yliu421/sample_di [42;33H[42;1H$  ls -l /home/yliu421/sample_dir [42;34H[42;1H$  ls -l /home/yliu421/sample_dir1 [42;35H[42;1H$  ls -l /home/yliu421/sample_dir1/ [42;36H[42;1H$  ls -l /home/yliu421/sample_dir1/s [42;37H[42;1H$  ls -l /home/yliu421/sample_dir1/sa [42;38H[42;1H$  ls -l /home/yliu421/sample_dir1/sam [42;39H[42;1H$  ls -l /home/yliu421/sample_dir1/samp [42;40H[42;1H$  ls -l /home/yliu421/sample_dir1/sampl [42;41H[42;1H$  ls -l /home/yliu421/sample_dir1/sample [42;42H[42;1H$  ls -l /home/yliu421/sample_dir1/sample_ [42;43H[42;1H$  ls -l /home/yliu421/sample_dir1/sample_d [42;44H[42;1H$  ls -l /home/yliu421/sample_dir1/sample_di [42;45H[42;1H$  ls -l /home/yliu421/sample_dir1/sample_dir [42;46H[42;1H$  ls -l /home/yliu421/sample_dir1/sample_dir/ [42;47H[42;1H$  ls -l /home/yliu421/sample_dir1/sample_dir/s [42;48H[42;1H$  ls -l /home/yliu421/sample_dir1/sample_dir/st [42;49H[42;1H$  ls -l /home/yliu421/sample_dir1/sample_dir/ste [42;50H[42;1H$  ls -l /home/yliu421/sample_dir1/sample_dir/sten [42;51H[42;1H$  ls -l /home/yliu421/sample_dir1/sample_dir/stent [42;52H[42;1H$  ls -l /home/yliu421/sample_dir1/sample_dir/stento [42;53H[42;1H$  ls -l /home/yliu421/sample_dir1/sample_dir/stenton [42;54H[H[JUNX510 Lab 1.6:  Practice Specifying Path Names
+[1;110HPage 14/15
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+$  ls -l /home/yliu421/sample_dir1/sample_dir/stenton
+total 0
+drwx------ 2 yliu421 users  6 May  9 14:52 gen_ed
+drwx------ 2 yliu421 users 40 May  9 14:52 lib_arts
+-rw------- 1 yliu421 users  0 May  9 14:52 parking2
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+                                                                                                                       [41;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 1.6:  Practice Specifying Path Names
+[1;110HPage 14/15
+[2;1H-----------------------------------------------------------------------------------------------------------------------[01;34msample_dir1[00m
+`-- [01;34msample_dir[00m
+    |-- [01;34madmin[00m
+    |-- [01;34mcambridge[00m
+    |   |-- [01;34mcafeteria[00m
+    |   `-- [01;34mlibrary[00m
+    |-- [01;34mfaculty[00m
+    |-- [01;32mhistory.exe[00m
+    |-- [01;34mmarkham[00m
+    |   |-- annex
+    |   |-- annex2
+    |   |-- building1
+    |   `-- parking
+    |-- outline.doc
+    |-- [01;34moxford[00m
+    |   |-- outline.doc
+    |   |-- [01;34mprogramming[00m
+    |   |   `-- report.pdf
+    |   `-- [01;34msecurity[00m
+    `-- [01;34mstenton[00m
+        |-- [01;34mgen_ed[00m
+        |-- [01;34mlib_arts[00m
+        |   |-- english.txt
+        |   `-- match.doc
+        `-- parking2
+
+Your current directory is oxford. Create a new empty regular file named dir_practice inside the library directory,
+using a relative pathname:
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[42;1H$  t [42;5H[42;1H$  to [42;6H[42;1H$  tou [42;7H[42;1H$  touc [42;8H[42;1H$  touch [42;9H[42;1H$  touch  [42;10H[42;1H$  touch . [42;11H[42;1H$  touch .. [42;12H[42;1H$  touch ../ [42;13H[42;1H$  touch ../s [42;14H[42;1H$  touch ../sm [42;15H[42;1H$  touch ../sma [42;16H[42;1H$  touch ../sm [42;15H[42;1H$  touch ../s [42;14H[42;1H$  touch ../sa [42;15H[42;1H$  touch ../sam [42;16H[42;1H$  touch ../samp [42;17H[42;1H$  touch ../sampl [42;18H[42;1H$  touch ../sample [42;19H[42;1H$  touch ../sample_ [42;20H[42;1H$  touch ../sample_d [42;21H[42;1H$  touch ../sample_di [42;22H[42;1H$  touch ../sample_dir [42;23H[42;1H$  touch ../sample_dir/ [42;24H[42;1H$  touch ../sample_dir [42;23H[42;1H$  touch ../sample_di [42;22H[42;1H$  touch ../sample_d [42;21H[42;1H$  touch ../sample_ [42;20H[42;1H$  touch ../sample [42;19H[42;1H$  touch ../sampl [42;18H[42;1H$  touch ../samp [42;17H[42;1H$  touch ../sam [42;16H[42;1H$  touch ../sa [42;15H[42;1H$  touch ../s [42;14H[42;1H$  touch ../ [42;13H[42;1H$  touch ../c [42;14H[42;1H$  touch ../ca [42;15H[42;1H$  touch ../cam [42;16H[42;1H$  touch ../camp [42;17H[42;1H$  touch ../cam [42;16H[42;1H$  touch ../camb [42;17H[42;1H$  touch ../cambr [42;18H[42;1H$  touch ../cambri [42;19H[42;1H$  touch ../cambrid [42;20H[42;1H$  touch ../cambridg [42;21H[42;1H$  touch ../cambridge [42;22H[42;1H$  touch ../cambridge/ [42;23H[42;1H$  touch ../cambridge// [42;24H[42;1H$  touch ../cambridge/ [42;23H[42;1H$  touch ../cambridge/l [42;24H[42;1H$  touch ../cambridge/li [42;25H[42;1H$  touch ../cambridge/lib [42;26H[42;1H$  touch ../cambridge/libr [42;27H[42;1H$  touch ../cambridge/libra [42;28H[42;1H$  touch ../cambridge/librar [42;29H[42;1H$  touch ../cambridge/library [42;30H[42;1H$  touch ../cambridge/library/ [42;31H[42;1H$  touch ../cambridge/library/d [42;32H[42;1H$  touch ../cambridge/library/di [42;33H[42;1H$  touch ../cambridge/library/dir [42;34H[42;1H$  touch ../cambridge/library/dir_ [42;35H[42;1H$  touch ../cambridge/library/dir_p [42;36H[42;1H$  touch ../cambridge/library/dir_pr [42;37H[42;1H$  touch ../cambridge/library/dir_pro [42;38H[42;1H$  touch ../cambridge/library/dir_pr [42;37H[42;1H$  touch ../cambridge/library/dir_pra [42;38H[42;1H$  touch ../cambridge/library/dir_prac [42;39H[42;1H$  touch ../cambridge/library/dir_pract [42;40H[42;1H$  touch ../cambridge/library/dir_practi [42;41H[42;1H$  touch ../cambridge/library/dir_practic [42;42H[42;1H$  touch ../cambridge/library/dir_practice [42;43H[H[JUNX510 Lab 1.6:  Practice Specifying Path Names
+[1;110HPage 15/15
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+$  touch ../cambridge/library/dir_practice
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+                                                                                                                       [41;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 1.6:  Practice Specifying Path Names
+[1;110HPage 15/15
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+Congratulations!
+
+You have successfully completed this section!
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 1:  Selection Menu
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 Introduction To Unix Commands - Completed[m
+2 Basic Unix Commands - Completed[m
+3 Directory Management - Completed[m
+4 Practice Commands To Create A Directory Structure - Completed[m
+5 Create A Directory Structure - Completed[m
+6 Practice Specifying Path Names - Completed[m
+7 [7mPermissions[m
+
+8 [7mSubmit UNX510 Lab 1[m
+
+The highlighted lines above indicate the incomplete parts of the Lab.
+There is a total possible mark of 3, with 0.5 marks deducted for each
+incomplete part. Late marks will be deducted at the rate of 0.3 marks (10%)
+per day for Labs submitted after midnight of May 19 2017.
+
+
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: 7
+[H[JUNX510 Lab 1.7:  Permissions
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 [7mFile Permissions[m
+2 [7mSetting Permissions[m
+3 [7mUsing umask To Limit Permissions On New Files[m
+4 [7mReview Exercise[m
+
+Note that the highlighted lines indicate the incomplete sections of
+this part of the Lab.
+
+The Review Exercise can only be done when the other sections have
+been completed.
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: 1
+[H[JUNX510 Lab 1.7:  File Permissions
+[1;110HPage 1/18
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+File Permissions
+
+Unix systems use a binary value to keep track of the file permissions (security settings) for each file.
+
+There are three communities of users, and three file permissions which may be turned ON or OFF for each community.
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 1.7:  File Permissions
+[1;110HPage 2/18
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+The communities are:
+
+   User (or 'u') - the file's owner.
+
+   Group (or 'g') - the file's group.
+
+   Other (or 'o') - all other users of the system.
+
+Memorize these communities and the order (u, g, o). Notice that they go from smallest (1 user) to medium-size
+(a group of users) to largest (all other users on the system).
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 1.7:  File Permissions
+[1;110HPage 3/18
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+In order to make the 'User' and 'Group' communities mean something, each file has to be owned by a particular user,
+and be placed into a particular group.
+
+By default, a file is owned by the person that created it, but this can be changed (using the 'chown' command).
+
+Every user of a Unix system is in a group. Files created by a user are in the same group as the user, but that
+can also be changed (using the 'chgrp' command).
+
+You can see your current user ID and group ID using the 'id' command.  You can see a file's owner and group using
+the 'ls -l' command.
+
+Take a look at your user and group IDs.
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  id  (or enter: 'm'-main menu):
+$  [?1h=[42;1H$  i [42;5H[42;1H$  id [42;6H[H[JUNX510 Lab 1.7:  File Permissions
+[1;110HPage 4/18
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+$  id
+uid=42742(yliu421) gid=500(users) groups=500(users)
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+                                                                                                                       [41;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 1.7:  File Permissions
+[1;110HPage 4/18
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+Now take a look at the owner and group of your home directory. This information is in the third and fourth column
+of detailed listings produced by 'ls -ld'.  Note that you are currently in your home directory.
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  ls -ld  (or enter: 'm'-main menu):
+$  [?1h=[42;1H$  l [42;5H[42;1H$  ls [42;6H[42;1H$  ls  [42;7H[42;1H$  ls - [42;8H[42;1H$  ls -l [42;9H[42;1H$  ls -ld [42;10H[H[JUNX510 Lab 1.7:  File Permissions
+[1;110HPage 5/18
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+$  ls -ld
+drwx--x--x 39 yliu421 users 4096 May  9 14:53 .
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+                                                                                                                       [41;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 1.7:  File Permissions
+[1;110HPage 5/18
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+Each of the communities has three separate permissions which may be turned on (granted) or turned off (denied).
+
+These permissions are:
+
+   Permission:      Read     Write    Execute
+   Letter:          r        w        x
+   Value:           4        2        1
+     
+Memorize the sequence (r, w, x) and values of these permissions.
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 1.7:  File Permissions
+[1;110HPage 6/18
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+Read permission means that a community may read a file. For directories, this means permission to list the
+filenames in the directory.
+
+Write permission means that a particular community may place information in a file or change information that is
+already in a file (delete, modify, overwrite).  In the case of a directory, this is permission to add, rename,
+or delete files listed in that directory.
+
+Execute permission permits a file to be run, if it is a program or script.  For directories, this permission is
+sometimes called Search or Passthrough, and it allows files in the directory to be accessed.
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 1.7:  File Permissions
+[1;110HPage 7/18
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+Symbolic Representation shown by "ls -l"
+
+Symbolic representation uses three sets of symbols, one per community, with three symbols in each set, one per
+permission. A symbolic representation of a permission takes 9 characters.
+
+The communities are given in u, g, o order, and the permissions are written in r, w, x order. If a permission is
+turned on, then the letter for that permission is shown, otherwise, a dash is used.
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 1.7:  File Permissions
+[1;110HPage 8/18
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+For example, the symbolic permission:
+
+   ---------
+
+...represents all permissions being turned OFF.
+
+This pattern:
+
+   rwxrwxrwx
+
+...means that all permissions are turned ON.
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 1.7:  File Permissions
+[1;110HPage 9/18
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+This pattern:
+
+   rw-r-----
+
+Shows that the User (first three characters) has read and write permission; users in the Group (middle three
+characters) have only read permission; and Others (last three characters) have no permission.
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 1.7:  File Permissions
+[1;110HPage 10/18
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+The detailed listings produced by 'ls -l' include the permissions of each file in the first field, with an extra
+character at the start which is used to represent the file type: '-' for a regular file, 'd' for a directory,
+and other symbols for other special file types.
+
+Take a look at the permissions of the files in your current directory.
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  ls -l  (or enter: 'm'-main menu):
+$  [?1h=[42;1H$  l [42;5H[42;1H$  ls [42;6H[42;1H$  ls  [42;7H[42;1H$  ls - [42;8H[42;1H$  ls -l [42;9H[H[JUNX510 Lab 1.7:  File Permissions
+[1;110HPage 11/18
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+$  ls -l
+total 628
+-rw-r--r--  1 yliu421 users  25863 Jun  3  2015 6vimtutor
+-rw-r--r--  1 yliu421 users  13957 May 13  2015 Acceptable-Use-Policy
+drwx------  2 yliu421 users     23 Feb 23  2016 Cplus
+drwx------  2 yliu421 users     58 Sep 13  2016 DCN455
+drwxr-xr-x  2 yliu421 users     94 May 13  2015 Desktop
+drwx------  2 yliu421 users     23 May 13  2015 Documents
+drwx------  3 yliu421 users     19 Sep 13  2016 INT422
+-rw-r--r--  1 yliu421 users    411 Sep  9  2016 Test1.class
+-rw-r--r--  1 yliu421 users    103 Sep  9  2016 Test1.java
+drwxr-xr-x  2 yliu421 users    108 Jun  3  2015 VI
+drwx------  2 yliu421 users     18 Aug 14  2015 a
+drwxr-xr-x  3 yliu421 users     15 Jun 19  2015 a2a
+drwxr-xr-x  3 yliu421 users     14 Jul 22  2015 a3_testdir
+-rw-r--r--  1 yliu421 users      0 Jun 19  2015 annex
+-rw-------  1 yliu421 users   1141 Jul 31  2015 awkExercise
+-rw-------  1 yliu421 users   1141 Aug  5  2015 awklog
+-rw-------  1 yliu421 users     71 Jul 31  2015 bill
+-rw-------  1 yliu421 users    121 Jul 31  2015 bill1
+-rw-------  1 yliu421 users    374 Jul 31  2015 bill2
+-rw-------  1 yliu421 users    472 Jul 31  2015 bill3
+-rw-------  1 yliu421 users    374 Jul 31  2015 billlll
+drwxr-xr-x  2 yliu421 users      6 May 13  2015 bin
+-rw-------  1 yliu421 users     22 Aug  7  2015 com_inv
+-rw-------  1 yliu421 users     18 Jul 31  2015 comp_inv
+-rw-------  1 yliu421 users     82 Jul 31  2015 def_var
+drwx------  5 yliu421 users     52 Jan 18 11:56 dsa555
+lrwxrwxrwx  1 yliu421 users     31 Feb 26  2016 g++11 -> /usr/local/gcc/gcc-cilk/bin/g++
+-rw-------  1 yliu421 users     80 Jul 31  2015 inven
+-rw-------  1 yliu421 users     66 Jul 31  2015 inven2
+drwxr-x--x  5 yliu421 users   4096 Aug 14  2015 ipc144
+drwx------  2 yliu421 users      6 Nov  4  2016 jac44
+drwx------  2 yliu421 users    107 Nov  4  2016 jac444-c
+drwx------  3 yliu421 users     17 May  9 14:09 lab1a
+-rw-r--r--  1 yliu421 users    395 Jun 16  2015 lab4.c
+drwxr-xr-x  2 yliu421 users     53 May 22  2015 linux_practices
+-rw-------  1 yliu421 users    176 Jul 31  2015 math
+-rw-------  1 yliu421 users     66 Jul 31  2015 math1
+-rwx------  1 yliu421 users   9920 Aug  4  2016 message_parse
+-rw-------  1 yliu421 users    381 Aug  4  2016 message_parse.cpp
+-rw-------  1 yliu421 users 125698 May  9 14:18 myHistory
+-------rwx  1 yliu421 users    207 Jun 19  2015 myscript
+lrwxrwxrwx  1 yliu421 users     27 Jul 10  2015 newjob1.txt -> /home/yliu421/work/job1.txt
+drwx------ 15 yliu421 users   4096 Dec  2  2015 oop244
+drwx------ 20 yliu421 users   4096 Apr 15  2016 oop345
+drwxr-xr-x  2 yliu421 users      6 Jul 24  2015 pdf
+-rw-r--r--  1 yliu421 users  23997 Jul 15  2015 phone_directory
+-rw-r--r--  1 yliu421 users 135838 Jul 15  2015 phonebook
+-rw-r--r--  1 yliu421 users  23997 Jul 15  2015 phonebook2
+-rw-r--r--  1 yliu421 users  23997 Jul 15  2015 phones
+-rw-r--r--  1 yliu421 users      0 Jul 22  2015 pp
+-rw-r--r--  1 yliu421 users      0 May 22  2015 prac.txt
+-rw-------  1 yliu421 users     18 Jul 31  2015 prn_pen
+drwx---r-x  3 yliu421 users     76 May 13  2015 public_html
+drwx------  2 yliu421 users     22 Feb  5  2016 regex
+-rw-r--r--  1 yliu421 users   1207 Jul 21  2015 regex.lab
+-rw-r--r--  1 yliu421 users   1181 Jul 17  2015 regex1.lab
+drwx------  3 yliu421 users     23 May  9 14:53 sample_dir1
+drwxr-xr-x  3 yliu421 users     23 Jul 16  2015 sample_dir2
+drwxr-xr-x  3 yliu421 users     38 May  9 09:55 scripts
+drwxr--r--  2 yliu421 users     28 Jun  8  2015 tem
+-rw-r--r--  1 yliu421 users   2277 Jul 15  2015 temp.txt
+-rw-r--r--  1 yliu421 users   2277 Jul 15  2015 temp1
+drwx------  2 yliu421 users     73 Aug  5  2015 testdir
+-rw-r--r--  1 yliu421 users   1273 Jun 16  2015 testlab4.c
+-rw-r--r--  1 yliu421 users     72 Jun 18  2015 text
+-rw-r--r--  1 yliu421 users  63558 Jul 31  2015 typescript
+drwxr-xr-x  4 yliu421 users   4096 Aug  5  2015 uli101
+-rw-------  1 yliu421 users    447 Aug 16  2015 unsorted
+drwx------  2 yliu421 users     56 May  9 14:03 unx510
+drwx------  2 yliu421 users    119 Jun 22  2015 vitutorials
+-rw-r--r--  1 yliu421 users  41239 Jun  2  2015 wk2practice.pdf
+drwxr-xr-x  4 yliu421 users   4096 Aug 16  2015 work
+-rw-r--r--  1 yliu421 users     50 May 29  2015 work1.txt
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+                                                                                                                       [41;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 1.7:  File Permissions
+[1;110HPage 11/18
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+If the permissions on a file were set so that everyone could read from or write to the file, how would that be
+represented symbolically (within the output of an 'ls -l' command)?
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+>  [?1h=[42;1H>  r [42;5H[42;1H>  rw [42;6H[42;1H>  rw- [42;7H[42;1H>  rw-r [42;8H[42;1H>  rw-rw [42;9H[42;1H>  rw-rw- [42;10H[42;1H>  rw-rw-r [42;11H[42;1H>  rw-rw-rw [42;12H[H[JUNX510 Lab 1.7:  File Permissions
+[1;110HPage 11/18
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+If the permissions on a file were set so that everyone could read from or write to the file, how would that be
+represented symbolically (within the output of an 'ls -l' command)?
+
+You entered: rw-rw-rw
+Please try again.
+
+Hint:
+The first 3 characters are right, now repeat them for each of the 3 communities.
+
+Hint:
+Start with 'rw-' for the first community.
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+>  [?1h=[42;1H>  rw-rw-rw                                                                                                        [42;12H[42;1H>  rw-rw-rw- [42;13H[H[JUNX510 Lab 1.7:  File Permissions
+[1;110HPage 12/18
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+Good. Try another one:
+
+Write the symbolic representation of a permission setting where the user could read, write, or execute the file;
+group members could read or execute only; and others could only execute the file.
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+>  [?1h=[42;1H>  r [42;5H[42;1H>  rw [42;6H[42;1H>  rwx [42;7H[42;1H>  rwxr [42;8H[42;1H>  rwxr- [42;9H[42;1H>  rwxr-x [42;10H[42;1H>  rwxr-x- [42;11H[42;1H>  rwxr-x-- [42;12H[42;1H>  rwxr-x--x [42;13H[H[JUNX510 Lab 1.7:  File Permissions
+[1;110HPage 13/18
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+Octal Notation
+
+The other way of representing permissions is to use Octal notation.
+
+Octal uses one digit per community, or three digits to represent the entire permissions setting.
+
+Remember that in Octal, each digit represents 3 bits. These 3 bits are the permissions (r, w, x) for a
+community. Therefore each digit is the sum of the permission values (4 for r, 2 for w, and 1 for x) for all of
+the permissions that are granted to each community.
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 1.7:  File Permissions
+[1;110HPage 14/18
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+For example, in the permission:
+
+   rwxr-x--x
+
+The first community, User, has been granted r (4) plus w (2) plus x (1) permission, so the first octal digit
+is 4+2+1=7.
+
+The second community, Group, has been granted r (4) plus x (1) permission, so the second octal digit is 4+1=5.
+
+The last community, Other, has been granted x (1) permission, so the last octal digit is 1.
+
+Putting this together, the octal representation of the permission above would be written as 751.
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 1.7:  File Permissions
+[1;110HPage 15/18
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+Here's another example: a file has '644' permission. This works out to:
+
+   User:  6 = 4 (r) + 2 (w) = rw-
+
+   Group: 4 = 4 (r)         = r--
+
+   Other: 4 = 4 (r)         = r--
+
+Therefore, 644 in octal notation is equivalent to 'rw-r--r--' in symbolic representation.
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 1.7:  File Permissions
+[1;110HPage 16/18
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+Your turn!
+
+What is the octal equivalent to this symbolic permission:
+
+   rwxrw-r--
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+>  [?1h=[42;1H>  7 [42;5H[42;1H>  76 [42;6H[42;1H>  764 [42;7H[H[JUNX510 Lab 1.7:  File Permissions
+[1;110HPage 17/18
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+Now try writing the symbolic representation for this octal permission:
+
+   0774
+
+(Note that the extra 0 in the front can be ignored. This octal digit is used for advanced permissions, including
+"set user ID", "set group ID",and the "sticky bit", which we will not cover in this Lab).
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+>  [?1h=[42;1H>  r [42;5H[42;1H>  rw [42;6H[42;1H>  rwx [42;7H[42;1H>  rwxr [42;8H[42;1H>  rwxrw [42;9H[42;1H>  rwxrwx [42;10H[42;1H>  rwxrwxr [42;11H[42;1H>  rwxrwxr- [42;12H[42;1H>  rwxrwxr-- [42;13H[H[JUNX510 Lab 1.7:  File Permissions
+[1;110HPage 18/18
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+Great!
+
+That completes the section on Representing Permissions.
+
+You will now be taken to the main menu. Proceed with Setting Permissions.
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 1.7:  Permissions
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 File Permissions - Completed[m
+2 [7mSetting Permissions[m
+3 [7mUsing umask To Limit Permissions On New Files[m
+4 [7mReview Exercise[m
+
+Note that the highlighted lines indicate the incomplete sections of
+this part of the Lab.
+
+The Review Exercise can only be done when the other sections have
+been completed.
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: 2
+[H[JUNX510 Lab 1.7:  Setting Permissions
+[1;110HPage 1/16
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+Setting Permissions
+
+Permissions are set using the 'chmod' (change mode) command. The syntax for this command is:
+
+   chmod permission file-list
+
+You can list the permission as an octal number, or by using a modified form of symbolic notation.
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 1.7:  Setting Permissions
+[1;110HPage 2/16
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+For example, to set file permission of 744 (rwxr--r--) on the file 'cows', you would use the command 'chmod 744 cows'.
+
+Let's experiment. Create an empty file called 'file1'.
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[42;1H$  t [42;5H[42;1H$  to [42;6H[42;1H$  tou [42;7H[42;1H$  touc [42;8H[42;1H$  touch [42;9H[42;1H$  touch  [42;10H[42;1H$  touch f [42;11H[42;1H$  touch fi [42;12H[42;1H$  touch fil [42;13H[42;1H$  touch file [42;14H[42;1H$  touch file1 [42;15H[H[JUNX510 Lab 1.7:  Setting Permissions
+[1;110HPage 3/16
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+$  touch file1
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+                                                                                                                       [41;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 1.7:  Setting Permissions
+[1;110HPage 3/16
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+Now set permissions of 761 on 'file1'.
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  chmod 761 file1  (or enter: 'm'-main menu):
+$  [?1h=[42;1H$  c [42;5H[42;1H$  ch [42;6H[42;1H$  chm [42;7H[42;1H$  chmo [42;8H[42;1H$  chmod [42;9H[42;1H$  chmod  [42;10H[42;1H$  chmod 7 [42;11H[42;1H$  chmod 76 [42;12H[42;1H$  chmod 761 [42;13H[42;1H$  chmod 761  [42;14H[42;1H$  chmod 761 f [42;15H[42;1H$  chmod 761 fi [42;16H[42;1H$  chmod 761 fil [42;17H[42;1H$  chmod 761 file [42;18H[42;1H$  chmod 761 file1 [42;19H[H[JUNX510 Lab 1.7:  Setting Permissions
+[1;110HPage 4/16
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+$  chmod 761 file1
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+                                                                                                                       [41;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 1.7:  Setting Permissions
+[1;110HPage 4/16
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+Now check the permissions on 'file1'.
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[42;1H$  l [42;5H[42;1H$  ls [42;6H[42;1H$  ls  [42;7H[42;1H$  ls - [42;8H[42;1H$  ls -  [42;9H[42;1H$  ls - l [42;10H[42;1H$  ls -  [42;9H[42;1H$  ls - [42;8H[42;1H$  ls -l [42;9H[42;1H$  ls -l  [42;10H[42;1H$  ls -l f [42;11H[42;1H$  ls -l fi [42;12H[42;1H$  ls -l fil [42;13H[42;1H$  ls -l file [42;14H[42;1H$  ls -l file1 [42;15H[H[JUNX510 Lab 1.7:  Setting Permissions
+[1;110HPage 5/16
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+$  ls -l file1
+-rwxrw---x 1 yliu421 users 0 May  9 15:10 file1
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+                                                                                                                       [41;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 1.7:  Setting Permissions
+[1;110HPage 5/16
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+Good. As you saw, the permissions were set to rwxrw---x (=761).
+
+Now try setting the permissions on 'file1' to 640 using octal notation.
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[42;1H$  c [42;5H[42;1H$  ch [42;6H[42;1H$  chm [42;7H[42;1H$  chmo [42;8H[42;1H$  chmod [42;9H[42;1H$  chmod  [42;10H[42;1H$  chmod 6 [42;11H[42;1H$  chmod 64 [42;12H[42;1H$  chmod 640 [42;13H[42;1H$  chmod 640  [42;14H[42;1H$  chmod 640 f [42;15H[42;1H$  chmod 640 fi [42;16H[42;1H$  chmod 640 fil [42;17H[42;1H$  chmod 640 file [42;18H[42;1H$  chmod 640 file1 [42;19H[H[JUNX510 Lab 1.7:  Setting Permissions
+[1;110HPage 6/16
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+$  chmod 640 file1
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+                                                                                                                       [41;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 1.7:  Setting Permissions
+[1;110HPage 6/16
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+Now check the permissions on 'file1' again.
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[42;1H$  l [42;5H[42;1H$  ls [42;6H[42;1H$  ls  [42;7H[42;1H$  ls - [42;8H[42;1H$  ls -l [42;9H[42;1H$  ls -l  [42;10H[42;1H$  ls -l f [42;11H[42;1H$  ls -l fi [42;12H[42;1H$  ls -l fil [42;13H[42;1H$  ls -l file [42;14H[42;1H$  ls -l file1 [42;15H[H[JUNX510 Lab 1.7:  Setting Permissions
+[1;110HPage 7/16
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+$  ls -l file1
+-rw-r----- 1 yliu421 users 0 May  9 15:10 file1
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+                                                                                                                       [41;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 1.7:  Setting Permissions
+[1;110HPage 7/16
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+Using chmod's Symbolic Mode
+
+chmod can also use a variation of symbolic representation. When you are using chmod in this way, the permissions
+are specified as:
+
+   - communities (u, g, o, or a for all)
+
+   - an operation (- to remove, + to add, = to set)
+
+   - permissions (r, w, or x)
+
+For example, to add read permission for Other for the file 'file1', you would write:
+
+   chmod o+r file1
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 1.7:  Setting Permissions
+[1;110HPage 8/16
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+Here are some more examples:
+
+To add read and write permission for everyone:
+
+       chmod ugo+rw file1
+    or chmod a+rw file1
+
+To remove read permission for the Group:
+
+       chmod g-r file1
+       
+To set the User permission to rw:
+
+       chmod u=rw file1
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 1.7:  Setting Permissions
+[1;110HPage 9/16
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+You can also combine several operations using commas:
+
+To add read permission for User and remove read for Group and Other:
+
+   chmod u+r,go-r file1
+
+To add read and execute permission for everyone and remove write permission for Other:
+
+   chmod a+rx,o-w file1
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 1.7:  Setting Permissions
+[1;110HPage 10/16
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+Notice that using this technique with + or - does not affect permissions that you do not mention. For example,
+if you use 'chmod g+r file1', then the permissions for User and Other are not affected, and the write and execute
+permissions for Group are not affected.
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 1.7:  Setting Permissions
+[1;110HPage 11/16
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+Use chmod's symbolic representation to add read permission for everyone to 'file1'.
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[42;1H$  c [42;5H[42;1H$  ch [42;6H[42;1H$  chm [42;7H[42;1H$  chmo [42;8H[42;1H$  chmod [42;9H[42;1H$  chmod  [42;10H[42;1H$  chmod a [42;11H[42;1H$  chmod a+ [42;12H[42;1H$  chmod a+r [42;13H[42;1H$  chmod a+r  [42;14H[42;1H$  chmod a+r f [42;15H[42;1H$  chmod a+r fi [42;16H[42;1H$  chmod a+r fil [42;17H[42;1H$  chmod a+r file [42;18H[42;1H$  chmod a+r file1 [42;19H[H[JUNX510 Lab 1.7:  Setting Permissions
+[1;110HPage 12/16
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+$  chmod a+r file1
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+                                                                                                                       [41;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 1.7:  Setting Permissions
+[1;110HPage 12/16
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+Now check the permissions on 'file1'.
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[42;1H$  l [42;5H[42;1H$  ls [42;6H[42;1H$  ls  [42;7H[42;1H$  ls - [42;8H[42;1H$  ls -l [42;9H[42;1H$  ls -l  [42;10H[42;1H$  ls -l f [42;11H[42;1H$  ls -l fi [42;12H[42;1H$  ls -l fil [42;13H[42;1H$  ls -l file [42;14H[42;1H$  ls -l file1 [42;15H[H[JUNX510 Lab 1.7:  Setting Permissions
+[1;110HPage 13/16
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+$  ls -l file1
+-rw-r--r-- 1 yliu421 users 0 May  9 15:10 file1
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+                                                                                                                       [41;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 1.7:  Setting Permissions
+[1;110HPage 13/16
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+Good. Now use chmod's symbolic representation to remove write permission for User from 'file1'.
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[42;1H$  c [42;5H[42;1H$  ch [42;6H[42;1H$  chm [42;7H[42;1H$  chmo [42;8H[42;1H$  chmod [42;9H[42;1H$  chmod  [42;10H[42;1H$  chmod u [42;11H[42;1H$  chmod u- [42;12H[42;1H$  chmod u-w [42;13H[42;1H$  chmod u-w  [42;14H[42;1H$  chmod u-w f [42;15H[42;1H$  chmod u-w fi [42;16H[42;1H$  chmod u-w fil [42;17H[42;1H$  chmod u-w file [42;18H[42;1H$  chmod u-w file1 [42;19H[H[JUNX510 Lab 1.7:  Setting Permissions
+[1;110HPage 14/16
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+$  chmod u-w file1
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+                                                                                                                       [41;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 1.7:  Setting Permissions
+[1;110HPage 14/16
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+Once again, check the permissions on 'file1'.
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[42;1H$  l [42;5H[42;1H$  ls [42;6H[42;1H$  ls  [42;7H[42;1H$  ls - [42;8H[42;1H$  ls -l [42;9H[42;1H$  ls -l  [42;10H[42;1H$  ls -l f [42;11H[42;1H$  ls -l fi [42;12H[42;1H$  ls -l fil [42;13H[42;1H$  ls -l file [42;14H[42;1H$  ls -l file1 [42;15H[H[JUNX510 Lab 1.7:  Setting Permissions
+[1;110HPage 15/16
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+$  ls -l file1
+-r--r--r-- 1 yliu421 users 0 May  9 15:10 file1
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+                                                                                                                       [41;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 1.7:  Setting Permissions
+[1;110HPage 15/16
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+Remember that 'x' means Passthrough permission on directories?  If passthrough permission is turned off, then
+the contents of the directory and subdirectories is effectively cut off.
+
+This provides a simple way to prevent other people from accessing the contents of your files: simply remove 'x'
+permission for Group and Other on your home directory (use '~' to represent your home directory).
+
+Enter a command to do this using symbolic notation (it won't be run).
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+>  [?1h=[42;1H>  c [42;5H[42;1H>  ch [42;6H[42;1H>  chm [42;7H[42;1H>  chmo [42;8H[42;1H>  chmod [42;9H[42;1H>  chmod  [42;10H[42;1H>  chmod g [42;11H[42;1H>  chmod go [42;12H[42;1H>  chmod go- [42;13H[42;1H>  chmod go-x [42;14H[42;1H>  chmod go-x  [42;15H[42;1H>  chmod go-x - [42;16H[42;1H>  chmod go-x  [42;15H[42;1H>  chmod go-x ~ [42;16H[H[JUNX510 Lab 1.7:  Setting Permissions
+[1;110HPage 16/16
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+Well done.
+
+Proceed to section 3, Using umask to Limit Permissions on New Files.
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 1.7:  Permissions
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 File Permissions - Completed[m
+2 Setting Permissions - Completed[m
+3 [7mUsing umask To Limit Permissions On New Files[m
+4 [7mReview Exercise[m
+
+Note that the highlighted lines indicate the incomplete sections of
+this part of the Lab.
+
+The Review Exercise can only be done when the other sections have
+been completed.
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: 3
+[H[JUNX510 Lab 1.7:  Using umask To Limit Permissions On New Files
+[1;110HPage 1/5
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+Using umask
+
+When a Unix program creates a file, it tells the kernel what permissions it wants on the new file. These permissions
+may be limited (restricted) by using a value called 'umask'.
+
+The umask value is set with the 'umask' command.
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 1.7:  Using umask To Limit Permissions On New Files
+[1;110HPage 2/5
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+The umask should be set to the permissions that you do NOT want to grant.
+
+For example, to prevent the system from setting write permission for group, and prevent it from setting ANY permission
+for other, you would use a umask of 027. Also note that umask only affects NEW files created, not existing files.
+
+Try the example now.
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  umask 027  (or enter: 'm'-main menu):
+$  [?1h=[42;1H$  u [42;5H[42;1H$  um [42;6H[42;1H$  uma [42;7H[42;1H$  umas [42;8H[42;1H$  umask [42;9H[42;1H$  umask  [42;10H[42;1H$  umask 0 [42;11H[42;1H$  umask 02 [42;12H[42;1H$  umask 027 [42;13H[H[JUNX510 Lab 1.7:  Using umask To Limit Permissions On New Files
+[1;110HPage 3/5
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+$  umask 027
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+                                                                                                                       [41;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 1.7:  Using umask To Limit Permissions On New Files
+[1;110HPage 3/5
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+Good.
+
+Now create the empty file 'testing'.
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[42;1H$  t [42;5H[42;1H$  tu [42;6H[42;1H$  tuc [42;7H[42;1H$  tuch [42;8H[42;1H$  tuch  [42;9H[42;1H$  tuch [42;8H[42;1H$  tuc [42;7H[42;1H$  tu [42;6H[42;1H$  t [42;5H[42;1H$   [42;4H[42;1H$  t [42;5H[42;1H$  to [42;6H[42;1H$  tou [42;7H[42;1H$  touc [42;8H[42;1H$  touch [42;9H[42;1H$  touch  [42;10H[42;1H$  touch t [42;11H[42;1H$  touch te [42;12H[42;1H$  touch tes [42;13H[42;1H$  touch test [42;14H[42;1H$  touch testi [42;15H[42;1H$  touch testin [42;16H[42;1H$  touch testing [42;17H[H[JUNX510 Lab 1.7:  Using umask To Limit Permissions On New Files
+[1;110HPage 4/5
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+$  touch testing
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+                                                                                                                       [41;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 1.7:  Using umask To Limit Permissions On New Files
+[1;110HPage 4/5
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+Now check the permissions on that file 'testing'.
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[42;1H$  l [42;5H[42;1H$  ls [42;6H[42;1H$  ls  [42;7H[42;1H$  ls - [42;8H[42;1H$  ls -l [42;9H[42;1H$  ls -l  [42;10H[42;1H$  ls -l t [42;11H[42;1H$  ls -l te [42;12H[42;1H$  ls -l tes [42;13H[42;1H$  ls -l test [42;14H[42;1H$  ls -l testi [42;15H[42;1H$  ls -l testin [42;16H[42;1H$  ls -l testing [42;17H[H[JUNX510 Lab 1.7:  Using umask To Limit Permissions On New Files
+[1;110HPage 5/5
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+$  ls -l testing
+-rw-r----- 1 yliu421 users 0 May  9 15:21 testing
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+                                                                                                                       [41;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 1.7:  Using umask To Limit Permissions On New Files
+[1;110HPage 5/5
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+Notice that the new file did not have write permission for Group, and had no permission for Other.
+
+When using an FTP client program, the files that you copy to your system are affected by the umask. When you copy
+from your FTP client to a server, the files are affected by the server program's umask, so it doesn't matter what
+umask setting you try to use.
+
+That concludes this section.
+
+Proceed to the Review!
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 1.7:  Permissions
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 File Permissions - Completed[m
+2 Setting Permissions - Completed[m
+3 Using umask To Limit Permissions On New Files - Completed[m
+4 [7mReview Exercise[m
+
+Note that the highlighted lines indicate the incomplete sections of
+this part of the Lab.
+
+The Review Exercise can only be done when the other sections have
+been completed.
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: 4
+[H[JUNX510 Lab 1.7:  Review Exercise
+[1;110HPage 1/7
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+Review Exercise
+
+The purpose of this section is to reinforce your skills with issuing UNIX commands covered in the previous sections.
+
+You will be asked to enter a single UNIX command for the following situations. If you are unable to successfully
+issue the UNIX command after several attempts, a hint will be provided.
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 1.7:  Review Exercise
+[1;110HPage 2/7
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+Question 1
+
+What is the symbolic representation, as displayed by the 'ls -l' command, for a permission setting for a file
+where the User can read, write, and execute; the Group can read; and the Other users can't do anything?
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+>  [?1h=[42;1H>  r [42;5H[42;1H>  rw [42;6H[42;1H>  rwx [42;7H[42;1H>  rwxr [42;8H[42;1H>  rwxr- [42;9H[42;1H>  rwxr-- [42;10H[42;1H>  rwxr--- [42;11H[42;1H>  rwxr---- [42;12H[42;1H>  rwxr----- [42;13H[H[JUNX510 Lab 1.7:  Review Exercise
+[1;110HPage 3/7
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+Question 2
+
+What is the octal permission number that represents 'rwxr-----'?
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+>  [?1h=[42;1H>  7 [42;5H[42;1H>  74 [42;6H[42;1H>  740 [42;7H[H[JUNX510 Lab 1.7:  Review Exercise
+[1;110HPage 4/7
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+Question 3
+
+What is the command to grant all permissions for everyone for the file 'foo' (using octal representation)?
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+>  [?1h=[42;1H>  c [42;5H[42;1H>  ch [42;6H[42;1H>  chm [42;7H[42;1H>  chmo [42;8H[42;1H>  chmod [42;9H[42;1H>  chmod  [42;10H[42;1H>  chmod a [42;11H[42;1H>  chmod a+ [42;12H[42;1H>  chmod a [42;11H[42;1H>  chmod  [42;10H[42;1H>  chmod [42;9H[42;1H>  chmod  [42;10H[42;1H>  chmod 7 [42;11H[42;1H>  chmod 77 [42;12H[42;1H>  chmod 777 [42;13H[42;1H>  chmod 777  [42;14H[42;1H>  chmod 777 f [42;15H[42;1H>  chmod 777 fo [42;16H[42;1H>  chmod 777 foo [42;17H[H[JUNX510 Lab 1.7:  Review Exercise
+[1;110HPage 5/7
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+Question 4
+
+What is the command to remove read permission for Group and Other on the file 'green'?
+
+(Hint: Since you don't want to change other permissions, use a symbolic permission instead of an octal permission).
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+>  [?1h=[42;1H>  c [42;5H[42;1H>  ch [42;6H[42;1H>  chm [42;7H[42;1H>  chmo [42;8H[42;1H>  chmod [42;9H[42;1H>  chmod  [42;10H[42;1H>  chmod g [42;11H[42;1H>  chmod go [42;12H[42;1H>  chmod go- [42;13H[42;1H>  chmod go-r [42;14H[42;1H>  chmod go-r  [42;15H[42;1H>  chmod go-r g [42;16H[42;1H>  chmod go-r gr [42;17H[42;1H>  chmod go-r gre [42;18H[42;1H>  chmod go-r gree [42;19H[42;1H>  chmod go-r green [42;20H[H[JUNX510 Lab 1.7:  Review Exercise
+[1;110HPage 6/7
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+Question 5
+
+What is the command to add passthrough permission for everyone for your home directory (~)?
+
+(Hint: Since you don't want to change other permissions, use a symbolic permission again instead of an octal
+permission).
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+>  [?1h=[42;1H>  c [42;5H[42;1H>  ch [42;6H[42;1H>  chm [42;7H[42;1H>  chmo [42;8H[42;1H>  chmod [42;9H[42;1H>  chmod  [42;10H[42;1H>  chmod a [42;11H[42;1H>  chmod a+ [42;12H[42;1H>  chmod a+x [42;13H[42;1H>  chmod a+x  [42;14H[42;1H>  chmod a+x ~ [42;15H[H[JUNX510 Lab 1.7:  Review Exercise
+[1;110HPage 7/7
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+Congratulations!
+
+You have successfully completed the Review Exercise!
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 1.7:  Permissions
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 File Permissions - Completed[m
+2 Setting Permissions - Completed[m
+3 Using umask To Limit Permissions On New Files - Completed[m
+4 Review Exercise - Completed[m
+
+Note that the highlighted lines indicate the incomplete sections of
+this part of the Lab.
+
+The Review Exercise can only be done when the other sections have
+been completed.
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: 
+[H[JUNX510 Lab 1.7:  Permissions
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 File Permissions - Completed[m
+2 Setting Permissions - Completed[m
+3 Using umask To Limit Permissions On New Files - Completed[m
+4 Review Exercise - Completed[m
+
+Note that the highlighted lines indicate the incomplete sections of
+this part of the Lab.
+
+The Review Exercise can only be done when the other sections have
+been completed.
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: q
+[H[JUNX510 Lab 1:  Selection Menu
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 Introduction To Unix Commands - Completed[m
+2 Basic Unix Commands - Completed[m
+3 Directory Management - Completed[m
+4 Practice Commands To Create A Directory Structure - Completed[m
+5 Create A Directory Structure - Completed[m
+6 Practice Specifying Path Names - Completed[m
+7 Permissions - Completed[m
+
+8 [7mSubmit UNX510 Lab 1[m
+
+The highlighted lines above indicate the incomplete parts of the Lab.
+There is a total possible mark of 3, with 0.5 marks deducted for each
+incomplete part. Late marks will be deducted at the rate of 0.3 marks (10%)
+per day for Labs submitted after midnight of May 19 2017.
+
+
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: 8
+[H[JUNX510 Lab 1.8:  Submit Lab 1
+[1;110HPage 1/2
+[2;1H-----------------------------------------------------------------------------------------------------------------------Total marks obtained is 3 out of 3.
+
+    Lab 1 Section 1 was completed
+    Lab 1 Section 2 was completed
+    Lab 1 Section 3 was completed
+    Lab 1 Section 4 was completed
+    Lab 1 Section 5 was completed
+    Lab 1 Section 6 was completed
+    Lab 1 Section 7 was completed
+
+Submission Confirmation
+
+You may now submit Lab 1 by typing 'Yes'.  If you do NOT want to submit at this time, type 'm' or 'M'.
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Enter  'Yes' to submit  (or enter: 'm'-main menu):
+>  [?1h=[42;1H>  Y [42;5H[42;1H>  Ye [42;6H[42;1H>  Yes [42;7H[H[JUNX510 Lab 1.8:  Submit Lab 1
+[1;110HPage 2/2
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+Congratulations!
+
+You have successfully submitted Lab 1!
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 1:  Selection Menu
+[2;1H-----------------------------------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 Introduction To Unix Commands - Completed[m
+2 Basic Unix Commands - Completed[m
+3 Directory Management - Completed[m
+4 Practice Commands To Create A Directory Structure - Completed[m
+5 Create A Directory Structure - Completed[m
+6 Practice Specifying Path Names - Completed[m
+7 Permissions - Completed[m
+
+8 Submit UNX510 Lab 1 - Completed - 3 out of 3[m
+
+The highlighted lines above indicate the incomplete parts of the Lab.
+There is a total possible mark of 3, with 0.5 marks deducted for each
+incomplete part. Late marks will be deducted at the rate of 0.3 marks (10%)
+per day for Labs submitted after midnight of May 19 2017.
+
+
+[40;1H-----------------------------------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: q
+[H[Jyliu421@matrix:~/unx510> exit
+exit
+
+Script done on Tue 09 May 2017 03:26:25 PM EDT

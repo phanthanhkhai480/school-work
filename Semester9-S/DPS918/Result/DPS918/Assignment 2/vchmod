@@ -1,0 +1,211 @@
+# Assignment 1
+# Course:                DPS918
+# Family Name:           Huang
+# Given Name:            Huiwen
+# Student Number:        034-485-128
+# Login name:            hhuang66
+# Professor:             Les Czegel
+# Due Date:              June 20, 2017
+#
+# I declare that the attached assignment is my own work in accordance with
+# Seneca Academic Policy.  No part of this assignment has been copied manually
+# or electronically from any other source (including web sites) or distributed
+# to other students.
+
+#!/bin/bash
+
+# show all terminal capabilities in stty-readable form 
+oldsettings=$(stty -g)
+
+#tput cols         - gives number of columns in current display
+columns=$(tput cols)
+
+#tput lines        - gives number of lines in current display
+lines=$(tput lines)
+
+#SIGINT			   - Interrupt from keyboard (Ctrl-c)
+#trap              - specifies action to take when a signal is detected 
+trap "stty $oldsettings; tput cup $lines 0; exit 0" SIGINT
+
+#Error Message
+#$# - contains number of parameters
+if [ $# != 1 ]; then
+   if [ $# = 0 ]; then
+      set .
+   elif [[ $# > 1 ]]; then
+      echo "Usage: vchmod [ filename ]" >&2
+      exit 1
+   fi
+else
+   #$1 - first argument
+   if [ ! -e $1 ]; then
+      echo "$1 is not a valid filename" >&2
+      exit 1
+   fi
+fi
+
+#default variable
+cursorLevel=0
+cursorCol=9
+#add root layer
+dirNAMES[0]="/"
+#readlink - display value of a symbolic link 
+#wc -c filename     - displays number of bytes in file
+count=$(readlink -f $1 | tr "/" " " | wc -w)
+numberLevels=$(( count ))
+
+# [0] [1]...[9] are dimensions, Number 2, 4, 6, 10, 12, 14, 18, 20, 22, 26 are cursor position
+col=([0]=2 [1]=4 [2]=6 [3]=10 [4]=12 [5]=14 [6]=18 [7]=20 [8]=22 [9]=26)
+
+#list current path, directory, file
+for (( i = 1; i <= count; i++ ))
+do
+   dirNAMES[i]=$(readlink -f $1 | tr "/" " " | awk '{print $'$i'}')
+done
+
+
+range=$(( lines - 4 ))
+cursorLevel=$numberLevels
+rows=$(( ( ( numberLevels + 1 ) * 2 ) + 2 ))
+if [[ $rows -gt $range ]]; then
+   exit 1
+fi
+
+#turns off canonical mode, doesn't require "enter" to read, 1 of characters accepted, time allowed between each character, in 10th's of seconds
+stty -icanon min 1 time 10
+
+#disables echoing of typed characters
+stty -echo
+clear
+
+#tput cup 0 2    - move cursor position to row 0 column 2
+tput cup 0 2
+
+#Output Format
+echo "Owner   Group   Other   Filename"
+tput cup 1 2
+echo "-----   -----   -----   --------" 
+tput cup 3 0
+pathName[0]=${dirNAMES[0]}
+permissionString=$(ls -ld ${pathName[0]} | cut -c1-10 | sed 's/./& /g' | sed 's/[^ ]* *[^ ] [^ ] [^ ]/&  /g')
+permissionString="$permissionString${dirNAMES[0]}"
+echo "$permissionString"
+for ((i = 1; i <= count; i++))
+do
+   if [ ! -d "${pathName[i-1]}${dirNAMES[i]}/" ]; then
+      pathName[i]="${pathName[i-1]}${dirNAMES[i]}"
+   else
+      pathName[i]="${pathName[i-1]}${dirNAMES[i]}/"
+   fi
+   permissionString=$(ls -ld ${pathName[i]} | cut -c1-10 | sed 's/./& /g' | sed 's/[^ ]* *[^ ] [^ ] [^ ]/&  /g')
+   permissionString="$permissionString${dirNAMES[i]}"
+   tput cup $(( ( ( i + 1 ) * 2 ) + 1 )) 0
+   echo "$permissionString" | cut -c1-$columns
+done
+#output Valid keys 
+tput cup $(( lines - 4 )) 0
+echo -n "Valid keys: k (up),  j (down): move between filenames"
+tput cup $(( lines - 3 )) 12
+echo -n "h (left), l (right): move between permissions"
+tput cup $(( lines - 2 )) 12
+echo -n "r, w, x, -: change permissions;  q: quit"
+tput cup $(( ( ( cursorLevel + 1 ) * 2 ) + 2 )) 2
+
+#list detail file information
+ls -ld ${pathName[cursorLevel]} | awk '{ print "Links: " $2 "  Owner: " $3 "  Group: " $4 "  Size: " $5 "  Modified: " $6 " " $7 " " $8}'
+key=
+while true
+do
+   if [ $cursorLevel = 0 ]; then
+      tput cup 3 ${col[$cursorCol]}
+   else
+      tput cup $(( ( ( cursorLevel + 1 ) * 2 ) + 1 )) ${col[$cursorCol]}
+   fi
+   tput cnorm # Display the cursor
+   key=$(dd bs=1 count=1 2> /dev/null)
+  case $key in 
+  k)  # line up: row number decrease
+      if [[ $cursorLevel != 0 ]]; then
+         tput civis #Hide the cursor
+         tput cup $(( ( ( cursorLevel + 1 ) * 2 ) + 2 )) 0
+         tput el
+         curLevels=$(( cursorLevel-- ))
+         if [ $cursorLevel = 0 ]; then
+            tput cup 4 2
+         else
+            tput cup $(( ( ( cursorLevel + 1 ) * 2 ) + 2 )) 2
+         fi
+         ls -ld ${pathName[cursorLevel]} | awk '{ print "Links: " $2 "  Owner: " $3 "  Group: " $4 "  Size: " $5 "  Modified: " $6 " " $7 " " $8 }'
+      fi;;
+   j) # line down: row number increase
+      if [[ $cursorLevel < $numberLevels ]]; then
+         tput civis #Hide the cursor
+         tput cup $(( ( ( cursorLevel + 1 ) * 2 ) + 2 )) 0
+         tput el
+         curLevels=$(( cursorLevel++ ))
+         tput cup $(( ( ( cursorLevel + 1 ) * 2 ) + 2 )) 2
+         ls -ld ${pathName[cursorLevel]} | awk '{ print "Links: " $2 "  Owner: " $3 "  Group: " $4 "  Size: " $5 "  Modified: " $6 " " $7 " " $8 }'
+      fi;;
+   h) # cursor move to left: colume number decrease
+      if (( "$cursorCol" > 0 )); then
+         curCols=$(( cursorCol-- ))
+      fi;;
+   l) # cursor move to right: colume number increase
+      if (( "$cursorCol" < 9 )); then
+         curCols=$(( cursorCol++ ))
+      fi;;
+    r)# change permissions to read 
+      case $cursorCol in
+         0) chmod u+r ${pathName[cursorLevel]} 2> /dev/null;;
+         3) chmod g+r ${pathName[cursorLevel]} 2> /dev/null;;
+         6) chmod o+r ${pathName[cursorLevel]} 2> /dev/null;;
+      esac
+      permissionString=$(ls -ld ${pathName[$cursorLevel]} | cut -c1-10 | sed 's/./& /g' | sed 's/[^ ]* *[^ ] [^ ] [^ ]/&  /g')
+      permissionString="$permissionString${dirNAMES[$cursorLevel]}"
+      tput cup $(( ( ( cursorLevel +1 ) * 2 ) + 1 )) 0
+      echo "$permissionString" | cut -c1-$columns ;;
+   w)# change permissions to write 
+      case $cursorCol in
+         1) chmod u+w ${pathName[cursorLevel]} 2> /dev/null;;
+         4) chmod g+w ${pathName[cursorLevel]} 2> /dev/null;;
+         7) chmod o+w ${pathName[cursorLevel]} 2> /dev/null;;
+      esac
+      permissionString=$(ls -ld ${pathName[$cursorLevel]} | cut -c1-10 | sed 's/./& /g' | sed 's/[^ ]* *[^ ] [^ ] [^ ]/&  /g')
+      permissionString="$permissionString${dirNAMES[$cursorLevel]}"
+      tput cup $(( ( ( cursorLevel + 1 ) * 2 ) + 1 )) 0
+      echo "$permissionString" | cut -c1-$columns ;;
+   x)# change permissions to execute   
+      case $cursorCol in
+         2) chmod u+x ${pathName[cursorLevel]} 2> /dev/null;;
+         5) chmod g+x ${pathName[cursorLevel]} 2> /dev/null;;
+         8) chmod o+x ${pathName[cursorLevel]} 2> /dev/null;;
+      esac
+      permissionString=$(ls -ld ${pathName[$cursorLevel]} | cut -c1-10 | sed 's/./& /g' | sed 's/[^ ]* *[^ ] [^ ] [^ ]/&  /g')
+      permissionString="$permissionString${dirNAMES[$cursorLevel]}"
+      tput cup $(( ( ( cursorLevel + 1 ) * 2 ) + 1 )) 0
+      echo "$permissionString" | cut -c1-$columns ;;
+   -)# set no permission 
+      case $cursorCol in
+         0) chmod u-r ${pathName[cursorLevel]} 2> /dev/null;;
+         1) chmod u-w ${pathName[cursorLevel]} 2> /dev/null;;
+         2) chmod u-x ${pathName[cursorLevel]} 2> /dev/null;;
+         3) chmod g-r ${pathName[cursorLevel]} 2> /dev/null;;
+         4) chmod g-w ${pathName[cursorLevel]} 2> /dev/null;;
+         5) chmod g-x ${pathName[cursorLevel]} 2> /dev/null;;
+         6) chmod o-r ${pathName[cursorLevel]} 2> /dev/null;;
+         7) chmod o-w ${pathName[cursorLevel]} 2> /dev/null;;
+         8) chmod o-x ${pathName[cursorLevel]} 2> /dev/null;;
+      esac
+      permissionString=$(ls -ld ${pathName[$cursorLevel]} | cut -c1-10 | sed 's/./& /g' | sed 's/[^ ]* *[^ ] [^ ] [^ ]/&  /g')
+      permissionString="$permissionString${dirNAMES[$cursorLevel]}"
+      tput cup $(( ( ( cursorLevel + 1 ) * 2 ) + 1 )) 0
+      echo "$permissionString" | cut -c1-$columns ;;
+   q)#quit program
+	 tput cnorm # Display the cursor
+   	 stty $oldsettings
+	 tput cup $lines 0
+	 exit 0;;
+ esac	 
+done
+
+fi

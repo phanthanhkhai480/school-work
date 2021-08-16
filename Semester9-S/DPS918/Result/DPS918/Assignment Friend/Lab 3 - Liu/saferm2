@@ -1,0 +1,27 @@
+#!/bin/bash
+
+if [[ $# != 1 ]]
+then
+   echo "Usage:  saferm  -1  (or a filename)" >&2
+   exit 1
+else
+   ls -a ~ | grep "\.saferm" > /dev/null
+   if [[ $? != 0 ]]
+   then
+      mkdir ~/.saferm
+   fi
+
+   if [[ $1 = "-l" ]]
+   then
+      ls -al ~/.saferm
+   else
+      ls $1 > /dev/null 2>&1 
+      if [[ $? != 0 ]]
+      then
+	 echo "Filename '$1' does not exist" >&2
+	 exit 2
+      else
+	 mv $1 ~/.saferm
+      fi
+   fi
+fi

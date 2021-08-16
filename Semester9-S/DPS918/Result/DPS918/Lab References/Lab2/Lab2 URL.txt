@@ -1,0 +1,6 @@
+Lab 2 reference
+
+https://cs.senecac.on.ca/~david.ward/unx122/notes/Lab7_Summary_023.html
+https://www.coursehero.com/file/p7gu30p/The-symbolic-link-cars3-DOES-NOT-point-to-the-inode-that-cars-is-pointing-to/
+https://www.coursehero.com/file/pf8662/Display-all-the-users-logged-into-the-system-Answer-who-7-Your-current/
+http://seneca.forummotions.com/t7-lab-7-unix

@@ -1,0 +1,64 @@
+	
+	stty                     - show an abbreviated list of terminal capabilities
+	stty -a                  - show all terminal capabilities
+	stty -g                  - show all terminal capabilities in stty-readable form
+								can be used to reset terminal characteristics
+	stty -echo               - disables echoing of typed characters
+	stty -icanon min nnn     - turns off canonical mode, doesn't require "enter" to read
+								"nnn" indicates number of characters accepted
+	stty -icrnl              - disables carriage-return to newline conversion
+	stty echo icanon icrnl   - enables these capabilities
+	
+	select ITEM in [LIST}
+	do ... done
+	
+	Signal     Value     Description
+	SIGHUP        1      Hangup detected on controlling terminal 
+							or death of controlling process
+	SIGINT        2      Interrupt from keyboard (Ctrl-c)
+	SIGQUIT       3      Quit from keyboard (Ctrl-\)
+	SIGALRM      14      Timer signal from alarm
+	SIGTERM      15      Termination signal ("kill" default)
+	SIGUSR1              User-defined signal 1
+	SIGUSR2              User-defined signal 2
+	EXIT                 Process exit detected
+	WINCH                Window size changed
+	**use trap to specify the Signal**
+	trap 'rm -f /tmp/*$$*; exit' SIGINT
+	trap “You tried to Stop Me!” 2
+	
+	array=(value1,...) or declare -a array(value1,...)
+	echo ${array[0]}/${array:0} to display first array element
+	echo ${array[*]}/${array[@]} to display all array element
+	read -a array				- read input to create array
+	${array[@]}					- display all element in array
+	${#array}					- display number of element in array
+	echo ${array[@]:1} 			- display everything except 1
+	echo ${array[@]:1:4} 		- display everything from 1 to 4
+	echo ${array[@]/a/A} 		- replace every a letter with A
+	for i in "${array[@]}"	do ... done 
+	array=([abc]=xyz,...) to create associative array
+	echo "${!assArray2[@]}" to display value in bracket
+	echo "${assArray2[@]}" to display value the bracket hold
+	
+	while getopts ":t:" opt; do
+		case ${opt} in
+		t )		target=$OPTARG	;;
+		\? )	echo "Invalid option: $OPTARG" 1>&2	;;
+		: )		echo "Invalid option: $OPTARG requires an argument"	1>&2	;;
+		esac
+	done
+	shift $((OPTIND -1))
+	
+	use mkfifo to create a namepipe
+	a named-pipe create one process for reading and one process for writing
+	
+	1st process created, give read and write permission to everyone
+	then it reads from the pipe and wait for the 2nd process to write into it
+	when 2nd process writing to the pipe, 1st process can view it
+	when 1st process trying to writng something in, the data that 2nd process
+	write previously will be gone. use rm command to delete the pipe
+	Check Client-Server Applications example (Week10)
+	
+	
+	

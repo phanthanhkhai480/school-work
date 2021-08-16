@@ -1,0 +1,40 @@
+Lecture 2
+
+hhuang66@matrix:~> vi .bash_profile
+PATH=$PATH:~/scripts
+
+hhuang66@matrix:~> exit
+logout
+
+hhuang66@matrix:~> mkdir scripts
+hhuang66@matrix:~> echo $PATH
+/home/uli101/bin:.:/usr/lib/mpi/gcc/openmpi/bin:/home/hhuang66/bin:/usr/local/bin:/usr/bin:/bin:/usr/bin/X11:/usr/X11R6/bin:/usr/games:/usr/local/ant/bin:/usr/java/jdk/bin:/usr/lib/mit/bin:/usr/lib/mit/sbin:/opt/oracle12c/instantclient_12_1:/opt/oracle12c/instantclient_12_1:/home/hhuang66/scripts
+
+hhuang66@matrix:~> mkdir test
+hhuang66@matrix:~> cd test
+hhuang66@matrix:~/test> clear
+hhuang66@matrix:~/test> vi script1
+echo Hello world
+~
+
+hhuang66@matrix:~/test> chmod u+x script1
+hhuang66@matrix:~/test> script1
+Hello world
+hhuang66@matrix:~/test> cd
+hhuang66@matrix:~> script1
+If 'script1' is not a typo you can use command-not-found to lookup the package that contains it, like this:
+    cnf script1
+hhuang66@matrix:~> cp test/script1 scripts
+hhuang66@matrix:~> ls scripts
+script1
+hhuang66@matrix:~> script1
+Hello world
+hhuang66@matrix:~> cd /etc
+hhuang66@matrix:/etc> script1
+Hello world
+hhuang66@matrix:/etc> cd -
+/home/hhuang66
+hhuang66@matrix:~> echo $PATH
+/home/uli101/bin:.:/usr/lib/mpi/gcc/openmpi/bin:/home/hhuang66/bin:/usr/local/bin:/usr/bin:/bin:/usr/bin/X11:/usr/X11R6/bin:/usr/games:/usr/local/ant/bin:/usr/java/jdk/bin:/usr/lib/mit/bin:/usr/lib/mit/sbin:/opt/oracle12c/instantclient_12_1:/opt/oracle12c/instantclient_12_1:/home/hhuang66/scripts
+hhuang66@matrix:~> 
+

@@ -1,0 +1,1894 @@
+Script started on Mon 22 May 2017 09:15:48 PM EDT
+yliu421@matrix:~/unx510/lab2> l[K~unx510/lab2
+[H[JUNX510 Lab 2:  Notes
+[2;1H--------------------------------------------------------------------------------
+
+Some important notes on this Lab:
+
+(1) You do NOT have to do this whole Lab in one sitting!  Any completed
+sections will be tracked.
+
+(2) You may abort the Lab at any time by pressing Ctrl-c but you may lose
+any work done on an incomplete section.
+
+(3) Instructions for each page will be displayed at the bottom of the screen.
+
+(4) The answers expected in this Lab are derived from the Lab itself
+and the course notes. The course notes should be used as a reference, if
+required. Using Google or another search engine may provide answers that
+are not accepted by the Lab.
+
+(5) This Lab is maintained by Les Czegel. Please try to resolve any problems
+with your instructor who will determine if Les should be contacted.
+[23;1H--------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2:  Selection Menu
+[2;1H--------------------------------------------------------------------------------
+
+Available selections:
+
+1 Redirection And Pipes - Completed[m
+2 Linking Files And Directories - Completed[m
+3 Command Summary - Completed[m
+4 Linux Processes - Completed[m
+5 Regular Expressions Using grep - Completed[m
+6 [7msed And awk[m
+7 [7mInteractive Shell Environment[m
+
+8 [7mSubmit UNX510 Lab 2[m
+
+The highlighted lines above indicate the incomplete parts of the Lab.
+There is a total possible mark of 3, with 0.5 marks deducted for each
+incomplete part. Late marks will be deducted at the rate of 0.3 marks (10%)
+per day for Labs submitted after midnight of May 26 2017.
+
+
+[23;1H--------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: 6
+[H[JUNX510 Lab 2.6:  sed And awk
+[2;1H--------------------------------------------------------------------------------
+
+Available selections:
+
+1 Using sed - Completed[m
+2 Using awk - Completed[m
+3 [7mReview Exercise[m
+
+Note that the highlighted lines indicate the incomplete sections of
+this part of the Lab.
+
+The Review Exercise can only be done when the other sections have
+been completed.
+[23;1H--------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: 3
+[H[JUNX510 Lab 2.6:  Review
+[1;71HPage 1/7
+[2;1H--------------------------------------------------------------------------------
+
+Review Exercise
+
+The purpose of this section is to reinforce your skills with issuing UNIX
+commands covered in the previous sections.
+
+You will be asked to enter a single UNIX command for the following situations.
+[23;1H--------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.6:  Review
+[1;71HPage 2/7
+[2;1H--------------------------------------------------------------------------------
+
+The data file for the review questions, named "inventory", looks like this:
+
+Strawberry Jam,300,4
+Raspberry Jam,1216,7
+Blueberry Jam,96,195
+Strawberry Compote,49,621
+Raspberry Compote,1937,624
+Blueberry compote,200,625
+Frozen Strawberries,130,1941
+Straw Hats,16,2047
+
+The first field is the product name, the second field is the quantity on hand,
+and the third field is the product code. The fields are separated by commas.
+
+In each of the following questions, write a command using "sed" or
+"awk". The data file in all cases is named "inventory".
+[23;1H--------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.6:  Review
+[1;71HPage 3/7
+[2;1H--------------------------------------------------------------------------------
+
+Question 1
+
+Display only the fifth line in the file, using sed.
+
+Remember that the data file is named "inventory".
+[23;1H--------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[25;1H$  s [25;5H[25;1H$  se [25;6H[25;1H$  sed [25;7H[25;1H$  sed  [25;8H[25;1H$  sed ' [25;9H[25;1H$  sed '5 [25;10H[25;1H$  sed '5  [25;11H[25;1H$  sed '5 p [25;12H[25;1H$  sed '5 p' [25;13H[25;1H$  sed '5 p'  [25;14H[25;1H$  sed '5 p' i [25;15H[25;1H$  sed '5 p' in [25;16H[25;1H$  sed '5 p' inv [25;17H[25;1H$  sed '5 p' inve [25;18H[25;1H$  sed '5 p' inven [25;19H[25;1H$  sed '5 p' invent [25;20H[25;1H$  sed '5 p' invento [25;21H[25;1H$  sed '5 p' inventor [25;22H[25;1H$  sed '5 p' inventory [25;23H[H[JUNX510 Lab 2.6:  Review
+[1;71HPage 3/7
+[2;1H--------------------------------------------------------------------------------
+
+Question 1
+
+Display only the fifth line in the file, using sed.
+
+Remember that the data file is named "inventory".
+
+You entered: sed '5 p' inventory
+Please try again.
+[23;1H--------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[25;1H$  sed '5 p' inventory                                                      [25;23H[25;22H[25;21H[25;20H[25;19H[25;18H[25;17H[25;16H[25;15H[25;14H[25;13H[25;12H[25;11H[25;10H[25;9H[25;8H[25;1H$  sed -'5 p' inventory [25;9H[25;1H$  sed -n'5 p' inventory [25;10H[25;1H$  sed -n '5 p' inventory [25;11H[H[JUNX510 Lab 2.6:  Review
+[1;71HPage 4/7
+[2;1H--------------------------------------------------------------------------------
+$  sed -n '5 p' inventory
+Raspberry Compote,1937,624
+[23;1H--------------------------------------------------------------------------------
+                                                                                [24;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 2.6:  Review
+[1;71HPage 4/7
+[2;1H--------------------------------------------------------------------------------
+
+Question 2
+
+Display all of the lines in the file, changing the characters "Jam" to
+"Marmalade", using sed.
+
+Remember that the data file is named "inventory".
+[23;1H--------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[25;1H$  s [25;5H[25;1H$  se [25;6H[25;1H$  sed [25;7H[25;1H$  sed  [25;8H[25;1H$  sed ' [25;9H[25;1H$  sed 's [25;10H[25;1H$  sed 's/ [25;11H[25;1H$  sed 's/J [25;12H[25;1H$  sed 's/Ja [25;13H[25;1H$  sed 's/Jam [25;14H[25;1H$  sed 's/Jam/ [25;15H[25;1H$  sed 's/Jam/M [25;16H[25;1H$  sed 's/Jam/Ma [25;17H[25;1H$  sed 's/Jam/Mar [25;18H[25;1H$  sed 's/Jam/Marm [25;19H[25;1H$  sed 's/Jam/Marma [25;20H[25;1H$  sed 's/Jam/Marmal [25;21H[25;1H$  sed 's/Jam/Marmala [25;22H[25;1H$  sed 's/Jam/Marmalad [25;23H[25;1H$  sed 's/Jam/Marmalade [25;24H[25;1H$  sed 's/Jam/Marmalade/ [25;25H[25;1H$  sed 's/Jam/Marmalade/g [25;26H[25;1H$  sed 's/Jam/Marmalade/gm [25;27H[25;1H$  sed 's/Jam/Marmalade/g [25;26H[25;1H$  sed 's/Jam/Marmalade/ [25;25H[25;1H$  sed 's/Jam/Marmalade/g [25;26H[25;1H$  sed 's/Jam/Marmalade/g  [25;27H[25;1H$  sed 's/Jam/Marmalade/g i [25;28H[25;1H$  sed 's/Jam/Marmalade/g in [25;29H[25;1H$  sed 's/Jam/Marmalade/g i [25;28H[25;1H$  sed 's/Jam/Marmalade/g  [25;27H[25;1H$  sed 's/Jam/Marmalade/g [25;26H[25;1H$  sed 's/Jam/Marmalade/g' [25;27H[25;1H$  sed 's/Jam/Marmalade/g'  [25;28H[25;1H$  sed 's/Jam/Marmalade/g' i [25;29H[25;1H$  sed 's/Jam/Marmalade/g' in [25;30H[25;1H$  sed 's/Jam/Marmalade/g' inv [25;31H[25;1H$  sed 's/Jam/Marmalade/g' inve [25;32H[25;1H$  sed 's/Jam/Marmalade/g' inven [25;33H[25;1H$  sed 's/Jam/Marmalade/g' invent [25;34H[25;1H$  sed 's/Jam/Marmalade/g' invento [25;35H[25;1H$  sed 's/Jam/Marmalade/g' inventor [25;36H[25;1H$  sed 's/Jam/Marmalade/g' inventory [25;37H[H[JUNX510 Lab 2.6:  Review
+[1;71HPage 5/7
+[2;1H--------------------------------------------------------------------------------
+$  sed 's/Jam/Marmalade/g' inventory
+Strawberry Marmalade,300,4
+Raspberry Marmalade,1216,7
+Blueberry Marmalade,96,195
+Strawberry Compote,49,621
+Raspberry Compote,1937,624
+Blueberry compote,200,625
+Frozen Strawberries,130,941
+Straw Hats,16,2047
+[23;1H--------------------------------------------------------------------------------
+                                                                                [24;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 2.6:  Review
+[1;71HPage 5/7
+[2;1H--------------------------------------------------------------------------------
+
+Question 3
+
+Display all of the lines in the file showing only the quantity and product
+name, in that order and separated by a space, using awk. Product name is
+the first field, and quantity is the second field.
+
+Remember that the data file is named "inventory".
+[23;1H--------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[25;1H$  a [25;5H[25;1H$  aw [25;6H[25;1H$  awk [25;7H[25;1H$  awk  [25;8H[25;1H$  awk ' [25;9H[25;1H$  awk 'B [25;10H[25;1H$  awk 'BE [25;11H[25;1H$  awk 'BEG [25;12H[25;1H$  awk 'BEGI [25;13H[25;1H$  awk 'BEGIN [25;14H[25;1H$  awk 'BEGIN  [25;15H[25;1H$  awk 'BEGIN { [25;16H[25;1H$  awk 'BEGIN {I [25;17H[25;1H$  awk 'BEGIN {IF [25;18H[25;1H$  awk 'BEGIN {IFS [25;19H[25;1H$  awk 'BEGIN {IFS  [25;20H[25;19H[25;18H[25;17H[25;16H[25;1H$  awk 'BEGIN { IFS  [25;17H[25;18H[25;19H[25;20H[25;1H$  awk 'BEGIN { IFS=  [25;21H[25;1H$  awk 'BEGIN { IFS="  [25;22H[25;1H$  awk 'BEGIN { IFS=",  [25;23H[25;1H$  awk 'BEGIN { IFS=","  [25;24H[25;1H$  awk 'BEGIN { IFS=","}  [25;25H[25;1H$  awk 'BEGIN { IFS=","}   [25;26H[25;1H$  awk 'BEGIN { IFS=","} {  [25;27H[25;1H$  awk 'BEGIN { IFS=","} {a  [25;28H[25;1H$  awk 'BEGIN { IFS=","} {  [25;27H[25;1H$  awk 'BEGIN { IFS=","} {p  [25;28H[25;1H$  awk 'BEGIN { IFS=","} {pr  [25;29H[25;1H$  awk 'BEGIN { IFS=","} {pri  [25;30H[25;1H$  awk 'BEGIN { IFS=","} {prin  [25;31H[25;1H$  awk 'BEGIN { IFS=","} {pring  [25;32H[25;1H$  awk 'BEGIN { IFS=","} {prin  [25;31H[25;1H$  awk 'BEGIN { IFS=","} {print  [25;32H[25;1H$  awk 'BEGIN { IFS=","} {print   [25;33H[25;1H$  awk 'BEGIN { IFS=","} {print $  [25;34H[25;1H$  awk 'BEGIN { IFS=","} {print $$  [25;35H[25;1H$  awk 'BEGIN { IFS=","} {print $  [25;34H[25;1H$  awk 'BEGIN { IFS=","} {print $2  [25;35H[25;1H$  awk 'BEGIN { IFS=","} {print $2,  [25;36H[25;1H$  awk 'BEGIN { IFS=","} {print $2,$  [25;37H[25;1H$  awk 'BEGIN { IFS=","} {print $2,$1  [25;38H[25;1H$  awk 'BEGIN { IFS=","} {print $2,$1}  [25;39H[H[JUNX510 Lab 2.6:  Review
+[1;71HPage 5/7
+[2;1H--------------------------------------------------------------------------------
+
+Question 3
+
+Display all of the lines in the file showing only the quantity and product
+name, in that order and separated by a space, using awk. Product name is
+the first field, and quantity is the second field.
+
+Remember that the data file is named "inventory".
+
+You entered: awk 'BEGIN { IFS=","} {print $2,$1} 
+Please try again.
+[23;1H--------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[25;1H$  awk 'BEGIN { IFS=","} {print $2,$1}                                      [25;40H[25;39H[25;38H[25;37H[25;36H[25;35H[25;35H[25;35H[25;35H[25;35H[25;35H[25;34H[25;33H[25;32H[25;31H[25;30H[25;29H[25;28H[25;27H[25;26H[25;25H[25;24H[25;1H$  awk 'BEGIN { IFS="," } {print $2,$1}  [25;25H[25;26H[25;27H[25;28H[25;1H$  awk 'BEGIN { IFS="," } { print $2,$1}  [25;29H[25;30H[25;31H[25;32H[25;33H[25;34H[25;35H[25;36H[25;37H[25;38H[25;39H[25;38H[25;1H$  awk 'BEGIN { IFS="," } { print $2, $1}  [25;39H[25;40H[25;41H[25;1H$  awk 'BEGIN { IFS="," } { print $2, $1 }  [25;42H[25;41H[25;40H[25;39H[25;38H[25;37H[25;38H[25;39H[25;40H[25;41H[25;42H[25;43H[25;1H$  awk 'BEGIN { IFS="," } { print $2, $1 }'  [25;44H[25;1H$  awk 'BEGIN { IFS="," } { print $2, $1 }'   [25;45H[25;1H$  awk 'BEGIN { IFS="," } { print $2, $1 }' i  [25;46H[25;1H$  awk 'BEGIN { IFS="," } { print $2, $1 }' in  [25;47H[25;1H$  awk 'BEGIN { IFS="," } { print $2, $1 }' inv  [25;48H[25;1H$  awk 'BEGIN { IFS="," } { print $2, $1 }' inve  [25;49H[25;1H$  awk 'BEGIN { IFS="," } { print $2, $1 }' inven  [25;50H[25;1H$  awk 'BEGIN { IFS="," } { print $2, $1 }' invent  [25;51H[25;1H$  awk 'BEGIN { IFS="," } { print $2, $1 }' invento  [25;52H[25;1H$  awk 'BEGIN { IFS="," } { print $2, $1 }' inventor  [25;53H[25;1H$  awk 'BEGIN { IFS="," } { print $2, $1 }' inventory  [25;54H[H[JUNX510 Lab 2.6:  Review
+[1;71HPage 5/7
+[2;1H--------------------------------------------------------------------------------
+
+Question 3
+
+Display all of the lines in the file showing only the quantity and product
+name, in that order and separated by a space, using awk. Product name is
+the first field, and quantity is the second field.
+
+Remember that the data file is named "inventory".
+
+You entered: awk 'BEGIN { IFS="," } { print $2, $1 }' inventory 
+Please try again.
+[23;1H--------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[25;1H$  awk 'BEGIN { IFS="," } { print $2, $1 }' inventory                       [25;55H[25;54H[25;53H[25;52H[25;51H[25;50H[25;50H[25;50H[25;50H[25;50H[25;50H[25;50H[25;49H[25;48H[25;47H[25;46H[25;45H[25;44H[25;43H[25;42H[25;41H[25;40H[25;39H[25;1H$  awk 'BEGIN { IFS="," } { print $2,$1 }' inventory  [25;38H[25;1H$  awk 'BEGIN { IFS="," } { print $2$1 }' inventory  [25;37H[25;1H$  awk 'BEGIN { IFS="," } { print $2 $1 }' inventory  [25;38H[H[JUNX510 Lab 2.6:  Review
+[1;71HPage 5/7
+[2;1H--------------------------------------------------------------------------------
+
+Question 3
+
+Display all of the lines in the file showing only the quantity and product
+name, in that order and separated by a space, using awk. Product name is
+the first field, and quantity is the second field.
+
+Remember that the data file is named "inventory".
+
+You entered: awk 'BEGIN { IFS="," } { print $2 $1 }' inventory 
+Please try again.
+[23;1H--------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[25;1H$  awk 'BEGIN { IFS="," } { print $2 $1 }' inventory                        [25;54H[25;53H[25;52H[25;51H[25;51H[25;51H[25;51H[25;51H[25;51H[25;51H[25;51H[25;51H[25;51H[25;51H[25;51H[25;51H[25;51H[25;51H[25;51H[25;50H[25;49H[25;48H[25;47H[25;46H[25;45H[25;44H[25;43H[25;42H[25;41H[25;40H[25;39H[25;38H[25;37H[25;1H$  awk 'BEGIN { IFS="," } { print $2, $1 }' inventory  [25;38H[25;37H[25;36H[25;35H[25;34H[25;33H[25;32H[25;31H[25;30H[25;29H[25;28H[25;27H[25;26H[25;25H[25;24H[25;23H[25;22H[25;21H[25;20H[25;19H[25;18H[25;17H[25;1H$  awk 'BEGIN {IFS="," } { print $2, $1 }' inventory  [25;16H[25;17H[25;18H[25;19H[25;20H[25;21H[25;22H[25;23H[25;24H[25;1H$  awk 'BEGIN {IFS=","} { print $2, $1 }' inventory  [25;23H[H[JUNX510 Lab 2.6:  Review
+[1;71HPage 5/7
+[2;1H--------------------------------------------------------------------------------
+
+Question 3
+
+Display all of the lines in the file showing only the quantity and product
+name, in that order and separated by a space, using awk. Product name is
+the first field, and quantity is the second field.
+
+Remember that the data file is named "inventory".
+
+You entered: awk 'BEGIN {IFS=","} { print $2, $1 }' inventory 
+Please try again.
+[23;1H--------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[25;1H$  awk 'BEGIN {IFS=","} { print $2, $1 }' inventory                         [25;53H[25;52H[25;51H[25;50H[25;49H[25;48H[25;47H[25;46H[25;45H[25;44H[25;43H[25;42H[25;41H[25;40H[25;39H[25;38H[25;37H[25;36H[25;35H[25;34H[25;33H[25;32H[25;31H[25;30H[25;29H[25;28H[25;27H[25;26H[25;25H[25;24H[25;23H[25;22H[25;21H[25;20H[25;19H[25;18H[25;17H[25;16H[25;15H[25;16H[25;17H[25;18H[25;19H[25;20H[25;21H[25;22H[25;23H[25;24H[25;25H[25;26H[25;27H[25;28H[25;29H[25;30H[25;30H[25;30H[25;30H[25;30H[25;30H[25;30H[25;30H[25;30H[25;30H[25;30H[25;1H$  awk 'BEGIN {IFS=","} { prisnt $2, $1 }' inventory  [25;31H[25;31H[25;31H[25;31H[25;31H[25;31H[25;31H[25;32H[25;33H[25;34H[25;35H[25;36H[25;37H[25;38H[25;39H[25;40H[25;41H[25;42H[25;43H[25;44H[25;44H[25;44H[25;45H[25;46H[25;47H[25;48H[25;49H[25;50H[25;51H[25;52H[25;53H[25;54H[25;54H[25;1H$  awk 'BEGIN {IFS=","} { prisnt $2, $1 }' inventory [25;53H[25;1H$  awk 'BEGIN {IFS=","} { prisnt $2, $1 }' inventor [25;52H[25;1H$  awk 'BEGIN {IFS=","} { prisnt $2, $1 }' invento [25;51H[25;1H$  awk 'BEGIN {IFS=","} { prisnt $2, $1 }' invent [25;50H[25;50H[25;50H[25;50H[25;1H$  awk 'BEGIN {IFS=","} { prisnt $2, $1 }' inven [25;49H[25;1H$  awk 'BEGIN {IFS=","} { prisnt $2, $1 }' inve [25;48H[25;1H$  awk 'BEGIN {IFS=","} { prisnt $2, $1 }' inv [25;47H[25;1H$  awk 'BEGIN {IFS=","} { prisnt $2, $1 }' in [25;46H[25;1H$  awk 'BEGIN {IFS=","} { prisnt $2, $1 }' i [25;45H[25;1H$  awk 'BEGIN {IFS=","} { prisnt $2, $1 }'  [25;44H[25;1H$  awk 'BEGIN {IFS=","} { prisnt $2, $1 }' [25;43H[25;1H$  awk 'BEGIN {IFS=","} { prisnt $2, $1 } [25;42H[25;1H$  awk 'BEGIN {IFS=","} { prisnt $2, $1  [25;41H[25;1H$  awk 'BEGIN {IFS=","} { prisnt $2, $1 [25;40H[25;1H$  awk 'BEGIN {IFS=","} { prisnt $2, $ [25;39H[25;1H$  awk 'BEGIN {IFS=","} { prisnt $2,  [25;38H[25;1H$  awk 'BEGIN {IFS=","} { prisnt $2, [25;37H[25;1H$  awk 'BEGIN {IFS=","} { prisnt $2 [25;36H[25;1H$  awk 'BEGIN {IFS=","} { prisnt $ [25;35H[25;1H$  awk 'BEGIN {IFS=","} { prisnt  [25;34H[25;1H$  awk 'BEGIN {IFS=","} { prisnt [25;33H[25;1H$  awk 'BEGIN {IFS=","} { prisn [25;32H[25;1H$  awk 'BEGIN {IFS=","} { pris [25;31H[25;1H$  awk 'BEGIN {IFS=","} { pri [25;30H[25;1H$  awk 'BEGIN {IFS=","} { pr [25;29H[25;1H$  awk 'BEGIN {IFS=","} { p [25;28H[25;1H$  awk 'BEGIN {IFS=","} {  [25;27H[25;1H$  awk 'BEGIN {IFS=","} { [25;26H[25;1H$  awk 'BEGIN {IFS=","}  [25;25H[25;1H$  awk 'BEGIN {IFS=","} [25;24H[25;1H$  awk 'BEGIN {IFS="," [25;23H[25;1H$  awk 'BEGIN {IFS=", [25;22H[25;1H$  awk 'BEGIN {IFS=" [25;21H[25;1H$  awk 'BEGIN {IFS= [25;20H[25;1H$  awk 'BEGIN {IFS [25;19H[25;1H$  awk 'BEGIN {IF [25;18H[25;1H$  awk 'BEGIN {I [25;17H[25;1H$  awk 'BEGIN { [25;16H[25;16H[25;1H$  awk 'BEGIN  [25;15H[25;1H$  awk 'BEGIN [25;14H[25;1H$  awk 'BEGI [25;13H[25;1H$  awk 'BEG [25;12H[25;1H$  awk 'BE [25;11H[25;1H$  awk 'B [25;10H[25;1H$  awk ' [25;9H[25;1H$  awk  [25;8H[25;1H$  awk [25;7H[25;1H$  aw [25;6H[25;1H$  a [25;5H[25;1H$   [25;4H[25;4H[25;4H[25;4H[25;4H[25;4H[25;4H[25;4H[25;4H[25;4H[25;4H[25;4H[25;4H[25;4H[25;4H[25;1H$  s [25;5H[25;5H[25;5H[25;5H[25;5H[25;5H[25;5H[25;5H[25;5H[25;5H[25;5H[25;1H$  ss [25;6H[25;1H$  s [25;5H[25;1H$   [25;4H[25;1H$  a [25;5H[25;1H$  aw [25;6H[25;1H$  awk [25;7H[25;1H$  awk  [25;8H[25;1H$  awk ' [25;9H[25;1H$  awk 'B [25;10H[25;1H$  awk 'BE [25;11H[25;1H$  awk 'BEG [25;12H[25;12H[25;1H$  awk 'BEG  [25;13H[25;1H$  awk 'BEG [ [25;14H[25;1H$  awk 'BEG  [25;13H[25;1H$  awk 'BEG { [25;14H[25;1H$  awk 'BEG {i [25;15H[25;1H$  awk 'BEG { [25;14H[25;1H$  awk 'BEG {I [25;15H[25;1H$  awk 'BEG {IF [25;16H[25;1H$  awk 'BEG {IFS [25;17H[25;1H$  awk 'BEG {IFS= [25;18H[25;1H$  awk 'BEG {IFS=" [25;19H[25;1H$  awk 'BEG {IFS=", [25;20H[25;1H$  awk 'BEG {IFS="," [25;21H[25;1H$  awk 'BEG {IFS=","} [25;22H[25;1H$  awk 'BEG {IFS=","}  [25;23H[25;1H$  awk 'BEG {IFS=","} { [25;24H[25;1H$  awk 'BEG {IFS=","} {P [25;25H[25;25H[25;1H$  awk 'BEG {IFS=","} {PT [25;26H[25;1H$  awk 'BEG {IFS=","} {P [25;25H[25;1H$  awk 'BEG {IFS=","} { [25;24H[25;1H$  awk 'BEG {IFS=","} {p [25;25H[25;1H$  awk 'BEG {IFS=","} {pr [25;26H[25;1H$  awk 'BEG {IFS=","} {pri [25;27H[25;1H$  awk 'BEG {IFS=","} {prin [25;28H[25;1H$  awk 'BEG {IFS=","} {print [25;29H[25;1H$  awk 'BEG {IFS=","} {print  [25;30H[25;1H$  awk 'BEG {IFS=","} {print $ [25;31H[25;1H$  awk 'BEG {IFS=","} {print $2 [25;32H[25;1H$  awk 'BEG {IFS=","} {print $2, [25;33H[25;1H$  awk 'BEG {IFS=","} {print $2,$ [25;34H[25;1H$  awk 'BEG {IFS=","} {print $2,$1 [25;35H[25;1H$  awk 'BEG {IFS=","} {print $2,$1} [25;36H[25;1H$  awk 'BEG {IFS=","} {print $2,$1}' [25;37H[25;1H$  awk 'BEG {IFS=","} {print $2,$1}'  [25;38H[25;1H$  awk 'BEG {IFS=","} {print $2,$1}' i [25;39H[25;1H$  awk 'BEG {IFS=","} {print $2,$1}' in [25;40H[25;1H$  awk 'BEG {IFS=","} {print $2,$1}' inv [25;41H[25;1H$  awk 'BEG {IFS=","} {print $2,$1}' inve [25;42H[25;1H$  awk 'BEG {IFS=","} {print $2,$1}' inven [25;43H[25;1H$  awk 'BEG {IFS=","} {print $2,$1}' invent [25;44H[25;1H$  awk 'BEG {IFS=","} {print $2,$1}' invento [25;45H[25;1H$  awk 'BEG {IFS=","} {print $2,$1}' inventor [25;46H[25;1H$  awk 'BEG {IFS=","} {print $2,$1}' inventory [25;47H[H[JUNX510 Lab 2.6:  Review
+[1;71HPage 5/7
+[2;1H--------------------------------------------------------------------------------
+
+Question 3
+
+Display all of the lines in the file showing only the quantity and product
+name, in that order and separated by a space, using awk. Product name is
+the first field, and quantity is the second field.
+
+Remember that the data file is named "inventory".
+
+You entered: awk 'BEG {IFS=","} {print $2,$1}' inventory
+Please try again.
+[23;1H--------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[25;4H[25;4H[25;4H[25;4H[25;4H[25;4H[25;4H[25;4H[25;4H[25;4H[25;1H$  a [25;5H[25;1H$  aw [25;6H[25;1H$  awk [25;7H[25;1H$  awk  [25;8H[25;1H$  awk _ [25;9H[25;1H$  awk  [25;8H[25;1H$  awk - [25;9H[25;1H$  awk -F [25;10H[25;1H$  awk -F' [25;11H[25;1H$  awk -F', [25;12H[25;1H$  awk -F',' [25;13H[25;1H$  awk -F','  [25;14H[25;1H$  awk -F',' ' [25;15H[25;1H$  awk -F',' '{ [25;16H[25;1H$  awk -F',' '{p [25;17H[25;1H$  awk -F',' '{pr [25;18H[25;1H$  awk -F',' '{pri [25;19H[25;1H$  awk -F',' '{prin [25;20H[25;1H$  awk -F',' '{print [25;21H[25;1H$  awk -F',' '{print  [25;22H[25;1H$  awk -F',' '{print $ [25;23H[25;1H$  awk -F',' '{print $2 [25;24H[25;1H$  awk -F',' '{print $2, [25;25H[25;1H$  awk -F',' '{print $2,  [25;26H[25;1H$  awk -F',' '{print $2, $ [25;27H[25;1H$  awk -F',' '{print $2, $1 [25;28H[25;1H$  awk -F',' '{print $2, $1} [25;29H[25;1H$  awk -F',' '{print $2, $1}' [25;30H[25;1H$  awk -F',' '{print $2, $1}'  [25;31H[25;1H$  awk -F',' '{print $2, $1}' i [25;32H[25;1H$  awk -F',' '{print $2, $1}' in [25;33H[25;1H$  awk -F',' '{print $2, $1}' inv [25;34H[25;1H$  awk -F',' '{print $2, $1}' inve [25;35H[25;1H$  awk -F',' '{print $2, $1}' inven [25;36H[25;1H$  awk -F',' '{print $2, $1}' invent [25;37H[25;1H$  awk -F',' '{print $2, $1}' invento [25;38H[25;1H$  awk -F',' '{print $2, $1}' inventor [25;39H[25;1H$  awk -F',' '{print $2, $1}' inventory [25;40H[H[JUNX510 Lab 2.6:  Review
+[1;71HPage 6/7
+[2;1H--------------------------------------------------------------------------------
+$  awk -F',' '{print $2, $1}' inventory
+300 Strawberry Jam
+1216 Raspberry Jam
+96 Blueberry Jam
+49 Strawberry Compote
+1937 Raspberry Compote
+200 Blueberry compote
+130 Frozen Strawberries
+16 Straw Hats
+[23;1H--------------------------------------------------------------------------------
+                                                                                [24;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 2.6:  Review
+[1;71HPage 6/7
+[2;1H--------------------------------------------------------------------------------
+
+Question 4
+
+Display all of the lines in the file with less than 100 items in inventory,
+using awk.  Quantity is the second field.
+
+Remember that the data file is named "inventory".
+[23;1H--------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[25;1H$  w [25;5H[25;1H$   [25;4H[25;1H$  a [25;5H[25;1H$  aw [25;6H[25;1H$  awk [25;7H[25;1H$  awk  [25;8H[25;1H$  awk ' [25;9H[25;1H$  awk '$ [25;10H[25;1H$  awk '$2 [25;11H[25;1H$  awk '$2< [25;12H[25;1H$  awk '$2<1 [25;13H[25;1H$  awk '$2<10 [25;14H[25;1H$  awk '$2<100 [25;15H[25;1H$  awk '$2<100  [25;16H[25;1H$  awk '$2<100 { [25;17H[25;1H$  awk '$2<100  [25;16H[25;1H$  awk '$2<100 [25;15H[25;1H$  awk '$2<100' [25;16H[25;1H$  awk '$2<100'  [25;17H[25;1H$  awk '$2<100' i [25;18H[25;1H$  awk '$2<100' in [25;19H[25;1H$  awk '$2<100' inv [25;20H[25;1H$  awk '$2<100' inve [25;21H[25;1H$  awk '$2<100' inven [25;22H[25;1H$  awk '$2<100' invent [25;23H[25;1H$  awk '$2<100' invento [25;24H[25;24H[25;1H$  awk '$2<100' inventor [25;25H[25;1H$  awk '$2<100' inventory [25;26H[H[JUNX510 Lab 2.6:  Review
+[1;71HPage 6/7
+[2;1H--------------------------------------------------------------------------------
+
+Question 4
+
+Display all of the lines in the file with less than 100 items in inventory,
+using awk.  Quantity is the second field.
+
+Remember that the data file is named "inventory".
+
+You entered: awk '$2<100' inventory
+Please try again.
+[23;1H--------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[25;1H$  awk '$2<100' inventory                                                   [25;26H[25;25H[25;24H[25;23H[25;22H[25;21H[25;20H[25;19H[25;18H[25;17H[25;16H[25;15H[25;14H[25;13H[25;12H[25;11H[25;1H$  awk '$2 <100' inventory [25;12H[25;13H[25;1H$  awk '$2 < 100' inventory [25;14H[25;15H[25;16H[25;17H[H[JUNX510 Lab 2.6:  Review
+[1;71HPage 6/7
+[2;1H--------------------------------------------------------------------------------
+
+Question 4
+
+Display all of the lines in the file with less than 100 items in inventory,
+using awk.  Quantity is the second field.
+
+Remember that the data file is named "inventory".
+
+You entered: awk '$2 < 100' inventory
+Please try again.
+[23;1H--------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[25;1H$  awk '$2 < 100' inventory                                                 [25;28H[25;27H[25;26H[25;25H[25;24H[25;23H[25;22H[25;21H[25;20H[25;19H[25;18H[25;17H[25;16H[25;15H[25;14H[25;13H[25;14H[25;15H[25;16H[25;17H[25;18H[25;19H[25;20H[25;21H[25;22H[25;23H[25;24H[25;23H[25;22H[25;21H[25;20H[25;19H[25;19H[25;19H[25;18H[25;17H[25;16H[25;15H[25;14H[25;13H[25;1H$  awk '$2 <= 100' inventory [25;14H[H[JUNX510 Lab 2.6:  Review
+[1;71HPage 6/7
+[2;1H--------------------------------------------------------------------------------
+
+Question 4
+
+Display all of the lines in the file with less than 100 items in inventory,
+using awk.  Quantity is the second field.
+
+Remember that the data file is named "inventory".
+
+You entered: awk '$2 <= 100' inventory
+Please try again.
+[23;1H--------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[25;1H$  awk '$2 <= 100' inventory                                                [25;29H[25;28H[25;27H[25;26H[25;25H[25;24H[25;23H[25;22H[25;21H[25;20H[25;19H[25;18H[25;17H[25;16H[25;15H[25;1H$  awk '$2 <=100' inventory [25;14H[25;1H$  awk '$2 <100' inventory [25;13H[25;1H$  awk '$2 < 100' inventory [25;14H[25;13H[25;12H[25;11H[25;10H[25;9H[25;8H[25;1H$  awk -'$2 < 100' inventory [25;9H[25;1H$  awk -F'$2 < 100' inventory [25;10H[25;1H$  awk -F''$2 < 100' inventory [25;11H[25;1H$  awk -F','$2 < 100' inventory [25;12H[25;1H$  awk -F',''$2 < 100' inventory [25;13H[25;1H$  awk -F',' '$2 < 100' inventory [25;14H[H[JUNX510 Lab 2.6:  Review
+[1;71HPage 7/7
+[2;1H--------------------------------------------------------------------------------
+$  awk -F',' '$2 < 100' inventory
+Blueberry Jam,96,195
+Strawberry Compote,49,621
+Straw Hats,16,2047
+[23;1H--------------------------------------------------------------------------------
+                                                                                [24;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 2.6:  Review
+[1;71HPage 7/7
+[2;1H--------------------------------------------------------------------------------
+
+Congratulations!
+
+You have successfully completed the Review Exercise!
+[23;1H--------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.6:  sed And awk
+[2;1H--------------------------------------------------------------------------------
+
+Available selections:
+
+1 Using sed - Completed[m
+2 Using awk - Completed[m
+3 Review Exercise - Completed[m
+
+Note that the highlighted lines indicate the incomplete sections of
+this part of the Lab.
+
+The Review Exercise can only be done when the other sections have
+been completed.
+[23;1H--------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: q
+[H[JUNX510 Lab 2:  Selection Menu
+[2;1H--------------------------------------------------------------------------------
+
+Available selections:
+
+1 Redirection And Pipes - Completed[m
+2 Linking Files And Directories - Completed[m
+3 Command Summary - Completed[m
+4 Linux Processes - Completed[m
+5 Regular Expressions Using grep - Completed[m
+6 sed And awk - Completed[m
+7 [7mInteractive Shell Environment[m
+
+8 [7mSubmit UNX510 Lab 2[m
+
+The highlighted lines above indicate the incomplete parts of the Lab.
+There is a total possible mark of 3, with 0.5 marks deducted for each
+incomplete part. Late marks will be deducted at the rate of 0.3 marks (10%)
+per day for Labs submitted after midnight of May 26 2017.
+
+
+[23;1H--------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: 7
+[H[JUNX510 Lab 2.7:  Interactive Shell Environment
+[2;1H--------------------------------------------------------------------------------
+
+Available selections:
+
+1 [7mEnvironment Variables[m
+2 [7mVariable Assignment & Quoting[m
+3 [7mCommand Substitution[m
+4 [7mUsing The alias Command[m
+5 [7mVariables[m
+6 [7mReview Exercise[m
+
+Note that the highlighted lines indicate the incomplete sections of
+this part of the Lab.
+
+The Review Exercise can only be done when the other sections have
+been completed.
+[23;1H--------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: 1
+[H[JUNX510 Lab 2.7:  Environment Variables
+[1;71HPage 1/16
+[2;1H--------------------------------------------------------------------------------
+
+Environment Variables
+
+There are many pieces of information that can be passed to programs through
+command-line options and arguments. This can lead to a lot of typing.
+
+Fortunately, Unix/Linux provides a way to reduce the amount of typing by
+enabling some information to be stored in 'Environment Variables', which
+are passed to all child processes.
+
+Every process receives environment variables from its parent, and every
+process passes environment variables to processes that it starts (the child
+processes).  Shells also permit you to view, create, remove, and alter
+environment variables.
+[23;1H--------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.7:  Environment Variables
+[1;71HPage 2/16
+[2;1H--------------------------------------------------------------------------------
+
+The command to view all of your shell's current environment variables is
+'env'.  Try it out now...
+[23;1H--------------------------------------------------------------------------------
+Enter  env  (or enter: 'm'-main menu):
+$  [?1h=[25;1H$  e [25;5H[25;1H$  en [25;6H[25;1H$  env [25;7H[H[JUNX510 Lab 2.7:  Environment Variables
+[1;71HPage 3/16
+[2;1H--------------------------------------------------------------------------------
+$  env
+LESSKEY=/etc/lesskey.bin
+MANPATH=/usr/lib/mpi/gcc/openmpi/share/man:/usr/local/man:/usr/local/share/man:/usr/share/man
+NNTPSERVER=news
+XDG_SESSION_ID=302
+HOSTNAME=matrix
+XKEYSYMDB=/usr/X11R6/lib/X11/XKeysymDB
+SHELL=/bin/bash
+TERM=vt100
+HOST=matrix
+HISTSIZE=9999
+PROFILEREAD=true
+SSH_CLIENT=192.214.237.131 28297 22
+TMPDIR=/tmp
+MORE=-sl
+SSH_TTY=/dev/pts/1
+LC_ALL=C
+ANT_HOME=/usr/local/ant
+USER=yliu421
+JRE_HOME=/usr/java/jdk/jre
+LD_LIBRARY_PATH=/usr/lib/mpi/gcc/openmpi/lib:/usr/local/gcc/5.2.0/lib:/opt/oracle12c/instantclient_12_1
+TEMP=/tmp
+LS_COLORS=no=00:fi=00:di=01;34:ln=00;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=41;33;01:ex=00;32:*.cmd=00;32:*.exe=01;32:*.com=01;32:*.bat=01;32:*.btm=01;32:*.dll=01;32:*.tar=00;31:*.tbz=00;31:*.tgz=00;31:*.rpm=00;31:*.deb=00;31:*.arj=00;31:*.taz=00;31:*.lzh=00;31:*.lzma=00;31:*.zip=00;31:*.zoo=00;31:*.z=00;31:*.Z=00;31:*.gz=00;31:*.bz2=00;31:*.tb2=00;31:*.tz2=00;31:*.tbz2=00;31:*.xz=00;31:*.avi=01;35:*.bmp=01;35:*.fli=01;35:*.gif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mng=01;35:*.mov=01;35:*.mpg=01;35:*.pcx=01;35:*.pbm=01;35:*.pgm=01;35:*.png=01;35:*.ppm=01;35:*.tga=01;35:*.tif=01;35:*.xbm=01;35:*.xpm=01;35:*.dl=01;35:*.gl=01;35:*.wmv=01;35:*.aiff=00;32:*.au=00;32:*.mid=00;32:*.mp3=00;32:*.ogg=00;32:*.voc=00;32:*.wav=00;32:
+ORACLE_SID=neptune
+XNLSPATH=/usr/share/X11/nls
+HOSTTYPE=i386
+ORACLE_BASE=/opt/oracle12c
+FROM_HEADER=matrix.senecac.on.ca
+CONFIG_SITE=/usr/share/site/i686-pc-linux-gnu
+PAGER=less
+CSHEDIT=emacs
+XDG_CONFIG_DIRS=/etc/xdg
+MINICOM=-c on
+PATH=/home/uli101/bin:/usr/lib/mpi/gcc/openmpi/bin:/home/yliu421/bin:/usr/local/bin:/usr/bin:/bin:/usr/bin/X11:/usr/X11R6/bin:/usr/games:/usr/local/ant/bin:/usr/java/jdk/bin:/usr/lib/mit/bin:/usr/lib/mit/sbin:/opt/oracle12c/instantclient_12_1:/opt/oracle12c/instantclient_12_1:/home/yliu421/scripts:/home/yliu421/scripts
+MAIL=/var/mail/yliu421
+TNS_ADMIN=/opt/oracle12c/instantclient_12_1
+CPU=i686
+JAVA_BINDIR=/usr/java/jdk/bin
+LC_COLLATE=C
+PWD=/home/yliu421
+INPUTRC=/home/yliu421/.inputrc
+JAVA_HOME=/usr/java/jdk
+LANG=ASCII
+PYTHONSTARTUP=/etc/pythonstart
+SDK_HOME=/usr/java/jdk
+GPG_TTY=/dev/pts/2
+HOME=/home/yliu421
+SHLVL=4
+QT_SYSTEM_DIR=/usr/share/desktop-data
+JDK_HOME=/usr/java/jdk
+OSTYPE=linux
+LESS_ADVANCED_PREPROCESSOR=no
+ALSA_CONFIG_PATH=/etc/alsa-pulse.conf
+SDL_AUDIODRIVER=pulse
+XCURSOR_THEME=DMZ
+LS_OPTIONS=-N --color=tty -T 0
+WINDOWMANAGER=/usr/bin/startkde
+LOGNAME=yliu421
+MACHTYPE=i686-suse-linux
+LESS=-M -I -R
+G_FILENAME_ENCODING=@locale,UTF-8,ISO-8859-15,CP1252
+CVS_RSH=ssh
+SSH_CONNECTION=192.214.237.131 28297 192.168.1.52 22
+XDG_DATA_DIRS=/usr/share
+LESSOPEN=lessopen.sh %s
+XDG_RUNTIME_DIR=/run/user/yliu421
+ORACLE_HOME=/opt/oracle12c/instantclient_12_1
+LESSCLOSE=lessclose.sh %s %s
+G_BROKEN_FILENAMES=1
+COLORTERM=1
+JAVA_ROOT=/usr/java/jdk
+_=/usr/bin/env
+OLDPWD=/home/yliu421
+[23;1H--------------------------------------------------------------------------------
+                                                                                [24;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 2.7:  Environment Variables
+[1;71HPage 3/16
+[2;1H--------------------------------------------------------------------------------
+
+That was too much information for your screen! Try using 'more' to view it
+one screen at a time.
+
+Remember! - press 'q' to quit from 'more' when you are ready to continue.
+[23;1H--------------------------------------------------------------------------------
+Enter  env | more  (or enter: 'm'-main menu):
+$  [?1h=[25;1H$  e [25;5H[25;1H$  en [25;6H[25;1H$  env [25;7H[25;1H$  env  [25;8H[25;1H$  env | [25;9H[25;1H$  env |  [25;10H[25;1H$  env | m [25;11H[25;1H$  env | mo [25;12H[25;1H$  env | mor [25;13H[25;1H$  env | more [25;14H[25;1H$  env | more  [25;15H[H[JUNX510 Lab 2.7:  Environment Variables
+[1;71HPage 4/16
+[2;1H--------------------------------------------------------------------------------
+$  env | more 
+LESSKEY=/etc/lesskey.bin
+MANPATH=/usr/lib/mpi/gcc/openmpi/share/man:/usr/local/man:/usr/local/share/man:/
+usr/share/man
+NNTPSERVER=news
+XDG_SESSION_ID=302
+HOSTNAME=matrix
+XKEYSYMDB=/usr/X11R6/lib/X11/XKeysymDB
+SHELL=/bin/bash
+TERM=vt100
+HOST=matrix
+HISTSIZE=9999
+PROFILEREAD=true
+SSH_CLIENT=192.214.237.131 28297 22
+TMPDIR=/tmp
+MORE=-sl
+SSH_TTY=/dev/pts/1
+LC_ALL=C
+ANT_HOME=/usr/local/ant
+USER=yliu421
+JRE_HOME=/usr/java/jdk/jre
+LD_LIBRARY_PATH=/usr/lib/mpi/gcc/openmpi/lib:/usr/local/gcc/5.2.0/lib:/opt/oracl
+e12c/instantclient_12_1
+TEMP=/tmp
+LS_COLORS=no=00:fi=00:di=01;34:ln=00;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:c
+[7m--More--[md=40;33;01:or=41;33;01:ex=00;32:*.cmd=00;32:*.exe=01;32:*.com=01;32:*.bat=01;32:
+[7m--More--[m*.btm=01;32:*.dll=01;32:*.tar=00;31:*.tbz=00;31:*.tgz=00;31:*.rpm=00;31:*.deb=00
+;31:*.arj=00;31:*.taz=00;31:*.lzh=00;31:*.lzma=00;31:*.zip=00;31:*.zoo=00;31:*.z
+=00;31:*.Z=00;31:*.gz=00;31:*.bz2=00;31:*.tb2=00;31:*.tz2=00;31:*.tbz2=00;31:*.x
+z=00;31:*.avi=01;35:*.bmp=01;35:*.fli=01;35:*.gif=01;35:*.jpg=01;35:*.jpeg=01;35
+:*.mng=01;35:*.mov=01;35:*.mpg=01;35:*.pcx=01;35:*.pbm=01;35:*.pgm=01;35:*.png=0
+1;35:*.ppm=01;35:*.tga=01;35:*.tif=01;35:*.xbm=01;35:*.xpm=01;35:*.dl=01;35:*.gl
+=01;35:*.wmv=01;35:*.aiff=00;32:*.au=00;32:*.mid=00;32:*.mp3=00;32:*.ogg=00;32:*
+.voc=00;32:*.wav=00;32:
+ORACLE_SID=neptune
+XNLSPATH=/usr/share/X11/nls
+HOSTTYPE=i386
+ORACLE_BASE=/opt/oracle12c
+FROM_HEADER=matrix.senecac.on.ca
+CONFIG_SITE=/usr/share/site/i686-pc-linux-gnu
+PAGER=less
+CSHEDIT=emacs
+XDG_CONFIG_DIRS=/etc/xdg
+MINICOM=-c on
+PATH=/home/uli101/bin:/usr/lib/mpi/gcc/openmpi/bin:/home/yliu421/bin:/usr/local/
+bin:/usr/bin:/bin:/usr/bin/X11:/usr/X11R6/bin:/usr/games:/usr/local/ant/bin:/usr
+/java/jdk/bin:/usr/lib/mit/bin:/usr/lib/mit/sbin:/opt/oracle12c/instantclient_12
+_1:/opt/oracle12c/instantclient_12_1:/home/yliu421/scripts:/home/yliu421/scripts
+MAIL=/var/mail/yliu421
+TNS_ADMIN=/opt/oracle12c/instantclient_12_1
+[7m--More--[mCPU=i686
+JAVA_BINDIR=/usr/java/jdk/bin
+LC_COLLATE=C
+PWD=/home/yliu421
+INPUTRC=/home/yliu421/.inputrc
+JAVA_HOME=/usr/java/jdk
+LANG=ASCII
+PYTHONSTARTUP=/etc/pythonstart
+SDK_HOME=/usr/java/jdk
+GPG_TTY=/dev/pts/2
+HOME=/home/yliu421
+SHLVL=4
+QT_SYSTEM_DIR=/usr/share/desktop-data
+JDK_HOME=/usr/java/jdk
+OSTYPE=linux
+LESS_ADVANCED_PREPROCESSOR=no
+ALSA_CONFIG_PATH=/etc/alsa-pulse.conf
+SDL_AUDIODRIVER=pulse
+XCURSOR_THEME=DMZ
+LS_OPTIONS=-N --color=tty -T 0
+WINDOWMANAGER=/usr/bin/startkde
+LOGNAME=yliu421
+MACHTYPE=i686-suse-linux
+LESS=-M -I -R
+[7m--More--[mG_FILENAME_ENCODING=@locale,UTF-8,ISO-8859-15,CP1252
+CVS_RSH=ssh
+SSH_CONNECTION=192.214.237.131 28297 192.168.1.52 22
+XDG_DATA_DIRS=/usr/share
+LESSOPEN=lessopen.sh %s
+XDG_RUNTIME_DIR=/run/user/yliu421
+ORACLE_HOME=/opt/oracle12c/instantclient_12_1
+LESSCLOSE=lessclose.sh %s %s
+G_BROKEN_FILENAMES=1
+COLORTERM=1
+JAVA_ROOT=/usr/java/jdk
+_=/usr/bin/env
+OLDPWD=/home/yliu421
+[23;1H--------------------------------------------------------------------------------
+                                                                                [24;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 2.7:  Environment Variables
+[1;71HPage 4/16
+[2;1H--------------------------------------------------------------------------------
+
+There were many variables in there. Some of the key ones are:
+
+  HOME -- contains your home directory
+  MAIL -- specifies where your e-mail mailbox file is located
+  PATH -- tells the system which directories to search for commands
+  PS1 -- sets your primary shell prompt
+  TERM -- tells programs what type of terminal you're using
+[23;1H--------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.7:  Environment Variables
+[1;71HPage 5/16
+[2;1H--------------------------------------------------------------------------------
+
+To set a variable, just enter its name, then an equal sign, then the value.
+Do not use any spaces or tabs.
+
+Let's assign the value '5' to the variable 'FOO':
+[23;1H--------------------------------------------------------------------------------
+Enter  FOO=5  (or enter: 'm'-main menu):
+$  [?1h=[25;1H$  F [25;5H[25;1H$  FO [25;6H[25;1H$  FOO [25;7H[25;1H$  FOO= [25;8H[25;1H$  FOO=5 [25;9H[H[JUNX510 Lab 2.7:  Environment Variables
+[1;71HPage 6/16
+[2;1H--------------------------------------------------------------------------------
+$  FOO=5
+[23;1H--------------------------------------------------------------------------------
+                                                                                [24;1HObserve the output above, then press <ENTER> to continue.
+/home/unx510/2017b/online.files/modules/module_Interactive_Shell_Environment: line 88: $'\n  FOO=5': command not found
+[H[JUNX510 Lab 2.7:  Environment Variables
+[1;71HPage 6/16
+[2;1H--------------------------------------------------------------------------------
+
+Now use 'env' to see if 'FOO' is in the list (remember to use 'more'!).
+[23;1H--------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[25;1H$  e [25;5H[25;1H$  en [25;6H[25;1H$  e [25;5H[25;1H$   [25;4H[25;1H$  e [25;5H[25;1H$  ec [25;6H[25;1H$  ech [25;7H[25;1H$  echo [25;8H[25;1H$  echo  [25;9H[25;1H$  echo $ [25;10H[25;1H$  echo $f [25;11H[25;1H$  echo $ff [25;12H[25;1H$  echo $f [25;11H[25;1H$  echo $ [25;10H[25;1H$  echo $F [25;11H[25;1H$  echo $FO [25;12H[25;1H$  echo $FOO [25;13H[H[JUNX510 Lab 2.7:  Environment Variables
+[1;71HPage 6/16
+[2;1H--------------------------------------------------------------------------------
+
+Now use 'env' to see if 'FOO' is in the list (remember to use 'more'!).
+
+You entered: echo $FOO
+Please try again.
+
+Hint:
+Try 'env | more'.
+[23;1H--------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[25;1H$  e [25;5H[25;1H$  en [25;6H[25;1H$  env [25;7H[25;1H$  env  [25;8H[25;1H$  env | [25;9H[25;1H$  env |  [25;10H[25;1H$  env | m [25;11H[25;1H$  env | mo [25;12H[25;1H$  env | mor [25;13H[25;1H$  env | more [25;14H[H[JUNX510 Lab 2.7:  Environment Variables
+[1;71HPage 7/16
+[2;1H--------------------------------------------------------------------------------
+$  env | more
+LESSKEY=/etc/lesskey.bin
+MANPATH=/usr/lib/mpi/gcc/openmpi/share/man:/usr/local/man:/usr/local/share/man:/
+usr/share/man
+NNTPSERVER=news
+XDG_SESSION_ID=302
+HOSTNAME=matrix
+XKEYSYMDB=/usr/X11R6/lib/X11/XKeysymDB
+SHELL=/bin/bash
+TERM=vt100
+HOST=matrix
+HISTSIZE=9999
+PROFILEREAD=true
+SSH_CLIENT=192.214.237.131 28297 22
+TMPDIR=/tmp
+MORE=-sl
+SSH_TTY=/dev/pts/1
+LC_ALL=C
+ANT_HOME=/usr/local/ant
+USER=yliu421
+JRE_HOME=/usr/java/jdk/jre
+LD_LIBRARY_PATH=/usr/lib/mpi/gcc/openmpi/lib:/usr/local/gcc/5.2.0/lib:/opt/oracl
+e12c/instantclient_12_1
+TEMP=/tmp
+LS_COLORS=no=00:fi=00:di=01;34:ln=00;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:c
+[7m--More--[md=40;33;01:or=41;33;01:ex=00;32:*.cmd=00;32:*.exe=01;32:*.com=01;32:*.bat=01;32:
+[7m--More--[m*.btm=01;32:*.dll=01;32:*.tar=00;31:*.tbz=00;31:*.tgz=00;31:*.rpm=00;31:*.deb=00
+;31:*.arj=00;31:*.taz=00;31:*.lzh=00;31:*.lzma=00;31:*.zip=00;31:*.zoo=00;31:*.z
+=00;31:*.Z=00;31:*.gz=00;31:*.bz2=00;31:*.tb2=00;31:*.tz2=00;31:*.tbz2=00;31:*.x
+z=00;31:*.avi=01;35:*.bmp=01;35:*.fli=01;35:*.gif=01;35:*.jpg=01;35:*.jpeg=01;35
+:*.mng=01;35:*.mov=01;35:*.mpg=01;35:*.pcx=01;35:*.pbm=01;35:*.pgm=01;35:*.png=0
+1;35:*.ppm=01;35:*.tga=01;35:*.tif=01;35:*.xbm=01;35:*.xpm=01;35:*.dl=01;35:*.gl
+=01;35:*.wmv=01;35:*.aiff=00;32:*.au=00;32:*.mid=00;32:*.mp3=00;32:*.ogg=00;32:*
+.voc=00;32:*.wav=00;32:
+ORACLE_SID=neptune
+XNLSPATH=/usr/share/X11/nls
+HOSTTYPE=i386
+ORACLE_BASE=/opt/oracle12c
+FROM_HEADER=matrix.senecac.on.ca
+CONFIG_SITE=/usr/share/site/i686-pc-linux-gnu
+PAGER=less
+CSHEDIT=emacs
+XDG_CONFIG_DIRS=/etc/xdg
+MINICOM=-c on
+PATH=/home/uli101/bin:/usr/lib/mpi/gcc/openmpi/bin:/home/yliu421/bin:/usr/local/
+bin:/usr/bin:/bin:/usr/bin/X11:/usr/X11R6/bin:/usr/games:/usr/local/ant/bin:/usr
+/java/jdk/bin:/usr/lib/mit/bin:/usr/lib/mit/sbin:/opt/oracle12c/instantclient_12
+_1:/opt/oracle12c/instantclient_12_1:/home/yliu421/scripts:/home/yliu421/scripts
+MAIL=/var/mail/yliu421
+TNS_ADMIN=/opt/oracle12c/instantclient_12_1
+[7m--More--[mCPU=i686
+JAVA_BINDIR=/usr/java/jdk/bin
+LC_COLLATE=C
+PWD=/home/yliu421
+INPUTRC=/home/yliu421/.inputrc
+JAVA_HOME=/usr/java/jdk
+LANG=ASCII
+PYTHONSTARTUP=/etc/pythonstart
+SDK_HOME=/usr/java/jdk
+GPG_TTY=/dev/pts/2
+HOME=/home/yliu421
+SHLVL=4
+QT_SYSTEM_DIR=/usr/share/desktop-data
+JDK_HOME=/usr/java/jdk
+OSTYPE=linux
+LESS_ADVANCED_PREPROCESSOR=no
+ALSA_CONFIG_PATH=/etc/alsa-pulse.conf
+SDL_AUDIODRIVER=pulse
+XCURSOR_THEME=DMZ
+LS_OPTIONS=-N --color=tty -T 0
+WINDOWMANAGER=/usr/bin/startkde
+LOGNAME=yliu421
+MACHTYPE=i686-suse-linux
+LESS=-M -I -R
+[7m--More--[mG_FILENAME_ENCODING=@locale,UTF-8,ISO-8859-15,CP1252
+CVS_RSH=ssh
+SSH_CONNECTION=192.214.237.131 28297 192.168.1.52 22
+XDG_DATA_DIRS=/usr/share
+LESSOPEN=lessopen.sh %s
+XDG_RUNTIME_DIR=/run/user/yliu421
+ORACLE_HOME=/opt/oracle12c/instantclient_12_1
+LESSCLOSE=lessclose.sh %s %s
+G_BROKEN_FILENAMES=1
+COLORTERM=1
+JAVA_ROOT=/usr/java/jdk
+_=/usr/bin/env
+OLDPWD=/home/yliu421
+[23;1H--------------------------------------------------------------------------------
+                                                                                [24;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 2.7:  Environment Variables
+[1;71HPage 7/16
+[2;1H--------------------------------------------------------------------------------
+
+Even though variable 'FOO' has been given a value, it is not yet an environment
+variable -- it is a shell variable accessible only by your shell. To make
+it into an environment variable, we must 'export' it so that child processes
+receive its value.
+[23;1H--------------------------------------------------------------------------------
+Enter  export FOO  (or enter: 'm'-main menu):
+$  [?1h=[25;1H$  e [25;5H[25;1H$  ex [25;6H[25;1H$  exp [25;7H[25;1H$  expo [25;8H[25;1H$  expor [25;9H[25;1H$  export [25;10H[25;1H$  export  [25;11H[25;1H$  export F [25;12H[25;1H$  export FO [25;13H[25;1H$  export FOO [25;14H[H[JUNX510 Lab 2.7:  Environment Variables
+[1;71HPage 8/16
+[2;1H--------------------------------------------------------------------------------
+$  export FOO
+[23;1H--------------------------------------------------------------------------------
+                                                                                [24;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 2.7:  Environment Variables
+[1;71HPage 8/16
+[2;1H--------------------------------------------------------------------------------
+
+Now use 'env' again to see if 'FOO' is in the list (remember to use 'more'!).
+[23;1H--------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[25;1H$  e [25;5H[25;1H$  ev [25;6H[25;1H$  e [25;5H[25;1H$  en [25;6H[25;1H$  env [25;7H[25;1H$  env  [25;8H[25;1H$  env | [25;9H[25;1H$  env |  [25;10H[25;1H$  env | m [25;11H[25;1H$  env | mo [25;12H[25;1H$  env | mor [25;13H[25;1H$  env | more [25;14H[H[JUNX510 Lab 2.7:  Environment Variables
+[1;71HPage 9/16
+[2;1H--------------------------------------------------------------------------------
+$  env | more
+LESSKEY=/etc/lesskey.bin
+MANPATH=/usr/lib/mpi/gcc/openmpi/share/man:/usr/local/man:/usr/local/share/man:/
+usr/share/man
+NNTPSERVER=news
+XDG_SESSION_ID=302
+HOSTNAME=matrix
+XKEYSYMDB=/usr/X11R6/lib/X11/XKeysymDB
+SHELL=/bin/bash
+TERM=vt100
+HOST=matrix
+HISTSIZE=9999
+PROFILEREAD=true
+FOO=5
+SSH_CLIENT=192.214.237.131 28297 22
+TMPDIR=/tmp
+MORE=-sl
+OLDPWD=/home/yliu421
+SSH_TTY=/dev/pts/1
+LC_ALL=C
+ANT_HOME=/usr/local/ant
+USER=yliu421
+JRE_HOME=/usr/java/jdk/jre
+LD_LIBRARY_PATH=/usr/lib/mpi/gcc/openmpi/lib:/usr/local/gcc/5.2.0/lib:/opt/oracl
+e12c/instantclient_12_1
+[7m--More--[mTEMP=/tmp
+LS_COLORS=no=00:fi=00:di=01;34:ln=00;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:c
+d=40;33;01:or=41;33;01:ex=00;32:*.cmd=00;32:*.exe=01;32:*.com=01;32:*.bat=01;32:
+*.btm=01;32:*.dll=01;32:*.tar=00;31:*.tbz=00;31:*.tgz=00;31:*.rpm=00;31:*.deb=00
+;31:*.arj=00;31:*.taz=00;31:*.lzh=00;31:*.lzma=00;31:*.zip=00;31:*.zoo=00;31:*.z
+=00;31:*.Z=00;31:*.gz=00;31:*.bz2=00;31:*.tb2=00;31:*.tz2=00;31:*.tbz2=00;31:*.x
+z=00;31:*.avi=01;35:*.bmp=01;35:*.fli=01;35:*.gif=01;35:*.jpg=01;35:*.jpeg=01;35
+:*.mng=01;35:*.mov=01;35:*.mpg=01;35:*.pcx=01;35:*.pbm=01;35:*.pgm=01;35:*.png=0
+1;35:*.ppm=01;35:*.tga=01;35:*.tif=01;35:*.xbm=01;35:*.xpm=01;35:*.dl=01;35:*.gl
+=01;35:*.wmv=01;35:*.aiff=00;32:*.au=00;32:*.mid=00;32:*.mp3=00;32:*.ogg=00;32:*
+.voc=00;32:*.wav=00;32:
+ORACLE_SID=neptune
+XNLSPATH=/usr/share/X11/nls
+HOSTTYPE=i386
+ORACLE_BASE=/opt/oracle12c
+FROM_HEADER=matrix.senecac.on.ca
+CONFIG_SITE=/usr/share/site/i686-pc-linux-gnu
+PAGER=less
+CSHEDIT=emacs
+XDG_CONFIG_DIRS=/etc/xdg
+MINICOM=-c on
+PATH=/home/uli101/bin:/usr/lib/mpi/gcc/openmpi/bin:/home/yliu421/bin:/usr/local/
+bin:/usr/bin:/bin:/usr/bin/X11:/usr/X11R6/bin:/usr/games:/usr/local/ant/bin:/usr
+/java/jdk/bin:/usr/lib/mit/bin:/usr/lib/mit/sbin:/opt/oracle12c/instantclient_12
+[7m--More--[m_1:/opt/oracle12c/instantclient_12_1:/home/yliu421/scripts:/home/yliu421/scripts
+MAIL=/var/mail/yliu421
+TNS_ADMIN=/opt/oracle12c/instantclient_12_1
+CPU=i686
+JAVA_BINDIR=/usr/java/jdk/bin
+LC_COLLATE=C
+PWD=/home/yliu421
+INPUTRC=/home/yliu421/.inputrc
+JAVA_HOME=/usr/java/jdk
+LANG=ASCII
+PYTHONSTARTUP=/etc/pythonstart
+SDK_HOME=/usr/java/jdk
+GPG_TTY=/dev/pts/2
+HOME=/home/yliu421
+SHLVL=4
+QT_SYSTEM_DIR=/usr/share/desktop-data
+JDK_HOME=/usr/java/jdk
+OSTYPE=linux
+LESS_ADVANCED_PREPROCESSOR=no
+ALSA_CONFIG_PATH=/etc/alsa-pulse.conf
+SDL_AUDIODRIVER=pulse
+XCURSOR_THEME=DMZ
+LS_OPTIONS=-N --color=tty -T 0
+WINDOWMANAGER=/usr/bin/startkde
+[7m--More--[mLOGNAME=yliu421
+MACHTYPE=i686-suse-linux
+LESS=-M -I -R
+G_FILENAME_ENCODING=@locale,UTF-8,ISO-8859-15,CP1252
+CVS_RSH=ssh
+SSH_CONNECTION=192.214.237.131 28297 192.168.1.52 22
+XDG_DATA_DIRS=/usr/share
+LESSOPEN=lessopen.sh %s
+XDG_RUNTIME_DIR=/run/user/yliu421
+ORACLE_HOME=/opt/oracle12c/instantclient_12_1
+LESSCLOSE=lessclose.sh %s %s
+G_BROKEN_FILENAMES=1
+COLORTERM=1
+JAVA_ROOT=/usr/java/jdk
+_=/usr/bin/env
+[23;1H--------------------------------------------------------------------------------
+                                                                                [24;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 2.7:  Environment Variables
+[1;71HPage 9/16
+[2;1H--------------------------------------------------------------------------------
+
+Now other programs can use the value of 'FOO'.
+
+You can also remove an environment variable with the 'unset' command.
+
+Let's remove 'FOO'.
+[23;1H--------------------------------------------------------------------------------
+Enter  unset FOO  (or enter: 'm'-main menu):
+>  [?1h=[25;1H>  u [25;5H[25;1H>  un [25;6H[25;1H>  uns [25;7H[25;1H>  unse [25;8H[25;1H>  unset [25;9H[25;1H>  unset  [25;10H[25;1H>  unset F [25;11H[25;1H>  unset FO [25;12H[25;1H>  unset FOO [25;13H[H[JUNX510 Lab 2.7:  Environment Variables
+[1;71HPage 10/16
+[2;1H--------------------------------------------------------------------------------
+
+One of the most important environment variables is 'PATH'.
+
+PATH contains a list of directories, separated by colons. When you enter a
+command, the shell will search those directories to find the command.
+
+Your PATH is currently set to:
+
+/home/uli101/bin:/usr/lib/mpi/gcc/openmpi/bin:/home/yliu421/bin:/usr/local/bin:/usr/bin:/bin:/usr/bin/X11:/usr/X11R6/bin:/usr/games:/usr/local/ant/bin:/usr/java/jdk/bin:/usr/lib/mit/bin:/usr/lib/mit/sbin:/opt/oracle12c/instantclient_12_1:/opt/oracle12c/instantclient_12_1:/home/yliu421/scripts:/home/yliu421/scripts
+
+Change your PATH to only include the root directory '/'.
+[23;1H--------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+>  [?1h=[25;1H>  P [25;5H[25;1H>  PA [25;6H[25;1H>  PAT [25;7H[25;1H>  PATH [25;8H[25;1H>  PATH  [25;9H[25;1H>  PATH = [25;10H[25;1H>  PATH  [25;9H[25;1H>  PATH [25;8H[25;1H>  PAT [25;7H[25;1H>  PAT= [25;8H[25;1H>  PAT=/ [25;9H[25;8H[25;7H[25;6H[25;7H[25;1H>  PATH=/ [25;8H[H[JUNX510 Lab 2.7:  Environment Variables
+[1;71HPage 11/16
+[2;1H--------------------------------------------------------------------------------
+
+Now try a simple 'ls' command.
+[23;1H--------------------------------------------------------------------------------
+Enter  ls  (or enter: 'm'-main menu):
+>  [?1h=[25;1H>  l [25;5H[25;1H>  ls [25;6H[H[JUNX510 Lab 2.7:  Environment Variables
+[1;71HPage 12/16
+[2;1H--------------------------------------------------------------------------------
+
+
+$ ls
+bash: ls: command not found
+[23;1H--------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.7:  Environment Variables
+[1;71HPage 13/16
+[2;1H--------------------------------------------------------------------------------
+
+ls was not found because it is not found in any of the directories in the PATH.
+
+(PATH has been automatically reset for you).
+
+You can retrieve the value of any environment variable using a dollar sign
+and the variable name. You can put this in any command.
+
+For example...
+[23;1H--------------------------------------------------------------------------------
+Enter  echo $PATH  (or enter: 'm'-main menu):
+$  [?1h=[25;1H$  e [25;5H[25;1H$  ec [25;6H[25;1H$  ech [25;7H[25;1H$  echo [25;8H[25;1H$  echo  [25;9H[25;1H$  echo $ [25;10H[25;1H$  echo $P [25;11H[25;1H$  echo $PA [25;12H[25;1H$  echo $PAT [25;13H[25;1H$  echo $PATH [25;14H[H[JUNX510 Lab 2.7:  Environment Variables
+[1;71HPage 14/16
+[2;1H--------------------------------------------------------------------------------
+$  echo $PATH
+/home/uli101/bin:/usr/lib/mpi/gcc/openmpi/bin:/home/yliu421/bin:/usr/local/bin:/usr/bin:/bin:/usr/bin/X11:/usr/X11R6/bin:/usr/games:/usr/local/ant/bin:/usr/java/jdk/bin:/usr/lib/mit/bin:/usr/lib/mit/sbin:/opt/oracle12c/instantclient_12_1:/opt/oracle12c/instantclient_12_1:/home/yliu421/scripts:/home/yliu421/scripts
+[23;1H--------------------------------------------------------------------------------
+                                                                                [24;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 2.7:  Environment Variables
+[1;71HPage 14/16
+[2;1H--------------------------------------------------------------------------------
+
+Notice that you only need to place a dollar sign in front of a variable name if
+you are retrieving the variable value. In any other situation we leave it off.
+
+We can combine retrieving a variable with assigning a value to a variable.
+Let's say you wanted to add the directory '/sbin' to your PATH.
+[23;1H--------------------------------------------------------------------------------
+Enter  PATH="$PATH:/sbin"  (or enter: 'm'-main menu):
+$  [?1h=[25;1H$  P [25;5H[25;1H$  PA [25;6H[25;1H$  PAT [25;7H[25;1H$  PATH [25;8H[25;1H$  PATH= [25;9H[25;1H$  PATH=$ [25;10H[25;1H$  PATH=$P [25;11H[25;1H$  PATH=$PA [25;12H[25;1H$  PATH=$PAT [25;13H[25;1H$  PATH=$PATH [25;14H[25;1H$  PATH=$PATH: [25;15H[25;1H$  PATH=$PATH:/ [25;16H[25;1H$  PATH=$PATH:/S [25;17H[25;1H$  PATH=$PATH:/SB [25;18H[25;1H$  PATH=$PATH:/SBI [25;19H[25;1H$  PATH=$PATH:/SBIN [25;20H[25;1H$  PATH=$PATH:/SBINN [25;21H[25;1H$  PATH=$PATH:/SBIN [25;20H[25;1H$  PATH=$PATH:/SBI [25;19H[25;1H$  PATH=$PATH:/SB [25;18H[25;1H$  PATH=$PATH:/S [25;17H[25;1H$  PATH=$PATH:/ [25;16H[25;1H$  PATH=$PATH:/s [25;17H[25;1H$  PATH=$PATH:/sb [25;18H[25;1H$  PATH=$PATH:/sbi [25;19H[25;1H$  PATH=$PATH:/sbin [25;20H[H[JUNX510 Lab 2.7:  Environment Variables
+[1;71HPage 14/16
+[2;1H--------------------------------------------------------------------------------
+
+Notice that you only need to place a dollar sign in front of a variable name if
+you are retrieving the variable value. In any other situation we leave it off.
+
+We can combine retrieving a variable with assigning a value to a variable.
+Let's say you wanted to add the directory '/sbin' to your PATH.
+
+You entered: PATH=$PATH:/sbin
+Please try again.
+
+Hint:
+Enter the command exactly as shown.
+[23;1H--------------------------------------------------------------------------------
+Enter  PATH="$PATH:/sbin"  (or enter: 'm'-main menu):
+$  [?1h=[25;1H$  P [25;5H[25;1H$  PT [25;6H[25;1H$  P [25;5H[25;1H$  PATH=$PATH:/sbin                                                         [25;20H[25;1H$  PATH=$PATH:/sbina [25;21H[25;1H$  PATH=$PATH:/sbin [25;20H[H[JUNX510 Lab 2.7:  Environment Variables
+[1;71HPage 14/16
+[2;1H--------------------------------------------------------------------------------
+
+Notice that you only need to place a dollar sign in front of a variable name if
+you are retrieving the variable value. In any other situation we leave it off.
+
+We can combine retrieving a variable with assigning a value to a variable.
+Let's say you wanted to add the directory '/sbin' to your PATH.
+
+You entered: PATH=$PATH:/sbin
+Please try again.
+
+Hint:
+Enter the command exactly as shown.
+[23;1H--------------------------------------------------------------------------------
+Enter  PATH="$PATH:/sbin"  (or enter: 'm'-main menu):
+$  [?1h=[25;1H$  PATH=$PATH:/sbin                                                         [25;20H[25;19H[25;18H[25;17H[25;16H[25;15H[25;14H[25;13H[25;12H[25;11H[25;10H[25;9H[25;1H$  PATH="$PATH:/sbin [25;10H[25;11H[25;12H[25;13H[25;14H[25;15H[25;16H[25;17H[25;18H[25;19H[25;20H[25;21H[25;1H$  PATH="$PATH:/sbin" [25;22H[H[JUNX510 Lab 2.7:  Environment Variables
+[1;71HPage 15/16
+[2;1H--------------------------------------------------------------------------------
+$  PATH="$PATH:/sbin"
+[23;1H--------------------------------------------------------------------------------
+                                                                                [24;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 2.7:  Environment Variables
+[1;71HPage 15/16
+[2;1H--------------------------------------------------------------------------------
+
+In the last example, we placed quotes around the value that we were assigning
+just in case there were spaces in the value. It is a good idea to always
+use quotes around the value when assigning a variable.
+
+Exported environment variables are inherited by child processes, so every
+program that you start will receive their values if you set them up as soon
+as you login.
+
+The file '~/.bash_profile' for the bash shell or '~/.profile' for ksh is
+run when you login, so you can add any environment variable set-up lines
+to that file. Note that since it is a regular text file, you can use any
+regular text editor to change it.
+[23;1H--------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.7:  Environment Variables
+[1;71HPage 16/16
+[2;1H--------------------------------------------------------------------------------
+
+That concludes this section.
+
+Remember:
+
+   To create a variable:           variablename="value" To export a variable:
+   export variablename To access a variable:           $variablename (in
+   a command) To remove a variable:           unset variablename To see
+   environment variables:   env To see ALL variables:           set
+
+And to have an environment variable created every time you login, place the
+appropriate commands in ~/.bash_profile (bash) or ~/.profile (ksh).
+
+You may now proceed to the next section about 'Variable Assignment & quoting'.
+[23;1H--------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.7:  Interactive Shell Environment
+[2;1H--------------------------------------------------------------------------------
+
+Available selections:
+
+1 Environment Variables - Completed[m
+2 [7mVariable Assignment & Quoting[m
+3 [7mCommand Substitution[m
+4 [7mUsing The alias Command[m
+5 [7mVariables[m
+6 [7mReview Exercise[m
+
+Note that the highlighted lines indicate the incomplete sections of
+this part of the Lab.
+
+The Review Exercise can only be done when the other sections have
+been completed.
+[23;1H--------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: 2
+[H[JUNX510 Lab 2.7:  Variable Assignment & Quoting
+[1;71HPage 1/10
+[2;1H--------------------------------------------------------------------------------
+
+To set a variable, just enter its name, then an equal sign, then the value.
+Do not use any space or tabs.
+
+Let's assign the value 'Ontario' to the variable 'province':
+[23;1H--------------------------------------------------------------------------------
+Enter  province=Ontario  (or enter: 'm'-main menu):
+$  [?1h=[25;1H$  p [25;5H[25;1H$  pr [25;6H[25;1H$  pro [25;7H[25;1H$  prov [25;8H[25;1H$  provi [25;9H[25;1H$  provin [25;10H[25;1H$  provinc [25;11H[25;1H$  province [25;12H[25;1H$  province= [25;13H[25;1H$  province=O [25;14H[25;1H$  province=On [25;15H[25;1H$  province=Ont [25;16H[25;1H$  province=Onta [25;17H[25;1H$  province=Ontar [25;18H[25;1H$  province=Ontari [25;19H[25;1H$  province=Ontario [25;20H[H[JUNX510 Lab 2.7:  Variable Assignment & Quoting
+[1;71HPage 2/10
+[2;1H--------------------------------------------------------------------------------
+$  province=Ontario
+[23;1H--------------------------------------------------------------------------------
+                                                                                [24;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 2.7:  Variable Assignment & Quoting
+[1;71HPage 2/10
+[2;1H--------------------------------------------------------------------------------
+
+To retrieve the value of a variable, we place a dollar sign in front of the
+variable name.  Try the following:
+[23;1H--------------------------------------------------------------------------------
+Enter  echo My province is $province  (or enter: 'm'-main menu):
+$  [?1h=[25;1H$  e [25;5H[25;1H$  ec [25;6H[25;1H$  ech [25;7H[25;1H$  echo [25;8H[25;1H$  echo  [25;9H[25;1H$  echo m [25;10H[25;1H$  echo  [25;9H[25;1H$  echo M [25;10H[25;1H$  echo My [25;11H[25;1H$  echo My  [25;12H[25;1H$  echo My P [25;13H[25;1H$  echo My  [25;12H[25;1H$  echo My p [25;13H[25;1H$  echo My pr [25;14H[25;1H$  echo My pro [25;15H[25;1H$  echo My prov [25;16H[25;1H$  echo My provi [25;17H[25;1H$  echo My provin [25;18H[25;1H$  echo My provinc [25;19H[25;1H$  echo My province [25;20H[25;1H$  echo My province  [25;21H[25;1H$  echo My province i [25;22H[25;1H$  echo My province is [25;23H[25;1H$  echo My province is  [25;24H[25;1H$  echo My province is $ [25;25H[25;1H$  echo My province is $p [25;26H[25;1H$  echo My province is $pr [25;27H[25;1H$  echo My province is $pro [25;28H[25;1H$  echo My province is $prov [25;29H[25;1H$  echo My province is $provo [25;30H[25;1H$  echo My province is $prov [25;29H[25;1H$  echo My province is $provi [25;30H[25;1H$  echo My province is $provin [25;31H[25;1H$  echo My province is $provinc [25;32H[25;1H$  echo My province is $province [25;33H[25;1H$  echo My province is $province\ [25;34H[25;1H$  echo My province is $province [25;33H[H[JUNX510 Lab 2.7:  Variable Assignment & Quoting
+[1;71HPage 3/10
+[2;1H--------------------------------------------------------------------------------
+$  echo My province is $province
+My province is Ontario
+[23;1H--------------------------------------------------------------------------------
+                                                                                [24;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 2.7:  Variable Assignment & Quoting
+[1;71HPage 3/10
+[2;1H--------------------------------------------------------------------------------
+
+Let's see what happens when we try to use spaces around the '=' sign:
+[23;1H--------------------------------------------------------------------------------
+Enter  city = Brampton  (or enter: 'm'-main menu):
+>  [?1h=[25;1H>  c [25;5H[25;1H>  ci [25;6H[25;1H>  cit [25;7H[25;1H>  city [25;8H[25;1H>  city  [25;9H[25;1H>  city = [25;10H[25;1H>  city =  [25;11H[25;1H>  city = B [25;12H[25;1H>  city = Br [25;13H[25;1H>  city = Bra [25;14H[25;1H>  city = Bram [25;15H[25;1H>  city = Bramp [25;16H[25;1H>  city = Brampt [25;17H[25;1H>  city = Brampto [25;18H[25;1H>  city = Brampton [25;19H[H[JUNX510 Lab 2.7:  Variable Assignment & Quoting
+[1;71HPage 4/10
+[2;1H--------------------------------------------------------------------------------
+
+
+$ city = Brampton
+bash: city: command not found
+[23;1H--------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.7:  Variable Assignment & Quoting
+[1;71HPage 5/10
+[2;1H--------------------------------------------------------------------------------
+
+An error message results because the variable 'city' is misinterpreted as
+a command by the shell.  Similarly, let's see what happens when we try to
+use spaces within the character string:
+[23;1H--------------------------------------------------------------------------------
+Enter  city=My city is Brampton  (or enter: 'm'-main menu):
+>  [?1h=[25;1H>  c [25;5H[25;1H>  ci [25;6H[25;1H>  cit [25;7H[25;1H>  city [25;8H[25;1H>  city  [25;9H[25;1H>  city [25;8H[25;1H>  city= [25;9H[25;1H>  city=M [25;10H[25;1H>  city=My [25;11H[25;1H>  city=My  [25;12H[25;1H>  city=My c [25;13H[25;1H>  city=My ci [25;14H[25;1H>  city=My cit [25;15H[25;1H>  city=My city [25;16H[25;1H>  city=My city  [25;17H[25;1H>  city=My city i [25;18H[25;1H>  city=My city is [25;19H[25;1H>  city=My city is  [25;20H[25;1H>  city=My city is B [25;21H[25;1H>  city=My city is Br [25;22H[25;1H>  city=My city is Bra [25;23H[25;1H>  city=My city is Bram [25;24H[25;1H>  city=My city is Bramp [25;25H[25;1H>  city=My city is Brampt [25;26H[25;1H>  city=My city is Brampto [25;27H[25;1H>  city=My city is Brampton [25;28H[H[JUNX510 Lab 2.7:  Variable Assignment & Quoting
+[1;71HPage 6/10
+[2;1H--------------------------------------------------------------------------------
+
+
+$ city=My city is Brampton
+bash: city: command not found
+[23;1H--------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.7:  Variable Assignment & Quoting
+[1;71HPage 7/10
+[2;1H--------------------------------------------------------------------------------
+
+Again we get a misinterpretation by the shell.  Fortunately, we can use
+spaces within the character string by using quotes around the entire string.
+Either single or double quotes will work in this case:
+[23;1H--------------------------------------------------------------------------------
+Enter  city='My city is Brampton'  (or enter: 'm'-main menu):
+$  [?1h=[25;1H$  c [25;5H[25;1H$  ci [25;6H[25;1H$  cit [25;7H[25;1H$  city [25;8H[25;1H$  city= [25;9H[25;1H$  city=' [25;10H[25;1H$  city='M [25;11H[25;1H$  city='My [25;12H[25;1H$  city='My  [25;13H[25;1H$  city='My c [25;14H[25;1H$  city='My ci [25;15H[25;1H$  city='My cit [25;16H[25;1H$  city='My city [25;17H[25;1H$  city='My city  [25;18H[25;1H$  city='My city i [25;19H[25;1H$  city='My city is [25;20H[25;1H$  city='My city is  [25;21H[25;1H$  city='My city is B [25;22H[25;1H$  city='My city is Br [25;23H[25;1H$  city='My city is Bra [25;24H[25;1H$  city='My city is Bram [25;25H[25;1H$  city='My city is Bramp [25;26H[25;1H$  city='My city is Brampt [25;27H[25;1H$  city='My city is Brampto [25;28H[25;1H$  city='My city is Brampton [25;29H[25;1H$  city='My city is Brampton' [25;30H[H[JUNX510 Lab 2.7:  Variable Assignment & Quoting
+[1;71HPage 8/10
+[2;1H--------------------------------------------------------------------------------
+$  city='My city is Brampton'
+[23;1H--------------------------------------------------------------------------------
+                                                                                [24;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 2.7:  Variable Assignment & Quoting
+[1;71HPage 8/10
+[2;1H--------------------------------------------------------------------------------
+
+Double quotes are also called weak quotes, because they allow variables to
+be substituted by their values:
+[23;1H--------------------------------------------------------------------------------
+Enter  echo "My province is $province"  (or enter: 'm'-main menu):
+$  [?1h=[25;1H$  e [25;5H[25;1H$  ec [25;6H[25;1H$  ech [25;7H[25;1H$  echo [25;8H[25;1H$  echo  [25;9H[25;1H$  echo " [25;10H[25;1H$  echo "M [25;11H[25;1H$  echo "My [25;12H[25;1H$  echo "My  [25;13H[25;1H$  echo "My p [25;14H[25;1H$  echo "My pr [25;15H[25;1H$  echo "My pro [25;16H[25;1H$  echo "My prov [25;17H[25;1H$  echo "My provi [25;18H[25;1H$  echo "My provin [25;19H[25;1H$  echo "My provinc [25;20H[25;1H$  echo "My province [25;21H[25;1H$  echo "My province  [25;22H[25;1H$  echo "My province i [25;23H[25;1H$  echo "My province is [25;24H[25;1H$  echo "My province is  [25;25H[25;1H$  echo "My province is $ [25;26H[25;1H$  echo "My province is $p [25;27H[25;1H$  echo "My province is $pr [25;28H[25;1H$  echo "My province is $pro [25;29H[25;1H$  echo "My province is $prov [25;30H[25;1H$  echo "My province is $provi [25;31H[25;1H$  echo "My province is $provin [25;32H[25;1H$  echo "My province is $provinc [25;33H[25;1H$  echo "My province is $province [25;34H[25;1H$  echo "My province is $province" [25;35H[H[JUNX510 Lab 2.7:  Variable Assignment & Quoting
+[1;71HPage 9/10
+[2;1H--------------------------------------------------------------------------------
+$  echo "My province is $province"
+My province is Ontario
+[23;1H--------------------------------------------------------------------------------
+                                                                                [24;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 2.7:  Variable Assignment & Quoting
+[1;71HPage 9/10
+[2;1H--------------------------------------------------------------------------------
+
+Single quotes are also called strong quotes, because they do not allow
+variable substitution:
+[23;1H--------------------------------------------------------------------------------
+Enter  echo 'My province is $province'  (or enter: 'm'-main menu):
+$  [?1h=[25;1H$  e [25;5H[25;1H$  ec [25;6H[25;1H$  ech [25;7H[25;1H$  echo [25;8H[25;1H$  echo  [25;9H[25;1H$  echo ' [25;10H[25;1H$  echo 'M [25;11H[25;1H$  echo 'My [25;12H[25;1H$  echo 'My  [25;13H[25;1H$  echo 'My p [25;14H[25;1H$  echo 'My pr [25;15H[25;1H$  echo 'My pro [25;16H[25;1H$  echo 'My prov [25;17H[25;1H$  echo 'My provi [25;18H[25;1H$  echo 'My provin [25;19H[25;1H$  echo 'My provinc [25;20H[25;1H$  echo 'My province [25;21H[25;1H$  echo 'My province  [25;22H[25;1H$  echo 'My province i [25;23H[25;1H$  echo 'My province is [25;24H[25;1H$  echo 'My province is  [25;25H[25;1H$  echo 'My province is $ [25;26H[25;1H$  echo 'My province is $p [25;27H[25;1H$  echo 'My province is $pr [25;28H[25;1H$  echo 'My province is $pro [25;29H[25;1H$  echo 'My province is $prov [25;30H[25;1H$  echo 'My province is $provi [25;31H[25;1H$  echo 'My province is $provin [25;32H[25;1H$  echo 'My province is $provinc [25;33H[25;1H$  echo 'My province is $province [25;34H[25;1H$  echo 'My province is $province' [25;35H[H[JUNX510 Lab 2.7:  Variable Assignment & Quoting
+[1;71HPage 10/10
+[2;1H--------------------------------------------------------------------------------
+$  echo 'My province is $province'
+My province is $province
+[23;1H--------------------------------------------------------------------------------
+                                                                                [24;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 2.7:  Variable Assignment & Quoting
+[1;71HPage 10/10
+[2;1H--------------------------------------------------------------------------------
+
+You may now proceed to the next section about 'Command Substitution'.
+[23;1H--------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.7:  Interactive Shell Environment
+[2;1H--------------------------------------------------------------------------------
+
+Available selections:
+
+1 Environment Variables - Completed[m
+2 Variable Assignment & Quoting - Completed[m
+3 [7mCommand Substitution[m
+4 [7mUsing The alias Command[m
+5 [7mVariables[m
+6 [7mReview Exercise[m
+
+Note that the highlighted lines indicate the incomplete sections of
+this part of the Lab.
+
+The Review Exercise can only be done when the other sections have
+been completed.
+[23;1H--------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: 3
+[H[JUNX510 Lab 2.7:  Command Substitution
+[1;71HPage 1/5
+[2;1H--------------------------------------------------------------------------------
+
+Command substitution takes the output of a command and treats it as a
+character string.
+
+The older form of command substitution uses backquotes:
+[23;1H--------------------------------------------------------------------------------
+Enter  echo "My user name is `whoami`"  (or enter: 'm'-main menu):
+$  [?1h=[25;1H$  e [25;5H[25;1H$  ec [25;6H[25;1H$  ech [25;7H[25;1H$  echo [25;8H[25;1H$  echo  [25;9H[25;1H$  echo " [25;10H[25;1H$  echo "M [25;11H[25;1H$  echo "My [25;12H[25;1H$  echo "My  [25;13H[25;1H$  echo "My u [25;14H[25;1H$  echo "My us [25;15H[25;1H$  echo "My use [25;16H[25;1H$  echo "My user [25;17H[25;1H$  echo "My user  [25;18H[25;1H$  echo "My user n [25;19H[25;1H$  echo "My user na [25;20H[25;1H$  echo "My user nam [25;21H[25;1H$  echo "My user name [25;22H[25;1H$  echo "My user name  [25;23H[25;1H$  echo "My user name i [25;24H[25;1H$  echo "My user name is [25;25H[25;1H$  echo "My user name is  [25;26H[25;1H$  echo "My user name is ` [25;27H[25;1H$  echo "My user name is `w [25;28H[25;1H$  echo "My user name is `wh [25;29H[25;1H$  echo "My user name is `who [25;30H[25;1H$  echo "My user name is `whoa [25;31H[25;1H$  echo "My user name is `whoam [25;32H[25;1H$  echo "My user name is `whoami [25;33H[25;1H$  echo "My user name is `whoami' [25;34H[25;1H$  echo "My user name is `whoami [25;33H[25;1H$  echo "My user name is `whoami` [25;34H[25;1H$  echo "My user name is `whoami`" [25;35H[H[JUNX510 Lab 2.7:  Command Substitution
+[1;71HPage 2/5
+[2;1H--------------------------------------------------------------------------------
+$  echo "My user name is `whoami`"
+My user name is yliu421
+[23;1H--------------------------------------------------------------------------------
+                                                                                [24;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 2.7:  Command Substitution
+[1;71HPage 2/5
+[2;1H--------------------------------------------------------------------------------
+
+The newer form of command substitution is more powerful, since it allows
+nesting of command substitution.  It uses '$' followed by parentheses
+surrounding the command:
+[23;1H--------------------------------------------------------------------------------
+Enter  echo "My user name is $(whoami)"  (or enter: 'm'-main menu):
+$  [?1h=[25;1H$  e [25;5H[25;1H$  ec [25;6H[25;1H$  ech [25;7H[25;1H$  echo [25;8H[25;1H$  echo  [25;9H[25;1H$  echo " [25;10H[25;1H$  echo "M [25;11H[25;1H$  echo "My [25;12H[25;1H$  echo "My  [25;13H[25;1H$  echo "My u [25;14H[25;1H$  echo "My us [25;15H[25;1H$  echo "My use [25;16H[25;1H$  echo "My user [25;17H[25;1H$  echo "My user  [25;18H[25;1H$  echo "My user n [25;19H[25;1H$  echo "My user na [25;20H[25;1H$  echo "My user nam [25;21H[25;1H$  echo "My user name [25;22H[25;1H$  echo "My user name  [25;23H[25;1H$  echo "My user name i [25;24H[25;1H$  echo "My user name is [25;25H[25;1H$  echo "My user name is  [25;26H[25;1H$  echo "My user name is $ [25;27H[25;1H$  echo "My user name is $( [25;28H[25;1H$  echo "My user name is $(w [25;29H[25;1H$  echo "My user name is $(wh [25;30H[25;1H$  echo "My user name is $(who [25;31H[25;1H$  echo "My user name is $(whoa [25;32H[25;1H$  echo "My user name is $(whoam [25;33H[25;1H$  echo "My user name is $(whoami [25;34H[25;1H$  echo "My user name is $(whoami) [25;35H[25;1H$  echo "My user name is $(whoami)" [25;36H[H[JUNX510 Lab 2.7:  Command Substitution
+[1;71HPage 3/5
+[2;1H--------------------------------------------------------------------------------
+$  echo "My user name is $(whoami)"
+My user name is yliu421
+[23;1H--------------------------------------------------------------------------------
+                                                                                [24;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 2.7:  Command Substitution
+[1;71HPage 3/5
+[2;1H--------------------------------------------------------------------------------
+
+The result of command substitution can be used anywhere a string can be used.
+For example, it may be placed into a variable:
+[23;1H--------------------------------------------------------------------------------
+Enter  username=$(whoami)  (or enter: 'm'-main menu):
+$  [?1h=[25;1H$  u [25;5H[25;1H$  us [25;6H[25;1H$  use [25;7H[25;1H$  user [25;8H[25;1H$  usern [25;9H[25;1H$  userna [25;10H[25;1H$  usernam [25;11H[25;1H$  username [25;12H[25;1H$  username  [25;13H[25;1H$  username [25;12H[25;1H$  username= [25;13H[25;1H$  username=$ [25;14H[25;1H$  username=$( [25;15H[25;1H$  username=$(w [25;16H[25;1H$  username=$(wh [25;17H[25;1H$  username=$(who [25;18H[25;1H$  username=$(whoa [25;19H[25;1H$  username=$(whoam [25;20H[25;1H$  username=$(whoami [25;21H[25;1H$  username=$(whoami) [25;22H[H[JUNX510 Lab 2.7:  Command Substitution
+[1;71HPage 4/5
+[2;1H--------------------------------------------------------------------------------
+$  username=$(whoami)
+[23;1H--------------------------------------------------------------------------------
+                                                                                [24;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 2.7:  Command Substitution
+[1;71HPage 4/5
+[2;1H--------------------------------------------------------------------------------
+
+Now the variable 'username' can be displayed:
+[23;1H--------------------------------------------------------------------------------
+Enter  echo "My user name is $username"  (or enter: 'm'-main menu):
+$  [?1h=[25;1H$  e [25;5H[25;1H$  ec [25;6H[25;1H$  ech [25;7H[25;1H$  echo [25;8H[25;1H$  echo  [25;9H[25;1H$  echo " [25;10H[25;1H$  echo "m [25;11H[25;1H$  echo " [25;10H[25;1H$  echo "M [25;11H[25;1H$  echo "My [25;12H[25;1H$  echo "My  [25;13H[25;1H$  echo "My u [25;14H[25;1H$  echo "My us [25;15H[25;1H$  echo "My use [25;16H[25;1H$  echo "My user [25;17H[25;1H$  echo "My user  [25;18H[25;1H$  echo "My user n [25;19H[25;1H$  echo "My user na [25;20H[25;1H$  echo "My user nam [25;21H[25;1H$  echo "My user name [25;22H[25;1H$  echo "My user name  [25;23H[25;1H$  echo "My user name i [25;24H[25;1H$  echo "My user name is [25;25H[25;1H$  echo "My user name is  [25;26H[25;1H$  echo "My user name is $ [25;27H[25;1H$  echo "My user name is $u [25;28H[25;1H$  echo "My user name is $us [25;29H[25;1H$  echo "My user name is $use [25;30H[25;1H$  echo "My user name is $user [25;31H[25;1H$  echo "My user name is $usern [25;32H[25;1H$  echo "My user name is $userna [25;33H[25;1H$  echo "My user name is $usernam [25;34H[25;1H$  echo "My user name is $username [25;35H[25;1H$  echo "My user name is $username" [25;36H[H[JUNX510 Lab 2.7:  Command Substitution
+[1;71HPage 5/5
+[2;1H--------------------------------------------------------------------------------
+$  echo "My user name is $username"
+My user name is yliu421
+[23;1H--------------------------------------------------------------------------------
+                                                                                [24;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 2.7:  Command Substitution
+[1;71HPage 5/5
+[2;1H--------------------------------------------------------------------------------
+
+You may now proceed to the next section about 'Using the alias Command'.
+[23;1H--------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.7:  Interactive Shell Environment
+[2;1H--------------------------------------------------------------------------------
+
+Available selections:
+
+1 Environment Variables - Completed[m
+2 Variable Assignment & Quoting - Completed[m
+3 Command Substitution - Completed[m
+4 [7mUsing The alias Command[m
+5 [7mVariables[m
+6 [7mReview Exercise[m
+
+Note that the highlighted lines indicate the incomplete sections of
+this part of the Lab.
+
+The Review Exercise can only be done when the other sections have
+been completed.
+[23;1H--------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: 4
+[H[JUNX510 Lab 2.7:  Using The alias Command
+[1;71HPage 1/12
+[2;1H--------------------------------------------------------------------------------
+
+The 'alias' command can be used to give a command a different name.
+For example:
+
+     alias display=echo
+
+In this case, whenever the shell finds a 'display' command, it will substitute
+the 'echo' command.  Try it:
+[23;1H--------------------------------------------------------------------------------
+Enter  alias display=echo  (or enter: 'm'-main menu):
+$  [?1h=[25;1H$  a [25;5H[25;1H$  al [25;6H[25;1H$  ali [25;7H[25;1H$  alia [25;8H[25;1H$  alias [25;9H[25;1H$  alias  [25;10H[25;1H$  alias d [25;11H[25;1H$  alias di [25;12H[25;1H$  alias dis [25;13H[25;1H$  alias disp [25;14H[25;1H$  alias displ [25;15H[25;1H$  alias displa [25;16H[25;1H$  alias display [25;17H[25;1H$  alias display= [25;18H[25;1H$  alias display=e [25;19H[25;1H$  alias display=ec [25;20H[25;1H$  alias display=ech [25;21H[25;1H$  alias display=echo [25;22H[H[JUNX510 Lab 2.7:  Using The alias Command
+[1;71HPage 2/12
+[2;1H--------------------------------------------------------------------------------
+$  alias display=echo
+[23;1H--------------------------------------------------------------------------------
+                                                                                [24;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 2.7:  Using The alias Command
+[1;71HPage 2/12
+[2;1H--------------------------------------------------------------------------------
+
+Now try using the new 'display' command:
+[23;1H--------------------------------------------------------------------------------
+Enter  display "My user name is $(whoami)"  (or enter: 'm'-main menu):
+>  [?1h=[25;1H>  d [25;5H[25;1H>  di [25;6H[25;1H>  dis [25;7H[25;1H>  disp [25;8H[25;1H>  displ [25;9H[25;1H>  displa [25;10H[25;1H>  display [25;11H[25;1H>  display  [25;12H[25;1H>  display " [25;13H[25;1H>  display "M [25;14H[25;1H>  display "My [25;15H[25;1H>  display "My  [25;16H[25;1H>  display "My u [25;17H[25;1H>  display "My us [25;18H[25;1H>  display "My use [25;19H[25;1H>  display "My user [25;20H[25;1H>  display "My user  [25;21H[25;1H>  display "My user n [25;22H[25;1H>  display "My user na [25;23H[25;1H>  display "My user nam [25;24H[25;1H>  display "My user name [25;25H[25;1H>  display "My user name  [25;26H[25;1H>  display "My user name i [25;27H[25;1H>  display "My user name is [25;28H[25;1H>  display "My user name is  [25;29H[25;1H>  display "My user name is $ [25;30H[25;1H>  display "My user name is $( [25;31H[25;1H>  display "My user name is $(w [25;32H[25;1H>  display "My user name is $(wh [25;33H[25;1H>  display "My user name is $(who [25;34H[25;1H>  display "My user name is $(whoa [25;35H[25;1H>  display "My user name is $(whoam [25;36H[25;1H>  display "My user name is $(whoami [25;37H[25;1H>  display "My user name is $(whoami) [25;38H[25;1H>  display "My user name is $(whoami)" [25;39H[H[JUNX510 Lab 2.7:  Using The alias Command
+[1;71HPage 3/12
+[2;1H--------------------------------------------------------------------------------
+
+
+$ display "My user name is $(whoami)"
+My user name is yliu421
+[23;1H--------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.7:  Using The alias Command
+[1;71HPage 4/12
+[2;1H--------------------------------------------------------------------------------
+
+An alias can be removed using the 'unalias' command:
+[23;1H--------------------------------------------------------------------------------
+Enter  unalias display  (or enter: 'm'-main menu):
+$  [?1h=[25;1H$  u [25;5H[25;1H$  un [25;6H[25;1H$  una [25;7H[25;1H$  unal [25;8H[25;1H$  unali [25;9H[25;1H$  unalia [25;10H[25;1H$  unalias [25;11H[H[JUNX510 Lab 2.7:  Using The alias Command
+[1;71HPage 4/12
+[2;1H--------------------------------------------------------------------------------
+
+An alias can be removed using the 'unalias' command:
+
+You entered: unalias
+Please try again.
+[23;1H--------------------------------------------------------------------------------
+Enter  unalias display  (or enter: 'm'-main menu):
+$  [?1h=[25;1H$  u [25;5H[25;1H$  un [25;6H[25;1H$  una [25;7H[25;1H$  unal [25;8H[25;1H$  unali [25;9H[25;1H$  unalia [25;10H[25;1H$  unalias [25;11H[25;1H$  unalias  [25;12H[25;1H$  unalias d [25;13H[25;1H$  unalias di [25;14H[25;1H$  unalias dis [25;15H[25;1H$  unalias disp [25;16H[25;1H$  unalias displ [25;17H[25;1H$  unalias displa [25;18H[25;1H$  unalias display [25;19H[H[JUNX510 Lab 2.7:  Using The alias Command
+[1;71HPage 5/12
+[2;1H--------------------------------------------------------------------------------
+$  unalias display
+[23;1H--------------------------------------------------------------------------------
+                                                                                [24;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 2.7:  Using The alias Command
+[1;71HPage 5/12
+[2;1H--------------------------------------------------------------------------------
+
+Now try using the 'display' command again:
+[23;1H--------------------------------------------------------------------------------
+Enter  display "My user name is $(whoami)"  (or enter: 'm'-main menu):
+>  [?1h=[25;1H>  d [25;5H[25;1H>  di [25;6H[25;1H>  dis [25;7H[25;1H>  disp [25;8H[25;1H>  displ [25;9H[25;1H>  displa [25;10H[25;1H>  display [25;11H[25;1H>  display  [25;12H[25;1H>  display " [25;13H[25;1H>  display "" [25;14H[25;13H[25;1H>  display "M" [25;14H[25;1H>  display "My" [25;15H[25;1H>  display "My " [25;16H[25;1H>  display "My u" [25;17H[25;1H>  display "My us" [25;18H[25;1H>  display "My use" [25;19H[25;1H>  display "My user" [25;20H[25;1H>  display "My user " [25;21H[25;1H>  display "My user n" [25;22H[25;1H>  display "My user na" [25;23H[25;1H>  display "My user nam" [25;24H[25;1H>  display "My user name" [25;25H[25;1H>  display "My user name " [25;26H[25;1H>  display "My user name i" [25;27H[25;1H>  display "My user name is" [25;28H[25;1H>  display "My user name is " [25;29H[25;1H>  display "My user name is $" [25;30H[25;1H>  display "My user name is $w" [25;31H[25;1H>  display "My user name is $" [25;30H[25;1H>  display "My user name is $(" [25;31H[25;1H>  display "My user name is $()" [25;32H[25;31H[25;1H>  display "My user name is $(w)" [25;32H[25;1H>  display "My user name is $(wh)" [25;33H[25;1H>  display "My user name is $(who)" [25;34H[25;1H>  display "My user name is $(whoa)" [25;35H[25;1H>  display "My user name is $(whoam)" [25;36H[25;1H>  display "My user name is $(whoami)" [25;37H[H[JUNX510 Lab 2.7:  Using The alias Command
+[1;71HPage 6/12
+[2;1H--------------------------------------------------------------------------------
+
+
+$ display "My user name is $(whoami)"
+bash: display: command not found
+[23;1H--------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.7:  Using The alias Command
+[1;71HPage 7/12
+[2;1H--------------------------------------------------------------------------------
+
+The 'alias' command can also be used to add options or arguments to a command.
+For example:
+
+     alias mkdir='mkdir -p'
+
+     or:
+
+     alias md='mkdir -p'
+
+In this case, whenever the shell finds a 'mkdir' or 'md' command, it will
+substitute the 'mkdir -p' command.  Try it:
+[23;1H--------------------------------------------------------------------------------
+Enter  alias md='mkdir -p'  (or enter: 'm'-main menu):
+$  [?1h=[25;1H$  a [25;5H[25;1H$  al [25;6H[25;1H$  ali [25;7H[25;1H$  alia [25;8H[25;1H$  alias [25;9H[25;1H$  alias= [25;10H[25;1H$  alias [25;9H[25;1H$  alias  [25;10H[25;1H$  alias m [25;11H[25;1H$  alias md [25;12H[25;1H$  alias md= [25;13H[25;1H$  alias md=' [25;14H[25;1H$  alias md='' [25;15H[25;14H[25;1H$  alias md='m' [25;15H[25;1H$  alias md='mk' [25;16H[25;1H$  alias md='mkd' [25;17H[25;1H$  alias md='mkdi' [25;18H[25;1H$  alias md='mkdir' [25;19H[25;1H$  alias md='mkdir ' [25;20H[25;1H$  alias md='mkdir -' [25;21H[25;1H$  alias md='mkdir -p' [25;22H[H[JUNX510 Lab 2.7:  Using The alias Command
+[1;71HPage 8/12
+[2;1H--------------------------------------------------------------------------------
+$  alias md='mkdir -p'
+[23;1H--------------------------------------------------------------------------------
+                                                                                [24;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 2.7:  Using The alias Command
+[1;71HPage 8/12
+[2;1H--------------------------------------------------------------------------------
+
+Now try using the new 'md' command.  In your current (home) directory,
+create the directory 'lab2_testdir/a/b/c/d':
+[23;1H--------------------------------------------------------------------------------
+Enter  md lab2_testdir/a/b/c/d  (or enter: 'm'-main menu):
+>  [?1h=[25;1H>  m [25;5H[25;1H>  md [25;6H[25;1H>  md  [25;7H[25;1H>  md l [25;8H[25;1H>  md la [25;9H[25;1H>  md lab [25;10H[25;1H>  md lab2 [25;11H[25;1H>  md lab2_ [25;12H[25;1H>  md lab2_t [25;13H[25;1H>  md lab2_te [25;14H[25;1H>  md lab2_tes [25;15H[25;1H>  md lab2_test [25;16H[25;1H>  md lab2_testd [25;17H[25;1H>  md lab2_testdi [25;18H[25;1H>  md lab2_testdir [25;19H[25;1H>  md lab2_testdir/ [25;20H[25;1H>  md lab2_testdir/a [25;21H[25;1H>  md lab2_testdir/a/ [25;22H[25;1H>  md lab2_testdir/a/b [25;23H[25;1H>  md lab2_testdir/a/b/ [25;24H[25;1H>  md lab2_testdir/a/b/c [25;25H[25;1H>  md lab2_testdir/a/b/c/ [25;26H[25;1H>  md lab2_testdir/a/b/c/d [25;27H[H[JUNX510 Lab 2.7:  Using The alias Command
+[1;71HPage 9/12
+[2;1H--------------------------------------------------------------------------------
+
+
+$ md lab2_testdir/a/b/c/d
+[23;1H--------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.7:  Using The alias Command
+[1;71HPage 10/12
+[2;1H--------------------------------------------------------------------------------
+
+Now check that the directory 'lab2_testdir/a/b/c/d' exists:
+[23;1H--------------------------------------------------------------------------------
+Enter  ls -ld lab2_testdir/a/b/c/d  (or enter: 'm'-main menu):
+$  [?1h=[25;1H$  l [25;5H[25;1H$  ls [25;6H[25;1H$  ls  [25;7H[25;1H$  ls - [25;8H[25;1H$  ls -l [25;9H[25;1H$  ls -ls [25;10H[25;1H$  ls -l [25;9H[25;1H$  ls -ld [25;10H[25;1H$  ls -ld  [25;11H[25;1H$  ls -ld l [25;12H[25;1H$  ls -ld la [25;13H[25;1H$  ls -ld lab [25;14H[25;1H$  ls -ld lab2 [25;15H[25;1H$  ls -ld lab2_ [25;16H[25;1H$  ls -ld lab2_t [25;17H[25;1H$  ls -ld lab2_te [25;18H[25;1H$  ls -ld lab2_tes [25;19H[25;1H$  ls -ld lab2_test [25;20H[25;1H$  ls -ld lab2_testd [25;21H[25;1H$  ls -ld lab2_testdi [25;22H[25;1H$  ls -ld lab2_testdir [25;23H[25;1H$  ls -ld lab2_testdir/ [25;24H[25;1H$  ls -ld lab2_testdir/a [25;25H[25;1H$  ls -ld lab2_testdir/a/ [25;26H[25;1H$  ls -ld lab2_testdir/a/a [25;27H[25;1H$  ls -ld lab2_testdir/a/ [25;26H[25;1H$  ls -ld lab2_testdir/a// [25;27H[25;1H$  ls -ld lab2_testdir/a/ [25;26H[25;1H$  ls -ld lab2_testdir/a/b [25;27H[25;1H$  ls -ld lab2_testdir/a/b/ [25;28H[25;1H$  ls -ld lab2_testdir/a/b/c [25;29H[25;1H$  ls -ld lab2_testdir/a/b/c/ [25;30H[25;1H$  ls -ld lab2_testdir/a/b/c/d [25;31H[H[JUNX510 Lab 2.7:  Using The alias Command
+[1;71HPage 11/12
+[2;1H--------------------------------------------------------------------------------
+$  ls -ld lab2_testdir/a/b/c/d
+drwx------ 2 yliu421 users 6 May 22 22:01 lab2_testdir/a/b/c/d
+[23;1H--------------------------------------------------------------------------------
+                                                                                [24;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 2.7:  Using The alias Command
+[1;71HPage 11/12
+[2;1H--------------------------------------------------------------------------------
+
+The 'alias' command can be convenient, but it has potential drawbacks.
+
+For example, if you ask a user to execute the 'md' or other aliased commands,
+they may not have the same aliases as you do.
+
+Similarly, you might use the 'md' or other aliased commands in scripts that
+you write for others, and they may not have the aliases.
+
+Remove the 'md' alias:
+[23;1H--------------------------------------------------------------------------------
+Enter  unalias md  (or enter: 'm'-main menu):
+$  [?1h=[25;1H$  u [25;5H[25;1H$  un [25;6H[25;1H$  una [25;7H[25;1H$  unal [25;8H[25;1H$  unali [25;9H[25;1H$  unalia [25;10H[25;1H$  unalias [25;11H[25;1H$  unalias  [25;12H[25;1H$  unalias m [25;13H[25;1H$  unalias md [25;14H[H[JUNX510 Lab 2.7:  Using The alias Command
+[1;71HPage 12/12
+[2;1H--------------------------------------------------------------------------------
+$  unalias md
+[23;1H--------------------------------------------------------------------------------
+                                                                                [24;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 2.7:  Using The alias Command
+[1;71HPage 12/12
+[2;1H--------------------------------------------------------------------------------
+
+You may now proceed to the next section about 'Variables'.
+[23;1H--------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.7:  Interactive Shell Environment
+[2;1H--------------------------------------------------------------------------------
+
+Available selections:
+
+1 Environment Variables - Completed[m
+2 Variable Assignment & Quoting - Completed[m
+3 Command Substitution - Completed[m
+4 Using The alias Command - Completed[m
+5 [7mVariables[m
+6 [7mReview Exercise[m
+
+Note that the highlighted lines indicate the incomplete sections of
+this part of the Lab.
+
+The Review Exercise can only be done when the other sections have
+been completed.
+[23;1H--------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: 5
+[H[JUNX510 Lab 2.7:  Variables
+[1;71HPage 1/19
+[2;1H--------------------------------------------------------------------------------
+
+Variables
+
+Besides the user-defined variables and environment variables seen in earlier
+sections, there are lots of pre-defined variables that can be used on the
+command line and within scripts.
+[23;1H--------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.7:  Variables
+[1;71HPage 2/19
+[2;1H--------------------------------------------------------------------------------
+
+Positional parameters are available as the variables $1, $2, $3, and so on.
+For example, if we write a script called 'script1', and call it as follows:
+
+     script1 Toronto Brampton 'North York'
+
+then the value of variable $1 is the string 'Toronto', $2 has the value
+'Brampton', and $3 has the value 'North York'.
+[23;1H--------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.7:  Variables
+[1;71HPage 3/19
+[2;1H--------------------------------------------------------------------------------
+
+Similarly, these variables can be set on the command line by using the
+'set' command.  For example:
+
+     set Toronto Brampton 'North York'
+
+then the value of variable $1 is the string 'Toronto', $2 has the value
+'Brampton', and $3 has the value 'North York'.  Try this now:
+[23;1H--------------------------------------------------------------------------------
+Enter  set Toronto Brampton 'North York'  (or enter: 'm'-main menu):
+$  [?1h=[H[JUNX510 Lab 2.7:  Variables
+[1;71HPage 3/19
+[2;1H--------------------------------------------------------------------------------
+
+Similarly, these variables can be set on the command line by using the
+'set' command.  For example:
+
+     set Toronto Brampton 'North York'
+
+then the value of variable $1 is the string 'Toronto', $2 has the value
+'Brampton', and $3 has the value 'North York'.  Try this now:
+
+You entered: 
+Please try again.
+[23;1H--------------------------------------------------------------------------------
+Enter  set Toronto Brampton 'North York'  (or enter: 'm'-main menu):
+$  [?1h=[25;1H$  s [25;5H[25;1H$  se [25;6H[25;1H$  set [25;7H[25;1H$  set  [25;8H[25;1H$  set T [25;9H[25;1H$  set To [25;10H[25;1H$  set Tor [25;11H[25;1H$  set Toro [25;12H[25;1H$  set Toron [25;13H[25;1H$  set Toront [25;14H[25;1H$  set Toronto [25;15H[25;1H$  set Toronto  [25;16H[25;1H$  set Toronto B [25;17H[25;1H$  set Toronto Br [25;18H[25;1H$  set Toronto Bra [25;19H[25;1H$  set Toronto Bram [25;20H[25;1H$  set Toronto Bramp [25;21H[25;1H$  set Toronto Brampt [25;22H[25;1H$  set Toronto Brampto [25;23H[25;1H$  set Toronto Brampton [25;24H[25;1H$  set Toronto Brampton  [25;25H[25;1H$  set Toronto Brampton ' [25;26H[25;1H$  set Toronto Brampton 'N [25;27H[25;1H$  set Toronto Brampton 'No [25;28H[25;1H$  set Toronto Brampton 'Nor [25;29H[25;1H$  set Toronto Brampton 'Nort [25;30H[25;1H$  set Toronto Brampton 'North [25;31H[25;1H$  set Toronto Brampton 'North  [25;32H[25;1H$  set Toronto Brampton 'North Y [25;33H[25;1H$  set Toronto Brampton 'North Yo [25;34H[25;1H$  set Toronto Brampton 'North Yor [25;35H[25;1H$  set Toronto Brampton 'North York [25;36H[25;1H$  set Toronto Brampton 'North York' [25;37H[H[JUNX510 Lab 2.7:  Variables
+[1;71HPage 4/19
+[2;1H--------------------------------------------------------------------------------
+$  set Toronto Brampton 'North York'
+[23;1H--------------------------------------------------------------------------------
+                                                                                [24;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 2.7:  Variables
+[1;71HPage 4/19
+[2;1H--------------------------------------------------------------------------------
+
+Now display the value of the variable $1:
+[23;1H--------------------------------------------------------------------------------
+Enter  echo $1  (or enter: 'm'-main menu):
+>  [?1h=[25;1H>  e [25;5H[25;5H[25;1H>  eo [25;6H[25;1H>  eo  [25;7H[25;1H>  eo [25;6H[25;1H>  e [25;5H[25;1H>  ec [25;6H[25;1H>  ech [25;7H[25;1H>  echo [25;8H[25;1H>  echo  [25;9H[25;1H>  echo $ [25;10H[25;1H>  echo $1 [25;11H[H[JUNX510 Lab 2.7:  Variables
+[1;71HPage 5/19
+[2;1H--------------------------------------------------------------------------------
+
+
+$ echo $1
+Toronto
+[23;1H--------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.7:  Variables
+[1;71HPage 6/19
+[2;1H--------------------------------------------------------------------------------
+
+Now display the value of the variable $3:
+[23;1H--------------------------------------------------------------------------------
+Enter  echo $3  (or enter: 'm'-main menu):
+>  [?1h=[25;1H>  e [25;5H[25;1H>  ec [25;6H[25;1H>  ech [25;7H[25;1H>  echo [25;8H[25;1H>  echo  [25;9H[25;1H>  echo $ [25;10H[25;1H>  echo $3 [25;11H[H[JUNX510 Lab 2.7:  Variables
+[1;71HPage 7/19
+[2;1H--------------------------------------------------------------------------------
+
+
+$ echo $3
+North York
+[23;1H--------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.7:  Variables
+[1;71HPage 8/19
+[2;1H--------------------------------------------------------------------------------
+
+The variable $* represents all of the positional parameters as a single
+string, with the parameters separated by a single space.  Display the value
+of the variable $*:
+[23;1H--------------------------------------------------------------------------------
+Enter  echo $*  (or enter: 'm'-main menu):
+>  [?1h=[25;1H>  e [25;5H[25;1H>  ec [25;6H[25;1H>  ech [25;7H[25;1H>  echo [25;8H[25;1H>  echo  [25;9H[25;1H>  echo $ [25;10H[25;1H>  echo $* [25;11H[H[JUNX510 Lab 2.7:  Variables
+[1;71HPage 9/19
+[2;1H--------------------------------------------------------------------------------
+
+
+$ echo $*
+Toronto Brampton North York
+[23;1H--------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.7:  Variables
+[1;71HPage 10/19
+[2;1H--------------------------------------------------------------------------------
+
+The variable $@ represents all of the positional parameters as separate
+strings.  The difference between $* and $@ will be easier to show when
+looping is discussed in a later section.
+
+The variable $# represents the number of positional parameters.  Display the
+value of the variable $#:
+[23;1H--------------------------------------------------------------------------------
+Enter  echo $#  (or enter: 'm'-main menu):
+>  [?1h=[25;1H>  e [25;5H[25;1H>  ec [25;6H[25;1H>  ech [25;7H[25;1H>  echo [25;8H[25;1H>  echo  [25;9H[25;1H>  echo $ [25;10H[25;1H>  echo $# [25;11H[H[JUNX510 Lab 2.7:  Variables
+[1;71HPage 11/19
+[2;1H--------------------------------------------------------------------------------
+
+
+$ echo $#
+3
+[23;1H--------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.7:  Variables
+[1;71HPage 12/19
+[2;1H--------------------------------------------------------------------------------
+
+The command 'shift' shifts all of the positional parameters by one position.
+The value of the first positional parameter disappears, so that $1 has the
+value of the second positional parameter, and so forth.
+
+Remember that our three parameters were 'Toronto', 'Brampton', and 'North
+York'.  Now try a shift command:
+[23;1H--------------------------------------------------------------------------------
+Enter  shift  (or enter: 'm'-main menu):
+$  [?1h=[25;1H$  s [25;5H[25;1H$  sh [25;6H[25;1H$  shi [25;7H[25;1H$  shif [25;8H[25;1H$  shift [25;9H[H[JUNX510 Lab 2.7:  Variables
+[1;71HPage 13/19
+[2;1H--------------------------------------------------------------------------------
+$  shift
+[23;1H--------------------------------------------------------------------------------
+                                                                                [24;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 2.7:  Variables
+[1;71HPage 13/19
+[2;1H--------------------------------------------------------------------------------
+
+Now display the values of the variables $1 and $2:
+[23;1H--------------------------------------------------------------------------------
+Enter  echo "$1 and $2"  (or enter: 'm'-main menu):
+>  [?1h=[25;1H>  e [25;5H[25;1H>  ec [25;6H[25;1H>  ech [25;7H[25;1H>  echo [25;8H[25;1H>  echo  [25;9H[25;1H>  echo $ [25;10H[25;1H>  echo $1 [25;11H[25;1H>  echo $ [25;10H[25;1H>  echo  [25;9H[25;1H>  echo " [25;10H[25;1H>  echo "$ [25;11H[25;1H>  echo "$1 [25;12H[25;1H>  echo "$1  [25;13H[25;1H>  echo "$1 a [25;14H[25;1H>  echo "$1 an [25;15H[25;1H>  echo "$1 and [25;16H[25;1H>  echo "$1 and  [25;17H[25;1H>  echo "$1 and $ [25;18H[25;1H>  echo "$1 and $2 [25;19H[25;1H>  echo "$1 and $2" [25;20H[H[JUNX510 Lab 2.7:  Variables
+[1;71HPage 14/19
+[2;1H--------------------------------------------------------------------------------
+
+
+$ echo "$1 and $2"
+Brampton and North York
+[23;1H--------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.7:  Variables
+[1;71HPage 15/19
+[2;1H--------------------------------------------------------------------------------
+
+Now display the values of the variables $3 and $#:
+[23;1H--------------------------------------------------------------------------------
+Enter  echo "$3 and $#"  (or enter: 'm'-main menu):
+>  [?1h=[25;1H>  e [25;5H[25;1H>  ec [25;6H[25;1H>  ech [25;7H[25;1H>  echo [25;8H[25;1H>  echo  [25;9H[25;1H>  echo " [25;10H[25;1H>  echo "$ [25;11H[25;1H>  echo "$3 [25;12H[25;1H>  echo "$3  [25;13H[25;1H>  echo "$3 a [25;14H[25;1H>  echo "$3 an [25;15H[25;1H>  echo "$3 and [25;16H[25;1H>  echo "$3 and  [25;17H[25;1H>  echo "$3 and $ [25;18H[25;1H>  echo "$3 and $# [25;19H[25;1H>  echo "$3 and $#" [25;20H[H[JUNX510 Lab 2.7:  Variables
+[1;71HPage 16/19
+[2;1H--------------------------------------------------------------------------------
+
+
+$ echo "$3 and $#"
+ and 2
+[23;1H--------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.7:  Variables
+[1;71HPage 17/19
+[2;1H--------------------------------------------------------------------------------
+
+The variable $$ contains the process id number, or PID, of the current
+process. All processes running on the system, including this Lab, have a
+unique process id.  This is very useful when creating temporary files within
+a script, allowing temporary files to have a unique name regardless of how
+many times the script is being executed at the same time.
+
+Again, this Lab is an example of that, where multiple students can
+simultaneouly run the Lab program without interfering with each other.
+Display the value of the variable $$:
+[23;1H--------------------------------------------------------------------------------
+Enter  echo $$  (or enter: 'm'-main menu):
+$  [?1h=[25;1H$  e [25;5H[25;1H$  eh [25;6H[25;1H$  ehc [25;7H[25;1H$  ehco [25;8H[25;1H$  ehc [25;7H[25;1H$  eh [25;6H[25;1H$  e [25;5H[25;1H$  ec [25;6H[25;1H$  ech [25;7H[25;1H$  echo [25;8H[25;1H$  echo  [25;9H[25;1H$  echo $ [25;10H[25;1H$  echo $$ [25;11H[H[JUNX510 Lab 2.7:  Variables
+[1;71HPage 18/19
+[2;1H--------------------------------------------------------------------------------
+$  echo $$
+7484
+[23;1H--------------------------------------------------------------------------------
+                                                                                [24;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 2.7:  Variables
+[1;71HPage 18/19
+[2;1H--------------------------------------------------------------------------------
+
+The variable $? contains the 'exit status' of the last command that was
+executed.  The 'exit status' is usually used as an indication of the success
+or failure of a command.  Zero indicates success, non-zero indicates failure.
+This is very useful in scripting, where we can determine what the script
+will do next based on whether the previous command was successful or not.
+[23;1H--------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.7:  Variables
+[1;71HPage 19/19
+[2;1H--------------------------------------------------------------------------------
+
+That concludes this section.
+
+Now it's time to do the Review section!
+[23;1H--------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.7:  Interactive Shell Environment
+[2;1H--------------------------------------------------------------------------------
+
+Available selections:
+
+1 Environment Variables - Completed[m
+2 Variable Assignment & Quoting - Completed[m
+3 Command Substitution - Completed[m
+4 Using The alias Command - Completed[m
+5 Variables - Completed[m
+6 [7mReview Exercise[m
+
+Note that the highlighted lines indicate the incomplete sections of
+this part of the Lab.
+
+The Review Exercise can only be done when the other sections have
+been completed.
+[23;1H--------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: 6
+[H[JUNX510 Lab 2.7:  Review Exercise
+[1;71HPage 1/9
+[2;1H--------------------------------------------------------------------------------
+
+Review Exercise
+
+The purpose of this section is to reinforce your skills with issuing UNIX
+commands covered in the previous sections.
+
+You will be asked to enter a single UNIX command for the following situations.
+[23;1H--------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.7:  Review Exercise
+[1;71HPage 2/9
+[2;1H--------------------------------------------------------------------------------
+
+Question 1
+
+The following command has been executed:
+
+     set 10 20 30 40 50
+
+Enter the value of the variable $3:
+[23;1H--------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+>  [?1h=[25;1H>  3 [25;5H[25;1H>  30 [25;6H[H[JUNX510 Lab 2.7:  Review Exercise
+[1;71HPage 3/9
+[2;1H--------------------------------------------------------------------------------
+
+Question 2
+
+The following command has been executed:
+
+     set 10 20 30 40 50
+
+Enter the value of the variable $#:
+[23;1H--------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+>  [?1h=[25;1H>  5 [25;5H[H[JUNX510 Lab 2.7:  Review Exercise
+[1;71HPage 4/9
+[2;1H--------------------------------------------------------------------------------
+
+Question 3
+
+The following commands have been executed:
+
+     set 10 20 30 40 50
+
+     shift
+
+     shift
+
+Enter the value of the variable $3:
+[23;1H--------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+>  [?1h=[25;1H>  5 [25;5H[25;1H>  50 [25;6H[H[JUNX510 Lab 2.7:  Review Exercise
+[1;71HPage 5/9
+[2;1H--------------------------------------------------------------------------------
+
+Question 4
+
+The following commands have been executed:
+
+     set 10 20 30 40 50
+
+     shift
+
+     shift
+
+Enter the value of the variable $#:
+[23;1H--------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+>  [?1h=[25;1H>  3 [25;5H[H[JUNX510 Lab 2.7:  Review Exercise
+[1;71HPage 6/9
+[2;1H--------------------------------------------------------------------------------
+
+Question 5
+
+The following commands have been executed:
+
+     set 10 20 30 40 50
+
+     shift
+
+     shift
+
+Enter the value of the variable $*:
+[23;1H--------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+>  [?1h=[25;1H>  3 [25;5H[25;1H>  30 [25;6H[25;1H>  30  [25;7H[25;1H>  30 4 [25;8H[25;1H>  30 40 [25;9H[25;1H>  30 40  [25;10H[25;1H>  30 40 5 [25;11H[25;1H>  30 40 50 [25;12H[H[JUNX510 Lab 2.7:  Review Exercise
+[1;71HPage 7/9
+[2;1H--------------------------------------------------------------------------------
+
+Question 6
+
+Enter the command to display a line that looks like the following:
+
+     My process id is ####
+
+where '####' is the process id of this Lab (Hint: use a variable, not a
+command substitution):
+[23;1H--------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[25;1H$  $ [25;5H[25;1H$   [25;4H[25;1H$  e [25;5H[25;1H$  ec [25;6H[25;1H$  ech [25;7H[25;1H$  echo [25;8H[25;1H$  echo  [25;9H[25;1H$  echo " [25;10H[25;1H$  echo "M [25;11H[25;1H$  echo "My [25;12H[25;1H$  echo "My  [25;13H[25;1H$  echo "My p [25;14H[25;1H$  echo "My pr [25;15H[25;1H$  echo "My pro [25;16H[25;1H$  echo "My proc [25;17H[25;1H$  echo "My proce [25;18H[25;1H$  echo "My proces [25;19H[25;1H$  echo "My process [25;20H[25;1H$  echo "My process  [25;21H[25;1H$  echo "My process i [25;22H[25;1H$  echo "My process id [25;23H[25;1H$  echo "My process id  [25;24H[25;1H$  echo "My process id i [25;25H[25;1H$  echo "My process id is [25;26H[25;1H$  echo "My process id is  [25;27H[25;1H$  echo "My process id is $ [25;28H[25;1H$  echo "My process id is $$ [25;29H[25;1H$  echo "My process id is $$" [25;30H[H[JUNX510 Lab 2.7:  Review Exercise
+[1;71HPage 8/9
+[2;1H--------------------------------------------------------------------------------
+$  echo "My process id is $$"
+My process id is 7484
+[23;1H--------------------------------------------------------------------------------
+                                                                                [24;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 2.7:  Review Exercise
+[1;71HPage 8/9
+[2;1H--------------------------------------------------------------------------------
+
+Question 7
+
+What command would you use to add the directory '/usr/share/bin' to the end
+of your current PATH?
+[23;1H--------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+>  [?1h=[25;1H>  p [25;5H[25;1H>   [25;4H[25;1H>  P [25;5H[25;1H>  PA [25;6H[25;1H>  PAT [25;7H[25;1H>  PATH [25;8H[25;1H>  PATH= [25;9H[25;1H>  PATH=" [25;10H[25;1H>  PATH="$ [25;11H[25;1H>  PATH="$P [25;12H[25;1H>  PATH="$PA [25;13H[25;1H>  PATH="$PAT [25;14H[25;1H>  PATH="$PATH [25;15H[25;1H>  PATH="$PATH: [25;16H[25;1H>  PATH="$PATH:/ [25;17H[25;1H>  PATH="$PATH:/u [25;18H[25;1H>  PATH="$PATH:/us [25;19H[25;1H>  PATH="$PATH:/usr [25;20H[25;1H>  PATH="$PATH:/usr/ [25;21H[25;1H>  PATH="$PATH:/usr/s [25;22H[25;1H>  PATH="$PATH:/usr/sh [25;23H[25;1H>  PATH="$PATH:/usr/shr [25;24H[25;1H>  PATH="$PATH:/usr/sh [25;23H[25;1H>  PATH="$PATH:/usr/sha [25;24H[25;1H>  PATH="$PATH:/usr/shar [25;25H[25;1H>  PATH="$PATH:/usr/share [25;26H[25;1H>  PATH="$PATH:/usr/share/ [25;27H[25;1H>  PATH="$PATH:/usr/share/b [25;28H[25;1H>  PATH="$PATH:/usr/share/bi [25;29H[25;1H>  PATH="$PATH:/usr/share/bin [25;30H[25;1H>  PATH="$PATH:/usr/share/bin" [25;31H[H[JUNX510 Lab 2.7:  Review Exercise
+[1;71HPage 9/9
+[2;1H--------------------------------------------------------------------------------
+
+Congratulations!
+
+You have successfully completed the Review Exercise!
+[23;1H--------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.7:  Interactive Shell Environment
+[2;1H--------------------------------------------------------------------------------
+
+Available selections:
+
+1 Environment Variables - Completed[m
+2 Variable Assignment & Quoting - Completed[m
+3 Command Substitution - Completed[m
+4 Using The alias Command - Completed[m
+5 Variables - Completed[m
+6 Review Exercise - Completed[m
+
+Note that the highlighted lines indicate the incomplete sections of
+this part of the Lab.
+
+The Review Exercise can only be done when the other sections have
+been completed.
+[23;1H--------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: q
+[H[JUNX510 Lab 2:  Selection Menu
+[2;1H--------------------------------------------------------------------------------
+
+Available selections:
+
+1 Redirection And Pipes - Completed[m
+2 Linking Files And Directories - Completed[m
+3 Command Summary - Completed[m
+4 Linux Processes - Completed[m
+5 Regular Expressions Using grep - Completed[m
+6 sed And awk - Completed[m
+7 Interactive Shell Environment - Completed[m
+
+8 [7mSubmit UNX510 Lab 2[m
+
+The highlighted lines above indicate the incomplete parts of the Lab.
+There is a total possible mark of 3, with 0.5 marks deducted for each
+incomplete part. Late marks will be deducted at the rate of 0.3 marks (10%)
+per day for Labs submitted after midnight of May 26 2017.
+
+
+[23;1H--------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: 8
+[H[JUNX510 Lab 2.8:  Submit Lab 2
+[1;71HPage 1/2
+[2;1H--------------------------------------------------------------------------------Total marks obtained is 3 out of 3.
+
+    Lab 2 Section 1 was completed
+    Lab 2 Section 2 was completed
+    Lab 2 Section 3 was completed
+    Lab 2 Section 4 was completed
+    Lab 2 Section 5 was completed
+    Lab 2 Section 6 was completed
+    Lab 2 Section 7 was completed
+
+Submission Confirmation
+
+You may now submit Lab 2 by typing 'Yes'.  If you do NOT want to submit at
+this time, type 'm' or 'M'.
+[23;1H--------------------------------------------------------------------------------
+Enter  'Yes' to submit  (or enter: 'm'-main menu):
+>  [?1h=[25;1H>  Y [25;5H[25;1H>  Ye [25;6H[25;1H>  Yes [25;7H[H[JUNX510 Lab 2.8:  Submit Lab 2
+[1;71HPage 2/2
+[2;1H--------------------------------------------------------------------------------
+
+Congratulations!
+
+You have successfully submitted Lab 2!
+[23;1H--------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2:  Selection Menu
+[2;1H--------------------------------------------------------------------------------
+
+Available selections:
+
+1 Redirection And Pipes - Completed[m
+2 Linking Files And Directories - Completed[m
+3 Command Summary - Completed[m
+4 Linux Processes - Completed[m
+5 Regular Expressions Using grep - Completed[m
+6 sed And awk - Completed[m
+7 Interactive Shell Environment - Completed[m
+
+8 Submit UNX510 Lab 2 - Completed - 3 out of 3[m
+
+The highlighted lines above indicate the incomplete parts of the Lab.
+There is a total possible mark of 3, with 0.5 marks deducted for each
+incomplete part. Late marks will be deducted at the rate of 0.3 marks (10%)
+per day for Labs submitted after midnight of May 26 2017.
+
+
+[23;1H--------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: q
+[H[Jyliu421@matrix:~/unx510/lab2> exit
+exit
+
+Script done on Mon 22 May 2017 10:11:44 PM EDT

@@ -1,0 +1,2 @@
+#!/bin/bash
+grep -i $1  ~unx510/2017b/phonebook

@@ -1,0 +1,2014 @@
+Script started on Thu 18 May 2017 10:07:46 AM EDT
+yliu421@matrix:~/unx510/lab2> ~unx510/lab2
+[H[JUNX510 Lab 2:  Notes
+[2;1H------------------------------------------------------------------------------------------------------
+
+Some important notes on this Lab:
+
+(1) You do NOT have to do this whole Lab in one sitting!  Any completed sections will be tracked.
+
+(2) You may abort the Lab at any time by pressing Ctrl-c but you may lose any work done on an
+incomplete section.
+
+(3) Instructions for each page will be displayed at the bottom of the screen.
+
+(4) The answers expected in this Lab are derived from the Lab itself and the course notes. The
+course notes should be used as a reference, if required. Using Google or another search engine
+may provide answers that are not accepted by the Lab.
+
+(5) This Lab is maintained by Les Czegel. Please try to resolve any problems with your instructor
+who will determine if Les should be contacted.
+[35;1H------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2:  Selection Menu
+[2;1H------------------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 Redirection And Pipes - Completed[m
+2 Linking Files And Directories - Completed[m
+3 Command Summary - Completed[m
+4 Linux Processes - Completed[m
+5 [7mRegular Expressions Using grep[m
+6 [7msed And awk[m
+7 [7mInteractive Shell Environment[m
+
+8 [7mSubmit UNX510 Lab 2[m
+
+The highlighted lines above indicate the incomplete parts of the Lab.
+There is a total possible mark of 3, with 0.5 marks deducted for each
+incomplete part. Late marks will be deducted at the rate of 0.3 marks (10%)
+per day for Labs submitted after midnight of May 26 2017.
+
+
+[35;1H------------------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: 5
+[H[JUNX510 Lab 2.5:  Regular Expressions Using grep
+[2;1H------------------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 [7mIntroduction to Regular Expressions[m
+2 [7mCharacters & Character Classes[m
+3 [7mThe Wildcard[m
+4 [7mRepetition[m
+5 [7mAnchors[m
+6 [7mReview Exercise[m
+
+Note that the highlighted lines indicate the incomplete sections of
+this part of the Lab.
+
+The Review Exercise can only be done when the other sections have
+been completed.
+[35;1H------------------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: 1
+[H[JUNX510 Lab 2.5:  Introduction
+[1;93HPage 1/4
+[2;1H------------------------------------------------------------------------------------------------------
+
+Regular Expressions
+
+Before we start working on regular expressions, you must bear in mind:
+
+   REGULAR EXPRESSIONS are NOT THE SAME as AMBIGUOUS FILENAMES!
+
+Although both are used to match patterns, they cannot be swapped, and they use the same symbols
+to mean different things.
+
+DO NOT GET THEM MIXED UP IN YOUR MIND!
+[35;1H------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.5:  Introduction
+[1;93HPage 2/4
+[2;1H------------------------------------------------------------------------------------------------------
+
+Regular Expressions
+
+Regular expressions are text search patterns. They are written using a specialized language,
+and there are several versions of that language.
+
+There are several basic components used to build simple regular expressions (or "regexps"):
+
+- Characters and Character Classes
+- Wildcard
+- Repetition
+- Anchors
+[35;1H------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.5:  Introduction
+[1;100HPage 3/4
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Our sample file "names" contains these lines:
+
+Mr. Smith
+Jenn Bewlite
+Ms Carmichael
+Dr Ivan James
+Mrs Holly Alva Beswol
+Mrs James Sheepwool
+Mr. Hitchcock
+Miss Jennifer Olgovie
+Melissa (Missy) Smith
+JoJo Smythe
+Dr Smooth
+Mr. John Waterson
+Sara Oooosterinnk
+Ms Ella Moloska
+James Ngenda
+Dr and Mr Wilson
+[35;1H-------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.5:  Introduction
+[1;100HPage 4/4
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Creating Regular Expressions
+
+When you write regular expressions, you are stating the text pattern that you wish to match. We are
+going to use the "grep" command to test some regular expressions.
+
+Let's start with the first component, which is characters.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.5:  Regular Expressions Using grep
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 Introduction to Regular Expressions - Completed[m
+2 [7mCharacters & Character Classes[m
+3 [7mThe Wildcard[m
+4 [7mRepetition[m
+5 [7mAnchors[m
+6 [7mReview Exercise[m
+
+Note that the highlighted lines indicate the incomplete sections of
+this part of the Lab.
+
+The Review Exercise can only be done when the other sections have
+been completed.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: 2
+[H[JUNX510 Lab 2.5:  Characters
+[1;100HPage 1/8
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Characters & Character Classes
+
+Characters may be literal characters, such as letters or digits, which match exactly the same letter
+or digit.
+
+Try this example:
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  grep "Smith" names  (or enter: 'm'-main menu):
+$  [?1h=[37;1H$  g [37;5H[37;1H$  gr [37;6H[37;1H$  gre [37;7H[37;1H$  grep [37;8H[37;1H$  grep  [37;9H[37;1H$  grep " [37;10H[37;1H$  grep "S [37;11H[37;1H$  grep "Sm [37;12H[37;1H$  grep "Smi [37;13H[37;1H$  grep "Smit [37;14H[37;1H$  grep "Smith [37;15H[37;1H$  grep "Smith" [37;16H[37;1H$  grep "Smith"  [37;17H[37;1H$  grep "Smith" n [37;18H[37;1H$  grep "Smith"  [37;17H[37;1H$  grep "Smith" n [37;18H[37;1H$  grep "Smith" na [37;19H[37;1H$  grep "Smith" nam [37;20H[37;1H$  grep "Smith" name [37;21H[37;1H$  grep "Smith" names [37;22H[H[JUNX510 Lab 2.5:  Characters
+[1;100HPage 2/8
+[2;1H-------------------------------------------------------------------------------------------------------------
+$  grep "Smith" names
+Mr. Smith
+Melissa (Missy) Smith
+[35;1H-------------------------------------------------------------------------------------------------------------
+                                                                                                             [36;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 2.5:  Characters
+[1;100HPage 2/8
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+In that last example, the regexp was "Smith", and it exactly matched the word "Smith", which appeared
+in two lines.
+
+Note that the quotes were not required in the last example, but it's easier to use them all the time
+than to think about when they are and are not required.
+
+Let's try matching "smith" in lowercase...
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  grep "smith" names  (or enter: 'm'-main menu):
+$  [?1h=[37;4H[37;1H$  g [37;5H[37;1H$  ge [37;6H[37;1H$  g [37;5H[37;1H$  gr [37;6H[37;1H$  gre [37;7H[37;1H$  grep [37;8H[37;1H$  grep  [37;9H[37;1H$  grep " [37;10H[37;1H$  grep "s [37;11H[37;1H$  grep "sm [37;12H[37;1H$  grep "smi [37;13H[37;1H$  grep "smit [37;14H[37;1H$  grep "smith [37;15H[37;1H$  grep "smith" [37;16H[37;1H$  grep "smith"  [37;17H[37;1H$  grep "smith" n [37;18H[37;1H$  grep "smith" na [37;19H[37;1H$  grep "smith" nam [37;20H[37;1H$  grep "smith" name [37;21H[37;1H$  grep "smith" names [37;22H[H[JUNX510 Lab 2.5:  Characters
+[1;100HPage 3/8
+[2;1H-------------------------------------------------------------------------------------------------------------
+$  grep "smith" names
+[35;1H-------------------------------------------------------------------------------------------------------------
+                                                                                                             [36;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 2.5:  Characters
+[1;100HPage 3/8
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+The last command didn't match any names because the "s" in "smith" was in lower-case. "grep" is
+case-sensitive.
+
+Generally, options such as case-sensitivity are not controlled by the regular expression, but are
+controlled by options to the program which uses the regular expression to search.
+
+For example, in the case of grep, the "-i" option makes it ignore UPPER- and lower-case.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  grep -i "smith" names  (or enter: 'm'-main menu):
+$  [?1h=[37;1H$  g [37;5H[37;1H$  gr [37;6H[37;1H$  gre [37;7H[37;1H$  grep [37;8H[37;1H$  grep  [37;9H[37;1H$  grep - [37;10H[37;1H$  grep -i [37;11H[37;1H$  grep -i  [37;12H[37;1H$  grep -i " [37;13H[37;1H$  grep -i "s [37;14H[37;1H$  grep -i "sm [37;15H[37;1H$  grep -i "smi [37;16H[37;1H$  grep -i "smil [37;17H[37;1H$  grep -i "smi [37;16H[37;1H$  grep -i "smit [37;17H[37;1H$  grep -i "smith [37;18H[37;1H$  grep -i "smith" [37;19H[37;1H$  grep -i "smith"  [37;20H[37;1H$  grep -i "smith" n [37;21H[37;1H$  grep -i "smith" na [37;22H[37;1H$  grep -i "smith" nam [37;23H[37;1H$  grep -i "smith" name [37;24H[37;1H$  grep -i "smith" names [37;25H[H[JUNX510 Lab 2.5:  Characters
+[1;100HPage 4/8
+[2;1H-------------------------------------------------------------------------------------------------------------
+$  grep -i "smith" names
+Mr. Smith
+Melissa (Missy) Smith
+[35;1H-------------------------------------------------------------------------------------------------------------
+                                                                                                             [36;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 2.5:  Characters
+[1;100HPage 4/8
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+If you want to search for a character other than a letter or digit, you will need to know if that
+character has a special meaning. If it does, then you can remove the special meaning by placing a
+backslash in front of the character.
+
+The confusing part is that, in some cases, a character BECOMES a special character when a backslash
+is placed in front of it -- this depends on the program you are using (for example, "grep" and "sed"
+are different in this way).
+
+The only reliable solution is to check the documentation for the program you are using.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.5:  Characters
+[1;100HPage 5/8
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+You can also specify a literal character using a character class.
+
+Character classes in regular expressions are basically the same as character classes in "ambiguous
+filenames": they consist of lists of characters and/or ranges of characters, written inside square-brackets.
+
+For example, the character class [ABCD] matches the letter A or the letter B or the letter C or the
+letter D. [A-D] means the same thing. [^ABCD] will match any letter EXCEPT A or B or C or D.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.5:  Characters
+[1;100HPage 6/8
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Let's use a character class to match both "Ms" and "Mr" in our names file.
+
+(Notice the space after the character class in this command).
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  grep "M[rs] " names  (or enter: 'm'-main menu):
+$  [?1h=[37;1H$  g [37;5H[37;1H$  gr [37;6H[37;1H$  gre [37;7H[37;1H$  grep [37;8H[37;1H$  grep  [37;9H[37;1H$  grep " [37;10H[37;1H$  grep "[ [37;11H[37;1H$  grep " [37;10H[37;1H$  grep "M [37;11H[37;1H$  grep "M[ [37;12H[37;1H$  grep "M[] [37;13H[37;12H[37;1H$  grep "M[r] [37;13H[37;1H$  grep "M[rs] [37;14H[37;15H[37;1H$  grep "M[rs]" [37;16H[37;1H$  grep "M[rs]"  [37;17H[37;1H$  grep "M[rs]" n [37;18H[37;1H$  grep "M[rs]" na [37;19H[37;1H$  grep "M[rs]" nam [37;20H[37;1H$  grep "M[rs]" name [37;21H[37;1H$  grep "M[rs]" names [37;22H[H[JUNX510 Lab 2.5:  Characters
+[1;100HPage 6/8
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Let's use a character class to match both "Ms" and "Mr" in our names file.
+
+(Notice the space after the character class in this command).
+
+You entered: grep "M[rs]" names
+Please try again.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  grep "M[rs] " names  (or enter: 'm'-main menu):
+$  [?1h=[37;1H$  grep "M[rs]" names                                                                                    [37;22H[37;21H[37;20H[37;19H[37;18H[37;17H[37;16H[37;15H[37;1H$  grep "M[rs" names [37;14H[37;1H$  grep "M[rs]" names [37;15H[37;14H[37;13H[37;12H[37;11H[37;10H[37;11H[37;10H[37;11H[37;12H[37;13H[37;14H[37;15H[37;1H$  grep "M[rs] " names [37;16H[37;17H[37;18H[37;19H[37;20H[37;21H[37;22H[37;23H[H[JUNX510 Lab 2.5:  Characters
+[1;100HPage 7/8
+[2;1H-------------------------------------------------------------------------------------------------------------
+$  grep "M[rs] " names
+Ms Carmichael
+Ms Ella Moloska
+Dr and Mr Wilson
+[35;1H-------------------------------------------------------------------------------------------------------------
+                                                                                                             [36;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 2.5:  Characters
+[1;100HPage 7/8
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Notice that "M[rs] " didn't match "Mrs", because the regular expression specifies the letter M followed
+by EITHER an r or an s, followed by a space.
+
+Remember that a character class matches only ONE character.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.5:  Characters
+[1;100HPage 8/8
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+You may now proceed to the section on the Wildcard.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.5:  Regular Expressions Using grep
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 Introduction to Regular Expressions - Completed[m
+2 Characters & Character Classes - Completed[m
+3 [7mThe Wildcard[m
+4 [7mRepetition[m
+5 [7mAnchors[m
+6 [7mReview Exercise[m
+
+Note that the highlighted lines indicate the incomplete sections of
+this part of the Lab.
+
+The Review Exercise can only be done when the other sections have
+been completed.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: 3
+[H[JUNX510 Lab 2.5:  The Wildcard
+[1;100HPage 1/3
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+The Wildcard
+
+A period "." character is called a wildcard, and will match any one character.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  grep "Sm.th" names  (or enter: 'm'-main menu):
+$  [?1h=[H[JUNX510 Lab 2.5:  The Wildcard
+[1;100HPage 1/3
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+The Wildcard
+
+A period "." character is called a wildcard, and will match any one character.
+
+You entered: 
+Please try again.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  grep "Sm.th" names  (or enter: 'm'-main menu):
+$  [?1h=[37;1H$  g [37;5H[37;1H$  gr [37;6H[37;1H$  gre [37;7H[37;1H$  grep [37;8H[37;1H$  grep  [37;9H[37;1H$  grep " [37;10H[37;1H$  grep "S [37;11H[37;1H$  grep "Sm [37;12H[37;1H$  grep "Sm> [37;13H[37;1H$  grep "Sm [37;12H[37;1H$  grep "Sm. [37;13H[37;1H$  grep "Sm.t [37;14H[37;1H$  grep "Sm.th [37;15H[37;1H$  grep "Sm.th" [37;16H[37;1H$  grep "Sm.th"  [37;17H[37;1H$  grep "Sm.th" n [37;18H[37;1H$  grep "Sm.th" na [37;19H[37;1H$  grep "Sm.th" nam [37;20H[37;1H$  grep "Sm.th" name [37;21H[37;1H$  grep "Sm.th" names [37;22H[H[JUNX510 Lab 2.5:  The Wildcard
+[1;100HPage 2/3
+[2;1H-------------------------------------------------------------------------------------------------------------
+$  grep "Sm.th" names
+Mr. Smith
+Melissa (Missy) Smith
+JoJo Smythe
+[35;1H-------------------------------------------------------------------------------------------------------------
+                                                                                                             [36;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 2.5:  The Wildcard
+[1;100HPage 2/3
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Notice that the period matched only one character. This is why the regular expression "Sm.th" did not
+match "Smooth".
+
+To match two characters, you could just place two periods in a row.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  grep "Sm..th" names  (or enter: 'm'-main menu):
+$  [?1h=[37;1H$  g [37;5H[37;1H$  gr [37;6H[37;1H$  gre [37;7H[37;1H$  grep [37;8H[37;1H$  grep  [37;9H[37;1H$  grep " [37;10H[37;1H$  grep "S [37;11H[37;1H$  grep "Sm [37;12H[37;1H$  grep "Sm. [37;13H[37;1H$  grep "Sm.. [37;14H[37;1H$  grep "Sm..t [37;15H[37;1H$  grep "Sm..th [37;16H[37;1H$  grep "Sm..th" [37;17H[37;1H$  grep "Sm..th"  [37;18H[37;1H$  grep "Sm..th" n [37;19H[37;1H$  grep "Sm..th" na [37;20H[37;1H$  grep "Sm..th" nam [37;21H[37;1H$  grep "Sm..th" name [37;22H[37;1H$  grep "Sm..th" names [37;23H[H[JUNX510 Lab 2.5:  The Wildcard
+[1;100HPage 3/3
+[2;1H-------------------------------------------------------------------------------------------------------------
+$  grep "Sm..th" names
+Dr Smooth
+[35;1H-------------------------------------------------------------------------------------------------------------
+                                                                                                             [36;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 2.5:  The Wildcard
+[1;100HPage 3/3
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+That's it for the wildcard!
+
+Now proceed to the section on Repetition to see another way of specifying multiple characters.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.5:  Regular Expressions Using grep
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 Introduction to Regular Expressions - Completed[m
+2 Characters & Character Classes - Completed[m
+3 The Wildcard - Completed[m
+4 [7mRepetition[m
+5 [7mAnchors[m
+6 [7mReview Exercise[m
+
+Note that the highlighted lines indicate the incomplete sections of
+this part of the Lab.
+
+The Review Exercise can only be done when the other sections have
+been completed.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: 4
+[H[JUNX510 Lab 2.5:  Repetition
+[1;100HPage 1/3
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+The asterisk character, "*", means that the pattern should match the previous character zero or more
+times. That means that the previous character does not have to be present at all.
+
+Let's search for a "w", then zero or more of the letter "o", then the letter "l".
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  grep "wo*l" names  (or enter: 'm'-main menu):
+$  [?1h=[37;1H$  g [37;5H[37;1H$  ge [37;6H[37;1H$  g [37;5H[37;1H$  gr [37;6H[37;1H$  gre [37;7H[37;1H$  grep [37;8H[37;1H$  grep  [37;9H[37;1H$  grep " [37;10H[37;1H$  grep "w [37;11H[37;1H$  grep "wo [37;12H[37;1H$  grep "wo* [37;13H[37;1H$  grep "wo*l [37;14H[37;1H$  grep "wo*l" [37;15H[H[JUNX510 Lab 2.5:  Repetition
+[1;100HPage 1/3
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+The asterisk character, "*", means that the pattern should match the previous character zero or more
+times. That means that the previous character does not have to be present at all.
+
+Let's search for a "w", then zero or more of the letter "o", then the letter "l".
+
+You entered: grep "wo*l"
+Please try again.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  grep "wo*l" names  (or enter: 'm'-main menu):
+$  [?1h=[37;1H$  g [37;5H[37;1H$  gr [37;6H[37;1H$  gre [37;7H[37;1H$  grep [37;8H[37;1H$  grep  [37;9H[37;1H$  grep " [37;10H[37;1H$  grep "w [37;11H[37;1H$  grep "wo [37;12H[37;1H$  grep "wo* [37;13H[37;1H$  grep "wo*l [37;14H[37;1H$  grep "wo*l" [37;15H[37;1H$  grep "wo*l"  [37;16H[37;1H$  grep "wo*l" n [37;17H[37;1H$  grep "wo*l" na [37;18H[37;1H$  grep "wo*l" nam [37;19H[37;1H$  grep "wo*l" name [37;20H[37;1H$  grep "wo*l" names [37;21H[H[JUNX510 Lab 2.5:  Repetition
+[1;100HPage 2/3
+[2;1H-------------------------------------------------------------------------------------------------------------
+$  grep "wo*l" names
+Jenn Bewlite
+Mrs Holly Alva Beswol
+Mrs James Sheepwool
+[35;1H-------------------------------------------------------------------------------------------------------------
+                                                                                                             [36;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 2.5:  Repetition
+[1;100HPage 2/3
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Notice that in "Bewlite" there was no "o" but in "Beswol" there was one letter "o" and in "Sheepwool"
+there were two.
+
+The asterisk is often placed after the wildcard to mean any number of any characters (the wildcard
+means any character, and the asterisk means zero or more repetitions).
+
+Let's say we wanted to search for Dr James, but we weren't sure if his first name or initials were
+between the "Dr" and the "James". We could use .* to match anything that was in the middle.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  grep "Dr.*James" names  (or enter: 'm'-main menu):
+$  [?1h=[37;1H$  g [37;5H[37;1H$  gr [37;6H[37;1H$  gre [37;7H[37;1H$  grep [37;8H[37;1H$  grep  [37;9H[37;1H$  grep " [37;10H[37;1H$  grep "D [37;11H[37;1H$  grep "Dr [37;12H[37;1H$  grep "Dr. [37;13H[37;1H$  grep "Dr.* [37;14H[37;1H$  grep "Dr.*J [37;15H[37;1H$  grep "Dr.*Ja [37;16H[37;1H$  grep "Dr.*Jam [37;17H[37;1H$  grep "Dr.*Jame [37;18H[37;1H$  grep "Dr.*James [37;19H[H[JUNX510 Lab 2.5:  Repetition
+[1;100HPage 2/3
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Notice that in "Bewlite" there was no "o" but in "Beswol" there was one letter "o" and in "Sheepwool"
+there were two.
+
+The asterisk is often placed after the wildcard to mean any number of any characters (the wildcard
+means any character, and the asterisk means zero or more repetitions).
+
+Let's say we wanted to search for Dr James, but we weren't sure if his first name or initials were
+between the "Dr" and the "James". We could use .* to match anything that was in the middle.
+
+You entered: grep "Dr.*James
+Please try again.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  grep "Dr.*James" names  (or enter: 'm'-main menu):
+$  [?1h=[37;1H$  grep "Dr.*James                                                                                       [37;19H[37;18H[37;17H[37;16H[37;15H[37;14H[37;13H[37;14H[37;1H$  grep "Dr.*"James [37;15H[37;1H$  grep "Dr.*" James [37;16H[H[JUNX510 Lab 2.5:  Repetition
+[1;100HPage 2/3
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Notice that in "Bewlite" there was no "o" but in "Beswol" there was one letter "o" and in "Sheepwool"
+there were two.
+
+The asterisk is often placed after the wildcard to mean any number of any characters (the wildcard
+means any character, and the asterisk means zero or more repetitions).
+
+Let's say we wanted to search for Dr James, but we weren't sure if his first name or initials were
+between the "Dr" and the "James". We could use .* to match anything that was in the middle.
+
+You entered: grep "Dr.*" James
+Please try again.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  grep "Dr.*James" names  (or enter: 'm'-main menu):
+$  [?1h=[37;1H$  grep "Dr.*" James                                                                                     [37;21H[37;20H[37;19H[37;18H[37;17H[37;16H[37;15H[37;1H$  grep "Dr.* James [37;14H[37;14H[37;14H[37;15H[37;1H$  grep "Dr.*James [37;14H[37;15H[37;16H[37;17H[37;18H[37;19H[37;1H$  grep "Dr.*James" [37;20H[37;1H$  grep "Dr.*James"  [37;21H[37;1H$  grep "Dr.*James" a [37;22H[37;1H$  grep "Dr.*James" an [37;23H[37;1H$  grep "Dr.*James" a [37;22H[37;1H$  grep "Dr.*James"  [37;21H[37;1H$  grep "Dr.*James" n [37;22H[37;1H$  grep "Dr.*James" na [37;23H[37;1H$  grep "Dr.*James" nam [37;24H[37;1H$  grep "Dr.*James" name [37;25H[37;1H$  grep "Dr.*James" names [37;26H[H[JUNX510 Lab 2.5:  Repetition
+[1;100HPage 3/3
+[2;1H-------------------------------------------------------------------------------------------------------------
+$  grep "Dr.*James" names
+Dr Ivan James
+[35;1H-------------------------------------------------------------------------------------------------------------
+                                                                                                             [36;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 2.5:  Repetition
+[1;100HPage 3/3
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Good!
+
+Now proceed to the section on Anchors.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.5:  Regular Expressions Using grep
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 Introduction to Regular Expressions - Completed[m
+2 Characters & Character Classes - Completed[m
+3 The Wildcard - Completed[m
+4 Repetition - Completed[m
+5 [7mAnchors[m
+6 [7mReview Exercise[m
+
+Note that the highlighted lines indicate the incomplete sections of
+this part of the Lab.
+
+The Review Exercise can only be done when the other sections have
+been completed.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: 5
+[H[JUNX510 Lab 2.5:  Anchors
+[1;100HPage 1/5
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Anchors
+
+Anchors let us search for text only at the start or end of the line.  The symbols are:
+   ^     anchor to the start of the line
+   $     anchor to the end of the line
+
+Search for "Miss" in the names file.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  grep "Miss" names  (or enter: 'm'-main menu):
+$  [?1h=[37;1H$  g [37;5H[37;1H$  gr [37;6H[37;1H$  gre [37;7H[37;1H$  grep [37;8H[37;1H$  grep  [37;9H[37;1H$  grep " [37;10H[37;1H$  grep "M [37;11H[37;1H$  grep "Mi [37;12H[37;1H$  grep "Mis [37;13H[37;1H$  grep "Miss [37;14H[37;1H$  grep "Miss" [37;15H[37;1H$  grep "Miss"  [37;16H[37;1H$  grep "Miss" n [37;17H[37;1H$  grep "Miss" na [37;18H[37;1H$  grep "Miss" nam [37;19H[37;1H$  grep "Miss" name [37;20H[37;1H$  grep "Miss" names [37;21H[H[JUNX510 Lab 2.5:  Anchors
+[1;100HPage 2/5
+[2;1H-------------------------------------------------------------------------------------------------------------
+$  grep "Miss" names
+Miss Jennifer Olgovie
+Melissa (Missy) Smith
+[35;1H-------------------------------------------------------------------------------------------------------------
+                                                                                                             [36;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 2.5:  Anchors
+[1;100HPage 2/5
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Notice that we matched the characters "Miss" in the middle of one line. Now let's anchor the regular
+expression to the start of the line with "^".
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  grep "^Miss" names  (or enter: 'm'-main menu):
+$  [?1h=[37;1H$  g [37;5H[37;1H$  gr [37;6H[37;1H$  gre [37;7H[37;1H$  grep [37;8H[37;1H$  grep  [37;9H[37;1H$  grep " [37;10H[37;1H$  grep "^ [37;11H[37;1H$  grep "^M [37;12H[37;1H$  grep "^Mi [37;13H[37;1H$  grep "^Mis [37;14H[37;1H$  grep "^Miss [37;15H[37;1H$  grep "^Miss" [37;16H[37;1H$  grep "^Miss"  [37;17H[37;1H$  grep "^Miss" n [37;18H[37;1H$  grep "^Miss" na [37;19H[37;1H$  grep "^Miss" nam [37;20H[37;1H$  grep "^Miss" name [37;21H[37;1H$  grep "^Miss" names [37;22H[H[JUNX510 Lab 2.5:  Anchors
+[1;100HPage 3/5
+[2;1H-------------------------------------------------------------------------------------------------------------
+$  grep "^Miss" names
+Miss Jennifer Olgovie
+[35;1H-------------------------------------------------------------------------------------------------------------
+                                                                                                             [36;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 2.5:  Anchors
+[1;100HPage 3/5
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+We can also anchor to the end of a line.
+
+Let's search for all of the lines with "James" in them.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  grep "James" names  (or enter: 'm'-main menu):
+$  [?1h=[37;1H$  g [37;5H[37;1H$  gr [37;6H[37;1H$  gre [37;7H[37;1H$  grep [37;8H[37;1H$  grep  [37;9H[37;1H$  grep " [37;10H[37;1H$  grep "J [37;11H[37;1H$  grep "Ja [37;12H[37;1H$  grep "Jam [37;13H[37;1H$  grep "Jame [37;14H[37;1H$  grep "James [37;15H[37;1H$  grep "James" [37;16H[37;1H$  grep "James"  [37;17H[37;1H$  grep "James" n [37;18H[37;1H$  grep "James" na [37;19H[37;1H$  grep "James" nam [37;20H[37;1H$  grep "James" name [37;21H[37;1H$  grep "James" names [37;22H[H[JUNX510 Lab 2.5:  Anchors
+[1;100HPage 4/5
+[2;1H-------------------------------------------------------------------------------------------------------------
+$  grep "James" names
+Dr Ivan James
+Mrs James Sheepwool
+James Ngenda
+[35;1H-------------------------------------------------------------------------------------------------------------
+                                                                                                             [36;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 2.5:  Anchors
+[1;100HPage 4/5
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+If we anchor the "James" to the end of the line, we can eliminate the records with "James" as a first name.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  grep "James$" names  (or enter: 'm'-main menu):
+$  [?1h=[37;1H$  g [37;5H[37;1H$  gr [37;6H[37;1H$  gre [37;7H[37;1H$  grep [37;8H[37;1H$  grep  [37;9H[37;1H$  grep " [37;10H[37;1H$  grep "J [37;11H[37;1H$  grep "Ja [37;12H[37;1H$  grep "Jam [37;13H[37;1H$  grep "Jame [37;14H[37;1H$  grep "James [37;15H[37;1H$  grep "James$ [37;16H[37;1H$  grep "James$" [37;17H[37;1H$  grep "James$"  [37;18H[37;1H$  grep "James$" n [37;19H[37;1H$  grep "James$" na [37;20H[37;1H$  grep "James$" nam [37;21H[37;1H$  grep "James$" name [37;22H[37;1H$  grep "James$" names [37;23H[H[JUNX510 Lab 2.5:  Anchors
+[1;100HPage 5/5
+[2;1H-------------------------------------------------------------------------------------------------------------
+$  grep "James$" names
+Dr Ivan James
+[35;1H-------------------------------------------------------------------------------------------------------------
+                                                                                                             [36;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 2.5:  Anchors
+[1;100HPage 5/5
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Good!
+
+You may now proceed to the Review section.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.5:  Regular Expressions Using grep
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 Introduction to Regular Expressions - Completed[m
+2 Characters & Character Classes - Completed[m
+3 The Wildcard - Completed[m
+4 Repetition - Completed[m
+5 Anchors - Completed[m
+6 [7mReview Exercise[m
+
+Note that the highlighted lines indicate the incomplete sections of
+this part of the Lab.
+
+The Review Exercise can only be done when the other sections have
+been completed.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: 6
+[H[JUNX510 Lab 2.5:  Review
+[1;100HPage 1/9
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Review Exercise
+
+The purpose of this section is to reinforce your skills with issuing UNIX commands covered in the
+previous sections.
+
+You will be asked to enter a single UNIX command for the following situations.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.5:  Review
+[1;100HPage 2/9
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+The data file for the review questions, named "inventory", looks like this:
+
+Strawberry Jam,300,4
+Raspberry Jam,1216,7
+Blueberry Jam,96,195
+Strawberry Compote,49,621
+Raspberry Compote,1937,624
+Blueberry compote,200,625
+Frozen Strawberries,130,1941
+Straw Hats,16,2047
+
+The first field is the product name, the second field is the quantity on hand,
+and the third field is the product code. The fields are separated by commas.
+
+In each of the following questions, write a command using "grep" and a
+regular expression. The data file in all cases is named "inventory".
+[35;1H-------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.5:  Review
+[1;100HPage 3/9
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Question 1
+
+Display all of the lines in the file that contain the characters "Jam".
+
+Remember that we're using "grep" and the data file is named "inventory".
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[37;1H$  g [37;5H[37;1H$  gr [37;6H[37;1H$  gre [37;7H[37;1H$  grep [37;8H[37;1H$  grep  [37;9H[37;1H$  grep " [37;10H[37;1H$  grep "J [37;11H[37;1H$  grep "Ja [37;12H[37;1H$  grep "Jam [37;13H[37;1H$  grep "Jam" [37;14H[37;1H$  grep "Jam"  [37;15H[37;1H$  grep "Jam" i [37;16H[37;1H$  grep "Jam" in [37;17H[37;1H$  grep "Jam" inv [37;18H[37;1H$  grep "Jam" inve [37;19H[37;1H$  grep "Jam" inven [37;20H[37;1H$  grep "Jam" invent [37;21H[37;1H$  grep "Jam" invento [37;22H[37;1H$  grep "Jam" inventor [37;23H[37;1H$  grep "Jam" inventory [37;24H[H[JUNX510 Lab 2.5:  Review
+[1;100HPage 4/9
+[2;1H-------------------------------------------------------------------------------------------------------------
+$  grep "Jam" inventory
+Strawberry Jam,300,4
+Raspberry Jam,1216,7
+Blueberry Jam,96,195
+[35;1H-------------------------------------------------------------------------------------------------------------
+                                                                                                             [36;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 2.5:  Review
+[1;100HPage 4/9
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Question 2
+
+Display all of the lines in the file that contain the word "Straw" right before a space.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[37;1H$  g [37;5H[37;1H$  gr [37;6H[37;1H$  gre [37;7H[37;1H$  grep [37;8H[37;1H$  grep  [37;9H[37;1H$  grep " [37;10H[37;1H$  grep "  [37;11H[37;1H$  grep " S [37;12H[37;1H$  grep " St [37;13H[37;1H$  grep " Str [37;14H[37;1H$  grep " Stra [37;15H[37;1H$  grep " Straw [37;16H[37;1H$  grep " Straw" [37;17H[37;1H$  grep " Straw"  [37;18H[37;1H$  grep " Straw" i [37;19H[37;1H$  grep " Straw" in [37;20H[37;1H$  grep " Straw" inv [37;21H[37;1H$  grep " Straw" inve [37;22H[37;1H$  grep " Straw" inven [37;23H[37;1H$  grep " Straw" invent [37;24H[37;1H$  grep " Straw" invento [37;25H[37;1H$  grep " Straw" inventor [37;26H[37;1H$  grep " Straw" inventory [37;27H[H[JUNX510 Lab 2.5:  Review
+[1;100HPage 4/9
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Question 2
+
+Display all of the lines in the file that contain the word "Straw" right before a space.
+
+You entered: grep " Straw" inventory
+Please try again.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[37;1H$  grep " Straw" inventory                                                                               [37;27H[37;26H[37;25H[37;24H[37;24H[37;24H[37;24H[37;24H[37;24H[37;24H[37;24H[37;24H[37;24H[37;24H[37;24H[37;24H[37;23H[37;22H[37;21H[37;20H[37;19H[37;18H[37;17H[37;16H[37;15H[37;14H[37;13H[37;12H[37;11H[37;1H$  grep "Straw" inventory [37;10H[37;11H[37;12H[37;13H[37;14H[37;15H[37;1H$  grep "Straw " inventory [37;16H[H[JUNX510 Lab 2.5:  Review
+[1;100HPage 5/9
+[2;1H-------------------------------------------------------------------------------------------------------------
+$  grep "Straw " inventory
+Straw Hats,16,2047
+[35;1H-------------------------------------------------------------------------------------------------------------
+                                                                                                             [36;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 2.5:  Review
+[1;100HPage 5/9
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Question 3
+
+Display all of the lines in the file that contain "Compote" or "compote".
+
+(Use a character class, do not use the -i option).
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[37;1H$  g [37;5H[37;1H$  gr [37;6H[37;1H$  gre [37;7H[37;1H$  grep [37;8H[37;1H$  grep  [37;9H[37;1H$  grep " [37;10H[37;1H$  grep "[ [37;11H[37;1H$  grep "[C [37;12H[37;1H$  grep "[Cc [37;13H[37;1H$  grep "[Cc] [37;14H[37;1H$  grep "[Cc]o [37;15H[37;1H$  grep "[Cc]om [37;16H[37;1H$  grep "[Cc]omp [37;17H[37;1H$  grep "[Cc]ompo [37;18H[37;1H$  grep "[Cc]ompot [37;19H[37;1H$  grep "[Cc]ompote [37;20H[37;1H$  grep "[Cc]ompote" [37;21H[37;1H$  grep "[Cc]ompote"  [37;22H[37;1H$  grep "[Cc]ompote" n [37;23H[37;1H$  grep "[Cc]ompote" na [37;24H[37;1H$  grep "[Cc]ompote" nam [37;25H[37;1H$  grep "[Cc]ompote" name [37;26H[37;1H$  grep "[Cc]ompote" names [37;27H[H[JUNX510 Lab 2.5:  Review
+[1;100HPage 5/9
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Question 3
+
+Display all of the lines in the file that contain "Compote" or "compote".
+
+(Use a character class, do not use the -i option).
+
+You entered: grep "[Cc]ompote" names
+Please try again.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[37;1H$  grep "[Cc]ompote" names                                                                               [37;27H[37;26H[37;25H[37;24H[37;23H[37;22H[37;21H[37;20H[37;19H[37;18H[37;17H[37;16H[37;15H[37;14H[37;13H[37;14H[37;15H[37;16H[37;17H[37;17H[37;17H[37;17H[37;17H[37;17H[37;17H[37;17H[37;17H[37;17H[37;17H[37;17H[37;17H[37;17H[37;17H[37;1H$  grep "[Cc]ompCote" names [37;18H[37;19H[37;20H[37;21H[37;22H[37;23H[37;24H[37;25H[37;26H[37;27H[37;28H[37;28H[37;1H$  grep "[Cc]ompCote" name [37;27H[37;1H$  grep "[Cc]ompCote" nam [37;26H[37;1H$  grep "[Cc]ompCote" na [37;25H[37;1H$  grep "[Cc]ompCote" n [37;24H[37;1H$  grep "[Cc]ompCote"  [37;23H[37;1H$  grep "[Cc]ompCote" i [37;24H[37;1H$  grep "[Cc]ompCote" in [37;25H[37;1H$  grep "[Cc]ompCote" inv [37;26H[37;1H$  grep "[Cc]ompCote" inve [37;27H[37;1H$  grep "[Cc]ompCote" inven [37;28H[37;1H$  grep "[Cc]ompCote" invent [37;29H[37;1H$  grep "[Cc]ompCote" invento [37;30H[37;1H$  grep "[Cc]ompCote" inventor [37;31H[37;1H$  grep "[Cc]ompCote" inventory [37;32H[H[JUNX510 Lab 2.5:  Review
+[1;100HPage 5/9
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Question 3
+
+Display all of the lines in the file that contain "Compote" or "compote".
+
+(Use a character class, do not use the -i option).
+
+You entered: grep "[Cc]ompCote" inventory
+Please try again.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[37;1H$  grep "[Cc]ompCote" inventory                                                                          [37;32H[37;31H[37;30H[37;29H[37;28H[37;27H[37;26H[37;25H[37;24H[37;23H[37;22H[37;21H[37;20H[37;19H[37;18H[37;1H$  grep "[Cc]ompote" inventory [37;17H[37;18H[37;19H[37;20H[37;21H[37;22H[37;23H[37;24H[37;25H[37;26H[37;27H[37;28H[37;29H[37;30H[37;31H[H[JUNX510 Lab 2.5:  Review
+[1;100HPage 6/9
+[2;1H-------------------------------------------------------------------------------------------------------------
+$  grep "[Cc]ompote" inventory
+Strawberry Compote,49,621
+Raspberry Compote,1937,624
+Blueberry compote,200,625
+[35;1H-------------------------------------------------------------------------------------------------------------
+                                                                                                             [36;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 2.5:  Review
+[1;100HPage 6/9
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Review Question 4
+
+Display all of the lines in the file that contain "Straw" at the beginning of the line.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[37;1H$  g [37;5H[37;1H$  gr [37;6H[37;1H$  gre [37;7H[37;1H$  grep [37;8H[37;1H$  grep  [37;9H[37;1H$  grep " [37;10H[37;1H$  grep "^ [37;11H[37;1H$  grep "^S [37;12H[37;1H$  grep "^St [37;13H[37;1H$  grep "^Str [37;14H[37;1H$  grep "^Stra [37;15H[37;1H$  grep "^Straw [37;16H[37;1H$  grep "^Straw" [37;17H[37;1H$  grep "^Straw"  [37;18H[37;1H$  grep "^Straw" i [37;19H[37;1H$  grep "^Straw" in [37;20H[37;1H$  grep "^Straw" inv [37;21H[37;1H$  grep "^Straw" inve [37;22H[37;1H$  grep "^Straw" inven [37;23H[37;1H$  grep "^Straw" invent [37;24H[37;1H$  grep "^Straw" invento [37;25H[37;1H$  grep "^Straw" inventor [37;26H[37;1H$  grep "^Straw" inventory [37;27H[H[JUNX510 Lab 2.5:  Review
+[1;100HPage 7/9
+[2;1H-------------------------------------------------------------------------------------------------------------
+$  grep "^Straw" inventory
+Strawberry Jam,300,4
+Strawberry Compote,49,621
+Straw Hats,16,2047
+[35;1H-------------------------------------------------------------------------------------------------------------
+                                                                                                             [36;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 2.5:  Review
+[1;100HPage 7/9
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Review Question 5
+
+Display all of the lines in the file where the last field is one digit long.
+
+Search for ',' before the field, then use a character class to make sure it's one digit, and anchor it
+to the end of the line to make sure it's the last field.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[37;1H$  g [37;5H[37;1H$  gr [37;6H[37;1H$  gre [37;7H[37;1H$  grep [37;8H[37;1H$  grep  [37;9H[37;1H$  grep " [37;10H[37;1H$  grep ", [37;11H[37;1H$  grep ",. [37;12H[37;1H$  grep ",." [37;13H[37;1H$  grep ",."  [37;14H[37;1H$  grep ",." i [37;15H[37;1H$  grep ",." in [37;16H[37;1H$  grep ",." inv [37;17H[37;1H$  grep ",." inve [37;18H[37;1H$  grep ",." inven [37;19H[37;1H$  grep ",." invent [37;20H[37;1H$  grep ",." invento [37;21H[37;1H$  grep ",." inventor [37;22H[37;1H$  grep ",." inventory [37;23H[H[JUNX510 Lab 2.5:  Review
+[1;100HPage 7/9
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Review Question 5
+
+Display all of the lines in the file where the last field is one digit long.
+
+Search for ',' before the field, then use a character class to make sure it's one digit, and anchor it
+to the end of the line to make sure it's the last field.
+
+You entered: grep ",." inventory
+Please try again.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[37;1H$  grep ",." inventory                                                                                   [37;23H[37;22H[37;21H[37;20H[37;19H[37;18H[37;17H[37;16H[37;15H[37;14H[37;13H[37;12H[37;1H$  grep "," inventory [37;11H[37;1H$  grep ",[" inventory [37;12H[37;1H$  grep ",[0" inventory [37;13H[37;1H$  grep ",[01" inventory [37;14H[37;1H$  grep ",[012" inventory [37;15H[37;1H$  grep ",[0123" inventory [37;16H[37;1H$  grep ",[01234" inventory [37;17H[37;1H$  grep ",[0123" inventory [37;16H[37;1H$  grep ",[012" inventory [37;15H[37;1H$  grep ",[01" inventory [37;14H[37;1H$  grep ",[0" inventory [37;13H[37;1H$  grep ",[0-" inventory [37;14H[37;1H$  grep ",[0-9" inventory [37;15H[37;1H$  grep ",[0-9]" inventory [37;16H[H[JUNX510 Lab 2.5:  Review
+[1;100HPage 7/9
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Review Question 5
+
+Display all of the lines in the file where the last field is one digit long.
+
+Search for ',' before the field, then use a character class to make sure it's one digit, and anchor it
+to the end of the line to make sure it's the last field.
+
+You entered: grep ",[0-9]" inventory
+Please try again.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[37;1H$  grep ",[0-9]" inventory                                                                               [37;27H[37;26H[37;25H[37;24H[37;23H[37;22H[37;21H[37;20H[37;19H[37;18H[37;17H[37;16H[37;1H$  grep ",[0-9]$" inventory [37;17H[H[JUNX510 Lab 2.5:  Review
+[1;100HPage 8/9
+[2;1H-------------------------------------------------------------------------------------------------------------
+$  grep ",[0-9]$" inventory
+Strawberry Jam,300,4
+Raspberry Jam,1216,7
+[35;1H-------------------------------------------------------------------------------------------------------------
+                                                                                                             [36;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 2.5:  Review
+[1;100HPage 8/9
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Review Question 6
+
+Display all of the lines that contain "Straw" followed later in the line by "Hat".
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[37;1H$  g [37;5H[37;1H$  gr [37;6H[37;1H$  gre [37;7H[37;1H$  grep [37;8H[37;1H$  grep  [37;9H[37;1H$  grep " [37;10H[37;1H$  grep "s [37;11H[37;1H$  grep " [37;10H[37;1H$  grep "S [37;11H[37;1H$  grep "St [37;12H[37;1H$  grep "Str [37;13H[37;1H$  grep "Stra [37;14H[37;1H$  grep "Straw [37;15H[37;1H$  grep "Straw  [37;16H[37;1H$  grep "Straw H [37;17H[37;1H$  grep "Straw Ha [37;18H[37;1H$  grep "Straw Hat [37;19H[37;1H$  grep "Straw Hat" [37;20H[37;1H$  grep "Straw Hat"  [37;21H[37;1H$  grep "Straw Hat" i [37;22H[37;1H$  grep "Straw Hat" in [37;23H[37;1H$  grep "Straw Hat" inv [37;24H[37;1H$  grep "Straw Hat" inve [37;25H[37;1H$  grep "Straw Hat" inven [37;26H[37;1H$  grep "Straw Hat" invent [37;27H[37;1H$  grep "Straw Hat" invento [37;28H[37;1H$  grep "Straw Hat" inventor [37;29H[37;1H$  grep "Straw Hat" inventory [37;30H[H[JUNX510 Lab 2.5:  Review
+[1;100HPage 8/9
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Review Question 6
+
+Display all of the lines that contain "Straw" followed later in the line by "Hat".
+
+You entered: grep "Straw Hat" inventory
+Please try again.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[37;1H$  grep "Straw Hat" inventory                                                                            [37;30H[37;29H[37;28H[37;27H[37;26H[37;25H[37;24H[37;23H[37;22H[37;21H[37;20H[37;19H[37;18H[37;17H[37;16H[37;1H$  grep "Straw *Hat" inventory [37;17H[H[JUNX510 Lab 2.5:  Review
+[1;100HPage 8/9
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Review Question 6
+
+Display all of the lines that contain "Straw" followed later in the line by "Hat".
+
+You entered: grep "Straw *Hat" inventory
+Please try again.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[37;1H$  grep "Straw *Hat" inventory                                                                           [37;31H[37;30H[37;29H[37;28H[37;27H[37;26H[37;25H[37;24H[37;23H[37;22H[37;21H[37;20H[37;19H[37;18H[37;17H[37;16H[37;1H$  grep "Straw*Hat" inventory [37;15H[H[JUNX510 Lab 2.5:  Review
+[1;100HPage 8/9
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Review Question 6
+
+Display all of the lines that contain "Straw" followed later in the line by "Hat".
+
+You entered: grep "Straw*Hat" inventory
+Please try again.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[37;1H$  grep "Straw*Hat" inventory                                                                            [37;30H[37;29H[37;28H[37;27H[37;26H[37;25H[37;24H[37;23H[37;22H[37;21H[37;20H[37;19H[37;18H[37;17H[37;16H[37;1H$  grep "StrawHat" inventory [37;15H[H[JUNX510 Lab 2.5:  Review
+[1;100HPage 8/9
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Review Question 6
+
+Display all of the lines that contain "Straw" followed later in the line by "Hat".
+
+You entered: grep "StrawHat" inventory
+Please try again.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[37;1H$  grep "StrawHat" inventory                                                                             [37;29H[37;28H[37;27H[37;26H[37;25H[37;24H[37;23H[37;22H[37;21H[37;20H[37;19H[37;18H[37;17H[37;16H[37;15H[37;1H$  grep "Straw.Hat" inventory [37;16H[37;1H$  grep "Straw.*Hat" inventory [37;17H[H[JUNX510 Lab 2.5:  Review
+[1;100HPage 9/9
+[2;1H-------------------------------------------------------------------------------------------------------------
+$  grep "Straw.*Hat" inventory
+Straw Hats,16,2047
+[35;1H-------------------------------------------------------------------------------------------------------------
+                                                                                                             [36;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 2.5:  Review
+[1;100HPage 9/9
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Congratulations!
+
+You have successfully completed the Review Exercise!
+[35;1H-------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.5:  Regular Expressions Using grep
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 Introduction to Regular Expressions - Completed[m
+2 Characters & Character Classes - Completed[m
+3 The Wildcard - Completed[m
+4 Repetition - Completed[m
+5 Anchors - Completed[m
+6 Review Exercise - Completed[m
+
+Note that the highlighted lines indicate the incomplete sections of
+this part of the Lab.
+
+The Review Exercise can only be done when the other sections have
+been completed.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: 
+[H[JUNX510 Lab 2.5:  Regular Expressions Using grep
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 Introduction to Regular Expressions - Completed[m
+2 Characters & Character Classes - Completed[m
+3 The Wildcard - Completed[m
+4 Repetition - Completed[m
+5 Anchors - Completed[m
+6 Review Exercise - Completed[m
+
+Note that the highlighted lines indicate the incomplete sections of
+this part of the Lab.
+
+The Review Exercise can only be done when the other sections have
+been completed.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: q
+[H[JUNX510 Lab 2:  Selection Menu
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 Redirection And Pipes - Completed[m
+2 Linking Files And Directories - Completed[m
+3 Command Summary - Completed[m
+4 Linux Processes - Completed[m
+5 Regular Expressions Using grep - Completed[m
+6 [7msed And awk[m
+7 [7mInteractive Shell Environment[m
+
+8 [7mSubmit UNX510 Lab 2[m
+
+The highlighted lines above indicate the incomplete parts of the Lab.
+There is a total possible mark of 3, with 0.5 marks deducted for each
+incomplete part. Late marks will be deducted at the rate of 0.3 marks (10%)
+per day for Labs submitted after midnight of May 26 2017.
+
+
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: 6
+[H[JUNX510 Lab 2.6:  sed And awk
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 [7mUsing sed[m
+2 [7mUsing awk[m
+3 [7mReview Exercise[m
+
+Note that the highlighted lines indicate the incomplete sections of
+this part of the Lab.
+
+The Review Exercise can only be done when the other sections have
+been completed.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: 1
+[H[JUNX510 Lab 2.6:  Using sed
+[1;100HPage 1/8
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Using sed
+
+sed is a 'stream editor'. This means it can be used to change (edit) a file non-destructively. In other
+words, it will send the changed file to standard output, but the original file is left unchanged.
+
+In this Lab, we will only use those facilities of sed and other commands that are covered in the lectures,
+so you may wish to use the lectures as a reference.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.6:  Using sed
+[1;100HPage 2/8
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+The true power of sed can be seen when it's combined with other commands, either within a series of
+piped commands, or within a script.
+
+As a matter of fact, this is Unix's major strength, the ability to combine several simple commands to
+get a fairly complex end result with relative ease.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.6:  Using sed
+[1;100HPage 3/8
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+In this section, we're going to create a series of piped commands to solve a problem, using the 'cars'
+file that you know and love:
+
+plym    fury    77      73      2500
+chevy   nova    79      60      3000
+ford    mustang 65      45      17000
+volvo   gl      78      102     9850
+ford    ltd     83      15      10500
+Chevy   nova    80      50      3500
+fiat    600     65      115     450
+honda   accord  81      30      6000
+ford    thundbd 84      10      17000
+toyota  tercel  82      180     750
+chevy   impala  65      85      1550
+ford    bronco  83      25      9525
+[35;1H-------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.6:  Using sed
+[1;100HPage 4/8
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+We have a customer who would like to buy a car, and we want to produce a list of cars that meet her
+requirements.  She wants to see a list of all the cars on the lot that cost less than $10,000, except
+she doesn't want a chevy.  The list should be sorted from lowest cost to highest, and we want to produce
+the list so that the alphabetic characters are in uppercase.
+
+Let's start by displaying all the records in 'cars' that are not chevy's.  Use a grep command to do this,
+and don't forget to ignore case:
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[37;1H$  m [37;5H[H[JUNX510 Lab 2.6:  sed And awk
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 [7mUsing sed[m
+2 [7mUsing awk[m
+3 [7mReview Exercise[m
+
+Note that the highlighted lines indicate the incomplete sections of
+this part of the Lab.
+
+The Review Exercise can only be done when the other sections have
+been completed.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: q
+[H[JUNX510 Lab 2:  Selection Menu
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 Redirection And Pipes - Completed[m
+2 Linking Files And Directories - Completed[m
+3 Command Summary - Completed[m
+4 Linux Processes - Completed[m
+5 Regular Expressions Using grep - Completed[m
+6 [7msed And awk[m
+7 [7mInteractive Shell Environment[m
+
+8 [7mSubmit UNX510 Lab 2[m
+
+The highlighted lines above indicate the incomplete parts of the Lab.
+There is a total possible mark of 3, with 0.5 marks deducted for each
+incomplete part. Late marks will be deducted at the rate of 0.3 marks (10%)
+per day for Labs submitted after midnight of May 26 2017.
+
+
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: 6
+[H[JUNX510 Lab 2.6:  sed And awk
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 [7mUsing sed[m
+2 [7mUsing awk[m
+3 [7mReview Exercise[m
+
+Note that the highlighted lines indicate the incomplete sections of
+this part of the Lab.
+
+The Review Exercise can only be done when the other sections have
+been completed.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: 1
+[H[JUNX510 Lab 2.6:  Using sed
+[1;100HPage 1/8
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Using sed
+
+sed is a 'stream editor'. This means it can be used to change (edit) a file non-destructively. In other
+words, it will send the changed file to standard output, but the original file is left unchanged.
+
+In this Lab, we will only use those facilities of sed and other commands that are covered in the lectures,
+so you may wish to use the lectures as a reference.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.6:  Using sed
+[1;100HPage 2/8
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+The true power of sed can be seen when it's combined with other commands, either within a series of
+piped commands, or within a script.
+
+As a matter of fact, this is Unix's major strength, the ability to combine several simple commands to
+get a fairly complex end result with relative ease.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.6:  Using sed
+[1;100HPage 3/8
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+In this section, we're going to create a series of piped commands to solve a problem, using the 'cars'
+file that you know and love:
+
+plym    fury    77      73      2500
+chevy   nova    79      60      3000
+ford    mustang 65      45      17000
+volvo   gl      78      102     9850
+ford    ltd     83      15      10500
+Chevy   nova    80      50      3500
+fiat    600     65      115     450
+honda   accord  81      30      6000
+ford    thundbd 84      10      17000
+toyota  tercel  82      180     750
+chevy   impala  65      85      1550
+ford    bronco  83      25      9525
+[35;1H-------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.6:  Using sed
+[1;100HPage 4/8
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+We have a customer who would like to buy a car, and we want to produce a list of cars that meet her
+requirements.  She wants to see a list of all the cars on the lot that cost less than $10,000, except
+she doesn't want a chevy.  The list should be sorted from lowest cost to highest, and we want to produce
+the list so that the alphabetic characters are in uppercase.
+
+Let's start by displaying all the records in 'cars' that are not chevy's.  Use a grep command to do this,
+and don't forget to ignore case:
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[37;1H$  g [37;5H[37;1H$  gr [37;6H[37;1H$  gre [37;7H[37;1H$  grep [37;8H[37;1H$  grep  [37;9H[37;1H$  grep " [37;10H[37;1H$  grep "[ [37;11H[37;10H[37;9H[37;8H[37;9H[37;1H$  grep -"[ [37;10H[37;1H$  grep -i"[ [37;11H[37;1H$  grep -i "[ [37;12H[37;13H[37;14H[37;1H$  grep -i "[c [37;15H[37;1H$  grep -i "[c] [37;16H[37;1H$  grep -i "[c][ [37;17H[37;1H$  grep -i "[c][h [37;18H[37;1H$  grep -i "[c][h] [37;19H[37;1H$  grep -i "[c][h][ [37;20H[37;1H$  grep -i "[c][h][e [37;21H[37;1H$  grep -i "[c][h][e] [37;22H[37;1H$  grep -i "[c][h][e][ [37;23H[37;1H$  grep -i "[c][h][e][v [37;24H[37;1H$  grep -i "[c][h][e][v] [37;25H[37;1H$  grep -i "[c][h][e][v][ [37;26H[37;1H$  grep -i "[c][h][e][v][y [37;27H[37;1H$  grep -i "[c][h][e][v][y] [37;28H[37;1H$  grep -i "[c][h][e][v][y]" [37;29H[H[JUNX510 Lab 2.6:  Using sed
+[1;100HPage 4/8
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+We have a customer who would like to buy a car, and we want to produce a list of cars that meet her
+requirements.  She wants to see a list of all the cars on the lot that cost less than $10,000, except
+she doesn't want a chevy.  The list should be sorted from lowest cost to highest, and we want to produce
+the list so that the alphabetic characters are in uppercase.
+
+Let's start by displaying all the records in 'cars' that are not chevy's.  Use a grep command to do this,
+and don't forget to ignore case:
+
+You entered: grep -i "[c][h][e][v][y]"
+Please try again.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[37;1H$  grep -i "[c][h][e][v][y]"                                                                             [37;29H[37;1H$  grep -i "[c][h][e][v][y]"  [37;30H[37;1H$  grep -i "[c][h][e][v][y]" c [37;31H[37;1H$  grep -i "[c][h][e][v][y]" ca [37;32H[37;1H$  grep -i "[c][h][e][v][y]" car [37;33H[37;1H$  grep -i "[c][h][e][v][y]" cars [37;34H[H[JUNX510 Lab 2.6:  Using sed
+[1;100HPage 4/8
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+We have a customer who would like to buy a car, and we want to produce a list of cars that meet her
+requirements.  She wants to see a list of all the cars on the lot that cost less than $10,000, except
+she doesn't want a chevy.  The list should be sorted from lowest cost to highest, and we want to produce
+the list so that the alphabetic characters are in uppercase.
+
+Let's start by displaying all the records in 'cars' that are not chevy's.  Use a grep command to do this,
+and don't forget to ignore case:
+
+You entered: grep -i "[c][h][e][v][y]" cars
+Please try again.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[37;1H$  grep -i "[c][h][e][v][y]" cars                                                                        [37;34H[37;33H[37;32H[37;31H[37;30H[37;29H[37;28H[37;27H[37;26H[37;25H[37;24H[37;23H[37;22H[37;21H[37;20H[37;19H[37;18H[37;17H[37;16H[37;15H[37;14H[37;13H[37;14H[37;1H$  grep -i "[^c][h][e][v][y]" cars [37;15H[37;16H[37;17H[37;18H[37;1H$  grep -i "[^c][^h][e][v][y]" cars [37;19H[37;20H[37;21H[37;22H[37;1H$  grep -i "[^c][^h][^e][v][y]" cars [37;23H[37;24H[37;25H[37;26H[37;1H$  grep -i "[^c][^h][^e][^v][y]" cars [37;27H[37;28H[37;29H[37;30H[37;1H$  grep -i "[^c][^h][^e][^v][^y]" cars [37;31H[37;1H$  grep -i "[^c][^h][^e][^v][y]" cars [37;30H[37;1H$  grep -i "[^c][^h][^e][^v]y]" cars [37;29H[37;1H$  grep -i "[^c][^h][^e][^vy]" cars [37;28H[37;1H$  grep -i "[^c][^h][^e][^y]" cars [37;27H[37;1H$  grep -i "[^c][^h][^e][y]" cars [37;26H[37;1H$  grep -i "[^c][^h][^e]y]" cars [37;25H[37;1H$  grep -i "[^c][^h][^ey]" cars [37;24H[37;1H$  grep -i "[^c][^h][^y]" cars [37;23H[37;1H$  grep -i "[^c][^h][y]" cars [37;22H[37;1H$  grep -i "[^c][^h]y]" cars [37;21H[37;1H$  grep -i "[^c][^hy]" cars [37;20H[37;1H$  grep -i "[^c][^y]" cars [37;19H[37;1H$  grep -i "[^c][y]" cars [37;18H[37;1H$  grep -i "[^c]y]" cars [37;17H[37;1H$  grep -i "[^cy]" cars [37;16H[37;1H$  grep -i "[^y]" cars [37;15H[37;1H$  grep -i "[y]" cars [37;14H[37;1H$  grep -i "y]" cars [37;13H[37;13H[37;14H[37;15H[37;1H$  grep -i "y" cars [37;14H[37;1H$  grep -i "" cars [37;13H[37;1H$  grep -i "c" cars [37;14H[37;1H$  grep -i "ch" cars [37;15H[37;1H$  grep -i "che" cars [37;16H[37;1H$  grep -i "chev" cars [37;17H[37;1H$  grep -i "chevy" cars [37;18H[H[JUNX510 Lab 2.6:  Using sed
+[1;100HPage 4/8
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+We have a customer who would like to buy a car, and we want to produce a list of cars that meet her
+requirements.  She wants to see a list of all the cars on the lot that cost less than $10,000, except
+she doesn't want a chevy.  The list should be sorted from lowest cost to highest, and we want to produce
+the list so that the alphabetic characters are in uppercase.
+
+Let's start by displaying all the records in 'cars' that are not chevy's.  Use a grep command to do this,
+and don't forget to ignore case:
+
+You entered: grep -i "chevy" cars
+Please try again.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[37;1H$  grep -i "chevy" cars                                                                                  [37;24H[37;23H[37;22H[37;21H[37;20H[37;19H[37;18H[37;17H[37;16H[37;15H[37;14H[37;13H[37;12H[37;11H[37;1H$  grep -iv "chevy" cars [37;12H[H[JUNX510 Lab 2.6:  Using sed
+[1;100HPage 5/8
+[2;1H-------------------------------------------------------------------------------------------------------------
+$  grep -iv "chevy" cars
+plym    fury    77      73      2500
+ford    mustang 65      45      17000
+volvo   gl      78      102     9850
+ford    ltd     83      15      10500
+fiat    600     65      115     450
+honda   accord  81      30      6000
+ford    thundbd 84      10      17000
+toyota  tercel  82      180     750
+ford    bronco  83      25      9525
+[35;1H-------------------------------------------------------------------------------------------------------------
+                                                                                                             [36;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 2.6:  Using sed
+[1;100HPage 5/8
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+So far we have:
+
+grep -iv chevy cars
+
+Pipe the output of the grep into a sed to delete records that match a regular expression representing
+5 digits at the end of a record (DO NOT use a repetition factor, such as {5}, for this).  This will
+delete the cars that have a price greater than $9,999:
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  grep -iv chevy cars [?1h=[37;1H$  grep -iv chevy cars | [37;25H[37;1H$  grep -iv chevy cars |  [37;26H[37;1H$  grep -iv chevy cars | s [37;27H[37;1H$  grep -iv chevy cars | se [37;28H[37;1H$  grep -iv chevy cars | sed [37;29H[37;1H$  grep -iv chevy cars | sed  [37;30H[37;1H$  grep -iv chevy cars | sed - [37;31H[37;1H$  grep -iv chevy cars | sed -d [37;32H[37;1H$  grep -iv chevy cars | sed -d  [37;33H[37;1H$  grep -iv chevy cars | sed -d ' [37;34H[37;1H$  grep -iv chevy cars | sed -d '/ [37;35H[37;1H$  grep -iv chevy cars | sed -d '// [37;36H[37;1H$  grep -iv chevy cars | sed -d '//' [37;37H[37;36H[37;35H[37;1H$  grep -iv chevy cars | sed -d '/[/' [37;36H[37;1H$  grep -iv chevy cars | sed -d '/[1/' [37;37H[37;1H$  grep -iv chevy cars | sed -d '/[/' [37;36H[37;1H$  grep -iv chevy cars | sed -d '/[-/' [37;37H[37;1H$  grep -iv chevy cars | sed -d '/[/' [37;36H[37;1H$  grep -iv chevy cars | sed -d '/[0/' [37;37H[37;1H$  grep -iv chevy cars | sed -d '/[0-/' [37;38H[37;1H$  grep -iv chevy cars | sed -d '/[0-1/' [37;39H[37;1H$  grep -iv chevy cars | sed -d '/[0-/' [37;38H[37;1H$  grep -iv chevy cars | sed -d '/[0-9/' [37;39H[37;1H$  grep -iv chevy cars | sed -d '/[0-9]/' [37;40H[37;1H$  grep -iv chevy cars | sed -d '/[0-9][/' [37;41H[37;1H$  grep -iv chevy cars | sed -d '/[0-9][0/' [37;42H[37;1H$  grep -iv chevy cars | sed -d '/[0-9][0-/' [37;43H[37;1H$  grep -iv chevy cars | sed -d '/[0-9][0-9/' [37;44H[37;1H$  grep -iv chevy cars | sed -d '/[0-9][0-9]/' [37;45H[37;1H$  grep -iv chevy cars | sed -d '/[0-9][0-9]-/' [37;46H[37;1H$  grep -iv chevy cars | sed -d '/[0-9][0-9]-0/' [37;47H[37;1H$  grep -iv chevy cars | sed -d '/[0-9][0-9]-0-/' [37;48H[37;1H$  grep -iv chevy cars | sed -d '/[0-9][0-9]-0-9/' [37;49H[37;1H$  grep -iv chevy cars | sed -d '/[0-9][0-9]-0-/' [37;48H[37;1H$  grep -iv chevy cars | sed -d '/[0-9][0-9]-0/' [37;47H[37;1H$  grep -iv chevy cars | sed -d '/[0-9][0-9]-/' [37;46H[37;1H$  grep -iv chevy cars | sed -d '/[0-9][0-9]/' [37;45H[37;1H$  grep -iv chevy cars | sed -d '/[0-9][0-9][/' [37;46H[37;1H$  grep -iv chevy cars | sed -d '/[0-9][0-9][0/' [37;47H[37;1H$  grep -iv chevy cars | sed -d '/[0-9][0-9][0-/' [37;48H[37;1H$  grep -iv chevy cars | sed -d '/[0-9][0-9][0-8/' [37;49H[37;1H$  grep -iv chevy cars | sed -d '/[0-9][0-9][0-/' [37;48H[37;1H$  grep -iv chevy cars | sed -d '/[0-9][0-9][0-0/' [37;49H[37;1H$  grep -iv chevy cars | sed -d '/[0-9][0-9][0-/' [37;48H[37;1H$  grep -iv chevy cars | sed -d '/[0-9][0-9][0-9/' [37;49H[37;1H$  grep -iv chevy cars | sed -d '/[0-9][0-9][0-9]/' [37;50H[37;1H$  grep -iv chevy cars | sed -d '/[0-9][0-9][0-9][/' [37;51H[37;1H$  grep -iv chevy cars | sed -d '/[0-9][0-9][0-9][0/' [37;52H[37;1H$  grep -iv chevy cars | sed -d '/[0-9][0-9][0-9][0-/' [37;53H[37;1H$  grep -iv chevy cars | sed -d '/[0-9][0-9][0-9][0-9/' [37;54H[37;1H$  grep -iv chevy cars | sed -d '/[0-9][0-9][0-9][0-9]/' [37;55H[37;1H$  grep -iv chevy cars | sed -d '/[0-9][0-9][0-9][0-9]0/' [37;56H[37;1H$  grep -iv chevy cars | sed -d '/[0-9][0-9][0-9][0-9]/' [37;55H[37;1H$  grep -iv chevy cars | sed -d '/[0-9][0-9][0-9][0-9][/' [37;56H[37;1H$  grep -iv chevy cars | sed -d '/[0-9][0-9][0-9][0-9][0/' [37;57H[37;1H$  grep -iv chevy cars | sed -d '/[0-9][0-9][0-9][0-9][0-/' [37;58H[37;1H$  grep -iv chevy cars | sed -d '/[0-9][0-9][0-9][0-9][0-9/' [37;59H[37;1H$  grep -iv chevy cars | sed -d '/[0-9][0-9][0-9][0-9][0-9]/' [37;60H[37;61H[37;62H[H[JUNX510 Lab 2.6:  Using sed
+[1;100HPage 5/8
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+So far we have:
+
+grep -iv chevy cars
+
+Pipe the output of the grep into a sed to delete records that match a regular expression representing
+5 digits at the end of a record (DO NOT use a repetition factor, such as {5}, for this).  This will
+delete the cars that have a price greater than $9,999:
+
+You entered: grep -iv chevy cars | sed -d '/[0-9][0-9][0-9][0-9][0-9]/'
+Please try again.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  grep -iv chevy cars [?1h=[37;1H$  grep -iv chevy cars | sed -d '/[0-9][0-9][0-9][0-9][0-9]/'                        [37;62H[37;61H[37;1H$  grep -iv chevy cars | sed -d '/[0-9][0-9][0-9][0-9][0-9]/g' [37;62H[H[JUNX510 Lab 2.6:  Using sed
+[1;100HPage 5/8
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+So far we have:
+
+grep -iv chevy cars
+
+Pipe the output of the grep into a sed to delete records that match a regular expression representing
+5 digits at the end of a record (DO NOT use a repetition factor, such as {5}, for this).  This will
+delete the cars that have a price greater than $9,999:
+
+You entered: grep -iv chevy cars | sed -d '/[0-9][0-9][0-9][0-9][0-9]/g'
+Please try again.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  grep -iv chevy cars [?1h=[37;1H$  grep -iv chevy cars | sed -d '/[0-9][0-9][0-9][0-9][0-9]/g'                       [37;63H[37;62H[37;61H[37;60H[37;1H$  grep -iv chevy cars | sed -d '/[0-9][0-9][0-9][0-9][0-9]*/g' [37;61H[H[JUNX510 Lab 2.6:  Using sed
+[1;100HPage 5/8
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+So far we have:
+
+grep -iv chevy cars
+
+Pipe the output of the grep into a sed to delete records that match a regular expression representing
+5 digits at the end of a record (DO NOT use a repetition factor, such as {5}, for this).  This will
+delete the cars that have a price greater than $9,999:
+
+You entered: grep -iv chevy cars | sed -d '/[0-9][0-9][0-9][0-9][0-9]*/g'
+Please try again.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  grep -iv chevy cars [?1h=[37;1H$  grep -iv chevy cars | sed -d '/[0-9][0-9][0-9][0-9][0-9]*/g'                      [37;64H[37;63H[37;62H[37;61H[37;60H[37;59H[37;58H[37;57H[37;56H[37;55H[37;54H[37;53H[37;52H[37;51H[37;50H[37;49H[37;48H[37;47H[37;46H[37;45H[37;44H[37;43H[37;42H[37;41H[37;40H[37;39H[37;38H[37;37H[37;36H[37;35H[37;34H[37;33H[37;1H$  grep -iv chevy cars | sed -d'/[0-9][0-9][0-9][0-9][0-9]*/g' [37;32H[37;1H$  grep -iv chevy cars | sed -'/[0-9][0-9][0-9][0-9][0-9]*/g' [37;31H[37;1H$  grep -iv chevy cars | sed '/[0-9][0-9][0-9][0-9][0-9]*/g' [37;30H[37;31H[37;32H[37;33H[37;34H[37;34H[37;34H[37;34H[37;34H[37;34H[37;34H[37;34H[37;34H[37;34H[37;34H[37;34H[37;34H[37;35H[37;36H[37;37H[37;38H[37;39H[37;40H[37;41H[37;42H[37;43H[37;44H[37;45H[37;46H[37;47H[37;48H[37;49H[37;50H[37;51H[37;52H[37;53H[37;54H[37;55H[37;56H[37;57H[37;58H[37;1H$  grep -iv chevy cars | sed '/[0-9][0-9][0-9][0-9][0-9]/g' [37;57H[37;58H[37;59H[37;1H$  grep -iv chevy cars | sed '/[0-9][0-9][0-9][0-9][0-9]/' [37;58H[37;1H$  grep -iv chevy cars | sed '/[0-9][0-9][0-9][0-9][0-9]/d' [37;59H[H[JUNX510 Lab 2.6:  Using sed
+[1;100HPage 5/8
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+So far we have:
+
+grep -iv chevy cars
+
+Pipe the output of the grep into a sed to delete records that match a regular expression representing
+5 digits at the end of a record (DO NOT use a repetition factor, such as {5}, for this).  This will
+delete the cars that have a price greater than $9,999:
+
+You entered: grep -iv chevy cars | sed '/[0-9][0-9][0-9][0-9][0-9]/d'
+Please try again.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  grep -iv chevy cars [?1h=[37;1H$  grep -iv chevy cars | sed '/[0-9][0-9][0-9][0-9][0-9]/d'                          [37;60H[37;59H[37;58H[37;1H$  grep -iv chevy cars | sed '/[0-9][0-9][0-9][0-9][0-9]/ d' [37;59H[H[JUNX510 Lab 2.6:  Using sed
+[1;100HPage 5/8
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+So far we have:
+
+grep -iv chevy cars
+
+Pipe the output of the grep into a sed to delete records that match a regular expression representing
+5 digits at the end of a record (DO NOT use a repetition factor, such as {5}, for this).  This will
+delete the cars that have a price greater than $9,999:
+
+You entered: grep -iv chevy cars | sed '/[0-9][0-9][0-9][0-9][0-9]/ d'
+Please try again.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  grep -iv chevy cars [?1h=[37;1H$  grep -iv chevy cars | sed '/[0-9][0-9][0-9][0-9][0-9]/ d'                         [37;61H[37;60H[37;59H[37;58H[37;57H[37;56H[37;55H[37;54H[37;53H[37;54H[37;55H[37;56H[37;57H[37;1H$  grep -iv chevy cars | sed '/[0-9][0-9][0-9][0-9][0-9]%/ d' [37;58H[37;1H$  grep -iv chevy cars | sed '/[0-9][0-9][0-9][0-9][0-9]/ d' [37;57H[37;1H$  grep -iv chevy cars | sed '/[0-9][0-9][0-9][0-9][0-9]&/ d' [37;58H[37;1H$  grep -iv chevy cars | sed '/[0-9][0-9][0-9][0-9][0-9]/ d' [37;57H[37;1H$  grep -iv chevy cars | sed '/[0-9][0-9][0-9][0-9][0-9]$/ d' [37;58H[H[JUNX510 Lab 2.6:  Using sed
+[1;100HPage 6/8
+[2;1H-------------------------------------------------------------------------------------------------------------
+$  grep -iv chevy cars | sed '/[0-9][0-9][0-9][0-9][0-9]$/ d'
+plym    fury    77      73      2500
+volvo   gl      78      102     9850
+fiat    600     65      115     450
+honda   accord  81      30      6000
+toyota  tercel  82      180     750
+ford    bronco  83      25      9525
+[35;1H-------------------------------------------------------------------------------------------------------------
+                                                                                                             [36;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 2.6:  Using sed
+[1;100HPage 6/8
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+So far we have:
+
+grep -iv chevy cars | sed '/[0-9][0-9][0-9][0-9][0-9]$/ d'
+
+Now let's sort the cars by price.  Pipe the output of the sed into a sort to do this, and don't forget
+to sort numerically on the 5th field:
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  grep -iv chevy cars | sed '/[0-9][0-9][0-9][0-9][0-9]$/ d' [?1h=[37;1H$  grep -iv chevy cars | sed '/[0-9][0-9][0-9][0-9][0-9]$/ d' | [37;64H[37;1H$  grep -iv chevy cars | sed '/[0-9][0-9][0-9][0-9][0-9]$/ d' |  [37;65H[37;1H$  grep -iv chevy cars | sed '/[0-9][0-9][0-9][0-9][0-9]$/ d' | s [37;66H[37;1H$  grep -iv chevy cars | sed '/[0-9][0-9][0-9][0-9][0-9]$/ d' | so [37;67H[37;1H$  grep -iv chevy cars | sed '/[0-9][0-9][0-9][0-9][0-9]$/ d' | sor [37;68H[37;1H$  grep -iv chevy cars | sed '/[0-9][0-9][0-9][0-9][0-9]$/ d' | sort [37;69H[37;1H$  grep -iv chevy cars | sed '/[0-9][0-9][0-9][0-9][0-9]$/ d' | sort  [37;70H[37;1H$  grep -iv chevy cars | sed '/[0-9][0-9][0-9][0-9][0-9]$/ d' | sort - [37;71H[37;1H$  grep -iv chevy cars | sed '/[0-9][0-9][0-9][0-9][0-9]$/ d' | sort -n [37;72H[37;1H$  grep -iv chevy cars | sed '/[0-9][0-9][0-9][0-9][0-9]$/ d' | sort -nk [37;73H[37;1H$  grep -iv chevy cars | sed '/[0-9][0-9][0-9][0-9][0-9]$/ d' | sort -nk  [37;74H[37;1H$  grep -iv chevy cars | sed '/[0-9][0-9][0-9][0-9][0-9]$/ d' | sort -nk 5 [37;75H[H[JUNX510 Lab 2.6:  Using sed
+[1;100HPage 7/8
+[2;1H-------------------------------------------------------------------------------------------------------------
+$  grep -iv chevy cars | sed '/[0-9][0-9][0-9][0-9][0-9]$/ d' | sort -nk 5
+fiat    600     65      115     450
+toyota  tercel  82      180     750
+plym    fury    77      73      2500
+honda   accord  81      30      6000
+ford    bronco  83      25      9525
+volvo   gl      78      102     9850
+[35;1H-------------------------------------------------------------------------------------------------------------
+                                                                                                             [36;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 2.6:  Using sed
+[1;100HPage 7/8
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+So far we have:
+
+grep -iv chevy cars | sed '/[0-9][0-9][0-9][0-9][0-9]$/ d' | sort -nk 5
+
+Finally, let's display the output in uppercase.  Pipe the output of the sort into a tr command:
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  grep -iv chevy cars| sed '/[0-9][0-9][0-9][0-9][0-9]$/ d' | sort -nk 5 [?1h=[37;1H$  grep -iv chevy cars| sed '/[0-9][0-9][0-9][0-9][0-9]$/ d' | sort -nk 5 | [37;76H[37;1H$  grep -iv chevy cars| sed '/[0-9][0-9][0-9][0-9][0-9]$/ d' | sort -nk 5 |  [37;77H[37;1H$  grep -iv chevy cars| sed '/[0-9][0-9][0-9][0-9][0-9]$/ d' | sort -nk 5 | t [37;78H[37;1H$  grep -iv chevy cars| sed '/[0-9][0-9][0-9][0-9][0-9]$/ d' | sort -nk 5 | tr [37;79H[37;1H$  grep -iv chevy cars| sed '/[0-9][0-9][0-9][0-9][0-9]$/ d' | sort -nk 5 | tr  [37;80H[37;1H$  grep -iv chevy cars| sed '/[0-9][0-9][0-9][0-9][0-9]$/ d' | sort -nk 5 | tr " [37;81H[37;1H$  grep -iv chevy cars| sed '/[0-9][0-9][0-9][0-9][0-9]$/ d' | sort -nk 5 | tr "[ [37;82H[37;1H$  grep -iv chevy cars| sed '/[0-9][0-9][0-9][0-9][0-9]$/ d' | sort -nk 5 | tr "[a [37;83H[37;1H$  grep -iv chevy cars| sed '/[0-9][0-9][0-9][0-9][0-9]$/ d' | sort -nk 5 | tr "[a- [37;84H[37;1H$  grep -iv chevy cars| sed '/[0-9][0-9][0-9][0-9][0-9]$/ d' | sort -nk 5 | tr "[a-z [37;85H[37;1H$  grep -iv chevy cars| sed '/[0-9][0-9][0-9][0-9][0-9]$/ d' | sort -nk 5 | tr "[a-z] [37;86H[37;1H$  grep -iv chevy cars| sed '/[0-9][0-9][0-9][0-9][0-9]$/ d' | sort -nk 5 | tr "[a-z]" [37;87H[37;1H$  grep -iv chevy cars| sed '/[0-9][0-9][0-9][0-9][0-9]$/ d' | sort -nk 5 | tr "[a-z]"  [37;88H[37;1H$  grep -iv chevy cars| sed '/[0-9][0-9][0-9][0-9][0-9]$/ d' | sort -nk 5 | tr "[a-z]" { [37;89H[37;1H$  grep -iv chevy cars| sed '/[0-9][0-9][0-9][0-9][0-9]$/ d' | sort -nk 5 | tr "[a-z]"  [37;88H[37;1H$  grep -iv chevy cars| sed '/[0-9][0-9][0-9][0-9][0-9]$/ d' | sort -nk 5 | tr "[a-z]" " [37;89H[37;1H$  grep -iv chevy cars| sed '/[0-9][0-9][0-9][0-9][0-9]$/ d' | sort -nk 5 | tr "[a-z]" "[ [37;90H[37;1H$  grep -iv chevy cars| sed '/[0-9][0-9][0-9][0-9][0-9]$/ d' | sort -nk 5 | tr "[a-z]" "[A [37;91H[37;1H$  grep -iv chevy cars| sed '/[0-9][0-9][0-9][0-9][0-9]$/ d' | sort -nk 5 | tr "[a-z]" "[A- [37;92H[37;1H$  grep -iv chevy cars| sed '/[0-9][0-9][0-9][0-9][0-9]$/ d' | sort -nk 5 | tr "[a-z]" "[A-Z [37;93H[37;1H$  grep -iv chevy cars| sed '/[0-9][0-9][0-9][0-9][0-9]$/ d' | sort -nk 5 | tr "[a-z]" "[A-Z" [37;94H[37;1H$  grep -iv chevy cars| sed '/[0-9][0-9][0-9][0-9][0-9]$/ d' | sort -nk 5 | tr "[a-z]" "[A-Z [37;93H[37;1H$  grep -iv chevy cars| sed '/[0-9][0-9][0-9][0-9][0-9]$/ d' | sort -nk 5 | tr "[a-z]" "[A-Z} [37;94H[37;1H$  grep -iv chevy cars| sed '/[0-9][0-9][0-9][0-9][0-9]$/ d' | sort -nk 5 | tr "[a-z]" "[A-Z [37;93H[37;1H$  grep -iv chevy cars| sed '/[0-9][0-9][0-9][0-9][0-9]$/ d' | sort -nk 5 | tr "[a-z]" "[A-Z] [37;94H[37;1H$  grep -iv chevy cars| sed '/[0-9][0-9][0-9][0-9][0-9]$/ d' | sort -nk 5 | tr "[a-z]" "[A-Z]" [37;95H[H[JUNX510 Lab 2.6:  Using sed
+[1;100HPage 8/8
+[2;1H-------------------------------------------------------------------------------------------------------------
+$  grep -iv chevy cars| sed '/[0-9][0-9][0-9][0-9][0-9]$/ d' | sort -nk 5 | tr "[a-z]" "[A-Z]"
+FIAT    600     65      115     450
+TOYOTA  TERCEL  82      180     750
+PLYM    FURY    77      73      2500
+HONDA   ACCORD  81      30      6000
+FORD    BRONCO  83      25      9525
+VOLVO   GL      78      102     9850
+[35;1H-------------------------------------------------------------------------------------------------------------
+                                                                                                             [36;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 2.6:  Using sed
+[1;100HPage 8/8
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Good.
+
+Let's go on to awk.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.6:  sed And awk
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 Using sed - Completed[m
+2 [7mUsing awk[m
+3 [7mReview Exercise[m
+
+Note that the highlighted lines indicate the incomplete sections of
+this part of the Lab.
+
+The Review Exercise can only be done when the other sections have
+been completed.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: 2
+[H[JUNX510 Lab 2.6:  Using awk
+[1;100HPage 1/7
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Using awk
+
+awk is a superset of the C programming language.  Fortunately, a very small subset of awk functionality
+is enough to handle many situations that arise both on the command line and within scripts.
+
+awk can make substantial changes to a file, and like sed, it will send the changed file to standard
+output, but the original file is left unchanged.
+
+In this Lab, we will only use those facilities of awk and other commands that are covered in the lectures,
+so you may wish to use the lectures as a reference.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.6:  Using awk
+[1;100HPage 2/7
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Once again, we're going to use the 'cars' file:
+
+plym    fury    77      73      2500
+chevy   nova    79      60      3000
+ford    mustang 65      45      17000
+volvo   gl      78      102     9850
+ford    ltd     83      15      10500
+Chevy   nova    80      50      3500
+fiat    600     65      115     450
+honda   accord  81      30      6000
+ford    thundbd 84      10      17000
+toyota  tercel  82      180     750
+chevy   impala  65      85      1550
+ford    bronco  83      25      9525
+[35;1H-------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.6:  Using awk
+[1;100HPage 3/7
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+We have another customer who would like to buy a car, and we need a list of cars that meet his
+requirements.  He wants to rebuild a classic car built between 1975 and 1983.  He's willing to pay up
+to $9,000, but he cares less about price than he does about low mileage, so the list should be sorted
+from lowest mileage to highest.
+
+Let's start by displaying all the records in 'cars' that are newer than 1974.  Use an awk command to
+do this, selecting those records that have a third field greater than 74:
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[37;1H$  w [37;5H[37;1H$   [37;4H[37;1H$  q [37;5H[37;1H$   [37;4H[37;1H$  a [37;5H[37;1H$  aw [37;6H[37;1H$  awk [37;7H[37;1H$  awk  [37;8H[37;1H$  awk ' [37;9H[37;1H$  awk '$ [37;10H[37;1H$  awk '$3 [37;11H[37;1H$  awk '$3  [37;12H[37;1H$  awk '$3 [37;11H[37;1H$  awk '$3  [37;12H[37;1H$  awk '$3 > [37;13H[37;1H$  awk '$3 >  [37;14H[37;1H$  awk '$3 > 7 [37;15H[37;1H$  awk '$3 > 74 [37;16H[37;1H$  awk '$3 > 74' [37;17H[37;1H$  awk '$3 > 74'  [37;18H[37;1H$  awk '$3 > 74' c [37;19H[37;1H$  awk '$3 > 74' ca [37;20H[37;1H$  awk '$3 > 74' car [37;21H[37;1H$  awk '$3 > 74' cars [37;22H[H[JUNX510 Lab 2.6:  Using awk
+[1;100HPage 4/7
+[2;1H-------------------------------------------------------------------------------------------------------------
+$  awk '$3 > 74' cars
+plym    fury    77      73      2500
+chevy   nova    79      60      3000
+volvo   gl      78      102     9850
+ford    ltd     83      15      10500
+Chevy   nova    80      50      3500
+honda   accord  81      30      6000
+ford    thundbd 84      10      17000
+toyota  tercel  82      180     750
+ford    bronco  83      25      9525
+[35;1H-------------------------------------------------------------------------------------------------------------
+                                                                                                             [36;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 2.6:  Using awk
+[1;100HPage 4/7
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+So far we have:
+
+awk '$3 > 74' cars
+
+Now let's pare the list down to the cars that are older than 1984.  Pipe the output of the awk into a
+second awk, selecting those records that have a third field less than 84:
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  awk '$3 > 74' cars [?1h=[37;1H$  awk '$3 > 74' cars | [37;24H[37;1H$  awk '$3 > 74' cars |  [37;25H[37;1H$  awk '$3 > 74' cars | a [37;26H[37;1H$  awk '$3 > 74' cars | aw [37;27H[37;1H$  awk '$3 > 74' cars | awk [37;28H[37;1H$  awk '$3 > 74' cars | awk  [37;29H[37;1H$  awk '$3 > 74' cars | awk ' [37;30H[37;1H$  awk '$3 > 74' cars | awk '$ [37;31H[37;1H$  awk '$3 > 74' cars | awk '$3 [37;32H[37;1H$  awk '$3 > 74' cars | awk '$3< [37;33H[37;1H$  awk '$3 > 74' cars | awk '$3 [37;32H[37;1H$  awk '$3 > 74' cars | awk '$3  [37;33H[37;1H$  awk '$3 > 74' cars | awk '$3 < [37;34H[37;1H$  awk '$3 > 74' cars | awk '$3 <  [37;35H[37;1H$  awk '$3 > 74' cars | awk '$3 < 8 [37;36H[37;1H$  awk '$3 > 74' cars | awk '$3 < 84 [37;37H[37;1H$  awk '$3 > 74' cars | awk '$3 < 84' [37;38H[H[JUNX510 Lab 2.6:  Using awk
+[1;100HPage 5/7
+[2;1H-------------------------------------------------------------------------------------------------------------
+$  awk '$3 > 74' cars | awk '$3 < 84'
+plym    fury    77      73      2500
+chevy   nova    79      60      3000
+volvo   gl      78      102     9850
+ford    ltd     83      15      10500
+Chevy   nova    80      50      3500
+honda   accord  81      30      6000
+toyota  tercel  82      180     750
+ford    bronco  83      25      9525
+[35;1H-------------------------------------------------------------------------------------------------------------
+                                                                                                             [36;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 2.6:  Using awk
+[1;100HPage 5/7
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+So far we have:
+
+awk '$3 > 74' cars | awk '$3 < 84'
+
+Now let's delete the cars that are more than $9,000.  Pipe the output of the second awk into a third
+awk to do this, selecting those records that have a fifth field less than or equal to 9000:
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  awk '$3 > 74' cars | awk '$3 < 84' [?1h=[37;1H$  awk '$3 > 74' cars | awk '$3 < 84' | [37;40H[37;1H$  awk '$3 > 74' cars | awk '$3 < 84' |w [37;41H[37;1H$  awk '$3 > 74' cars | awk '$3 < 84' | [37;40H[37;1H$  awk '$3 > 74' cars | awk '$3 < 84' |a [37;41H[37;1H$  awk '$3 > 74' cars | awk '$3 < 84' | [37;40H[37;1H$  awk '$3 > 74' cars | awk '$3 < 84' |  [37;41H[37;1H$  awk '$3 > 74' cars | awk '$3 < 84' | w [37;42H[37;1H$  awk '$3 > 74' cars | awk '$3 < 84' |  [37;41H[37;1H$  awk '$3 > 74' cars | awk '$3 < 84' | a [37;42H[37;1H$  awk '$3 > 74' cars | awk '$3 < 84' | aw [37;43H[37;1H$  awk '$3 > 74' cars | awk '$3 < 84' | awk [37;44H[37;1H$  awk '$3 > 74' cars | awk '$3 < 84' | awk  [37;45H[37;1H$  awk '$3 > 74' cars | awk '$3 < 84' | awk > [37;46H[37;1H$  awk '$3 > 74' cars | awk '$3 < 84' | awk >  [37;47H[37;1H$  awk '$3 > 74' cars | awk '$3 < 84' | awk > 9 [37;48H[37;1H$  awk '$3 > 74' cars | awk '$3 < 84' | awk > 90 [37;49H[37;1H$  awk '$3 > 74' cars | awk '$3 < 84' | awk > 900 [37;50H[37;1H$  awk '$3 > 74' cars | awk '$3 < 84' | awk > 9000 [37;51H[37;1H$  awk '$3 > 74' cars | awk '$3 < 84' | awk > 900 [37;50H[37;1H$  awk '$3 > 74' cars | awk '$3 < 84' | awk > 90 [37;49H[37;1H$  awk '$3 > 74' cars | awk '$3 < 84' | awk > 9 [37;48H[37;1H$  awk '$3 > 74' cars | awk '$3 < 84' | awk >  [37;47H[37;1H$  awk '$3 > 74' cars | awk '$3 < 84' | awk > [37;46H[37;1H$  awk '$3 > 74' cars | awk '$3 < 84' | awk  [37;45H[37;1H$  awk '$3 > 74' cars | awk '$3 < 84' | awk $ [37;46H[37;1H$  awk '$3 > 74' cars | awk '$3 < 84' | awk $5 [37;47H[37;1H$  awk '$3 > 74' cars | awk '$3 < 84' | awk $5  [37;48H[37;1H$  awk '$3 > 74' cars | awk '$3 < 84' | awk $5 > [37;49H[37;48H[37;47H[37;46H[37;45H[37;1H$  awk '$3 > 74' cars | awk '$3 < 84' | awk '$5 > [37;46H[37;47H[37;48H[37;49H[37;50H[37;1H$  awk '$3 > 74' cars | awk '$3 < 84' | awk '$5 >  [37;51H[37;1H$  awk '$3 > 74' cars | awk '$3 < 84' | awk '$5 > 9 [37;52H[37;1H$  awk '$3 > 74' cars | awk '$3 < 84' | awk '$5 > 90 [37;53H[37;1H$  awk '$3 > 74' cars | awk '$3 < 84' | awk '$5 > 900 [37;54H[37;1H$  awk '$3 > 74' cars | awk '$3 < 84' | awk '$5 > 9000 [37;55H[37;1H$  awk '$3 > 74' cars | awk '$3 < 84' | awk '$5 > 9000' [37;56H[H[JUNX510 Lab 2.6:  Using awk
+[1;100HPage 5/7
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+So far we have:
+
+awk '$3 > 74' cars | awk '$3 < 84'
+
+Now let's delete the cars that are more than $9,000.  Pipe the output of the second awk into a third
+awk to do this, selecting those records that have a fifth field less than or equal to 9000:
+
+You entered: awk '$3 > 74' cars | awk '$3 < 84' | awk '$5 > 9000'
+Please try again.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  awk '$3 > 74' cars | awk '$3 < 84' [?1h=[37;1H$  awk '$3 > 74' cars | awk '$3 < 84' | awk '$5 > 9000'               [37;56H[37;55H[37;54H[37;53H[37;52H[37;51H[37;50H[37;1H$  awk '$3 > 74' cars | awk '$3 < 84' | awk '$5  9000' [37;49H[37;1H$  awk '$3 > 74' cars | awk '$3 < 84' | awk '$5 < 9000' [37;50H[H[JUNX510 Lab 2.6:  Using awk
+[1;100HPage 5/7
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+So far we have:
+
+awk '$3 > 74' cars | awk '$3 < 84'
+
+Now let's delete the cars that are more than $9,000.  Pipe the output of the second awk into a third
+awk to do this, selecting those records that have a fifth field less than or equal to 9000:
+
+You entered: awk '$3 > 74' cars | awk '$3 < 84' | awk '$5 < 9000'
+Please try again.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  awk '$3 > 74' cars | awk '$3 < 84' [?1h=[37;1H$  awk '$3 > 74' cars | awk '$3 < 84' | awk '$5 < 9000'               [37;56H[37;55H[37;54H[37;53H[37;52H[37;51H[37;50H[37;1H$  awk '$3 > 74' cars | awk '$3 < 84' | awk '$5 <= 9000' [37;51H[H[JUNX510 Lab 2.6:  Using awk
+[1;100HPage 6/7
+[2;1H-------------------------------------------------------------------------------------------------------------
+$  awk '$3 > 74' cars | awk '$3 < 84' | awk '$5 <= 9000'
+plym    fury    77      73      2500
+chevy   nova    79      60      3000
+Chevy   nova    80      50      3500
+honda   accord  81      30      6000
+toyota  tercel  82      180     750
+[35;1H-------------------------------------------------------------------------------------------------------------
+                                                                                                             [36;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 2.6:  Using awk
+[1;100HPage 6/7
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+So far we have:
+
+awk '$3 > 74' cars | awk '$3 < 84' | awk '$5 <= 9000'
+
+Finally, let's sort the cars by mileage.  Pipe the output of the third awk into a sort to do this,
+and don't forget to sort numerically on the 4th field:
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  awk '$3 > 74' cars | awk '$3 < 84' | awk '$5 <= 9000' [?1h=[37;1H$  awk '$3 > 74' cars | awk '$3 < 84' | awk '$5 <= 9000' | [37;59H[37;1H$  awk '$3 > 74' cars | awk '$3 < 84' | awk '$5 <= 9000' |s [37;60H[37;1H$  awk '$3 > 74' cars | awk '$3 < 84' | awk '$5 <= 9000' |so [37;61H[37;1H$  awk '$3 > 74' cars | awk '$3 < 84' | awk '$5 <= 9000' |s [37;60H[37;1H$  awk '$3 > 74' cars | awk '$3 < 84' | awk '$5 <= 9000' | [37;59H[37;1H$  awk '$3 > 74' cars | awk '$3 < 84' | awk '$5 <= 9000' |  [37;60H[37;1H$  awk '$3 > 74' cars | awk '$3 < 84' | awk '$5 <= 9000' | s [37;61H[37;1H$  awk '$3 > 74' cars | awk '$3 < 84' | awk '$5 <= 9000' | so [37;62H[37;1H$  awk '$3 > 74' cars | awk '$3 < 84' | awk '$5 <= 9000' | sor [37;63H[37;1H$  awk '$3 > 74' cars | awk '$3 < 84' | awk '$5 <= 9000' | sort [37;64H[37;1H$  awk '$3 > 74' cars | awk '$3 < 84' | awk '$5 <= 9000' | sort  [37;65H[37;1H$  awk '$3 > 74' cars | awk '$3 < 84' | awk '$5 <= 9000' | sort - [37;66H[37;1H$  awk '$3 > 74' cars | awk '$3 < 84' | awk '$5 <= 9000' | sort -n [37;67H[37;1H$  awk '$3 > 74' cars | awk '$3 < 84' | awk '$5 <= 9000' | sort -nk [37;68H[37;1H$  awk '$3 > 74' cars | awk '$3 < 84' | awk '$5 <= 9000' | sort -nk  [37;69H[37;1H$  awk '$3 > 74' cars | awk '$3 < 84' | awk '$5 <= 9000' | sort -nk [37;68H[37;1H$  awk '$3 > 74' cars | awk '$3 < 84' | awk '$5 <= 9000' | sort -nk4 [37;69H[H[JUNX510 Lab 2.6:  Using awk
+[1;100HPage 7/7
+[2;1H-------------------------------------------------------------------------------------------------------------
+$  awk '$3 > 74' cars | awk '$3 < 84' | awk '$5 <= 9000' | sort -nk4
+honda   accord  81      30      6000
+Chevy   nova    80      50      3500
+chevy   nova    79      60      3000
+plym    fury    77      73      2500
+toyota  tercel  82      180     750
+[35;1H-------------------------------------------------------------------------------------------------------------
+                                                                                                             [36;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 2.6:  Using awk
+[1;100HPage 7/7
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Good!
+
+You may now proceed to the Review section.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.6:  sed And awk
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 Using sed - Completed[m
+2 Using awk - Completed[m
+3 [7mReview Exercise[m
+
+Note that the highlighted lines indicate the incomplete sections of
+this part of the Lab.
+
+The Review Exercise can only be done when the other sections have
+been completed.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: q^H
+[H[JUNX510 Lab 2.6:  sed And awk
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 Using sed - Completed[m
+2 Using awk - Completed[m
+3 [7mReview Exercise[m
+
+Note that the highlighted lines indicate the incomplete sections of
+this part of the Lab.
+
+The Review Exercise can only be done when the other sections have
+been completed.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: 3
+[H[JUNX510 Lab 2.6:  Review
+[1;100HPage 1/7
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Review Exercise
+
+The purpose of this section is to reinforce your skills with issuing UNIX commands covered in the
+previous sections.
+
+You will be asked to enter a single UNIX command for the following situations.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.6:  Review
+[1;100HPage 2/7
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+The data file for the review questions, named "inventory", looks like this:
+
+Strawberry Jam,300,4
+Raspberry Jam,1216,7
+Blueberry Jam,96,195
+Strawberry Compote,49,621
+Raspberry Compote,1937,624
+Blueberry compote,200,625
+Frozen Strawberries,130,1941
+Straw Hats,16,2047
+
+The first field is the product name, the second field is the quantity on hand,
+and the third field is the product code. The fields are separated by commas.
+
+In each of the following questions, write a command using "sed" or
+"awk". The data file in all cases is named "inventory".
+[35;1H-------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.6:  Review
+[1;100HPage 3/7
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Question 1
+
+Display only the fifth line in the file, using sed.
+
+Remember that the data file is named "inventory".
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[37;1H$  s [37;5H[37;1H$  se [37;6H[37;1H$  sed [37;7H[37;1H$  sed  [37;8H[37;1H$  sed - [37;9H[37;1H$  sed -n [37;10H[37;1H$  sed -n  [37;11H[37;1H$  sed -n ' [37;12H[37;1H$  sed -n '3 [37;13H[37;1H$  sed -n ' [37;12H[37;1H$  sed -n '5 [37;13H[37;1H$  sed -n '5' [37;14H[37;1H$  sed -n '5 [37;13H[37;1H$  sed -n '5  [37;14H[37;1H$  sed -n '5 p [37;15H[37;1H$  sed -n '5 p' [37;16H[H[JUNX510 Lab 2.6:  Review
+[1;100HPage 3/7
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Question 1
+
+Display only the fifth line in the file, using sed.
+
+Remember that the data file is named "inventory".
+
+You entered: sed -n '5 p'
+Please try again.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[37;1H$  sed -n '5 p'                                                                                          [37;16H[37;1H$  sed -n '5 p'  [37;17H[37;1H$  sed -n '5 p' i [37;18H[37;1H$  sed -n '5 p' in [37;19H[37;1H$  sed -n '5 p' inv [37;20H[37;1H$  sed -n '5 p' inve [37;21H[37;1H$  sed -n '5 p' inven [37;22H[37;1H$  sed -n '5 p' invent [37;23H[37;1H$  sed -n '5 p' invento [37;24H[37;1H$  sed -n '5 p' inventor [37;25H[37;1H$  sed -n '5 p' inventory [37;26H[H[JUNX510 Lab 2.6:  Review
+[1;100HPage 4/7
+[2;1H-------------------------------------------------------------------------------------------------------------
+$  sed -n '5 p' inventory
+Raspberry Compote,1937,624
+[35;1H-------------------------------------------------------------------------------------------------------------
+                                                                                                             [36;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 2.6:  Review
+[1;100HPage 4/7
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Question 2
+
+Display all of the lines in the file, changing the characters "Jam" to "Marmalade", using sed.
+
+Remember that the data file is named "inventory".
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[37;1H$  s [37;5H[37;1H$  se [37;6H[37;1H$  sed [37;7H[37;1H$  sed  [37;8H[37;1H$  sed ' [37;9H[37;1H$  sed '/ [37;10H[37;1H$  sed '/J [37;11H[37;1H$  sed '/Ja [37;12H[37;1H$  sed '/Jam [37;13H[37;1H$  sed '/Jam/ [37;14H[37;1H$  sed '/Jam/M [37;15H[37;1H$  sed '/Jam/Ma [37;16H[37;1H$  sed '/Jam/Mar [37;17H[37;1H$  sed '/Jam/Marm [37;18H[37;1H$  sed '/Jam/Marma [37;19H[37;1H$  sed '/Jam/Marmal [37;20H[37;1H$  sed '/Jam/Marmala [37;21H[37;1H$  sed '/Jam/Marmalad [37;22H[37;1H$  sed '/Jam/Marmalade [37;23H[37;1H$  sed '/Jam/Marmalade/ [37;24H[37;1H$  sed '/Jam/Marmalade/' [37;25H[37;1H$  sed '/Jam/Marmalade/'  [37;26H[37;1H$  sed '/Jam/Marmalade/' i [37;27H[37;1H$  sed '/Jam/Marmalade/' in [37;28H[37;1H$  sed '/Jam/Marmalade/' inv [37;29H[37;1H$  sed '/Jam/Marmalade/' inve [37;30H[37;1H$  sed '/Jam/Marmalade/' inven [37;31H[37;1H$  sed '/Jam/Marmalade/' invent [37;32H[37;1H$  sed '/Jam/Marmalade/' invento [37;33H[37;1H$  sed '/Jam/Marmalade/' inventor [37;34H[37;1H$  sed '/Jam/Marmalade/' inventory [37;35H[H[JUNX510 Lab 2.6:  Review
+[1;100HPage 4/7
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Question 2
+
+Display all of the lines in the file, changing the characters "Jam" to "Marmalade", using sed.
+
+Remember that the data file is named "inventory".
+
+You entered: sed '/Jam/Marmalade/' inventory
+Please try again.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[37;1H$  sed '/Jam/Marmalade/' inventory                                                                       [37;35H[37;34H[37;33H[37;32H[37;31H[37;30H[37;29H[37;28H[37;27H[37;26H[37;25H[37;24H[37;1H$  sed '/Jam/Marmalade/g' inventory [37;25H[H[JUNX510 Lab 2.6:  Review
+[1;100HPage 4/7
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Question 2
+
+Display all of the lines in the file, changing the characters "Jam" to "Marmalade", using sed.
+
+Remember that the data file is named "inventory".
+
+You entered: sed '/Jam/Marmalade/g' inventory
+Please try again.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[37;1H$  sed '/Jam/Marmalade/g' inventory                                                                      [37;36H[37;35H[37;34H[37;33H[37;33H[37;33H[37;33H[37;33H[37;33H[37;33H[37;33H[37;33H[37;33H[37;32H[37;31H[37;30H[37;29H[37;28H[37;27H[37;26H[37;25H[37;24H[37;23H[37;22H[37;21H[37;20H[37;19H[37;18H[37;17H[37;16H[37;15H[37;14H[37;13H[37;12H[37;11H[37;10H[37;9H[37;1H$  sed 's/Jam/Marmalade/g' inventory [37;10H[H[JUNX510 Lab 2.6:  Review
+[1;100HPage 5/7
+[2;1H-------------------------------------------------------------------------------------------------------------
+$  sed 's/Jam/Marmalade/g' inventory
+Strawberry Marmalade,300,4
+Raspberry Marmalade,1216,7
+Blueberry Marmalade,96,195
+Strawberry Compote,49,621
+Raspberry Compote,1937,624
+Blueberry compote,200,625
+Frozen Strawberries,130,941
+Straw Hats,16,2047
+[35;1H-------------------------------------------------------------------------------------------------------------
+                                                                                                             [36;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 2.6:  Review
+[1;100HPage 5/7
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Question 3
+
+Display all of the lines in the file showing only the quantity and product name, in that order and
+separated by a space, using awk. Product name is the first field, and quantity is the second field.
+
+Remember that the data file is named "inventory".
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[37;1H$  a [37;5H[37;1H$  aw [37;6H[37;1H$  awk [37;7H[37;1H$  awk  [37;8H[37;1H$  awk ' [37;9H[37;1H$  awk 'I [37;10H[37;1H$  awk 'IF [37;11H[37;1H$  awk 'IFS [37;12H[37;1H$  awk 'IFS  [37;13H[37;1H$  awk 'IFS = [37;14H[37;1H$  awk 'IFS == [37;15H[37;1H$  awk 'IFS ==  [37;16H[37;15H[37;14H[37;13H[37;14H[37;1H$  awk 'IFS =  [37;13H[37;1H$  awk 'IFS=  [37;12H[37;13H[37;1H$  awk 'IFS="  [37;14H[37;1H$  awk 'IFS=",  [37;15H[37;1H$  awk 'IFS=","  [37;16H[37;1H$  awk 'IFS=","   [37;17H[37;1H$  awk 'IFS="," ,  [37;18H[37;1H$  awk 'IFS=","   [37;17H[37;16H[37;15H[37;14H[37;13H[37;12H[37;11H[37;10H[37;9H[37;8H[37;1H$  awk {'IFS=","   [37;9H[37;10H[37;1H$  awk {IFS=","   [37;9H[37;10H[37;11H[37;12H[37;13H[37;14H[37;15H[37;16H[37;17H[37;1H$  awk {IFS=","  [37;16H[37;1H$  awk {IFS=",";  [37;17H[37;1H$  awk {IFS=",";   [37;18H[37;1H$  awk {IFS=","; p  [37;19H[37;1H$  awk {IFS=","; pr  [37;20H[37;1H$  awk {IFS=","; pri  [37;21H[37;1H$  awk {IFS=","; prin  [37;22H[37;1H$  awk {IFS=","; print  [37;23H[37;1H$  awk {IFS=","; print   [37;24H[37;1H$  awk {IFS=","; print $  [37;25H[37;1H$  awk {IFS=","; print $1  [37;26H[37;1H$  awk {IFS=","; print $1,  [37;27H[37;1H$  awk {IFS=","; print $1  [37;26H[37;1H$  awk {IFS=","; print $  [37;25H[37;1H$  awk {IFS=","; print   [37;24H[37;1H$  awk {IFS=","; print  [37;23H[37;1H$  awk {IFS=","; prin  [37;22H[37;1H$  awk {IFS=","; pri  [37;21H[37;1H$  awk {IFS=","; pr  [37;20H[37;1H$  awk {IFS=","; p  [37;19H[37;1H$  awk {IFS=",";   [37;18H[37;1H$  awk {IFS=",";  [37;17H[37;1H$  awk {IFS=","  [37;16H[37;1H$  awk {IFS=",  [37;15H[37;1H$  awk {IFS="  [37;14H[37;1H$  awk {IFS=  [37;13H[37;1H$  awk {IFS  [37;12H[37;1H$  awk {IF  [37;11H[37;1H$  awk {I  [37;10H[37;1H$  awk {  [37;9H[37;1H$  awk   [37;8H[37;1H$  awk  [37;7H[37;1H$  awk   [37;8H[37;1H$  awk B  [37;9H[37;1H$  awk BE  [37;10H[37;1H$  awk BEG  [37;11H[37;1H$  awk BEGI  [37;12H[37;1H$  awk BEGIN  [37;13H[37;12H[37;11H[37;10H[37;9H[37;8H[37;1H$  awk 'BEGIN  [37;9H[37;10H[37;11H[37;12H[37;13H[37;14H[37;13H[37;14H[37;1H$  awk 'BEGIN   [37;15H[37;1H$  awk 'BEGIN {  [37;16H[37;1H$  awk 'BEGIN {I  [37;17H[37;1H$  awk 'BEGIN {IF  [37;18H[37;1H$  awk 'BEGIN {IFS  [37;19H[37;1H$  awk 'BEGIN {IFS=  [37;20H[37;1H$  awk 'BEGIN {IFS="  [37;21H[37;1H$  awk 'BEGIN {IFS=",  [37;22H[37;1H$  awk 'BEGIN {IFS=","  [37;23H[37;1H$  awk 'BEGIN {IFS=",";  [37;24H[37;1H$  awk 'BEGIN {IFS=",";O  [37;25H[37;1H$  awk 'BEGIN {IFS=",";OF  [37;26H[37;1H$  awk 'BEGIN {IFS=",";OFS  [37;27H[37;1H$  awk 'BEGIN {IFS=",";OFS=  [37;28H[37;1H$  awk 'BEGIN {IFS=",";OFS="  [37;29H[37;1H$  awk 'BEGIN {IFS=",";OFS="   [37;30H[37;1H$  awk 'BEGIN {IFS=",";OFS=" "  [37;31H[37;1H$  awk 'BEGIN {IFS=",";OFS=" ":  [37;32H[37;1H$  awk 'BEGIN {IFS=",";OFS=" ":}  [37;33H[37;1H$  awk 'BEGIN {IFS=",";OFS=" ":}   [37;34H[37;1H$  awk 'BEGIN {IFS=",";OFS=" ":} {  [37;35H[37;1H$  awk 'BEGIN {IFS=",";OFS=" ":} {p  [37;36H[37;1H$  awk 'BEGIN {IFS=",";OFS=" ":} {pr  [37;37H[37;1H$  awk 'BEGIN {IFS=",";OFS=" ":} {prn  [37;38H[37;1H$  awk 'BEGIN {IFS=",";OFS=" ":} {pr  [37;37H[37;1H$  awk 'BEGIN {IFS=",";OFS=" ":} {pri  [37;38H[37;1H$  awk 'BEGIN {IFS=",";OFS=" ":} {prin  [37;39H[37;1H$  awk 'BEGIN {IFS=",";OFS=" ":} {print  [37;40H[37;1H$  awk 'BEGIN {IFS=",";OFS=" ":} {print   [37;41H[37;1H$  awk 'BEGIN {IFS=",";OFS=" ":} {print $  [37;42H[37;1H$  awk 'BEGIN {IFS=",";OFS=" ":} {print $1  [37;43H[37;1H$  awk 'BEGIN {IFS=",";OFS=" ":} {print $1   [37;44H[37;1H$  awk 'BEGIN {IFS=",";OFS=" ":} {print $1 $  [37;45H[37;1H$  awk 'BEGIN {IFS=",";OFS=" ":} {print $1 $2  [37;46H[37;1H$  awk 'BEGIN {IFS=",";OFS=" ":} {print $1 $2}  [37;47H[37;1H$  awk 'BEGIN {IFS=",";OFS=" ":} {print $1 $2}'  [37;48H[37;1H$  awk 'BEGIN {IFS=",";OFS=" ":} {print $1 $2}'   [37;49H[37;1H$  awk 'BEGIN {IFS=",";OFS=" ":} {print $1 $2}' i  [37;50H[37;1H$  awk 'BEGIN {IFS=",";OFS=" ":} {print $1 $2}' in  [37;51H[37;1H$  awk 'BEGIN {IFS=",";OFS=" ":} {print $1 $2}' inv  [37;52H[37;1H$  awk 'BEGIN {IFS=",";OFS=" ":} {print $1 $2}' inve  [37;53H[37;1H$  awk 'BEGIN {IFS=",";OFS=" ":} {print $1 $2}' inven  [37;54H[37;1H$  awk 'BEGIN {IFS=",";OFS=" ":} {print $1 $2}' invent  [37;55H[37;1H$  awk 'BEGIN {IFS=",";OFS=" ":} {print $1 $2}' invento  [37;56H[37;1H$  awk 'BEGIN {IFS=",";OFS=" ":} {print $1 $2}' inventor  [37;57H[37;1H$  awk 'BEGIN {IFS=",";OFS=" ":} {print $1 $2}' inventory  [37;58H[H[JUNX510 Lab 2.6:  Review
+[1;100HPage 5/7
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Question 3
+
+Display all of the lines in the file showing only the quantity and product name, in that order and
+separated by a space, using awk. Product name is the first field, and quantity is the second field.
+
+Remember that the data file is named "inventory".
+
+You entered: awk 'BEGIN {IFS=",";OFS=" ":} {print $1 $2}' inventory 
+Please try again.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[37;1H$  awk 'BEGIN {IFS=",";OFS=" ":} {print $1 $2}' inventory                                                [37;59H[37;58H[37;57H[37;56H[37;55H[37;54H[37;53H[37;52H[37;51H[37;50H[37;49H[37;48H[37;47H[37;46H[37;45H[37;44H[37;43H[37;1H$  awk 'BEGIN {IFS=",";OFS=" ":} {print $ $2}' inventory  [37;42H[37;1H$  awk 'BEGIN {IFS=",";OFS=" ":} {print $2 $2}' inventory  [37;43H[37;44H[37;45H[37;46H[37;1H$  awk 'BEGIN {IFS=",";OFS=" ":} {print $2 $}' inventory  [37;45H[37;1H$  awk 'BEGIN {IFS=",";OFS=" ":} {print $2 $1}' inventory  [37;46H[H[JUNX510 Lab 2.6:  Review
+[1;100HPage 5/7
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Question 3
+
+Display all of the lines in the file showing only the quantity and product name, in that order and
+separated by a space, using awk. Product name is the first field, and quantity is the second field.
+
+Remember that the data file is named "inventory".
+
+You entered: awk 'BEGIN {IFS=",";OFS=" ":} {print $2 $1}' inventory 
+Please try again.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[37;1H$  awk 'BEGIN {IFS=",";OFS=" ":} {print $2 $1}' inventory                                                [37;59H[37;58H[37;57H[37;56H[37;55H[37;55H[37;55H[37;55H[37;55H[37;55H[37;55H[37;55H[37;55H[37;55H[37;54H[37;53H[37;52H[37;51H[37;50H[37;49H[37;48H[37;47H[37;46H[37;45H[37;44H[37;43H[37;42H[37;41H[37;40H[37;39H[37;38H[37;37H[37;36H[37;35H[37;34H[37;33H[37;32H[37;1H$  awk 'BEGIN {IFS=",";OFS=" "} {print $2 $1}' inventory  [37;31H[37;1H$  awk 'BEGIN {IFS=",";OFS=" ";} {print $2 $1}' inventory  [37;32H[H[JUNX510 Lab 2.6:  Review
+[1;100HPage 5/7
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Question 3
+
+Display all of the lines in the file showing only the quantity and product name, in that order and
+separated by a space, using awk. Product name is the first field, and quantity is the second field.
+
+Remember that the data file is named "inventory".
+
+You entered: awk 'BEGIN {IFS=",";OFS=" ";} {print $2 $1}' inventory 
+Please try again.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[37;1H$  awk 'BEGIN {IFS=",";OFS=" ";} {print $2 $1}' inventory                                                [37;59H[37;58H[37;57H[37;56H[37;55H[37;54H[37;54H[37;54H[37;1H$  awk 'BEGIN {IFS=",";OFS=" ";} {print $2 $1}' invenDtory  [37;55H[37;54H[37;53H[37;52H[37;51H[37;50H[37;49H[37;48H[37;47H[37;46H[37;45H[37;44H[37;43H[37;42H[37;41H[37;40H[37;39H[37;38H[37;37H[37;36H[37;35H[37;34H[37;33H[37;34H[37;35H[37;36H[37;37H[37;38H[37;39H[37;40H[37;41H[37;42H[37;43H[37;1H$  awk 'BEGIN {IFS=",";OFS=" ";} {print $ $1}' invenDtory  [37;42H[37;1H$  awk 'BEGIN {IFS=",";OFS=" ";} {print $1 $1}' invenDtory  [37;43H[37;44H[37;45H[37;46H[37;1H$  awk 'BEGIN {IFS=",";OFS=" ";} {print $1 $}' invenDtory  [37;45H[37;1H$  awk 'BEGIN {IFS=",";OFS=" ";} {print $1 $2}' invenDtory  [37;46H[37;47H[37;46H[37;45H[37;44H[37;43H[37;42H[37;41H[37;40H[37;39H[37;38H[37;37H[37;36H[37;35H[37;34H[37;33H[37;32H[37;31H[37;30H[37;29H[37;28H[37;27H[37;26H[37;25H[37;24H[37;23H[37;22H[37;23H[37;1H$  awk 'BEGIN {IFS=","};OFS=" ";} {print $1 $2}' invenDtory  [37;24H[37;24H[37;1H$  awk 'BEGIN {IFS=",";OFS=" ";} {print $1 $2}' invenDtory  [37;23H[37;23H[37;24H[37;1H$  awk 'BEGIN {IFS=","OFS=" ";} {print $1 $2}' invenDtory  [37;23H[37;1H$  awk 'BEGIN {IFS="," OFS=" ";} {print $1 $2}' invenDtory  [37;24H[H[JUNX510 Lab 2.6:  Review
+[1;100HPage 5/7
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Question 3
+
+Display all of the lines in the file showing only the quantity and product name, in that order and
+separated by a space, using awk. Product name is the first field, and quantity is the second field.
+
+Remember that the data file is named "inventory".
+
+You entered: awk 'BEGIN {IFS="," OFS=" ";} {print $1 $2}' invenDtory 
+Please try again.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[37;1H$  awk 'BEGIN {IFS="," OFS=" ";} {print $1 $2}' invenDtory                                               [37;60H[37;59H[37;58H[37;57H[37;56H[37;55H[37;54H[37;53H[37;52H[37;51H[37;50H[37;49H[37;48H[37;47H[37;46H[37;45H[37;44H[37;43H[37;42H[37;41H[37;40H[37;39H[37;38H[37;37H[37;36H[37;35H[37;34H[37;33H[37;32H[37;1H$  awk 'BEGIN {IFS="," OFS=" "} {print $1 $2}' invenDtory  [37;31H[H[JUNX510 Lab 2.6:  Review
+[1;100HPage 5/7
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Question 3
+
+Display all of the lines in the file showing only the quantity and product name, in that order and
+separated by a space, using awk. Product name is the first field, and quantity is the second field.
+
+Remember that the data file is named "inventory".
+
+You entered: awk 'BEGIN {IFS="," OFS=" "} {print $1 $2}' invenDtory 
+Please try again.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[37;1H$  awk 'BEGIN {IFS="," OFS=" "} {print $1 $2}' invenDtory                                                [37;59H[37;58H[37;57H[37;56H[37;55H[37;54H[37;53H[37;52H[37;51H[37;50H[37;49H[37;48H[37;47H[37;46H[37;45H[37;44H[37;43H[37;42H[37;1H$  awk 'BEGIN {IFS="," OFS=" "} {print $1, $2}' invenDtory  [37;43H[H[JUNX510 Lab 2.6:  Review
+[1;100HPage 5/7
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Question 3
+
+Display all of the lines in the file showing only the quantity and product name, in that order and
+separated by a space, using awk. Product name is the first field, and quantity is the second field.
+
+Remember that the data file is named "inventory".
+
+You entered: awk 'BEGIN {IFS="," OFS=" "} {print $1, $2}' invenDtory 
+Please try again.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[37;4H[37;4H[37;4H[37;1H$  awk 'BEGIN {IFS="," OFS=" "} {print $1, $2}' invenDtory                                               [37;60H[37;59H[37;58H[37;57H[37;57H[37;57H[37;57H[37;57H[37;57H[37;57H[37;57H[37;57H[37;57H[37;57H[37;57H[37;57H[37;57H[37;57H[37;57H[37;56H[37;55H[37;54H[37;53H[37;52H[37;51H[37;50H[37;49H[37;48H[37;47H[37;46H[37;45H[37;44H[37;43H[37;42H[37;41H[37;40H[37;39H[37;38H[37;37H[37;36H[37;35H[37;34H[37;33H[37;32H[37;31H[37;30H[37;29H[37;28H[37;27H[37;26H[37;25H[37;24H[37;23H[37;1H$  awk 'BEGIN {IFS=","; OFS=" "} {print $1, $2}' invenDtory  [37;24H[H[JUNX510 Lab 2.6:  Review
+[1;100HPage 5/7
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Question 3
+
+Display all of the lines in the file showing only the quantity and product name, in that order and
+separated by a space, using awk. Product name is the first field, and quantity is the second field.
+
+Remember that the data file is named "inventory".
+
+You entered: awk 'BEGIN {IFS=","; OFS=" "} {print $1, $2}' invenDtory 
+Please try again.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[37;1H$  awk 'BEGIN {IFS=","; OFS=" "} {print $1, $2}' invenDtory                                              [37;61H[37;60H[37;59H[37;58H[37;57H[37;56H[37;55H[37;54H[37;53H[37;52H[37;51H[37;50H[37;49H[37;48H[37;47H[37;46H[37;45H[37;44H[37;43H[37;42H[37;41H[37;40H[37;39H[37;38H[37;37H[37;36H[37;35H[37;34H[37;33H[37;32H[37;33H[37;34H[37;35H[37;36H[37;37H[37;38H[37;39H[37;40H[37;41H[37;42H[37;43H[37;44H[37;45H[37;46H[37;47H[37;48H[37;49H[37;50H[37;51H[37;52H[37;53H[37;54H[37;55H[37;56H[37;1H$  awk 'BEGIN {IFS=","; OFS=" "} {print $1, $2}' inventory  [37;55H[H[JUNX510 Lab 2.6:  Review
+[1;100HPage 5/7
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Question 3
+
+Display all of the lines in the file showing only the quantity and product name, in that order and
+separated by a space, using awk. Product name is the first field, and quantity is the second field.
+
+Remember that the data file is named "inventory".
+
+You entered: awk 'BEGIN {IFS=","; OFS=" "} {print $1, $2}' inventory 
+Please try again.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[37;1H$  awk 'BEGIN {IFS=","; OFS=" "} {print $1, $2}' inventory                                               [37;60H[37;59H[37;58H[37;57H[37;56H[37;55H[37;54H[37;53H[37;52H[37;51H[37;50H[37;49H[37;48H[37;47H[37;46H[37;45H[37;44H[37;43H[37;42H[37;41H[37;40H[37;39H[37;38H[37;37H[37;36H[37;35H[37;34H[37;33H[37;1H$  awk 'BEGIN {IFS=","; OFS=" " {print $1, $2}' inventory  [37;32H[37;1H$  awk 'BEGIN {IFS=","; OFS="  {print $1, $2}' inventory  [37;31H[37;1H$  awk 'BEGIN {IFS=","; OFS=" {print $1, $2}' inventory  [37;30H[37;1H$  awk 'BEGIN {IFS=","; OFS= {print $1, $2}' inventory  [37;29H[37;1H$  awk 'BEGIN {IFS=","; OFS {print $1, $2}' inventory  [37;28H[37;1H$  awk 'BEGIN {IFS=","; OF {print $1, $2}' inventory  [37;27H[37;1H$  awk 'BEGIN {IFS=","; O {print $1, $2}' inventory  [37;26H[37;1H$  awk 'BEGIN {IFS=",";  {print $1, $2}' inventory  [37;25H[37;1H$  awk 'BEGIN {IFS=","; {print $1, $2}' inventory  [37;24H[37;1H$  awk 'BEGIN {IFS="," {print $1, $2}' inventory  [37;23H[37;1H$  awk 'BEGIN {IFS=","] {print $1, $2}' inventory  [37;24H[37;1H$  awk 'BEGIN {IFS="," {print $1, $2}' inventory  [37;23H[37;1H$  awk 'BEGIN {IFS=","] {print $1, $2}' inventory  [37;24H[37;1H$  awk 'BEGIN {IFS="," {print $1, $2}' inventory  [37;23H[37;1H$  awk 'BEGIN {IFS=","} {print $1, $2}' inventory  [37;24H[H[JUNX510 Lab 2.6:  Review
+[1;100HPage 5/7
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Question 3
+
+Display all of the lines in the file showing only the quantity and product name, in that order and
+separated by a space, using awk. Product name is the first field, and quantity is the second field.
+
+Remember that the data file is named "inventory".
+
+You entered: awk 'BEGIN {IFS=","} {print $1, $2}' inventory 
+Please try again.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[37;1H$  awk 'BEGIN {IFS=","} {print $1, $2}' inventory                                                        [37;51H[37;50H[37;49H[37;48H[37;47H[37;46H[37;45H[37;44H[37;43H[37;42H[37;41H[37;40H[37;39H[37;38H[37;37H[37;36H[37;35H[37;34H[37;33H[37;32H[37;31H[37;30H[37;29H[37;28H[37;27H[37;26H[37;25H[37;24H[37;23H[37;22H[37;21H[37;22H[37;23H[37;1H$  awk 'BEGIN {IFS=",";} {print $1, $2}' inventory  [37;24H[37;1H$  awk 'BEGIN {IFS=","; } {print $1, $2}' inventory  [37;25H[37;1H$  awk 'BEGIN {IFS=","; O} {print $1, $2}' inventory  [37;26H[37;1H$  awk 'BEGIN {IFS=","; OF} {print $1, $2}' inventory  [37;27H[37;1H$  awk 'BEGIN {IFS=","; OFS} {print $1, $2}' inventory  [37;28H[37;1H$  awk 'BEGIN {IFS=","; OFS=} {print $1, $2}' inventory  [37;29H[37;1H$  awk 'BEGIN {IFS=","; OFS="} {print $1, $2}' inventory  [37;30H[37;1H$  awk 'BEGIN {IFS=","; OFS=" } {print $1, $2}' inventory  [37;31H[37;1H$  awk 'BEGIN {IFS=","; OFS=" "} {print $1, $2}' inventory  [37;32H[37;33H[37;34H[37;35H[37;36H[37;37H[37;38H[37;39H[37;40H[37;41H[37;42H[37;43H[37;44H[37;45H[37;46H[37;47H[37;1H$  awk 'BEGIN {IFS=","; OFS=" "} {print $1, $2 }' inventory  [37;48H[H[JUNX510 Lab 2.6:  Review
+[1;100HPage 5/7
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Question 3
+
+Display all of the lines in the file showing only the quantity and product name, in that order and
+separated by a space, using awk. Product name is the first field, and quantity is the second field.
+
+Remember that the data file is named "inventory".
+
+You entered: awk 'BEGIN {IFS=","; OFS=" "} {print $1, $2 }' inventory 
+Please try again.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[37;1H$  awk 'BEGIN {IFS=","; OFS=" "} {print $1, $2 }' inventory                                              [37;61H[37;1H$  awk 'BEGIN {IFS=","; OFS=" "} {print $1, $2 }' inventory   [37;62H[37;61H[37;60H[37;59H[37;59H[37;59H[37;59H[37;59H[37;59H[37;59H[37;59H[37;59H[37;59H[37;59H[37;59H[37;59H[37;59H[37;59H[37;59H[37;59H[37;59H[37;1H$  awk 'BEGIN {IFS=","; OFS=" "} {print $1, $2 }' inventorDy   [37;60H[37;59H[37;58H[37;57H[37;56H[37;55H[37;54H[37;53H[37;52H[37;51H[37;50H[37;49H[37;48H[37;47H[37;46H[37;45H[37;44H[37;43H[37;42H[37;41H[37;40H[37;39H[37;38H[37;37H[37;36H[37;35H[37;34H[37;33H[37;32H[37;31H[37;30H[37;29H[37;28H[37;27H[37;26H[37;25H[37;24H[37;23H[37;22H[37;21H[37;20H[37;19H[37;18H[37;17H[37;16H[37;1H$  awk 'BEGIN { IFS=","; OFS=" "} {print $1, $2 }' inventorDy   [37;17H[37;18H[37;19H[37;20H[37;21H[37;22H[37;23H[37;24H[37;25H[37;26H[37;27H[37;28H[37;29H[37;30H[37;31H[37;32H[37;33H[37;1H$  awk 'BEGIN { IFS=","; OFS=" " } {print $1, $2 }' inventorDy   [37;34H[37;35H[37;36H[37;37H[37;1H$  awk 'BEGIN { IFS=","; OFS=" " } { print $1, $2 }' inventorDy   [37;38H[37;39H[37;40H[37;41H[37;42H[37;43H[37;44H[37;45H[37;46H[37;47H[37;48H[37;49H[37;50H[37;51H[37;52H[37;53H[37;54H[37;55H[37;56H[37;57H[37;58H[37;59H[37;60H[37;61H[37;62H[37;63H[37;1H$  awk 'BEGIN { IFS=","; OFS=" " } { print $1, $2 }' inventory   [37;62H[H[JUNX510 Lab 2.6:  Review
+[1;100HPage 5/7
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Question 3
+
+Display all of the lines in the file showing only the quantity and product name, in that order and
+separated by a space, using awk. Product name is the first field, and quantity is the second field.
+
+Remember that the data file is named "inventory".
+
+You entered: awk 'BEGIN { IFS=","; OFS=" " } { print $1, $2 }' inventory  
+Please try again.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[37;1H$  awk 'BEGIN { IFS=","; OFS=" " } { print $1, $2 }' inventory                                           [37;65H[37;64H[37;63H[37;62H[37;61H[37;60H[37;59H[37;58H[37;57H[37;56H[37;55H[37;54H[37;53H[37;52H[37;51H[37;50H[37;49H[37;48H[37;1H$  awk 'BEGIN { IFS=","; OFS=" " } { print $1,$2 }' inventory   [37;47H[37;1H$  awk 'BEGIN { IFS=","; OFS=" " } { print $1$2 }' inventory   [37;46H[37;1H$  awk 'BEGIN { IFS=","; OFS=" " } { print $1 $2 }' inventory   [37;47H[37;46H[37;45H[37;44H[37;43H[37;42H[37;41H[37;40H[37;39H[37;38H[37;37H[37;36H[37;35H[37;34H[37;1H$  awk 'BEGIN { IFS=","; OFS=" "} { print $1 $2 }' inventory   [37;33H[37;1H$  awk 'BEGIN { IFS=","; OFS=" } { print $1 $2 }' inventory   [37;32H[37;1H$  awk 'BEGIN { IFS=","; OFS="} { print $1 $2 }' inventory   [37;31H[37;1H$  awk 'BEGIN { IFS=","; OFS=} { print $1 $2 }' inventory   [37;30H[37;1H$  awk 'BEGIN { IFS=","; OFS} { print $1 $2 }' inventory   [37;29H[37;1H$  awk 'BEGIN { IFS=","; OF} { print $1 $2 }' inventory   [37;28H[37;1H$  awk 'BEGIN { IFS=","; O} { print $1 $2 }' inventory   [37;27H[37;1H$  awk 'BEGIN { IFS=","; } { print $1 $2 }' inventory   [37;26H[37;1H$  awk 'BEGIN { IFS=",";} { print $1 $2 }' inventory   [37;25H[37;1H$  awk 'BEGIN { IFS=","} { print $1 $2 }' inventory   [37;24H[H[JUNX510 Lab 2.6:  Review
+[1;100HPage 5/7
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Question 3
+
+Display all of the lines in the file showing only the quantity and product name, in that order and
+separated by a space, using awk. Product name is the first field, and quantity is the second field.
+
+Remember that the data file is named "inventory".
+
+You entered: awk 'BEGIN { IFS=","} { print $1 $2 }' inventory  
+Please try again.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[37;1H$  awk 'BEGIN { IFS=","} { print $1 $2 }' inventory                                                      [37;54H[37;53H[37;52H[37;51H[37;50H[37;49H[37;48H[37;47H[37;46H[37;45H[37;44H[37;43H[37;42H[37;41H[37;40H[37;39H[37;38H[37;37H[37;36H[37;35H[37;34H[37;33H[37;32H[37;31H[37;30H[37;29H[37;28H[37;27H[37;26H[37;25H[37;24H[37;23H[37;22H[37;21H[37;1H$  awk 'BEGIN { IFS","} { print $1 $2 }' inventory   [37;20H[37;1H$  awk 'BEGIN { IF","} { print $1 $2 }' inventory   [37;19H[37;1H$  awk 'BEGIN { I","} { print $1 $2 }' inventory   [37;18H[37;1H$  awk 'BEGIN { ","} { print $1 $2 }' inventory   [37;17H[37;1H$  awk 'BEGIN {","} { print $1 $2 }' inventory   [37;16H[37;1H$  awk 'BEGIN ","} { print $1 $2 }' inventory   [37;15H[37;1H$  awk 'BEGIN","} { print $1 $2 }' inventory   [37;14H[37;1H$  awk 'BEGI","} { print $1 $2 }' inventory   [37;13H[37;1H$  awk 'BEG","} { print $1 $2 }' inventory   [37;12H[37;1H$  awk 'BE","} { print $1 $2 }' inventory   [37;11H[37;1H$  awk 'B","} { print $1 $2 }' inventory   [37;10H[37;1H$  awk '","} { print $1 $2 }' inventory   [37;9H[37;1H$  awk ","} { print $1 $2 }' inventory   [37;8H[37;1H$  awk -","} { print $1 $2 }' inventory   [37;9H[37;1H$  awk -F","} { print $1 $2 }' inventory   [37;10H[37;11H[37;12H[37;13H[37;14H[37;1H$  awk -F"," { print $1 $2 }' inventory   [37;13H[37;14H[37;1H$  awk -F"," '{ print $1 $2 }' inventory   [37;15H[H[JUNX510 Lab 2.6:  Review
+[1;100HPage 5/7
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Question 3
+
+Display all of the lines in the file showing only the quantity and product name, in that order and
+separated by a space, using awk. Product name is the first field, and quantity is the second field.
+
+Remember that the data file is named "inventory".
+
+You entered: awk -F"," '{ print $1 $2 }' inventory  
+Please try again.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[37;1H$  awk -F"," '{ print $1 $2 }' inventory                                                                 [37;43H[37;42H[37;41H[37;40H[37;39H[37;38H[37;37H[37;36H[37;35H[37;34H[37;33H[37;32H[37;31H[37;30H[37;29H[37;28H[37;27H[37;26H[37;25H[37;26H[37;27H[37;28H[37;1H$  awk -F"," '{ print $1 $ }' inventory   [37;27H[37;1H$  awk -F"," '{ print $1 $3 }' inventory   [37;28H[H[JUNX510 Lab 2.6:  Review
+[1;100HPage 5/7
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Question 3
+
+Display all of the lines in the file showing only the quantity and product name, in that order and
+separated by a space, using awk. Product name is the first field, and quantity is the second field.
+
+Remember that the data file is named "inventory".
+
+You entered: awk -F"," '{ print $1 $3 }' inventory  
+Please try again.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[37;1H$  awk -F"," '{ print $1 $3 }' inventory                                                                 [37;43H[37;42H[37;41H[37;40H[37;39H[37;38H[37;37H[37;36H[37;35H[37;34H[37;33H[37;32H[37;31H[37;30H[37;29H[37;28H[37;1H$  awk -F"," '{ print $1 $ }' inventory   [37;27H[37;1H$  awk -F"," '{ print $1 $2 }' inventory   [37;28H[37;27H[37;26H[37;25H[37;1H$  awk -F"," '{ print $1m $2 }' inventory   [37;26H[37;1H$  awk -F"," '{ print $1 $2 }' inventory   [37;25H[37;1H$  awk -F"," '{ print $1, $2 }' inventory   [37;26H[H[JUNX510 Lab 2.6:  Review
+[1;100HPage 5/7
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Question 3
+
+Display all of the lines in the file showing only the quantity and product name, in that order and
+separated by a space, using awk. Product name is the first field, and quantity is the second field.
+
+Remember that the data file is named "inventory".
+
+You entered: awk -F"," '{ print $1, $2 }' inventory  
+Please try again.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[37;1H$  awk -F"," '{ print $1, $2 }' inventory                                                                [37;44H[37;43H[37;42H[37;41H[37;40H[37;39H[37;38H[37;37H[37;36H[37;35H[37;34H[37;33H[37;32H[37;31H[37;30H[37;29H[37;28H[37;27H[37;26H[37;25H[37;24H[37;23H[37;22H[37;21H[37;20H[37;19H[37;18H[37;17H[37;16H[37;15H[37;14H[37;13H[37;12H[37;11H[37;10H[37;9H[37;8H[37;7H[37;8H[37;9H[37;10H[37;11H[37;12H[37;13H[37;14H[37;15H[37;16H[37;17H[37;18H[37;19H[37;20H[37;21H[37;22H[37;23H[37;24H[37;25H[37;26H[37;1H$  awk -F"," '{ print $1 $2 }' inventory   [37;25H[H[JUNX510 Lab 2.6:  Review
+[1;100HPage 5/7
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Question 3
+
+Display all of the lines in the file showing only the quantity and product name, in that order and
+separated by a space, using awk. Product name is the first field, and quantity is the second field.
+
+Remember that the data file is named "inventory".
+
+You entered: awk -F"," '{ print $1 $2 }' inventory  
+Please try again.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[37;1H$  awk -F"," '{ print $1 $2 }' inventory                                                                 [37;43H[37;42H[37;41H[37;40H[37;39H[37;38H[37;37H[37;36H[37;35H[37;34H[37;33H[37;32H[37;31H[37;30H[37;29H[37;28H[37;27H[37;26H[37;25H[37;1H$  awk -F"," '{ print $ $2 }' inventory   [37;24H[37;1H$  awk -F"," '{ print $2 $2 }' inventory   [37;25H[37;26H[37;25H[37;1H$  awk -F"," '{ print $2, $2 }' inventory   [37;26H[37;27H[37;28H[37;29H[37;1H$  awk -F"," '{ print $2, $ }' inventory   [37;28H[37;1H$  awk -F"," '{ print $2, $1 }' inventory   [37;29H[H[JUNX510 Lab 2.6:  Review
+[1;100HPage 6/7
+[2;1H-------------------------------------------------------------------------------------------------------------
+$  awk -F"," '{ print $2, $1 }' inventory  
+300 Strawberry Jam
+1216 Raspberry Jam
+96 Blueberry Jam
+49 Strawberry Compote
+1937 Raspberry Compote
+200 Blueberry compote
+130 Frozen Strawberries
+16 Straw Hats
+[35;1H-------------------------------------------------------------------------------------------------------------
+                                                                                                             [36;1HObserve the output above, then press <ENTER> to continue.
+[H[JUNX510 Lab 2.6:  Review
+[1;100HPage 6/7
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Question 4
+
+Display all of the lines in the file with less than 100 items in inventory, using awk.  Quantity is
+the second field.
+
+Remember that the data file is named "inventory".
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+$  [?1h=[37;1H$  m [37;5H[H[JUNX510 Lab 2.6:  sed And awk
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 Using sed - Completed[m
+2 Using awk - Completed[m
+3 [7mReview Exercise[m
+
+Note that the highlighted lines indicate the incomplete sections of
+this part of the Lab.
+
+The Review Exercise can only be done when the other sections have
+been completed.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: exit
+[H[JUNX510 Lab 2.6:  sed And awk
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 Using sed - Completed[m
+2 Using awk - Completed[m
+3 [7mReview Exercise[m
+
+Note that the highlighted lines indicate the incomplete sections of
+this part of the Lab.
+
+The Review Exercise can only be done when the other sections have
+been completed.
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: q
+[H[JUNX510 Lab 2:  Selection Menu
+[2;1H-------------------------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 Redirection And Pipes - Completed[m
+2 Linking Files And Directories - Completed[m
+3 Command Summary - Completed[m
+4 Linux Processes - Completed[m
+5 Regular Expressions Using grep - Completed[m
+6 [7msed And awk[m
+7 [7mInteractive Shell Environment[m
+
+8 [7mSubmit UNX510 Lab 2[m
+
+The highlighted lines above indicate the incomplete parts of the Lab.
+There is a total possible mark of 3, with 0.5 marks deducted for each
+incomplete part. Late marks will be deducted at the rate of 0.3 marks (10%)
+per day for Labs submitted after midnight of May 26 2017.
+
+
+[35;1H-------------------------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: q
+[H[Jyliu421@matrix:~/unx510/lab2> eix[K[Kxit
+exit
+
+Script done on Thu 18 May 2017 11:37:09 AM EDT

@@ -1,0 +1,271 @@
+Script started on Wed 17 May 2017 04:05:27 PM EDT
+yliu421@matrix:~/unx510/lab2> u[K~unx510/lab2
+[H[JUNX510 Lab 2:  Notes
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+Some important notes on this Lab:
+
+(1) You do NOT have to do this whole Lab in one sitting!  Any completed sections will be tracked.
+
+(2) You may abort the Lab at any time by pressing Ctrl-c but you may lose any work done on an incomplete
+section.
+
+(3) Instructions for each page will be displayed at the bottom of the screen.
+
+(4) The answers expected in this Lab are derived from the Lab itself and the course notes. The course
+notes should be used as a reference, if required. Using Google or another search engine may provide
+answers that are not accepted by the Lab.
+
+(5) This Lab is maintained by Les Czegel. Please try to resolve any problems with your instructor who
+will determine if Les should be contacted.
+[46;1H--------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2:  Selection Menu
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 Redirection And Pipes - Completed[m
+2 Linking Files And Directories - Completed[m
+3 Command Summary - Completed[m
+4 [7mLinux Processes[m
+5 [7mRegular Expressions Using grep[m
+6 [7msed And awk[m
+7 [7mInteractive Shell Environment[m
+
+8 [7mSubmit UNX510 Lab 2[m
+
+The highlighted lines above indicate the incomplete parts of the Lab.
+There is a total possible mark of 3, with 0.5 marks deducted for each
+incomplete part. Late marks will be deducted at the rate of 0.3 marks (10%)
+per day for Labs submitted after midnight of May 26 2017.
+
+
+[46;1H--------------------------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: 4
+[H[JUNX510 Lab 2.4:  Linux Processes
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 Process Concepts - Completed[m
+2 Managing Processes - Completed[m
+3 [7mReview Exercise[m
+
+Note that the highlighted lines indicate the incomplete sections of
+this part of the Lab.
+
+The Review Exercise can only be done when the other sections have
+been completed.
+[46;1H--------------------------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: 3
+[H[JUNX510 Lab 2.4:  Review
+[1;101HPage 1/7
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+Review Exercise
+
+The purpose of this section is to reinforce your skills with issuing UNIX commands covered in the
+previous sections.
+
+You will be asked to enter a single UNIX command for the following situations.
+[46;1H--------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.4:  Review
+[1;101HPage 2/7
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+Question 1
+
+Enter the command that is used to display currently running processes, including an option to display
+PPID's (parent process id's):
+[46;1H--------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+>  [?1h=[48;1H>  p [48;5H[48;1H>  ps [48;6H[H[JUNX510 Lab 2.4:  Review
+[1;101HPage 2/7
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+Question 1
+
+Enter the command that is used to display currently running processes, including an option to display
+PPID's (parent process id's):
+
+You entered: ps
+Please try again.
+[46;1H--------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+>  [?1h=[48;1H>  p [48;5H[48;1H>  pa [48;6H[48;1H>  pa  [48;7H[48;1H>  pa _ [48;8H[H[JUNX510 Lab 2.4:  Review
+[1;101HPage 2/7
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+Question 1
+
+Enter the command that is used to display currently running processes, including an option to display
+PPID's (parent process id's):
+
+You entered: pa _
+Please try again.
+[46;1Ha--------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+>  [?1h=[48;1H>  a [48;5H[48;1H>   [48;4H[48;1H>  p [48;5H[48;1H>  ps [48;6H[48;1H>  ps  [48;7H[48;1H>  ps - [48;8H[H[JUNX510 Lab 2.4:  Review
+[1;101HPage 2/7
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+Question 1
+
+Enter the command that is used to display currently running processes, including an option to display
+PPID's (parent process id's):
+
+You entered: ps -
+Please try again.
+[46;1H--------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+>  [?1h=[48;1H>  p [48;5H[48;1H>  ps [48;6H[48;1H>  ps  [48;7H[48;1H>  ps - [48;8H[48;1H>  ps -A [48;9H[H[JUNX510 Lab 2.4:  Review
+[1;101HPage 2/7
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+Question 1
+
+Enter the command that is used to display currently running processes, including an option to display
+PPID's (parent process id's):
+
+You entered: ps -A
+Please try again.
+[46;1H--------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+>  [?1h=[48;1H>  p [48;5H[48;1H>  ps [48;6H[48;1H>  ps  [48;7H[48;1H>  ps - [48;8H[48;1H>  ps -f [48;9H[H[JUNX510 Lab 2.4:  Review
+[1;101HPage 3/7
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+Question 2
+
+Enter the command that is used to display the background jobs that are currently running:
+[46;1H--------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+>  [?1h=[48;1H>  j [48;5H[48;1H>  jo [48;6H[48;1H>  job [48;7H[48;1H>  jobs [48;8H[H[JUNX510 Lab 2.4:  Review
+[1;101HPage 4/7
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+Question 3
+
+Enter the command to bring job #2 to the foreground
+[46;1H--------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+>  [?1h=[48;1H>  b [48;5H[48;1H>   [48;4H[48;1H>  f [48;5H[48;1H>  fg [48;6H[48;1H>  fg  [48;7H[48;1H>  fg $ [48;8H[48;1H>  fg  [48;7H[48;1H>  fg % [48;8H[48;1H>  fg %2 [48;9H[H[JUNX510 Lab 2.4:  Review
+[1;101HPage 5/7
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+Question 4
+
+Enter the command to terminate job #3:
+[46;1H--------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+>  [?1h=[48;1H>  k [48;5H[48;1H>  ki [48;6H[48;1H>  kil [48;7H[48;1H>  kill [48;8H[48;1H>  kill  [48;9H[48;1H>  kill % [48;10H[48;1H>  kill %3 [48;11H[H[JUNX510 Lab 2.4:  Review
+[1;101HPage 6/7
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+Question 5
+
+Enter the command to terminate job #3, assuming "kill %3" didn't work:
+[46;1H--------------------------------------------------------------------------------------------------------------
+Enter  your answer  (or enter: 'm'-main menu):
+>  [?1h=[48;1H>  k [48;5H[48;1H>  ki [48;6H[48;1H>  kil [48;7H[48;1H>  kill [48;8H[48;1H>  kill  [48;9H[48;1H>  kill - [48;10H[48;1H>  kill -9 [48;11H[48;1H>  kill -9  [48;12H[48;1H>  kill -9 % [48;13H[48;1H>  kill -9 %3 [48;14H[H[JUNX510 Lab 2.4:  Review
+[1;101HPage 7/7
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+Congratulations!
+
+You have successfully completed the Review Exercise!
+[46;1H--------------------------------------------------------------------------------------------------------------
+Press <ENTER> to continue (or: 'm'-main menu).
+[H[JUNX510 Lab 2.4:  Linux Processes
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 Process Concepts - Completed[m
+2 Managing Processes - Completed[m
+3 Review Exercise - Completed[m
+
+Note that the highlighted lines indicate the incomplete sections of
+this part of the Lab.
+
+The Review Exercise can only be done when the other sections have
+been completed.
+[46;1H--------------------------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: 
+[H[JUNX510 Lab 2.4:  Linux Processes
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 Process Concepts - Completed[m
+2 Managing Processes - Completed[m
+3 Review Exercise - Completed[m
+
+Note that the highlighted lines indicate the incomplete sections of
+this part of the Lab.
+
+The Review Exercise can only be done when the other sections have
+been completed.
+[46;1H--------------------------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: 
+[H[JUNX510 Lab 2.4:  Linux Processes
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 Process Concepts - Completed[m
+2 Managing Processes - Completed[m
+3 Review Exercise - Completed[m
+
+Note that the highlighted lines indicate the incomplete sections of
+this part of the Lab.
+
+The Review Exercise can only be done when the other sections have
+been completed.
+[46;1H--------------------------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: 
+[H[JUNX510 Lab 2.4:  Linux Processes
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 Process Concepts - Completed[m
+2 Managing Processes - Completed[m
+3 Review Exercise - Completed[m
+
+Note that the highlighted lines indicate the incomplete sections of
+this part of the Lab.
+
+The Review Exercise can only be done when the other sections have
+been completed.
+[46;1H--------------------------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: q
+[H[JUNX510 Lab 2:  Selection Menu
+[2;1H--------------------------------------------------------------------------------------------------------------
+
+Available selections:
+
+1 Redirection And Pipes - Completed[m
+2 Linking Files And Directories - Completed[m
+3 Command Summary - Completed[m
+4 Linux Processes - Completed[m
+5 [7mRegular Expressions Using grep[m
+6 [7msed And awk[m
+7 [7mInteractive Shell Environment[m
+
+8 [7mSubmit UNX510 Lab 2[m
+
+The highlighted lines above indicate the incomplete parts of the Lab.
+There is a total possible mark of 3, with 0.5 marks deducted for each
+incomplete part. Late marks will be deducted at the rate of 0.3 marks (10%)
+per day for Labs submitted after midnight of May 26 2017.
+
+
+[46;1H--------------------------------------------------------------------------------------------------------------
+Enter a menu selection or 'q' to quit: q
+[H[Jyliu421@matrix:~/unx510/lab2> exit
+exit
+
+Script done on Wed 17 May 2017 04:14:20 PM EDT
