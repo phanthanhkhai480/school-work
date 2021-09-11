@@ -1,1 +1,1 @@
-## BTI225 - Web Programming Principles
+## Web Programming Principles
