@@ -1,0 +1,122 @@
+.dropdown {
+	position: relative;
+	display: inline-block;
+	font-size: 20px;
+	column-width: 100px;
+}
+		
+.dropdown-content {
+    display: none;
+	position: fixed;
+	background-color: #333;
+	z-index: 1;
+	font-size: medium;
+}
+		
+.dropdown-content a {
+    color: #333;
+    border-bottom: 2px solid cyan;
+    text-align: left;
+    font-size: 14px;
+    width: 179.5px;
+    position: absolute;
+}
+		
+.dropdown-content a:hover {background-color: #ddd;}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+.footer {
+    padding: 0px 30px 20px 30px;
+    position: sticky;
+	text-align: center;
+    bottom: 5px;
+    color:black;
+}
+
+.display {
+    padding: 20px;
+    font-size: x-large;
+    line-height: 2.0;
+    color: black;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+  
+body {
+    background-image: url(https://i.postimg.cc/XYR3Th5Q/antiquepaper-1920x1234.jpg);
+    -webkit-background-size:cover;
+    background-size:cover;
+    background-position: center center;
+    height: 130vh;
+  }
+  
+.menu-area li a {text-decoration: none;} 
+.menu-area li {list-style-type: none;}
+.custom-padding{padding-top: 25px;}
+.menu-area a:hover {background: tomato; color: #fff;}
+.menu-area li {display: inline-block;}
+.menu-area a:hover:after {transform: translateY(-50%) rotate(-35deg);}
+  
+nav {
+    position: relative;
+    width: calc(100% - 60px);
+    margin: 0 auto;
+    padding: 10px 0;
+    background: #333;
+    z-index: 1;
+    text-align: right;
+    padding-right: 2%;
+  }
+  
+.logo {
+    width: 30%;
+    float: left;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 20px;
+    text-align: left;
+    padding-left: 2%;
+    display: block;
+}
+  
+
+  
+.menu-area a {
+    color: #fff;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: block;
+    padding: 0 25px;
+    line-height: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+  
+nav:before {
+    position: absolute;
+    content: '';
+    border-top: 10px solid #333;
+    border-right: 10px solid #333;
+    border-left: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    top: 100%;
+    left: 0;
+}
+  
+nav:after {
+    position: absolute;
+    content: '';
+    border-top: 10px solid #333;
+    border-left: 10px solid #333;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    top: 100%;
+    right: 0;
+}
